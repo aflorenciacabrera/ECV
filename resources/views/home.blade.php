@@ -14,10 +14,10 @@
                         </div>
                     @endif
                     
-                    @if(Auth::user()->hasRole('admin'))
-                        <div>Acceso como administrador</div>
+                    @if(Auth::user()->hasRole('super'))
+                        <div>Acceso como Supervisor</div>
                     @else
-                        <div>Acceso usuario</div>
+                        <div>Acceso Encuestador</div>
                     @endif
                         You are logged in!
                         
