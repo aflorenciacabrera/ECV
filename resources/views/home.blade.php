@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">
+                    Dashboard
+                        
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,8 +22,10 @@
                     @else
                         <div>Acceso Encuestador</div>
                     @endif
-                        You are logged in!
-                        
+                    
+                    <input type="datetime-local" name="fechayhora"  step="1"  >
+                    Fecha y hora actual: <input type="datetime-local" name="fechahora" step="1"  value="">
+                    
                 </div>
             </div>
         </div>
