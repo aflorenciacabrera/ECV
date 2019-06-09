@@ -74,6 +74,12 @@ class CreateEncuestasTable extends Migration
             $table->string('banio_compartido_otra_vivienda');
             $table->string('sin_baño');
             
+            // III. EXCLUSIVAMENTE PARA HOGARES DE PENSIONISTAS Y SERVICIO DOMÉSTICO CON CAMA
+            $table->boolean('habitacion_exclusivo'); //si-no
+            $table->boolean('banio_exclusivo'); //si-no
+            $table->boolean('ingresos_otro_hogar');//si-no
+            
+            // IV.
             $table->timestamps();
         });
     }
