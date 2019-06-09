@@ -23,15 +23,15 @@
                     </div>
                    
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="numero_semana">Semana Nº</label>
+                            <div class="form-group col-md-6">
+                                    <label for="numero_semana">Semana Nº</label>
                             <input type="text" class="form-control" id="numero_semana" name="numero_semana" placeholder="">
-                        </div>
-                        <div class="form-groupcol-md-6">
-                            <label for="trimestre">Trimestre</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="trimestre">Trimestre</label>
                             <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="">
+                            </div>
                         </div>
-                    </div>
                     
                         <div class="form-group">
                             <label for="anio">Año</label>
