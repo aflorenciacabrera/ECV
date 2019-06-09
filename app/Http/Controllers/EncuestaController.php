@@ -53,6 +53,6 @@ class EncuestaController extends Controller
 
         $e->save();
      
-      return redirect(url('home'))->with('status','El usuario cliente fue registrado');;
+      return redirect(url('home'))->with('status','Formulario de Encuensta cargado');;
       }
 }
