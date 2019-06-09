@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\encuesta;
 class EncuestaController extends Controller
 {
     //
@@ -53,6 +53,6 @@ class EncuestaController extends Controller
 
         $e->save();
      
-      return redirect(url('inicio'))->with('status','El usuario cliente fue registrado');;
+      return redirect(url('home'))->with('status','El usuario cliente fue registrado');;
       }
 }
