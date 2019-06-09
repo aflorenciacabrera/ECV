@@ -1,35 +1,38 @@
-@extends('layouts.app')
-
-@section('content')
+{{-- 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                   Sección I - Identificación      
-                </div>
+                </div> --}}
 
                 <div class="card-body">
                     <form method="POST" action="{{route('crearencuesta')}}">
                     
                             @csrf
-                        <div class="form-group">
-                            <label for="codigo_area">Código de área</label>
-                            <input type="text" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " required>
-                            {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                                <label for="codigo_area">Código de área</label>
+                                <input type="text" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " required>
                         </div>
-                        <div class="form-group">
-                            <label for="numero_listado">Nº en el listado</label>
-                            <input type="text" class="form-control" id="numero_listado" name="numero_listado" placeholder="">
+                        <div class="form-group col-md-6">
+                                <label for="numero_listado">Nº en el listado</label>
+                                <input type="text" class="form-control" id="numero_listado" name="numero_listado" placeholder="">
                         </div>
-                        <div class="form-group">
+                    </div>
+                   
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
                             <label for="numero_semana">Semana Nº</label>
                             <input type="text" class="form-control" id="numero_semana" name="numero_semana" placeholder="">
                         </div>
-                        <div class="form-group">
+                        <div class="form-groupcol-md-6">
                             <label for="trimestre">Trimestre</label>
                             <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="">
                         </div>
+                    </div>
+                    
                         <div class="form-group">
                             <label for="anio">Año</label>
                             <input type="text" class="form-control" id="anio" name="anio" placeholder="">
@@ -80,13 +83,18 @@
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Entrevista Realizada</label>
                                 <select class="form-control" name="entrevista_realizada" >
-                                    <option>Default select</option>
+                                    <option>Si</option>
+                                    <option>No</option>
+                                    <option>Salido</option>
+                                    <option>Mal tomado</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Modalidad de Aplicación</label>
                                 <select class="form-control" name="modalidad_aplicacion" >
-                                    <option>Default select</option>
+                                    <option>Personal Completa</option>
+                                    <option>Personal Telefónico</option>
+                                    <option>Solo Telefónica</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -101,8 +109,7 @@
                     </form>
                                             
                 </div>
-            </div>
+            {{-- </div>
         </div>
     </div>
-</div>
-@endsection
+</div> --}}

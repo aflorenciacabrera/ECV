@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     Cargar Encuesta                        
@@ -23,16 +23,17 @@
                                   <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                    Sección #1
                                   </button>
+                                  {{-- @include('shared.errors') --}}
                                 </h2>
                             </div>
                               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
-                                        {{-- <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> --}}
-                                    <a href="{{ route('seccion1') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 1</a>
+                                    @include('encuesta.seccion_1')
+                                    {{-- <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> --}}
+                                    {{-- <a href="{{ route('seccion1') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 1</a> --}}
                                 </div>
                               </div>
                             </div>
-
                             <div class="card">
                               <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
