@@ -8,8 +8,7 @@
                 </div> --}}
 
                 <div class="card-body">
-                    <form method="POST" action="{{route('crearencuesta')}}">
-                            @csrf
+                   
                     <div class="form-row">
                         <div class="form-group col-md-6">
                                 <label for="codigo_area">Código de área</label>
@@ -114,8 +113,7 @@
                                 </div>
                     </div>
                                
-                        <button type="submit" class="btn btn-primary">Cargar</button>
-                    </form>
+                       
                                             
                 </div>
             {{-- </div>

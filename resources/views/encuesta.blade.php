@@ -15,18 +15,20 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
+                    <form method="POST" action="{{route('crearencuesta')}}">
+                        @csrf
                     <div class="accordion" id="accordionExample">
                             <div class="card">
                               <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                    Sección #1 - I. IDENTIFICACIÓN
                                   </button>
                                   {{-- @include('shared.errors') --}}
                                 </h2>
                             </div>
-                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                              {{-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample"> --}}
+                                  <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     @include('encuesta.seccion_1')
                                     {{-- <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> --}}
@@ -114,7 +116,14 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="card-footer text-muted d-flex justify-content-end">
+                                <div class="col-sm-11 input-column"></div>
+                                  {{-- <a href="{{ url('/planilla/ver/1') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button"  class="btn  btn-danger  ">CANCELAR</a>  </div> --}}
+                                {{-- <a class="btn btn-light mr-2" type="reset">Cancelar</a> --}}
+                                <button class="btn btn-success" type="submit">Cargar</button>
+                            </div>
+                            
+                          </form>
                     </div>
                 </div>
             </div>
