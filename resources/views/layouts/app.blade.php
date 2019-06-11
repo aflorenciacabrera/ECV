@@ -6,9 +6,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <title>ECV</title>
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
-    ECV
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

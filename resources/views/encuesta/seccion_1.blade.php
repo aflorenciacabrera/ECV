@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{route('crearencuesta')}}">
                             @csrf
-                    <dhoiv class="form-row">
+                    <div class="form-row">
                         <div class="form-group col-md-6">
                                 <label for="codigo_area">Código de área</label>
                                 <input type="text" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " required>

@@ -23,12 +23,12 @@
                         <div>Acceso Encuestador</div>
                     @endif --}}
                     <div class="jumbotron">
-                            <h1 class="display-4">ECV!</h1>
+                            {{-- <h1 class="display-4">ECV!</h1> --}}
                             {{-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> --}}
-                            <hr class="my-4">
+                            {{-- <hr class="my-4"> --}}
                             <p>Encuesta de Calidad de Vida</p>
                             {{-- <a href="{{route('encuesta')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> --}}
-                            <a href="{{route('encuesta')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Encuesta</a>
+                            <a href="{{route('encuesta')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Nueva Encuesta</a>
                           </div>
                     {{-- <input type="datetime-local" name="fechayhora"  step="1"  >
                     Fecha y hora actual: <input type="datetime-local" name="fechahora" step="1"  value=""> --}}
