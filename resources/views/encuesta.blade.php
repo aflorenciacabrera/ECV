@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -105,7 +104,7 @@
                                 <div class="card-header" id="headingThree">
                                     <h2 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Sección #6
+                                        Sección #6 -INGRESOS NO LABORALES
                                     </button>
                                     </h2>
                                 </div>
@@ -116,6 +115,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @include('encuesta.seccion_hogar_planesyprogramas')
                             <div class="card-footer text-muted d-flex justify-content-end">
                                 <div class="col-sm-11 input-column"></div>
                                   {{-- <a href="{{ url('/planilla/ver/1') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button"  class="btn  btn-danger  ">CANCELAR</a>  </div> --}}
