@@ -1,6 +1,6 @@
 
 {{-- ------------------------------------- --}}
-<br>
+
 <label for="">HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES</label>
 <br>
 

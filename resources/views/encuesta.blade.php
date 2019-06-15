@@ -69,14 +69,14 @@
                             </div>
 
                             <div class="card">
-                                <div class="card-header" id="headingThree">
+                                <div class="card-header" id="heading4">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
                                             Sección #4 - IV. CARACTERÍSTICAS DE LOS MIEMBROS DEL HOGAR
                                         </button>
                                     </h2>
                                 </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
                                     <div class="card-body">
                                         @include('encuesta.seccion_4')
                                      {{-- <a href="{{ route('seccion4') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 4</a> --}}
@@ -85,14 +85,14 @@
                             </div>
 
                             <div class="card">
-                                <div class="card-header" id="headingThree">
+                                <div class="card-header" id="heading5">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
                                         Sección #5 -ESTRATEGIAS DEL HOGAR
                                     </button>
                                     </h2>
                                 </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
                                     <div class="card-body">
                                         @include('encuesta.seccion_5')
                                         {{-- <a href="{{ route('seccion5') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 5</a> --}}
@@ -101,28 +101,75 @@
                             </div>
 
                             <div class="card">
-                                <div class="card-header" id="headingThree">
+                                <div class="card-header" id="heading6">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapseThree">
                                         Sección #6 -INGRESOS NO LABORALES
                                     </button>
                                     </h2>
                                 </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
                                     <div class="card-body">
                                         @include('encuesta.seccion_6')
                                         {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
                                     </div>
                                 </div>
                             </div>
-                            @include('encuesta.seccion_hogar_planesyprogramas')
+                            <div class="card">
+                                <div class="card-header" id="heading7">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                                        HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        @include('encuesta.seccion_hogar_planesyprogramas') 
+                                        {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingO">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseO" aria-expanded="false" aria-controls="collapseThree">
+                                        ORGANIZACIÓN DEL HOGAR
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseO" class="collapse" aria-labelledby="headingO" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        @include('encuesta.seccion_org_hogar') 
+                                        {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            {{-- -------------------------------------------------------- --}}
+                            <div class="card">
+                                <div class="card-header" id="headingR">
+                                    <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseR" aria-expanded="false" aria-controls="collapseThree">
+                                        RAZON POR LA CUAL NO SE REALIZÓ LA ENTREVISTA
+                                    </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseR" class="collapse" aria-labelledby="headingR" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        @include('encuesta.seccion_razones_no_encuesta') 
+                                        {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- ------------------------------------------ --}}
                             <div class="card-footer text-muted d-flex justify-content-end">
-                                <div class="col-sm-11 input-column"></div>
+                                {{-- <div class="col-sm-11 input-column"></div> --}}
                                   {{-- <a href="{{ url('/planilla/ver/1') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button"  class="btn  btn-danger  ">CANCELAR</a>  </div> --}}
                                 {{-- <a class="btn btn-light mr-2" type="reset">Cancelar</a> --}}
-                                <button class="btn btn-success" type="submit">Cargar</button>
+                                <button class="btn btn-success" type="submit">Cargar</button>  
                             </div>
-                            
+                         
                           </form>
                     </div>
                 </div>
