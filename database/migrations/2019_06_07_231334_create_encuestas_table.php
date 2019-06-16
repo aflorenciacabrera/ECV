@@ -41,7 +41,7 @@ class CreateEncuestasTable extends Migration
             // 2.
             $table->string('uso_para_dormir'); //de la pregunta 1
             // 3.
-            $table->boolean('uso_para_trabajar'); //si-no  si es todo no sala al 7
+            $table->boolean('uso_para_trabajar1'); //si-no  si es todo no sala al 7
                 $table->string('cuantos_uso_trabajo'); //si
             // 4.
             $table->boolean('cuarto_cocina'); //si-no 
@@ -51,7 +51,7 @@ class CreateEncuestasTable extends Migration
             $table->boolean('para_dormir'); //de los Si de la pregunta 4
                 $table->string('cuantos_uso_dormir'); //si
             // 6.
-            $table->boolean('cuantos_uso_trabajo'); //si
+            $table->boolean('cuantos_uso_trabajo1'); //si
                 $table->string('cuantos_uso'); //si
             // 7.
             $table->string('propietario_vivienda_terreno'); 
@@ -69,7 +69,7 @@ class CreateEncuestasTable extends Migration
             $table->string('kersone_leña_carbon');
             $table->string('otro');
             // 9.
-            $table->string('banio_exclusivo');
+            $table->string('banio_exclusivo1');
             $table->string('banio_compartido_misma_vivienda');
             $table->string('banio_compartido_otra_vivienda');
             $table->string('sin_baño');
