@@ -162,6 +162,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card">
+                                    <div class="card-header" id="headingC">
+                                        <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsec" aria-expanded="false" aria-controls="collapseThree">
+                                                CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS, RECHAZOS Y OTRAS CAUSAS (hogares)
+                                        </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapsec" class="collapse" aria-labelledby="headingC" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            @include('encuesta.seccion_recuperacion_ausencia') 
+                                            {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
+                                        </div>
+                                    </div>
+                                </div>
                             {{-- ------------------------------------------ --}}
                             <div class="card-footer text-muted d-flex justify-content-end">
                                 {{-- <div class="col-sm-11 input-column"></div> --}}
