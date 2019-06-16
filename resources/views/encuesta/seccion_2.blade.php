@@ -31,7 +31,7 @@
                                 <div class="form-group col-md-6">
                                     <br>
                                         <label for="">3.1 ¿Cuántos?</label>
-                                        <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" required>
+                                        <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" >
                                 </div>
                         </div>
     
@@ -86,214 +86,70 @@
                                         <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" required>
                                 </div>
                         </div>
+
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                    <label for="numero_semana">7. Este hogar es….</label>
-                                    <br>
-                                    <div class="form-row ">
-                                        <div class="col-md-10">
-                                            <label for="numero_semana">… propietario de la vivienda y el terreno?</label>
+                                        <div class="form-group col-md-6">
+                                                        <label for="numero_semana">7. Este hogar es….</label>
+                                                        <select class="form-control" name="entrevista_realizada"  required>
+                                                                        <option>… propietario de la vivienda y el terreno?</option>
+                                                                        <option>… propietario de la vivienda solamente?</option>
+                                                                        <option>….inquilino/arrendatario de la vivienda?</option>
+                                                                        <option>… ocupante por pago de impuestos/expensas?</option>
+                                                                        <option>…ocupante en relación de dependencia?</option>
+                                                                        <option>… ocupante gratuito (con permiso)?</option>
+                                                                        <option>… ocupante gratuito (sin permiso)?</option>
+                                                                        <option>… está en sucesión?</option>
+                                                                        <option>…. Otra situación? (especificar)</option>
+                                                        </select>
+                                                
                                         </div>
-                                        <div class="col-md-2" >
-                                            <select class="form-control" name="entrevista_realizada"  required>
-                                                    <option>Si</option>
-                                                    <option>No</option>
-                                            </select>
+                                        <div class="form-group col-md-6">
+                                                <label for="">   </label>
+                                                <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" disabled>
                                         </div>
-                                    </div>
-                                    <div class="form-row ">
-                                        <div class="col-md-10">
-                                            <label for="numero_semana">… propietario de la vivienda solamente?</label>
+                        </div>
+                        
+                        <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                                        <label for="numero_semana">8. ¿Para cocinar, utiliza principalmente…..</label>
+                                                        <select class="form-control" name="entrevista_realizada"  required>
+                                                                        <option>… gas de red?</option>
+                                                        <option>…. Gas de tubo/garrafa?</option>
+                                                        <option>…. Kersone/leña/carbón?</option>
+                                                        <option>…. Otra situación? (especificar)</option>
+                                                        </select>
+                                                
                                         </div>
-                                        <div class="col-md-2" >
-                                            <select class="form-control" name="entrevista_realizada"  required>
-                                                    <option>Si</option>
-                                                    <option>No</option>
-                                            </select>
+                                        <div class="form-group col-md-6">
+                                                <label for="">   </label>
+                                                <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" disabled>
                                         </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">….inquilino/arrendatario de la vivienda?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">… ocupante por pago de impuestos/expensas?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">…ocupante en relación de dependencia?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">… ocupante gratuito (con permiso)?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">… ocupante gratuito (sin permiso)?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">… está en sucesión?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">…. Otra situación? (especificar)</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <br>
-                                    <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                    <label for="numero_semana">8. ¿Para cocinar, utiliza principalmente….</label>
-                                    <br>
-                                    <div class="form-row ">
-                                        <div class="col-md-10">
-                                            <label for="numero_semana">… gas de red?</label>
+                        </div>
+                            
+                        <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                                        <label for="numero_semana">9. ¿El baño es de….</label>
+                                                        <select class="form-control" name="entrevista_realizada"  required>
+                                                                <option>…. Uso exclusivo del hogar?</option>
+                                                                <option>…. Compartido con otro/s hogar/es de la misma vivienda?</option>
+                                                                <option>….Compartifo con otra/s vivienda/s?</option>
+                                                                <option>…. No tiene baño (sólo para los que en Cuest. De Viv. Bloque IV, pregunta 8 dijeron "NO")</option>
+                                                                
+                                                        </select>
+                                                
                                         </div>
-                                        <div class="col-md-2" >
-                                            <select class="form-control" name="entrevista_realizada"  required>
-                                                    <option>Si</option>
-                                                    <option>No</option>
-                                            </select>
+                                        <div class="form-group col-md-6">
+                                                <label for="">   </label>
+                                                <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" disabled>
                                         </div>
-                                    </div>
-                                    <div class="form-row ">
-                                        <div class="col-md-10">
-                                            <label for="numero_semana">…. Gas de tubo/garrafa?</label>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <select class="form-control" name="entrevista_realizada"  required>
-                                                    <option>Si</option>
-                                                    <option>No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">…. Kersone/leña/carbón?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
+                        </div>
                                    
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">…. Otra situación? (especificar)</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <br>
-                                    <input type="text" class="form-control" id="trimestre" name="trimestre" placeholder="" required>
-                                    {{-- --------------------------  --}}
                                   
-                                    <label for="numero_semana">9. ¿El baño es de….</label>
                                     
-                                    <div class="form-row ">
-                                        <div class="col-md-10">
-                                            <label for="numero_semana">…. Uso exclusivo del hogar?</label>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <select class="form-control" name="entrevista_realizada"  required>
-                                                    <option>Si</option>
-                                                    <option>No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row ">
-                                        <div class="col-md-10">
-                                            <label for="numero_semana">…. Compartido con otro/s hogar/es de la misma vivienda?</label>
-                                        </div>
-                                        <div class="col-md-2" >
-                                            <select class="form-control" name="entrevista_realizada"  required>
-                                                    <option>Si</option>
-                                                    <option>No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">….Compartifo con otra/s vivienda/s?</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
+                                    
+                                 
                                    
-                                    <div class="form-row ">
-                                            <div class="col-md-10">
-                                                <label for="numero_semana">…. No tiene baño (sólo para los que en Cuest. De Viv. Bloque IV, pregunta 8 dijeron "NO")</label>
-                                            </div>
-                                            <div class="col-md-2" >
-                                                <select class="form-control" name="entrevista_realizada"  required>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                </select>
-                                            </div>
-                                    </div>
                                     
                             </div>
                             
-                        </div>
-                                     
-                    </div>
+                      
