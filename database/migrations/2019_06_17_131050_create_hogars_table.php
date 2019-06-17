@@ -67,15 +67,15 @@ class CreateHogarsTable extends Migration
             $table->string('CH06');
             $table->string('CH07');
             $table->string('CH08');
-            $table->string('CH08_1');
-            $table->string('CH08_2');
-            $table->string('CH08_3');
-            $table->string('CH08_4');
+            // $table->string('CH08_1');
+            // $table->string('CH08_2');
+            // $table->string('CH08_3');
+            // $table->string('CH08_4');
             $table->string('CH09');
             $table->string('CH10');
-            $table->string('CH10_1');
-            $table->string('CH10_2');
-            $table->string('CH10_3');
+            // $table->string('CH10_1');
+            // $table->string('CH10_2');
+            // $table->string('CH10_3');
             $table->string('CH11');
             $table->string('CH12');
             $table->string('CH13');
@@ -87,6 +87,33 @@ class CreateHogarsTable extends Migration
             $table->string('CH17');
             $table->string('CH18');
         // V. ESTRATEGIAS DEL HOGAR
+            $table->string('V1');
+            $table->string('V2');
+            $table->string('V3');
+            $table->string('V4');
+            $table->string('V5');
+            $table->string('V6');
+            $table->string('V7');
+            $table->string('V8');
+            $table->string('V9');
+            $table->string('V10');
+            $table->string('V11');
+            $table->string('V12');
+            $table->string('V13');
+            $table->string('V14');
+            $table->string('V15');
+            $table->string('V16');
+            $table->string('V17');
+            $table->string('V18');
+            $table->string('V19_A');
+            $table->string('V19_B');
+         // VI. Ingreso no laborales
+            // $table->string('VImes');
+        // VII. Organizacion del hogar 
+            $table->string('VII1');
+            $table->string('VII2');
+            $table->string('VII3');
+            
             $table->timestamps();
         });
     }

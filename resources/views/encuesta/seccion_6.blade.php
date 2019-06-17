@@ -1,6 +1,6 @@
 
 <div class="card-body">
-Para finalizar, en el mes de  <select name="" id=""  >
+Para finalizar, en el mes de  <select name="VImes" id=""  >
                                 <option value="">enero</option>
                                 <option value="">febrero</option>
                                 <option value="">marzo</option>
@@ -13,7 +13,7 @@ Para finalizar, en el mes de  <select name="" id=""  >
                                 <option value="">octubre</option>
                                 <option value="">noviembre</option>
                                 <option value="">diciembre</option>
-                            </select>   ¿cuánto cobró por <input type="text"  > ? 
+                            </select>   ¿cuánto cobró por <input type="text"  name="VIcobr"> ? 
 (indagar sólo en los ítems 2 a 5, 8 a 12 y 19.a marcados con sí en el Bloque estrategias del hogar)
 <br><br>
 <table class="table table-bordered table-responsive">
