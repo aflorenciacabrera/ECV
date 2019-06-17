@@ -138,11 +138,11 @@ class CreateHogarsTable extends Migration
                 $table->string('V5_M_4');
                 $table->string('V5_M_5');
             $table->string('V8_M');
-                $table->string('V8_M_1')
-                $table->string('V8_M_2')
-                $table->string('V8_M_3')
-                $table->string('V8_M_4')
-                $table->string('V8_M_5')
+                $table->string('V8_M_1');
+                $table->string('V8_M_2');
+                $table->string('V8_M_3');
+                $table->string('V8_M_4');
+                $table->string('V8_M_5');
             $table->string('V9_M');
                 $table->string('V9_M_1');
                 $table->string('V9_M_2');
