@@ -113,7 +113,25 @@ class CreateHogarsTable extends Migration
             $table->string('VII1');
             $table->string('VII2');
             $table->string('VII3');
-            
+        // VIII. Planes y programas Gubernamentales
+            $table->string('DI');
+            $table->string('DI_1');
+            $table->string('AI');
+            $table->string('AI_1');
+            $table->string('MI');
+            $table->string('MI_1');
+            $table->string('TS');
+            $table->string('TS_1');
+            $table->string('TV');
+            $table->string('TV_1');
+            $table->string('BE');
+            $table->string('BE_1');
+            $table->string('TM');
+            $table->string('TM_1');
+            $table->string('TS');
+            $table->string('TS_1');
+            $table->string('PM');
+            $table->string('PM_1');
             $table->timestamps();
         });
     }

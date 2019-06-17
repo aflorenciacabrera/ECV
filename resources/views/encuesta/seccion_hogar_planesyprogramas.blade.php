@@ -16,15 +16,15 @@
          
           <div class="col-md-10">
             <label for="numero_semana">1.1¿Cuántos miembros?</label>
-            <input type="number" class="form-control">
+            <input type="number" class="form-control" name="DI_1">
         </div>
        
     </div>
      
       <div class="col-md-2" >
-          <select class="form-control" name="entrevista_realizada"  required>
-                  <option>Si</option>
-                  <option>No</option>
+          <select class="form-control" name="DI"  >
+                  <option value="1">Si</option>
+                  <option value="2">No</option>
           </select>
       </div>
     </div>
@@ -35,15 +35,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">2.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="AI_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="AI"  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -54,15 +54,16 @@
            
             <div class="col-md-10">
               <label for="numero_semana">3.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="MI_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="MI"  required>
+                <option value="1">Si</option>
+                <option value="2">No</option>
+                
             </select>
         </div>
       </div>
@@ -73,15 +74,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">4.1 ¿Porcentaje?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="TS_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="TS"  required>
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -92,15 +93,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">5.1 ¿Porcentaje?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="TV_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="TV"  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -114,15 +115,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">6.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="BE_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="BE"  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -133,15 +134,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">7.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="TM_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="TM"  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -152,15 +153,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">8.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="TS_1">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="TS"  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -171,15 +172,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">9.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="PM_1" >
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name="PM"  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
@@ -190,15 +191,15 @@
            
             <div class="col-md-10">
               <label for="numero_semana">10.1 Monto cobrado total</label>
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="">
           </div>
          
       </div>
        
         <div class="col-md-2" >
-            <select class="form-control" name="entrevista_realizada"  required>
-                    <option>Si</option>
-                    <option>No</option>
+            <select class="form-control" name=""  >
+                <option value="1">Si</option>
+                <option value="2">No</option>
             </select>
         </div>
       </div>
