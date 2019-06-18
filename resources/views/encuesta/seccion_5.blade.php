@@ -1,6 +1,6 @@
 
 
-<div class="form-group col-md-6">
+<div class="form-group col-md-10">
         <label for="numero_semana">En los últimos 3 meses, las personas de este hogar han vivido…</label>
         <br>
         <div class="form-row ">
@@ -59,11 +59,23 @@
                 </div>
         </div>
         <div class="form-row ">
+            <div class="col-md-10">
+                <label for="numero_semana">6… con  mercaderías,  ropa,  alimentos del gobierno, 
+                    iglesias, escuelas, etc.?</label>
+            </div>
+            <div class="col-md-2" >
+                <select class="form-control" name="V6"  >
+                    <option value="1">Si</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+    </div>
+        <div class="form-row ">
                 <div class="col-md-10">
-                    <label for="numero_semana">6… con mercaderías, ropa, alimentos de familiares, vecinos u otras personas que no viven en este hogar? Cobraron…</label>
+                    <label for="numero_semana">7… con mercaderías, ropa, alimentos de familiares, vecinos u otras personas que no viven en este hogar?  </label>
                 </div>
                 <div class="col-md-2" >
-                    <select class="form-control" name="V6"  >
+                    <select class="form-control" name="V7"  >
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
