@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Cargar Encuesta                        
+                    Cargar Encuesta de Hogar                      
                 </div>
                 <div class="card-body">
                     {{-- Alert mesaje --}}
@@ -14,7 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form method="POST" action="{{route('crearencuesta')}}">
+                    <form method="POST" action="{{route('crearencuestaHogar')}}">
                         @csrf
                     <div class="accordion" id="accordionExample">
                             <div class="card">
@@ -29,7 +29,7 @@
                               {{-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample"> --}}
                                   <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    @include('encuesta.seccion_1')
+                                    @include('encuestaHogar.seccion_1')
                                     {{-- <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> --}}
                                     {{-- <a href="{{ route('seccion1') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 1</a> --}}
                                 </div>
@@ -46,7 +46,7 @@
                               </div>
                               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    @include('encuesta.seccion_2')
+                                    @include('encuestaHogar.seccion_2')
                                     {{-- <a href="{{ route('seccion2') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 2</a> --}}
                                 </div>
                               </div>
@@ -62,7 +62,7 @@
                               </div>
                               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    @include('encuesta.seccion_3')  
+                                    @include('encuestaHogar.seccion_3')  
                                   {{-- <a href="{{ route('seccion3') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 3</a> --}}
                                 </div>
                               </div>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @include('encuesta.seccion_4')
+                                        @include('encuestaHogar.seccion_4')
                                      {{-- <a href="{{ route('seccion4') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 4</a> --}}
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@
                                 </div>
                                 <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @include('encuesta.seccion_5')
+                                        @include('encuestaHogar.seccion_5')
                                         {{-- <a href="{{ route('seccion5') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 5</a> --}}
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@
                                 </div>
                                 <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @include('encuesta.seccion_6')
+                                        @include('encuestaHogar.seccion_6')
                                         {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                 </div>
                                 <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @include('encuesta.seccion_hogar_planesyprogramas') 
+                                        @include('encuestaHogar.seccion_hogar_planesyprogramas') 
                                         {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@
                                 </div>
                                 <div id="collapseO" class="collapse" aria-labelledby="headingO" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @include('encuesta.seccion_org_hogar') 
+                                        @include('encuestaHogar.seccion_org_hogar') 
                                         {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                                 </div>
                                 <div id="collapseR" class="collapse" aria-labelledby="headingR" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        @include('encuesta.seccion_razones_no_encuesta') 
+                                        @include('encuestaHogar.seccion_razones_no_encuesta') 
                                         {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
                                     </div>
                                 </div>
@@ -172,7 +172,7 @@
                                     </div>
                                     <div id="collapsec" class="collapse" aria-labelledby="headingC" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            @include('encuesta.seccion_recuperacion_ausencia') 
+                                            @include('encuestaHogar.seccion_recuperacion_ausencia') 
                                             {{-- <a href="{{ route('seccion6') }}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Sección 6</a> --}}
                                         </div>
                                     </div>

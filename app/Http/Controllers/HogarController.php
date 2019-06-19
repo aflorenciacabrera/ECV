@@ -7,28 +7,28 @@ use Illuminate\Http\Request;
 class HogarController extends Controller
 {
     //
-    public function verEncuesta(){
-        return view('encuesta');
+    public function verEncuestaHogar(){
+        return view('encuestaHogar');
       }
-      public function verseccion1(){
-        return view('encuesta/seccion_1');
+      public function verHogarseccion1(){
+        return view('encuestaHogar/seccion_1');
       }
-      public function verseccion2(){
-        return view('encuesta/seccion_2');
+      public function verHogarseccion2(){
+        return view('encuestaHogar/seccion_2');
       }
-      public function verseccion3(){
-        return view('encuesta/seccion_3');
+      public function verHogarseccion3(){
+        return view('encuestaHogar/seccion_3');
       }
-      public function verseccion4(){
-        return view('encuesta/seccion_4');
+      public function verHogarseccion4(){
+        return view('encuestaHogar/seccion_4');
       }
-      public function verseccion5(){
-        return view('encuesta/seccion_5');
+      public function verHogarseccion5(){
+        return view('encuestaHogar/seccion_5');
       }
-      public function verseccion6(){
-        return view('encuesta/seccion_6');
+      public function verHogarseccion6(){
+        return view('encuestaHogar/seccion_6');
       }
-      public function crearEncuesta (Request $request)
+      public function crearEncuestaHogar (Request $request)
         {
           $e = new encuesta; 
   
@@ -53,5 +53,12 @@ class HogarController extends Controller
           $e->save();
        
         return redirect(url('home'))->with('status','Formulario de Encuensta cargado');;
+        }
+
+        public function verEncuestaVivienda(){
+          return view('encuestaVivienda');
+        }
+        public function verEncuestaInvivenda(){
+          return view('encuestaInvivenda');
         }
 }
