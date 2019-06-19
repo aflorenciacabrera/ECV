@@ -1,5 +1,3 @@
-@extends('layouts.app')
-@section('content')
 
 <div class="card-body">      
         <div class="form-row">
@@ -43,4 +41,3 @@
        
     </div>
             
-@endsection
