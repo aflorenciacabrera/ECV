@@ -1,11 +1,3 @@
-{{-- 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                  Sección I - Identificación      
-                </div> --}}
 
 <div class="card-body">      
     <div class="form-row">
@@ -93,9 +85,9 @@
                     <br>
                     <label for="exampleInputPassword1">Modalidad de Aplicación</label>
                     <select class="form-control" name="modalidad_aplicacion"  >
-                        <option value="">Personal Completa</option>
-                        <option value="">Personal Telefónico</option>
-                        <option value="">Solo Telefónica</option>
+                        <option value="1">Personal Completa</option>
+                        <option value="2">Personal Telefónico</option>
+                        <option value="3">Solo Telefónica</option>
                     </select>
                     <br>
                     <label for="encuestador">Encuestador</label>
@@ -105,7 +97,4 @@
                 </div>
     </div>                    
 </div>
-            {{-- </div>
-        </div>
-    </div>
-</div> --}}
+           

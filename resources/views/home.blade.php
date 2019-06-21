@@ -28,8 +28,9 @@
                             {{-- <hr class="my-4"> --}}
                             
                             {{-- <a href="{{route('encuesta')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> --}}
-                            <a href="{{route('encuestaVivienda')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Nueva Vivienda</a>
-                            <a href="{{route('encuestaHogar')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Nueva Encuesta</a>
+                            <a href="{{route('encuestaVivienda')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"> Vivienda</a>
+                            <a href="{{route('encuestaHogar')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"> Encuesta Hogar</a>
+                            <a href="{{route('encuestaIndividuo')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"> Encuesta Individuo</a>
                           </div>
                     {{-- <input type="datetime-local" name="fechayhora"  step="1"  >
                     Fecha y hora actual: <input type="datetime-local" name="fechahora" step="1"  value=""> --}}
