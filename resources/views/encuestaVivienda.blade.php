@@ -176,30 +176,17 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                            Sección #5 - V. CODICIÓN DE RESIDENCIA.
+                                            Sección #5 - V. CODICIÓN DE RESIDENCIA Y   Sección #6 - VI. CONTROL DE CAMBIOS .
                                             </button>
                                         </h2>
                                     </div>
                                     <div id="collapse5" class="collapse " aria-labelledby="heading5" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            @include('encuestaVivienda.seccion_5')
+                                            @include('encuestaVivienda.seccion_5-6')
                                         </div>
                                   </div>
                             </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                            Sección #6 - VI. CONTROL DE CAMBIOS .
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse6" class="collapse " aria-labelledby="heading6" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            @include('encuestaVivienda.seccion_6')
-                                        </div>
-                                  </div>
-                            </div>
+                           
                             <div class="card-footer text-muted d-flex justify-content-end">
                                 <button class="btn btn-success" type="submit">Cargar</button>  
                             </div>
