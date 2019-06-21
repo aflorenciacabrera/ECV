@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+{{-- @extends('layouts.app')
+@section('content') --}}
 
 <div class="card-body">
                 Atención: 
@@ -170,5 +170,5 @@
             
                     
             </div>
-                    
-@endsection
+{{--                     
+@endsection --}}
