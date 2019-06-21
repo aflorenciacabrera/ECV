@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Cargar Encuesta de Hogar                      
+                   <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Hogar  </label>                     
                 </div>
                 <div class="card-body">
                     {{-- Alert mesaje --}}
@@ -20,7 +20,7 @@
                             <div class="card">
                               <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                    Sección #1 - I. IDENTIFICACIÓN
                                   </button>
                                   {{-- @include('shared.errors') --}}
@@ -38,7 +38,7 @@
                             <div class="card">
                               <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Sección #2 - II. CARACTERÍSTICAS HABITACIONALES DEL HOGAR (sólo para hogares que responden por primera vez o mal tomado en la
                                     participación anterior)
                                   </button>
@@ -55,7 +55,7 @@
                             <div class="card">
                               <div class="card-header" id="headingThree">
                                 <h2 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     Sección #3 - III. EXCLUSIVAMENTE PARA HOGARES DE PENSIONISTAS Y SERVICIO DOMÉSTICO CON CAMA
                                   </button>
                                 </h2>
@@ -71,7 +71,7 @@
                             <div class="card">
                                 <div class="card-header" id="heading4">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
                                             Sección #4 - IV. CARACTERÍSTICAS DE LOS MIEMBROS DEL HOGAR
                                         </button>
                                     </h2>
@@ -87,7 +87,7 @@
                             <div class="card">
                                 <div class="card-header" id="heading5">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
                                         Sección #5 -ESTRATEGIAS DEL HOGAR
                                     </button>
                                     </h2>
@@ -103,7 +103,7 @@
                             <div class="card">
                                 <div class="card-header" id="heading6">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapseThree">
                                         Sección #6 -INGRESOS NO LABORALES
                                     </button>
                                     </h2>
@@ -118,7 +118,7 @@
                             <div class="card">
                                 <div class="card-header" id="heading7">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
                                         HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES
                                     </button>
                                     </h2>
@@ -133,7 +133,7 @@
                             <div class="card">
                                 <div class="card-header" id="headingO">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseO" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseO" aria-expanded="false" aria-controls="collapseThree">
                                         ORGANIZACIÓN DEL HOGAR
                                     </button>
                                     </h2>
@@ -150,7 +150,7 @@
                             <div class="card">
                                 <div class="card-header" id="headingR">
                                     <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseR" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseR" aria-expanded="false" aria-controls="collapseThree">
                                         RAZON POR LA CUAL NO SE REALIZÓ LA ENTREVISTA
                                     </button>
                                     </h2>
@@ -165,7 +165,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingC">
                                         <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsec" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapsec" aria-expanded="false" aria-controls="collapseThree">
                                                 CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS, RECHAZOS Y OTRAS CAUSAS (hogares)
                                         </button>
                                         </h2>

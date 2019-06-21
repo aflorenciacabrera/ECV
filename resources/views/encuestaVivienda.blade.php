@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header ">
-                    Cargar Encuesta de Vivienda                       
+                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Vivienda  </label>                            
                 </div>
                 <div class="card-body">
                     {{-- Alert mesaje --}}
@@ -20,7 +20,7 @@
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         Sección #1 - I. IDENTIFICACIÓN
                                         </button>
                                     </h2>
@@ -34,7 +34,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                             Sección #2 - II. UBICACIÓN.
                                             </button>
                                         </h2>
@@ -48,7 +48,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2P1" aria-expanded="false" aria-controls="collapse2P1">
+                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P1" aria-expanded="false" aria-controls="collapse2P1">
                                                 PRIMERA PARTICIPACIÓN.
                                             </button>
                                         </h2>
@@ -62,7 +62,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3P1" aria-expanded="false" aria-controls="collapse3P1">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P1" aria-expanded="false" aria-controls="collapse3P1">
                                             Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - PRIMERA PARTICIPACIÓN.
                                             </button>
                                         </h2>
@@ -76,7 +76,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2P2" aria-expanded="false" aria-controls="collapse2P2">
+                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P2" aria-expanded="false" aria-controls="collapse2P2">
                                                 SEGUNDA PARTICIPACIÓN. 
                                             </button>
                                         </h2>
@@ -90,7 +90,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3P2" aria-expanded="false" aria-controls="collapse3P2">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P2" aria-expanded="false" aria-controls="collapse3P2">
                                                     Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - SEGUNDA PARTICIPACIÓN.
                                             </button>
                                         </h2>
@@ -104,7 +104,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2P3" aria-expanded="false" aria-controls="collapse2P3">
+                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P3" aria-expanded="false" aria-controls="collapse2P3">
                                                    TERCERA PARTICIPACIÓN. 
                                             </button>
                                         </h2>
@@ -118,7 +118,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3P3" aria-expanded="false" aria-controls="collapse3P3">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P3" aria-expanded="false" aria-controls="collapse3P3">
                                                     Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - TERCERA PARTICIPACIÓN.
                                             </button>
                                         </h2>
@@ -132,7 +132,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2P4" aria-expanded="false" aria-controls="collapse2P4">
+                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P4" aria-expanded="false" aria-controls="collapse2P4">
                                                     CUARTA PARTICIPACIÓN. 
                                             </button>
                                         </h2>
@@ -146,7 +146,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3P4" aria-expanded="false" aria-controls="collapse3P4">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P4" aria-expanded="false" aria-controls="collapse3P4">
                                                     Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - CUARTA PARTICIPACIÓN.
                                             </button>
                                         </h2>
@@ -161,7 +161,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                             Sección #4 - IV. CARACTERÍSTICA DE LA VIVIENDA.
                                             </button>
                                         </h2>
@@ -175,7 +175,7 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                             Sección #5 - V. CODICIÓN DE RESIDENCIA Y   Sección #6 - VI. CONTROL DE CAMBIOS .
                                             </button>
                                         </h2>
