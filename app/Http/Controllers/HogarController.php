@@ -58,7 +58,7 @@ class HogarController extends Controller
         public function verEncuestaVivienda(){
           return view('encuestaVivienda');
         }
-        public function verEncuestaInvivenda(){
-          return view('encuestaInvivenda');
+        public function verEncuestaIndividuo(){
+          return view('encuestaIndividuo');
         }
 }
