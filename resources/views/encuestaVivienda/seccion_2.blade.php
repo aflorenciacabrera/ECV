@@ -12,7 +12,7 @@
             </div>
             <div class="form-group col-md-4">
                         <label for="numero_listado">Calle:</label>
-                        <input type="text" class="form-control" id="" name="lado" placeholder="" >
+                        <input type="text" class="form-control" id="" name="calle" placeholder="" >
            </div>
         </div>   
        

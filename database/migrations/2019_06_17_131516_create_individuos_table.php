@@ -14,7 +14,7 @@ class CreateIndividuosTable extends Migration
     public function up()
     {
         Schema::create('individuos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->timestamps();
         });
     }

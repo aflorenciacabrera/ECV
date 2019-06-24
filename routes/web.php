@@ -19,10 +19,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Encuestas
-Route::get('encuestaVivienda', 'HogarController@verEncuestaVivienda')->name('encuestaVivienda');
+Route::get('encuestaVivienda', 'ViviendaController@verEncuestaVivienda')->name('encuestaVivienda');
+Route::post('encuesta/crear', 'ViviendaController@crearEncuestaVivienda')->name('crearencuestaVivienda');
+
 Route::get('encuestaHogar', 'HogarController@verEncuestaHogar')->name('encuestaHogar');
-Route::get('encuestaIndividuo', 'HogarController@verEncuestaIndividuo')->name('encuestaIndividuo');
 Route::post('encuesta/crear', 'HogarController@crearEncuestaHogar')->name('crearencuestaHogar');
+
+Route::get('encuestaIndividuo', 'HogarController@verEncuestaIndividuo')->name('encuestaIndividuo');
+
+
 
 // Route::get('encuestaHogar/seccion_1', 'HogarController@verHogarseccion1')->name('Hogar_seccion1');
 // Route::get('encuestaHogar/seccion_2', 'HogarController@verHogarseccion2')->name('Hogar_seccion2');

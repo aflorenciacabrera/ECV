@@ -14,7 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form method="POST" action="{{route('crearencuestaHogar')}}">
+                    <form method="POST" action="{{route('crearencuestaVivienda')}}">
                         @csrf
                         <div class="accordion" id="accordionExample">
                             <div class="card">

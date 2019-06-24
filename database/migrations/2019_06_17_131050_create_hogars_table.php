@@ -14,7 +14,7 @@ class CreateHogarsTable extends Migration
     public function up()
     {
         Schema::create('hogars', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
         // I. Identificación
             $table->string('codigo_area');
             $table->string('numero_listado');
@@ -33,7 +33,7 @@ class CreateHogarsTable extends Migration
             $table->string('modalidad_aplicacion');
             $table->string('encuestador');
             $table->string('numero_encuestador');
-           
+        
         // II. Caracteristicas Habitacionales del Hogar (sólo para hogares que responden por primera vez o mal tomado en la participación anterior)
             $table->string('II1'); 
             $table->string('II2');         
@@ -106,7 +106,7 @@ class CreateHogarsTable extends Migration
             $table->string('V18');
             $table->string('V19_A');
             $table->string('V19_B');
-         // VI. Ingreso no laborales
+        // VI. Ingreso no laborales
             $table->string('V2_M');
                 $table->string('V2_M_1');
                 $table->string('V2_M_2');
