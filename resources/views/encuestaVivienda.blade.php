@@ -14,7 +14,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form method="POST" action="{{route('crearencuestaVivienda')}}">
+                     {{-- <form method="POST" action="{{url('encuesta/Vivienda/crear')}}"> --}}
+                    <form method="POST" action="{{route('crearEncuestaVivienda')}}">
                         @csrf
                         <div class="accordion" id="accordionExample">
                             <div class="card">
