@@ -201,8 +201,8 @@ class CreateHogarsTable extends Migration
             $table->text('BE_1')->nullable();
             $table->text('TM')->nullable();
             $table->text('TM_1')->nullable();
-            $table->text('TS');
-            $table->text('TS_1');
+            $table->text('TS')->nullable();
+            $table->text('TS_1')->nullable();
             $table->text('PM')->nullable();
             $table->text('PM_1')->nullable();
         // RAZON POR LA CUAL NO SE REALIZÓ LA ENTREVISTA
