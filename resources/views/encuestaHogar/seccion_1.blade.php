@@ -43,36 +43,36 @@
     </div>   
     <div class="form-row">
             <div class="form-group col-md-6">
-                    <table class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                <th scope="col">Visita Nº</th>
-                                <th scope="col">Fecha y Hora</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
+                   <table class="table table-striped table-bordered">
+                                <thead>
+                                        <tr>
+                                        <th scope="col">Visita Nº</th>
+                                        <th scope="col">Fecha y Hora</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                        <th scope="row">1</th>
                                         <td><input type="datetime-local" name="visitas_fecha_hora_1"   value="" ></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td><input type="datetime-local" name="visitas_fecha_hora_2"  value="" ></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td><input type="datetime-local" name="visitas_fecha_hora_3" value="" ></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td><input type="datetime-local" name="visitas_fecha_hora_4"  value="" ></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td><input type="datetime-local" name="visitas_fecha_hora_5"  value="" ></td>
-                                </tr>
-                            </tbody>
-                    </table>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">2</th>
+                                        <td><input type="datetime-local" name="visitas_fecha_hora_2"  value="" ></td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">3</th>
+                                        <td><input type="datetime-local" name="visitas_fecha_hora_3" value="" ></td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">4</th>
+                                        <td><input type="datetime-local" name="visitas_fecha_hora_4"  value="" ></td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">5</th>
+                                        <td><input type="datetime-local" name="visitas_fecha_hora_5"  value="" ></td>
+                                        </tr>
+                                </tbody>
+                        </table>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleInputPassword1">Entrevista Realizada</label>

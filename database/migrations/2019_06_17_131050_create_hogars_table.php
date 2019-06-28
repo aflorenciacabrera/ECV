@@ -17,22 +17,22 @@ class CreateHogarsTable extends Migration
             $table->increments('id');
         // I. Identificación
             $table->text('codigo_area')->nullable();
-            $table->text('numero_listado')->nullable()->nullable()->nullable();
-            $table->text('numero_semana')->nullable()->nullable()->nullable();
-            $table->text('trimestre')->nullable()->nullable()->nullable();
-            $table->text('anio')->nullable()->nullable()->nullable();
-            $table->text('numero_vivienda')->nullable()->nullable()->nullable();
-            $table->text('numero_hogar')->nullable()->nullable()->nullable();
-            $table->text('respondiente')->nullable()->nullable()->nullable();
-            $table->text('visitas_fecha_hora_1')->nullable()->nullable();
-            $table->text('visitas_fecha_hora_2')->nullable()->nullable();
-            $table->text('visitas_fecha_hora_3')->nullable()->nullable();
-            $table->text('visitas_fecha_hora_4')->nullable()->nullable();
-            $table->text('visitas_fecha_hora_5')->nullable()->nullable();
-            $table->text('entrevista_realizada')->nullable()->nullable();
-            $table->text('modalidad_aplicacion')->nullable()->nullable();
+            $table->text('numero_listado')->nullable()->nullable();
+            $table->text('numero_semana')->nullable()->nullable();
+            $table->text('trimestre')->nullable()->nullable();
+            $table->text('anio')->nullable()->nullable();
+            $table->text('numero_vivienda')->nullable()->nullable();
+            $table->text('numero_hogar')->nullable();
+            $table->text('respondiente')->nullable();
+            $table->text('visitas_fecha_hora_1')->nullable();
+            $table->text('visitas_fecha_hora_2')->nullable();
+            $table->text('visitas_fecha_hora_3')->nullable();
+            $table->text('visitas_fecha_hora_4')->nullable();
+            $table->text('visitas_fecha_hora_5')->nullable();
+            $table->text('entrevista_realizada')->nullable();
+            $table->text('modalidad_aplicacion')->nullable();
             $table->text('encuestador')->nullable();
-            $table->text('numero_encuestador')->nullable()->nullable();
+            $table->text('numero_encuestador')->nullable();
         
         // II. Caracteristicas Habitacionales del Hogar (sólo para hogares que responden por primera vez o mal tomado en la participación anterior)
             $table->text('II1')->nullable(); 
@@ -106,7 +106,9 @@ class CreateHogarsTable extends Migration
             $table->text('V18')->nullable();
             $table->text('V19_A')->nullable();
             $table->text('V19_B')->nullable();
-        // VI. Ingreso no laborales
+            // VI. Ingreso no laborales
+            $table->text( 'VImes')->nullable();
+            $table->text( 'VIcobr')->nullable();
             $table->text('V2_M')->nullable();
                 $table->text('V2_M_1')->nullable();
                 $table->text('V2_M_2')->nullable();
@@ -180,29 +182,47 @@ class CreateHogarsTable extends Migration
                 $table->text('V19_M_4')->nullable();
                 $table->text('V19_M_5')->nullable();
             $table->text('T_Vi')->nullable();
-        // VII. Organizacion del hogar 
+        // ORGANIZACIÓN DEL HOGAR
             $table->text('VII1')->nullable();
             $table->text('VII2')->nullable();
             $table->text('VII3')->nullable();
-        // VIII. Planes y programas Gubernamentales
+        // HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES
             $table->text('DI')->nullable();
             $table->text('DI_1')->nullable();
             $table->text('AI')->nullable();
             $table->text('AI_1')->nullable();
             $table->text('MI')->nullable();
             $table->text('MI_1')->nullable();
-            $table->text('TS')->nullable();
-            $table->text('TS_1')->nullable();
+            $table->text('TSA')->nullable();
+            $table->text('TSA_1')->nullable();
             $table->text('TV')->nullable();
             $table->text('TV_1')->nullable();
             $table->text('BE')->nullable();
             $table->text('BE_1')->nullable();
             $table->text('TM')->nullable();
             $table->text('TM_1')->nullable();
-            // $table->text('TS');
-            // $table->text('TS_1');
+            $table->text('TS');
+            $table->text('TS_1');
             $table->text('PM')->nullable();
             $table->text('PM_1')->nullable();
+        // RAZON POR LA CUAL NO SE REALIZÓ LA ENTREVISTA
+            $table->text( 'motivo')->nullable();
+            $table->text( 'ausencia')->nullable();
+            $table->text( 'rechazo')->nullable();
+            $table->text( 'otro')->nullable();
+            $table->text( 'informante')->nullable();
+            $table->text( 'observaciones')->nullable();
+            // CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS,RECHAZOS Y OTRAS CAUSAS(hogares)
+            $table->text( 'supervision')->nullable();
+            $table->text( 'super_nombre')->nullable();
+            $table->text( 'super_num')->nullable();
+            $table->text( 'r_visitas_fecha_hora_1')->nullable();
+            $table->text( 'r_visitas_fecha_hora_2')->nullable();
+            $table->text( 'r_visitas_fecha_hora_3')->nullable();
+            $table->text( 'r_visitas_fecha_hora_4')->nullable();
+            $table->text( 'r_visitas_fecha_hora_5')->nullable();
+            $table->text( 'entrega')->nullable();
+            $table->text( 'mal_tomado')->nullable();
             $table->timestamps();
         });
     }
