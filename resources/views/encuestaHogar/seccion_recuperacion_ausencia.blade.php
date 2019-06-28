@@ -8,7 +8,7 @@
                                 <label for="">¿Salió a supervisión?</label>
                         </div>
                             <div class="col-md-2" >
-                                    <select name="" id="" class="form-control">
+                                    <select name="supervision" id="" class="form-control">
                                             <option value="">Si</option>
                                             <option value="">No</option>                                        
                                     </select>
@@ -22,7 +22,7 @@
                         <label for="">Supervisor:</label>
                     </div>
                     <div class="col-md-6" >
-                        <input type="text" class="form-control">
+                        <input type="text" name="super_nombre" class="form-control">
                     </div>
                    
                 </div>  
@@ -32,7 +32,7 @@
                         <label for="">N°:</label>
                     </div>
                     <div class="col-md-2" >
-                        <input type="text" class="form-control">
+                        <input type="text" name="super_num" class="form-control">
                     </div> 
                 </div>
             </div>  
@@ -52,24 +52,24 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td><input type="datetime-local" name="visitas_fecha_hora_1"   value="" required></td>
+                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_1"   value="" ></td>
                                             
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
-                                            <td><input type="datetime-local" name="visitas_fecha_hora_2"  value="" required></td>
+                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_2"  value="" ></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
-                                            <td><input type="datetime-local" name="visitas_fecha_hora_3" value="" required></td>
+                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_3" value="" ></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
-                                            <td><input type="datetime-local" name="visitas_fecha_hora_4"  value="" required></td>
+                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_4"  value="" ></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">5</th>
-                                            <td><input type="datetime-local" name="visitas_fecha_hora_5"  value="" required></td>
+                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_5"  value="" ></td>
                                         </tr>
                                     </tbody>
                             </table>                              
@@ -84,7 +84,7 @@
                                 <label for="">El encuestador entregó...</label>
                             </div>
                             <div class="col-md-4" >
-                               <select name="" id=""  class="form-control">
+                               <select name="entrega" id=""  class="form-control">
                                    <option value="">...Ausencia</option>
                                    <option value="">...Rechazo</option>
                                    <option value="">...Otras causas</option>
@@ -97,7 +97,7 @@
                                 <label for="">Mal Tomado:</label>
                             </div>
                             <div class="col-md-2" >
-                              <input type="checkbox" name="" id="">
+                              <input type="checkbox" name="mal_tomado" id="">
                             </div> 
                         </div>
                     </div>  

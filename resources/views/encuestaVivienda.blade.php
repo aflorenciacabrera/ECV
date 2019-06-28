@@ -64,7 +64,7 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P1" aria-expanded="false" aria-controls="collapse3P1">
-                                            Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - PRIMERA PARTICIPACIÓN.
+                                            PRIMERA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
                                             </button>
                                         </h2>
                                     </div>
@@ -92,7 +92,7 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P2" aria-expanded="false" aria-controls="collapse3P2">
-                                                    Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - SEGUNDA PARTICIPACIÓN.
+                                                    SEGUNDA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
                                             </button>
                                         </h2>
                                     </div>
@@ -120,7 +120,7 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P3" aria-expanded="false" aria-controls="collapse3P3">
-                                                    Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - TERCERA PARTICIPACIÓN.
+                                                   TERCERA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
                                             </button>
                                         </h2>
                                     </div>
@@ -148,7 +148,7 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P4" aria-expanded="false" aria-controls="collapse3P4">
-                                                    Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES - CUARTA PARTICIPACIÓN.
+                                                    CUARTA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
                                             </button>
                                         </h2>
                                     </div>
