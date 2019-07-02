@@ -52,7 +52,7 @@
                 <div class="form-group col-md-6">
                         <label for="">5. ¿El techo tiene cielorraso/revestimiento interior? </label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
-                        <select class="form-control" name="cielorraso"  >
+                        <select class="form-control" name="cielorraso"  id="cielorraso">
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>     
                         </select>  
@@ -60,7 +60,7 @@
                 <div class="form-group col-md-6">
                         <label for="">6. ¿ Tiene agua…</label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
-                        <select class="form-control" name="agua"  >
+                        <select class="form-control" name="agua" id="agua" >
                                 <option value="1" >… Por cañería dentro de la vivienda?</option>
                                 <option value="2" >… Fuera de la vivienda pero dentro del terreno?</option> 
                                 <option value="3" >… Fuera del terreno?</option>                
@@ -77,14 +77,14 @@
                                 <option value="3">… Perforación con bomba manual?</option>
                                 <option value="4" >…Otra fuente? (especificar)</option>     
                         </select>  
-                        <input type="text" class="form-control" id="" name="tipo_agua_otro" placeholder="" >  
+                        <input type="text" class="form-control" id="" name="tipo_agua_otro"  placeholder="" >  
                 </div> 
                 <div class="form-group col-md-6">
                         <label for="">8. ¿Tiene baño/letrina?</label>
-                        <small id="" class="form-text text-muted">(a p.12)</small>
-                        <select class="form-control" name="banio"  >
+                        {{-- <small id="" class="form-text text-muted">(a p.12)</small> --}}
+                        <select class="form-control" name="banio" id="banio" >
                                 <option value="1">Si</option>
-                                <option value="2" >No</option>     
+                                <option value="2" >No - <small id="" class="form-text text-muted">(a p.12)</small></option>     
                         </select> 
                 </div>                 
         </div> 
@@ -92,7 +92,7 @@
                 <div class="form-group col-md-6">
                         <label for="">9. ¿El baño o letrina está….</label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
-                        <select class="form-control" name="banio_lugar"  >
+                        <select class="form-control" name="banio_lugar" id="banio_lugar" >
                                 <option value="1">… Dentro de la vivienda?</option>
                                 <option value="2">… Fuera de la vivienda pero dentro del terreno?</option>
                                 <option value="3">…Fuera del terreno?</option>
@@ -103,7 +103,7 @@
                 <div class="form-group col-md-6">
                         <label for="">10. ¿El baño tiene…</label>
                         {{-- <small id="" class="form-text text-muted">(a p.12)</small> --}}
-                        <select class="form-control" name="banio_tiene"  >
+                        <select class="form-control" name="banio_tiene" id="banio_tiene" >
                                 <option value="1">… Inodoro con botón/mochila/cadena y arrastre de agua?</option>
                                 <option value="2" >… Inodoro sin botón/cadena y con arrastre de agua?</option>
                                 <option value="3">… Letrina? (sin arrastre de agua)</option> 
@@ -114,7 +114,7 @@
                 <div class="form-group col-md-6">
                         <label for="">11. ¿El desagüe del baño es…</label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
-                        <select class="form-control" name="desague"  >
+                        <select class="form-control" name="desague" id="desague" >
                                 <option value="1">… A red pública? (cloaca)</option>
                                 <option value="2">… A cámara séptica y pozo ciego?</option>
                                 <option value="3">… Solo a pozo ciego?</option>
@@ -167,3 +167,56 @@
                 </div> 
     </div>           
 {{-- @endsection --}}
+                                <div class="col-2">
+                                <label for="n_catast">N° Catast:</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="n_catast" id="n_catast" pattern="[S/N 0-9]+" title="Ingreso S/N o 0-9" placeholder="" required >
+                            </div>  
+                            <div class="form-group row"> 
+                            <div class="col-3">
+                                <label for="descripcion">Descripción:</label>   
+                            </div> 
+                            <div class="col-7">
+                               <textarea   class="form-control"name="descripcion" id="descripcion" cols="30" rows="3" ></textarea> 
+                               {{-- pattern="[A-Zaz 0-9]+" title="Texto con letras  A-Z, a-z y 0-9" --}}
+                            </div>          
+                        </div> 
+<script src="{{ asset('js/jquery.min.js') }} "></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+   $('#cielorraso').change(function(){
+
+                if($(this).val() == '1'){
+                    $('#agua').removeAttr("disabled")
+                  
+                }else{
+                    $('#agua').attr("disabled",'folse').attr('name','agua')
+                
+                  $(this).attr('name','cielorraso')
+                }
+            })
+            
+        //      $('#descripcion').change(function(){
+        //           $('#n_catast').attr('name','descripcion')
+        //           $(this).attr('name','n_catast')
+        //      })
+      
+   $('#banio').change(function(){
+
+                if($(this).val() == '1'){
+                        $('#banio_tiene').removeAttr("disabled")
+                        $('#desague').removeAttr("disabled")
+                  
+                }else{
+                        $('#banio_tiene').attr("disabled",'folse').attr('name','banio_tiene')
+                        $('#desague').attr("disabled",'folse').attr('name','desague')
+                
+                  $(this).attr('name','banio')
+                }
+            })       
+     })
+</script>
