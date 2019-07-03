@@ -64,12 +64,15 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+           
                 <div class="top-right links">
+                     
                     @auth
                         <a href="{{ url('/home') }}">Inicio</a>
                     @else
+                    
                         <a href="{{ route('login') }}">Acceder</a>
 
                         @if (Route::has('register'))
@@ -80,12 +83,23 @@
             @endif
 
             <div class="content">
+  
+                  <a href="#"><img src="{{asset('img/LOGO_ESTADISTICA_Y_CENSOS_transparente.png')}}" width="300" /></a>
+          <hr>
                 <div class="title m-b-md">
-                    ECV
+                {{-- ECV --}}
+                  
+                   <img src="{{asset('img/Logo-_Encuesta_Calidad_de_Vida_Color.png')}}" width="500" /><br>
+               
+                    
                 </div>
 
+                <div class="col-md-0 offset-lg-4">
+                    
+                 </div>
                 <div class="links">
-                    <label for=""><h3> Encuesta de calidad de Vida </h3> </label>
+                    
+                    {{-- <label for=""><h3> Encuesta de calidad de Vida </h3> </label> --}}
                     {{-- <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
