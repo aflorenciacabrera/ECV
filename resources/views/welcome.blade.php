@@ -85,7 +85,7 @@
             <div class="content">
   
                   <a href="#"><img src="{{asset('img/LOGO_ESTADISTICA_Y_CENSOS_transparente.png')}}" width="300" /></a>
-          
+          <hr>
                 <div class="title m-b-md">
                 {{-- ECV --}}
                   

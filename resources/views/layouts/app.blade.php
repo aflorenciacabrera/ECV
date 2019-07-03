@@ -22,8 +22,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             
             <div class="container">
-                 <a class="navbar-brand"  href="{{ url('/') }}" ><img src="{{asset('img/LOGO_ESTADISTICA_Y_CENSOS_transparente.png')}}" width="100" /></a>
-                <div class="col-md-0 offset-lg-4">
+                 <a class="navbar-brand"  href="{{ url('/') }}" ><img src="{{asset('img/LOGO_ESTADISTICA_Y_CENSOS_transparente.png')}}" width="130" /></a>
+                <div class="col-md-0 offset-lg-3">
                     <a class="navbar-brand"  href="{{ url('/') }}" ><img src="{{asset('img/Logo-_Encuesta_Calidad_de_Vida_Color.png')}}" width="200" /></a>
                  </div>
                 {{-- <a class="navbar-brand" href="{{ url('/') }}">
