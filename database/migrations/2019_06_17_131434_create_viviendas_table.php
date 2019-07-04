@@ -137,6 +137,7 @@ class CreateViviendasTable extends Migration
             $table->text('piso_int_otro')->nullable();
             $table->text('cubierta_exterior')->nullable();
             $table->text('cielorraso')->nullable();
+            $table->text('electricidad')->nullable();
             $table->text('agua')->nullable();
             $table->text('tipo_agua')->nullable();
             $table->text('tipo_agua_otro')->nullable();
@@ -167,6 +168,55 @@ class CreateViviendasTable extends Migration
             $table->text('CH14')->nullable();
             $table->text('CH15')->nullable();
             $table->text('CH16')->nullable();
+            //Seccion VII. CAUSAS POR LA QUE NO SE REALIZÓ LA ENTREVISTA
+            // Primera participación
+            $table->text( 'p1_no_entrevista')->nullable();
+            $table->text('p1_no_entrevista_1')->nullable();
+            $table->text('p1_no_entrevista_2')->nullable();
+            $table->text('p1_no_entrevista_3')->nullable();
+            $table->text('p1_no_entrevista_4')->nullable();
+            $table->text('p1_no_entrevista_5')->nullable();
+            $table->text('p1_no_entrevista_6')->nullable();
+            $table->text('p1_no_entrevista_7')->nullable();
+            $table->text('p1_no_entrevista_8')->nullable();
+            $table->text('p1_no_entrevista_9')->nullable();
+            $table->text( 'p1_observaciones')->nullable();
+            // Segunda participación
+            $table->text('p2_no_entrevista')->nullable();
+            $table->text('p2_no_entrevista_1')->nullable();
+            $table->text('p2_no_entrevista_2')->nullable();
+            $table->text('p2_no_entrevista_3')->nullable();
+            $table->text('p2_no_entrevista_4')->nullable();
+            $table->text('p2_no_entrevista_5')->nullable();
+            $table->text('p2_no_entrevista_6')->nullable();
+            $table->text('p2_no_entrevista_7')->nullable();
+            $table->text('p2_no_entrevista_8')->nullable();
+            $table->text('p2_no_entrevista_9')->nullable();
+            $table->text('p2_observaciones')->nullable();
+            // Tercera participación
+            $table->text('p3_no_entrevista')->nullable();
+            $table->text('p3_no_entrevista_1')->nullable();
+            $table->text('p3_no_entrevista_2')->nullable();
+            $table->text('p3_no_entrevista_3')->nullable();
+            $table->text('p3_no_entrevista_4')->nullable();
+            $table->text('p3_no_entrevista_5')->nullable();
+            $table->text('p3_no_entrevista_6')->nullable();
+            $table->text('p3_no_entrevista_7')->nullable();
+            $table->text('p3_no_entrevista_8')->nullable();
+            $table->text('p3_no_entrevista_9')->nullable();
+            $table->text('p3_observaciones')->nullable();
+            // Cuarta participación
+            $table->text('p4_no_entrevista')->nullable();
+            $table->text('p4_no_entrevista_1')->nullable();
+            $table->text('p4_no_entrevista_2')->nullable();
+            $table->text('p4_no_entrevista_3')->nullable();
+            $table->text('p4_no_entrevista_4')->nullable();
+            $table->text('p4_no_entrevista_5')->nullable();
+            $table->text('p4_no_entrevista_6')->nullable();
+            $table->text('p4_no_entrevista_7')->nullable();
+            $table->text('p4_no_entrevista_8')->nullable();
+            $table->text('p4_no_entrevista_9')->nullable();
+            $table->text('p4_observaciones')->nullable(); 
             $table->timestamps();
         });
     }

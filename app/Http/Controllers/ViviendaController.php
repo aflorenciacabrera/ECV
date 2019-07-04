@@ -138,6 +138,7 @@ class ViviendaController extends Controller
     $v->piso_int_otro = $request->piso_int_otro;
     $v->cubierta_exterior = $request->cubierta_exterior;
     $v->cielorraso = $request->cielorraso;
+    $v->electricidad = $request->electricidad;
     $v->agua = $request->agua;
     $v->tipo_agua = $request->tipo_agua;
     $v->tipo_agua_otro = $request->tipo_agua_otro;
@@ -168,6 +169,55 @@ class ViviendaController extends Controller
     $v->CH14 = $request->CH14;
     $v->CH15 = $request->CH15;
     $v->CH16 = $request->CH16;
+    //Seccion VII. CAUSAS POR LA QUE NO SE REALIZÓ LA ENTREVISTA
+    // Primera participación
+    $v->p1_no_entrevista= $request->p1_no_entrevista;
+    $v->p1_no_entrevista_1= $request->p1_no_entrevista_1;
+    $v->p1_no_entrevista_2= $request->p1_no_entrevista_2;
+    $v->p1_no_entrevista_3= $request->p1_no_entrevista_3;
+    $v->p1_no_entrevista_4= $request->p1_no_entrevista_4;
+    $v->p1_no_entrevista_5= $request->p1_no_entrevista_5;
+    $v->p1_no_entrevista_6= $request->p1_no_entrevista_6;
+    $v->p1_no_entrevista_7= $request->p1_no_entrevista_7;
+    $v->p1_no_entrevista_8= $request->p1_no_entrevista_8;
+    $v->p1_no_entrevista_9= $request->p1_no_entrevista_9;
+    $v->p1_observaciones= $request->p1_observaciones;
+    // Segunda participación
+    $v->p2_no_entrevista= $request->p2_no_entrevista;
+    $v->p2_no_entrevista_1= $request->p2_no_entrevista_1;
+    $v->p2_no_entrevista_2= $request->p2_no_entrevista_2;
+    $v->p2_no_entrevista_3= $request->p2_no_entrevista_3;
+    $v->p2_no_entrevista_4= $request->p2_no_entrevista_4;
+    $v->p2_no_entrevista_5= $request->p2_no_entrevista_5;
+    $v->p2_no_entrevista_6= $request->p2_no_entrevista_6;
+    $v->p2_no_entrevista_7= $request->p2_no_entrevista_7;
+    $v->p2_no_entrevista_8= $request->p2_no_entrevista_8;
+    $v->p2_no_entrevista_9= $request->p2_no_entrevista_9;
+    $v->p2_observaciones= $request->p2_observaciones;
+    // Tercera participación
+    $v->p3_no_entrevista= $request->p3_no_entrevista;
+    $v->p3_no_entrevista_1= $request->p3_no_entrevista_1;
+    $v->p3_no_entrevista_2= $request->p3_no_entrevista_2;
+    $v->p3_no_entrevista_3= $request->p3_no_entrevista_3;
+    $v->p3_no_entrevista_4= $request->p3_no_entrevista_4;
+    $v->p3_no_entrevista_5= $request->p3_no_entrevista_5;
+    $v->p3_no_entrevista_6= $request->p3_no_entrevista_6;
+    $v->p3_no_entrevista_7= $request->p3_no_entrevista_7;
+    $v->p3_no_entrevista_8= $request->p3_no_entrevista_8;
+    $v->p3_no_entrevista_9= $request->p3_no_entrevista_9;
+    $v->p3_observaciones= $request->p3_observaciones;
+    // Cuarta participación
+    $v->p4_no_entrevista= $request->p4_no_entrevista;
+    $v->p4_no_entrevista_1= $request->p4_no_entrevista_1;
+    $v->p4_no_entrevista_2= $request->p4_no_entrevista_2;
+    $v->p4_no_entrevista_3= $request->p4_no_entrevista_3;
+    $v->p4_no_entrevista_4= $request->p4_no_entrevista_4;
+    $v->p4_no_entrevista_5= $request->p4_no_entrevista_5;
+    $v->p4_no_entrevista_6= $request->p4_no_entrevista_6;
+    $v->p4_no_entrevista_7= $request->p4_no_entrevista_7;
+    $v->p4_no_entrevista_8= $request->p4_no_entrevista_8;
+    $v->p4_no_entrevista_9= $request->p4_no_entrevista_9;
+    $v->p4_observaciones= $request->p4_observaciones; 
     $v->save();
 
       return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
