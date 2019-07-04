@@ -187,7 +187,34 @@
                                         </div>
                                   </div>
                             </div>
-                           
+                           <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                            Sección #7 - VII. CAUSAS POR LA QUE NO SE REALIZÓ LA ENTREVISTA
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapse7" class="collapse " aria-labelledby="heading7" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            @include('encuestaVivienda.seccion_7')
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                            Sección #8 - VIII. CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS, RECHAZOS Y OTRAS CAUSAS
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapse8" class="collapse " aria-labelledby="heading8" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            @include('encuestaVivienda.seccion_8')
+                                        </div>
+                                  </div>
+                            </div>
                             <div class="card-footer text-muted d-flex justify-content-end">
                                 <button class="btn btn-success" type="submit">Cargar</button>  
                             </div>
