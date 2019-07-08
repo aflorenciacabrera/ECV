@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+{{-- @extends('layouts.app')
+@section('content') --}}
 <div class="card-body">   
         <small id="" class="form-text text-muted"><h5>OCUPACIÓN DE MÁS HORAS</h5> </small>   
         <div class="form-row">
@@ -86,4 +86,4 @@
              
         </div>                   
 </div>
-@endsection
+{{-- @endsection --}}
