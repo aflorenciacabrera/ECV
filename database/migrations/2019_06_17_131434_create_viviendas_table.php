@@ -21,8 +21,8 @@ class CreateViviendasTable extends Migration
             $table->text('numero_vivienda')->nullable()->nullable();
             $table->text('numero_semana')->nullable()->nullable();
             $table->text('grupo_rotacion')->nullable()->nullable();
-            $table->text('hogar1')->nullable()->nullable();
-            $table->text('hogar2')->nullable()->nullable();
+            $table->text('telefono_hogar1')->nullable()->nullable();
+            $table->text('telefono_hogar2')->nullable()->nullable();
             // seccion II. UBICACIÓN
             $table->text('manz')->nullable();
             $table->text('lado')->nullable();
