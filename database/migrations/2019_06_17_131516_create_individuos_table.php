@@ -15,6 +15,7 @@ class CreateIndividuosTable extends Migration
     {
         Schema::create('individuos', function (Blueprint $table) {
             $table->increments('id');
+            
             $table->timestamps();
         });
     }

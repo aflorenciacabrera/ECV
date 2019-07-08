@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\individuo;
 class IndividuoController extends Controller
 {
     //
@@ -11,9 +11,9 @@ class IndividuoController extends Controller
         return view('encuestaIndividuo');
       }
 
-        public function crearEncuestaHogar (Request $request)
+        public function crearEncuestaIndividuo (Request $request)
         {
-          $i = new hogar; 
+          $i = new individuo; 
   
         
           // $h->numero_encuestador= $request->numero_encuestador;
