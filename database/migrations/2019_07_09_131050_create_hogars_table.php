@@ -15,6 +15,16 @@ class CreateHogarsTable extends Migration
     {
         Schema::create('hogars', function (Blueprint $table) {
             $table->increments('id');
+
+ // Relaciones
+            $table->unsignedInteger('user_id');//ingresador
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->unsignedInteger('vivienda_id');
+            $table->foreign('vivienda_id')->references('id')->on('viviendas');
+ //  *Relaciones
+
+
         // I. Identificación
             $table->text('codigo_area')->nullable();
             $table->text('numero_listado')->nullable()->nullable();
@@ -32,33 +42,33 @@ class CreateHogarsTable extends Migration
             $table->text('entrevista_realizada')->nullable();
             $table->text('modalidad_aplicacion')->nullable();
             $table->text('encuestador')->nullable();
-            $table->text('numero_encuestador')->nullable();       
+            $table->text('numero_encuestador')->nullable();
         // II. Caracteristicas Habitacionales del Hogar (sólo para hogares que responden por primera vez o mal tomado en la participación anterior)
-            $table->text('II1')->nullable(); 
-            $table->text('II2')->nullable();         
-            $table->text('II3')->nullable(); 
-            $table->text('II3_1')->nullable(); 
-            $table->text('II4_1')->nullable(); 
+            $table->text('II1')->nullable();
+            $table->text('II2')->nullable();
+            $table->text('II3')->nullable();
+            $table->text('II3_1')->nullable();
+            $table->text('II4_1')->nullable();
             $table->text('II4_2')->nullable();
-            $table->text('II4_3')->nullable(); 
-            $table->text('II5')->nullable(); 
-            $table->text('II5_1')->nullable(); 
-            $table->text('II6')->nullable(); 
-            $table->text('II6_1')->nullable(); 
-            $table->text('II7')->nullable(); 
+            $table->text('II4_3')->nullable();
+            $table->text('II5')->nullable();
+            $table->text('II5_1')->nullable();
+            $table->text('II6')->nullable();
+            $table->text('II6_1')->nullable();
+            $table->text('II7')->nullable();
             $table->text('II7_Esp')->nullable();
             $table->text('II8')->nullable();
             $table->text('II8_Esp')->nullable();
-            $table->text('II9')->nullable();           
+            $table->text('II9')->nullable();
         // III. EXCLUSIVAMENTE PARA HOGARES DE PENSIONISTAS Y SERVICIO DOMÉSTICO CON CAMA
-            $table->text('III1_1')->nullable(); 
+            $table->text('III1_1')->nullable();
             $table->text('III1_2')->nullable();
-            $table->text('III2')->nullable();          
+            $table->text('III2')->nullable();
         // IV. CARACTERÍSTICAS DE LOS MIEMBROS DEL HOGAR
-            $table->text('CH01')->nullable(); 
-            $table->text('CH02')->nullable();     
-            $table->text('CH03')->nullable();    
-            $table->text('CH04')->nullable(); 
+            $table->text('CH01')->nullable();
+            $table->text('CH02')->nullable();
+            $table->text('CH03')->nullable();
+            $table->text('CH04')->nullable();
             $table->text('CH05')->nullable();
             $table->text('CH06')->nullable();
             $table->text('CH07')->nullable();

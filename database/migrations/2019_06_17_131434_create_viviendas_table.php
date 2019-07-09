@@ -15,6 +15,16 @@ class CreateViviendasTable extends Migration
     {
         Schema::create('viviendas', function (Blueprint $table) {
             $table->increments('id');
+
+            //
+
+             // Relaciones
+                $table->unsignedInteger('user_id')->nullable();//ingresador
+                $table->foreign('user_id')->references('id')->on('users');
+                $table->unsignedInteger('encuestador_id')->nullable();
+                $table->foreign('encuestador_id')->references('id')->on('users');
+             //  *Relaciones
+            //
     // seccion I. IDENTIFICACIÓN
             $table->text('codigo_area')->nullable();
             $table->text('numero_listado')->nullable()->nullable();
@@ -50,7 +60,7 @@ class CreateViviendasTable extends Migration
             $table->text('numero_encuestador')->nullable();
             $table->text('acompaniamiento')->nullable();
             $table->text('nombre')->nullable();
-            $table->text('numero_particion')->nullable();//TODO preguntar en el diccionario dice numero nomas pero esta repetido con numero de calle
+            $table->text('numero_particion')->nullable();//TODO (creo que fuimos nosotros te pregunto mañana )preguntar en el diccionario dice numero nomas pero esta repetido con numero de calle
     //  Particion -- Seccion III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES
             $table->text('otra_viv_direc')->nullable();
             $table->text('comparten_gastos')->nullable();
