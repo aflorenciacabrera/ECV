@@ -57,7 +57,6 @@ class CreateViviendasTable extends Migration
             $table->text('N_hogar_viv')->nullable();
             $table->text('domestico_cama_adentro')->nullable();
             $table->text('pensionistas')->nullable();
-    
     // Seccion IV. CARACTERÍSTICA DE LA VIVIENDA
             $table->text( 'IV1')->nullable();
             $table->text( 'IV1_Esp')->nullable();
@@ -78,8 +77,7 @@ class CreateViviendasTable extends Migration
             $table->text( 'IV12_2')->nullable();
             $table->text( 'IV12_3')->nullable();
             $table->text( 'IV14')->nullable();
-            $table->text( 'IV15')->nullable(); 
-            
+            $table->text( 'IV15')->nullable();   
     // Seccion V. CODICIÓN DE RESIDENCIA
             $table->text( 'NRO_HOGAR')->nullable();
             $table->text( 'NRO_COMPONENTE')->nullable();
@@ -111,7 +109,6 @@ class CreateViviendasTable extends Migration
             $table->text( 'RECHAZO')->nullable();
             $table->text( 'OTRO')->nullable();
             $table->text( 'INFORMANTE')->nullable();
-
             //Seccion  VIII . CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS,RECHAZOS Y OTRAS CAUSAS
              //  participación
             $table->text( 'supervision')->nullable();
