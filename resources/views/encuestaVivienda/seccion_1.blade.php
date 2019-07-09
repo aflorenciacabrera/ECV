@@ -28,14 +28,14 @@
                 <div class="form-group col-md-3">
                         <label for="numero_hogar">Teléfonos:</label>
                     <label for="respondiente">Hogar 1:</label>
-                    <input type="text" class="form-control" id="" name="hogar1" placeholder="" >
+                    <input type="text" class="form-control" id="" name="telefono_hogar1" placeholder="" >
                     
                 </div>
                 <div class="form-group col-md-3">
                         <label for="numero_hogar">Teléfonos:</label>
                     
                     <label for="respondiente">Hogar 2:</label>
-                    <input type="text" class="form-control" id="" name="hogar2" placeholder="" >
+                    <input type="text" class="form-control" id="" name="telefono_hogar2" placeholder="" >
                 </div>
         </div>   
        

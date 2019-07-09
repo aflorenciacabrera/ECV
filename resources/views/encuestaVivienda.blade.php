@@ -49,14 +49,14 @@
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P1" aria-expanded="false" aria-controls="collapse2P1">
-                                                PRIMERA PARTICIPACIÓN.
+                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse2P1" aria-expanded="false" aria-controls="collapse2P1">
+                                                 PARTICIPACIÓN.
                                             </button>
                                         </h2>
                                     </div>
                                     <div id="collapse2P1" class="collapse " aria-labelledby="heading2P1" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            @include('encuestaVivienda.1_participacion')
+                                            @include('encuestaVivienda.participacion')
                                         </div>
                                   </div>
                             </div>
@@ -64,101 +64,16 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P1" aria-expanded="false" aria-controls="collapse3P1">
-                                            PRIMERA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
+                                             PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
                                             </button>
                                         </h2>
                                     </div>
                                     <div id="collapse3P1" class="collapse " aria-labelledby="heading3P1" data-parent="#accordionExample">
                                         <div class="card-body">
-                                            @include('encuestaVivienda.seccion_3_1_participacion')
+                                            @include('encuestaVivienda.seccion_3_participacion')
                                         </div>
                                   </div>
                             </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P2" aria-expanded="false" aria-controls="collapse2P2">
-                                                SEGUNDA PARTICIPACIÓN. 
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse2P2" class="collapse " aria-labelledby="heading2P2" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            @include('encuestaVivienda.2_participacion')
-                                        </div>
-                                  </div>
-                            </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P2" aria-expanded="false" aria-controls="collapse3P2">
-                                                    SEGUNDA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse3P2" class="collapse " aria-labelledby="heading3P2" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                                @include('encuestaVivienda.seccion_3_2_participacion')
-                                        </div>
-                                  </div>
-                            </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P3" aria-expanded="false" aria-controls="collapse2P3">
-                                                   TERCERA PARTICIPACIÓN. 
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse2P3" class="collapse " aria-labelledby="heading2P3" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            @include('encuestaVivienda.3_participacion')
-                                        </div>
-                                  </div>
-                            </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P3" aria-expanded="false" aria-controls="collapse3P3">
-                                                   TERCERA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse3P3" class="collapse " aria-labelledby="heading3P3" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                                @include('encuestaVivienda.seccion_3_3_participacion')
-                                        </div>
-                                  </div>
-                            </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2P4" aria-expanded="false" aria-controls="collapse2P4">
-                                                    CUARTA PARTICIPACIÓN. 
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse2P4" class="collapse " aria-labelledby="heading2P4" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            @include('encuestaVivienda.4_participacion')
-                                        </div>
-                                  </div>
-                            </div>
-                            <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse3P4" aria-expanded="false" aria-controls="collapse3P4">
-                                                    CUARTA PARTICIPACIÓN - Sección #3  - III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES.
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapse3P4" class="collapse " aria-labelledby="heading3P4" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                                @include('encuestaVivienda.seccion_3_4_participacion')
-                                        </div>
-                                  </div>
-                            </div>
-                           
                             <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
