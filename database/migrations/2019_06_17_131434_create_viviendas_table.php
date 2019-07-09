@@ -27,7 +27,7 @@ class CreateViviendasTable extends Migration
             $table->text('manz')->nullable();
             $table->text('lado')->nullable();
             $table->text('calle')->nullable();
-            $table->text('numero')->nullable();
+            $table->text('numero_calle')->nullable();////TODO preguntar en el diccionario dice numero nomas pero esta repetido con numero de calle
             $table->text('piso')->nullable();
             $table->text('deptoocasa')->nullable();
             $table->text('habitacion')->nullable();
@@ -50,7 +50,7 @@ class CreateViviendasTable extends Migration
             $table->text('numero_encuestador')->nullable();
             $table->text('acompaniamiento')->nullable();
             $table->text('nombre')->nullable();
-            $table->text('numero')->nullable();
+            $table->text('numero_particion')->nullable();//TODO preguntar en el diccionario dice numero nomas pero esta repetido con numero de calle
     //  Particion -- Seccion III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES
             $table->text('otra_viv_direc')->nullable();
             $table->text('comparten_gastos')->nullable();
@@ -87,7 +87,7 @@ class CreateViviendasTable extends Migration
             $table->text( 'VIVIO_MES')->nullable();
             $table->text( 'FIJAR_RES')->nullable();
             $table->text( 'ESTABA')->nullable();
-            $table->text( 'AUSENCIA')->nullable();
+            $table->text( 'AUSENCIA')->nullable();///TODO Campo repetido
             $table->text( 'OTRA_RES')->nullable();
     // Seccion VI CONTROL DE CAMBIOS
             $table->text( 'NO_ESTABA')->nullable();
@@ -106,7 +106,7 @@ class CreateViviendasTable extends Migration
             $table->text( 'CONSTRUCCION')->nullable();
             $table->text( 'ESTABLECIMIENTO')->nullable();
             $table->text( 'VARIACION')->nullable();
-            $table->text( 'AUSENCIA')->nullable();
+            $table->text( 'AUSENCIA_PARTICIPACION')->nullable();//TODO campo repetido en seccion 6 se renombro
             $table->text( 'RECHAZO')->nullable();
             $table->text( 'OTRO')->nullable();
             $table->text( 'INFORMANTE')->nullable();
