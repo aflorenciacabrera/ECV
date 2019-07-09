@@ -50,7 +50,7 @@
             {{-- 1 --}}
             <td><input type="text" class="form-control" name="CH01"> </td>
             {{-- 2 --}}
-            <td><input type="text" class="form-control" name="CH02"> </td>
+            <td><input type="number" class="form-control" name="CH02"> </td>
             {{-- 3 --}}
             <td><select name="CH03" id="" class="form-control">
                 <option value="01">Jefe/a</option>
@@ -90,24 +90,24 @@
                     <option value="9">9. Ns/Nr</option>
                     </select>  </td>
             {{-- 9 --}}
-            <td><select name="CH08_1" id="" class="form-control">
+            <td><select name="CH08_A" id="" class="form-control">
                     <option value="1">Si</option>
                     <option value="2">No</option>
                     </select> </td>
             {{-- 10 --}}
-            <td><select name="CH08_2" id="" class="form-control">
+            <td><select name="CH08_B" id="" class="form-control">
                     <option value="1">1. Dolencia/afección/enfermedad</option>
                     <option value="2">2. Control/prevención</option>
                     </select> </td>
             {{-- 11 --}}
-            <td><select name="CH08_3" id="" class="form-control">
+            <td><select name="CH08_C" id="" class="form-control">
                     <option value="1">1. Emergencia</option>
                     <option value="2">2. Guardia</option>
                     <option value="3">3. Turno programado</option>
                     <option value="4">4. Consulta Médica domiciliaria</option>
                     </select> </td>
             {{-- 12 --}}
-            <td><select name="CH08_4" id="" class="form-control">
+            <td><select name="CH08_D" id="" class="form-control">
                     <option value="1">1. Privado</option>
                     <option value="2">2. Público Nacional</option>
                     <option value="3">3. Público Provincial</option>
@@ -126,9 +126,9 @@
                     <option value="3">3. Nunca asistió (A p. 22)</option>
                     </select> </td>
           {{-- 15 --}}
-            <td><input type="number" class="form-control" name="CH10_1"></td>
+            <td><input type="number" class="form-control" name="CH10_E" step="1" min="0" max="99"></td>
             {{-- 16 --}}
-            <td><select name="CH10_2" id="" class="form-control">
+            <td><select name="CH10_M" id="" class="form-control">
                     <option value="1">1. Porque me costaba estudiar</option>
                     <option value="2">2. Porque tenía que trabajar</option>
                     <option value="3">3. Porque tenía que cuidar hermanos o familiares</option>
@@ -138,7 +138,7 @@
                     <option value="7">7. Otros (especificar)</option>
                     </select> </td>
            {{-- 17 --}}
-            <td><select name="CH10_3" id="" class="form-control">
+            <td><select name="CH10_G" id="" class="form-control">
                     <option value="1">1. Si</option>
                     <option value="2">2. No</option>
                     <option value="9">9. Ns/Nr</option>
@@ -204,13 +204,13 @@
                     <input type="text" class="form-control" id="" name="CH16_Cod" placeholder=""  maxlength="3" disabled>
                   </td>
                 {{-- 24 --}}
-            <td><select name="CH17" id="" class="form-control">
+            <td><select name="CH24" id="" class="form-control">
                     <option value="1">1. Si (pasa a p25)</option>
                     <option value="2">2. No</option>
                     <option value="3">9. Ns/Nr</option>
                     </select></td>
                 {{-- 25 --}}
-            <td><select name="CH18" id="" class="form-control">
+            <td><select name="CH25" id="" class="form-control">
                     <option value="1">1. Si</option>
                     <option value="2">2. No</option>
                     <option value="3">9. Ns/Nr</option>

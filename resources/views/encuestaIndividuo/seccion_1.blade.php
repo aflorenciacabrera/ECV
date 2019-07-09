@@ -36,7 +36,7 @@
             </div>
             <div class="form-group col-md-1">
                     <label for="numero_semana">Trimestre:</label>
-            <input type="text" class="form-control" id="" name="trimestre" placeholder="" >
+            <input type="number" class="form-control" id="" name="trimestre" placeholder="" >
             </div>
             <div class="form-group col-md-1">
                     <label for="numero_semana">Año:</label>

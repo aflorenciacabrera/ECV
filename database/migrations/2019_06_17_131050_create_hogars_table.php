@@ -20,7 +20,7 @@ class CreateHogarsTable extends Migration
             $table->text('numero_listado')->nullable()->nullable();
             $table->text('numero_semana')->nullable()->nullable();
             $table->text('trimestre')->nullable()->nullable();
-            $table->text('anio')->nullable()->nullable();
+            $table->text('ano4')->nullable()->nullable();
             $table->text('numero_vivienda')->nullable()->nullable();
             $table->text('numero_hogar')->nullable();
             $table->text('respondiente')->nullable();

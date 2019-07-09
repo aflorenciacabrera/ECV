@@ -3,38 +3,40 @@
     <div class="form-row">
         <div class="form-group col-md-6">
                 <label for="codigo_area">Código de área</label>
-                <input type="text" class="form-control" id="" name="codigo_area" aria-describedby="codigo_area" placeholder=" " >
+                <input type="number" class="form-control" id="" name="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
                 {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
         </div>       
         <div class="form-group col-md-6">
                 <label for="numero_listado">Nº en el listado</label>
-                <input type="text" class="form-control" id="" name="numero_listado" placeholder="" >
+                <input type="number" class="form-control" id="" name="numero_listado" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
         </div>
     </div>   
     <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="numero_semana">Semana Nº</label>
-            <input type="text" class="form-control" id="" name="numero_semana" placeholder="" >
+                <input type="number" class="form-control" id="" name="numero_semana" placeholder="" step="1" min="0" >
+            
             </div>
             <div class="form-group col-md-6">
                     <label for="trimestre">Trimestre</label>
-            <input type="text" class="form-control" id="" name="trimestre" placeholder="" >
+             <input type="number" class="form-control" id="" name="trimestre" placeholder="" step="1" min="0" max="9" >
             </div>
     </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="anio">Año</label>
-                <input type="text" class="form-control" id="" name="anio" placeholder="" >
+                 <input type="number" class="form-control" id="" name="ano4" placeholder="" step="1" min="0" max="9999" >
+               
             </div>
             <div class="form-group col-md-6">
                 <label for="numero_vivienda">Vivienda Nº</label>
-                <input type="text" class="form-control" id="" name="numero_vivienda" placeholder="" >
+                <input type="number" class="form-control" id="" name="numero_vivienda" placeholder="" step="1" min="0" >
             </div>
     </div>   
     <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="numero_hogar">Hogar Nº</label>
-                <input type="text" class="form-control" id="" name="numero_hogar" placeholder="" >
+                 <input type="number" class="form-control" id="" name="numero_hogar" placeholder="" step="1" min="0" >
             </div>
             <div class="form-group col-md-6">
                 <label for="respondiente">Respondiente</label>
@@ -93,7 +95,7 @@
                     <label for="encuestador">Encuestador</label>
                     <input type="text" class="form-control" id="" name="encuestador" placeholder="" >
                     <label for="numero_encuestador">Nº</label>
-                    <input type="text" class="form-control" id="" name="numero_encuestador" placeholder="" >
+                    <input type="number" class="form-control" id="" name="numero_encuestador" placeholder="" step="1" min="0" >
                 </div>
     </div>                    
 </div>
