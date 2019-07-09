@@ -67,7 +67,7 @@ class CreateViviendasTable extends Migration
             $table->text('p2_visitas_fecha_hora_2')->nullable();
             $table->text('p2_visitas_fecha_hora_3')->nullable();
             $table->text('p2_visitas_fecha_hora_4')->nullable();
-            $table->text('p2_visitas_fecha_hora_5')->nullable(); 
+            $table->text('p2_visitas_fecha_hora_5')->nullable();
             $table->text('p2_entrevista_realizada')->nullable();
             $table->text('p2_modalidad_aplicacion')->nullable();
             $table->text('p2_encuestador')->nullable();
@@ -91,7 +91,7 @@ class CreateViviendasTable extends Migration
             $table->text('p3_visitas_fecha_hora_2')->nullable();
             $table->text('p3_visitas_fecha_hora_3')->nullable();
             $table->text('p3_visitas_fecha_hora_4')->nullable();
-            $table->text('p3_visitas_fecha_hora_5')->nullable(); 
+            $table->text('p3_visitas_fecha_hora_5')->nullable();
             $table->text('p3_entrevista_realizada')->nullable();
             $table->text('p3_modalidad_aplicacion')->nullable();
             $table->text('p3_encuestador')->nullable();
@@ -115,7 +115,7 @@ class CreateViviendasTable extends Migration
             $table->text('p4_visitas_fecha_hora_2')->nullable();
             $table->text('p4_visitas_fecha_hora_3')->nullable();
             $table->text('p4_visitas_fecha_hora_4')->nullable();
-            $table->text('p4_visitas_fecha_hora_5')->nullable(); 
+            $table->text('p4_visitas_fecha_hora_5')->nullable();
             $table->text('p4_entrevista_realizada')->nullable();
             $table->text('p4_modalidad_aplicacion')->nullable();
             $table->text('p4_encuestador')->nullable();
@@ -216,7 +216,7 @@ class CreateViviendasTable extends Migration
             $table->text('p4_no_entrevista_7')->nullable();
             $table->text('p4_no_entrevista_8')->nullable();
             $table->text('p4_no_entrevista_9')->nullable();
-            $table->text('p4_observaciones')->nullable(); 
+            $table->text('p4_observaciones')->nullable();
             $table->timestamps();
         });
     }

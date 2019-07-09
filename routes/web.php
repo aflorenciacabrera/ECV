@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,6 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Encuestas
 Route::get('Encuesta/Vivienda', 'ViviendaController@verEncuestaVivienda')->name( 'verEncuestaVivienda');
 Route::post('encuesta/Vivienda/crear', 'ViviendaController@crearEncuestaVivienda')->name( 'crearEncuestaVivienda');
+Route::get('encuesta/Vivienda/ver', 'ViviendaController@verListadoVivienda')->name( 'verListadoVivienda');
+Route::get('encuesta/Vivienda/{id}', 'ViviendaController@verVivienda')->name( 'verDetalleVivienda');
 
 Route::get('Encuesta/Hogar', 'HogarController@verEncuestaHogar')->name( 'verEncuestaHogar');
 Route::post( 'Encuesta/Hogar/crear', 'HogarController@crearEncuestaHogar')->name( 'crearEncuestaHogar');

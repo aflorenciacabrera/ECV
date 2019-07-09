@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\encuesta;
 use App\vivienda;
+use Auth;
 class ViviendaController extends Controller
 {
-    //
+
 
     public function verEncuestaVivienda(){
         return view('encuestaVivienda');
@@ -217,9 +218,28 @@ class ViviendaController extends Controller
     $v->p4_no_entrevista_7= $request->p4_no_entrevista_7;
     $v->p4_no_entrevista_8= $request->p4_no_entrevista_8;
     $v->p4_no_entrevista_9= $request->p4_no_entrevista_9;
-    $v->p4_observaciones= $request->p4_observaciones; 
+    $v->p4_observaciones= $request->p4_observaciones;
     $v->save();
+
 
       return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
     }
+
+    public function verListadoVivienda()
+    {
+        $viviendas = Auth::user()->viviendas();
+
+        return view("listadoVivienda")->with('viviendas',$viviendas);
+    }
+
+    public function verVivienda($id)
+    {
+        //TODO trae listado pero para eso necesitamos hacer la clave en la base de datos
+        return "... en contruccion";
+    }
+
+
+
+
+
 }
