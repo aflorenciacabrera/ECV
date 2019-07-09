@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\vivienda;
+use Auth;
 class ViviendaController extends Controller
 {
-    //
+
 
     public function verEncuestaVivienda(){
         return view('encuestaVivienda');
@@ -99,20 +100,50 @@ class ViviendaController extends Controller
     $v->CH16 = $request->CH16;
     //Seccion VII. CAUSAS POR LA QUE NO SE REALIZÓ LA ENTREVISTA
     //  participación
-    $v->no_entrevista=$request->no_entrevista;
-    $v->no_entrevista_1=$request->no_entrevista_1;
-    $v->no_entrevista_2=$request->no_entrevista_2;
-    $v->no_entrevista_3=$request->no_entrevista_3;
-    $v->no_entrevista_4=$request->no_entrevista_4;
-    $v->no_entrevista_5=$request->no_entrevista_5;
-    $v->no_entrevista_6=$request->no_entrevista_6;
-    $v->no_entrevista_7=$request->no_entrevista_7;
-    $v->no_entrevista_8=$request->no_entrevista_8;
-    $v->no_entrevista_9=$request->no_entrevista_9;
+    $v->CAUSAS=$request->CAUSAS;
+    $v->DESHABILITADA=$request->DESHABILITADA;
+    $v->DEMOLIDA=$request->DEMOLIDA;
+    $v->FIN_DE_SEMANA=$request->FIN_DE_SEMANA;
+    $v->CONSTRUCCION=$request->CONSTRUCCION;
+    $v->ESTABLECIMIENTO=$request->ESTABLECIMIENTO;
+    $v->VARIACION=$request->VARIACION;
+    $v->AUSENCIA=$request->AUSENCIA;
+    $v->RECHAZO=$request->RECHAZO;
+    $v->OTRO=$request->OTRO;
+    $v->INFORMANTE=$request->INFORMANTE;
+
+    //Seccion  VIII . CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS,RECHAZOS Y OTRAS CAUSAS
+    //  participación
+    $v->supervision=$request->supervision;
+    $v->num_super=$request->num_super;
+    $v->visita_1=$request->visita_1;
+    $v->visita_2=$request->visita_2;
+    $v->visita_3=$request->visita_3;
+    $v->modalidad=$request->modalidad;
+    $v->entrega=$request->entrega;
     $v->observaciones=$request->observaciones;
-    
+
     $v->save();
+
 
       return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
     }
+
+    public function verListadoVivienda()
+    {
+        $viviendas = Auth::user()->viviendas();
+
+        return view("listadoVivienda")->with('viviendas',$viviendas);
+    }
+
+    public function verVivienda($id)
+    {
+        //TODO trae listado pero para eso necesitamos hacer la clave en la base de datos
+        return "... en contruccion";
+    }
+
+
+
+
+
 }

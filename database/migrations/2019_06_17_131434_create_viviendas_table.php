@@ -116,9 +116,9 @@ class CreateViviendasTable extends Migration
              //  participación
             $table->text( 'supervision')->nullable();
             $table->text( 'num_super')->nullable();
-            $table->text( '1_visita')->nullable();
-            $table->text( '2_visita')->nullable();
-            $table->text( '3_visita')->nullable();
+            $table->text( 'visita_1')->nullable();
+            $table->text( 'visita_2')->nullable();
+            $table->text( 'visita_3')->nullable();
             $table->text( 'modalidad')->nullable();
             $table->text( 'entrega')->nullable();
             $table->text('observaciones')->nullable();

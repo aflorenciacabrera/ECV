@@ -31,15 +31,15 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">1</th>
-                                        <td><input type="datetime-local" name="1_visita"   value="" ></td>
+                                        <td><input type="datetime-local" name="visita_1"   value="" ></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">2</th>
-                                        <td><input type="datetime-local" name="2_visita"  value="" ></td>
+                                        <td><input type="datetime-local" name="visita_2"  value="" ></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">3</th>
-                                        <td><input type="datetime-local" name="3_visita" value="" ></td>
+                                        <td><input type="datetime-local" name="visita_3" value="" ></td>
                                         </tr>
                                         
                                 </tbody>
