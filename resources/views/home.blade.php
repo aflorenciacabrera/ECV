@@ -14,8 +14,8 @@
 
                         </div>
                         <div class="list-group">
-                            <a href="{{route('verListadoVivienda')}}" role="button" class="list-group-item btn-lg list-group-item-action " role="button" aria-pressed="true"> Cargar Nueva Vivienda</a>
-                            <a href="{{route('verEncuestaVivienda')}}" role="button" class="list-group-item btn-lg list-group-item-action " role="button" aria-pressed="true"> Ver Viviendas Cargadas</a>
+                            <a  href="{{route('verEncuestaVivienda')}}" role="button" class="list-group-item btn-lg list-group-item-action " role="button" aria-pressed="true"> Cargar Nueva Vivienda</a>
+                            <a  href="{{route('verListadoVivienda')}}" role="button" class="list-group-item btn-lg list-group-item-action " role="button" aria-pressed="true"> Ver Viviendas Cargadas</a>
                         </div>
                     </div>
 
