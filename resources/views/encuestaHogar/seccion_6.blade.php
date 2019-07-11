@@ -1,5 +1,5 @@
 
-<div class="card-body">
+
 Para finalizar, en el mes de  <select name="VImes" id=""  >
                                 <option value="">enero</option>
                                 <option value="">febrero</option>
@@ -13,7 +13,7 @@ Para finalizar, en el mes de  <select name="VImes" id=""  >
                                 <option value="">octubre</option>
                                 <option value="">noviembre</option>
                                 <option value="">diciembre</option>
-                            </select>   ¿cuánto cobró por <input type="text"  name="VIcobr"> ? 
+                            </select>   ¿cuánto cobró por <input type="text"  name="VIcobr"> ?
 (indagar sólo en los ítems 2 a 5, 8 a 12 y 19.a marcados con sí en el Bloque estrategias del hogar)
 <br><br>
 <table class="table table-bordered table-responsive">
@@ -36,9 +36,9 @@ Para finalizar, en el mes de  <select name="VImes" id=""  >
             <td> </td>
             <td> </td>
             <td> </td>
-            <td> </td>  
+            <td> </td>
         </tr>
-        <tr>   
+        <tr>
                 <td>     </td>
                 <td> Monto</td>
                 <td> Monto</td>
@@ -51,17 +51,17 @@ Para finalizar, en el mes de  <select name="VImes" id=""  >
                 <td>2…<br>
                     2.1.Aguinaldo <br>
                     2.2.Retroactivo</td>
-                <td><input type="text" class="form-control" name="V2_M"> 
+                <td><input type="text" class="form-control" name="V2_M">
                         <input type="text" class="form-control" name="V21_M"></td>
-                <td><input type="text" class="form-control" name="V2_M_1"> 
+                <td><input type="text" class="form-control" name="V2_M_1">
                         <input type="text" class="form-control" name="V21_M_1"></td>
-                <td><input type="text" class="form-control" name="V2_M_2"> 
+                <td><input type="text" class="form-control" name="V2_M_2">
                         <input type="text" class="form-control" name="V21_M_2"></td>
-                <td><input type="text" class="form-control" name="V2_M_3"> 
+                <td><input type="text" class="form-control" name="V2_M_3">
                         <input type="text" class="form-control" name="V21_M_3"></td>
-                <td><input type="text" class="form-control" name="V2_M_4"> 
+                <td><input type="text" class="form-control" name="V2_M_4">
                         <input type="text" class="form-control" name="V21_M_4"></td>
-                <td><input type="text" class="form-control" name="V2_M_5"> 
+                <td><input type="text" class="form-control" name="V2_M_5">
                          <input type="text" class="form-control" name="V21_M_5"></td>
         </tr>
            {{-- -------- --}}
@@ -159,4 +159,4 @@ Para finalizar, en el mes de  <select name="VImes" id=""  >
         </tr>
     </tbody>
 </table>
-</div>
+
