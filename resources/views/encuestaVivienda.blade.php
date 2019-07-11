@@ -19,10 +19,10 @@ $(document).ready(function () {
 <div class="container-fluid">
         <form method="POST" action="{{route('crearEncuestaVivienda')}}">
             @csrf
-        <div class="bs-stepper">
-            <div class="card">
-                <div class="card-header">
-                    <div class="bs-stepper-header" role="tablist">
+        <div class="bs-stepper ">
+            <div class="card ">
+                <div class="card-header ">
+                    <div class="bs-stepper-header " role="tablist">
                     <!-- your steps here -->
                     <div class="step" data-target="#seccion_1">
                         <button type="button" class="step-trigger" role="tab" aria-controls="seccion_1" id="seccion_1-trigger">
@@ -77,10 +77,11 @@ $(document).ready(function () {
                         <div class="step" data-target="#seccion_8">
                             <button type="button" class="step-trigger" role="tab" aria-controls="seccion_8" id="seccion_8-trigger">
                                 <span class="bs-stepper-circle">8</span>
-                                <span class="bs-stepper-label">Control de Campo</span>
+                                <span class="bs-stepper-label-">Control de Campo</span>
                             </button>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="card-body">
                     <div class="bs-stepper-content">

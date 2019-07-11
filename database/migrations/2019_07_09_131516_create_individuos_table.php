@@ -15,7 +15,6 @@ class CreateIndividuosTable extends Migration
     {
         Schema::create('individuos', function (Blueprint $table) {
             $table->increments('id');
-
             // Relaciones
             $table->unsignedInteger('user_id');//ingresador
             $table->foreign('user_id')->references('id')->on('users');
