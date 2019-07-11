@@ -9,7 +9,7 @@
                     Viviendas Ingresadas por <strong>{{Auth::user()->name}}</strong>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">Title</h4>
+                    <h4 class="card-title">{{$viviendas->count()}}</h4>
                     <table class="table table-striped table-inverse  table-sm">
                         <thead class="thead-inverse">
                             <tr>
@@ -33,8 +33,9 @@
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach ($viviendas as $item)
                                 <tr>
-                                <td>1</td>
+                                <td>{{$item->id}}</td>
                                 <td>99</td>
                                 <td>235</td>
                                 <td>2</td>
@@ -51,10 +52,12 @@
                                 <td>4</td>
                                 <td>
                                     {{-- TODO ruta pra ver detalle de area --}}
-                                <a name="" id="" class="btn btn-sm btn-primary" href="{{route('verDetalleVivienda',['id'=>1])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Ver Detalle <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a name="" id="" class="btn btn-sm btn-primary" href="{{route('verDetalleVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Ver Detalle <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a name="" id="" class="btn btn-sm btn-primary" href="{{route('verEncuestaHogar',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Cargar Hogar <i class="fa fa-home" aria-hidden="true"></i></a>
                                 </td>
 
                             </tr>
+                            @endforeach
                             </tbody>
                     </table>
                 </div>

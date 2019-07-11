@@ -131,7 +131,8 @@ class ViviendaController extends Controller
 
     public function verListadoVivienda()
     {
-        $viviendas = Auth::user()->viviendas();
+        $viviendas = Auth::user()->viviendas    ;
+        // $viviendas = vivienda::all();
 
         return view("listadoVivienda")->with('viviendas',$viviendas);
     }
@@ -140,6 +141,18 @@ class ViviendaController extends Controller
     {
         //TODO trae listado pero para eso necesitamos hacer la clave en la base de datos
         return "... en contruccion";
+    }
+
+    public function autogenerar(){
+
+
+        $v = new vivienda;
+
+        $v->user_id = Auth::user()->id;
+        $v->save();
+        //devuelvo el ultimo generado
+        return redirect()->route('verListadoVivienda')->with('vivienda',$v->id);
+
     }
 
 

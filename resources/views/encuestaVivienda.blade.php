@@ -17,6 +17,7 @@ $(document).ready(function () {
 })
 </script>
 <div class="container-fluid">
+    <a name="" id="" class="btn btn-primary" href="{{route('autogenerarVivienda')}}" role="button">GENERAR AUTOMÁTICO</a>
         <form method="POST" action="{{route('crearEncuestaVivienda')}}">
             @csrf
         <div class="bs-stepper ">
@@ -81,7 +82,7 @@ $(document).ready(function () {
                             </button>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="card-body">
                     <div class="bs-stepper-content">
