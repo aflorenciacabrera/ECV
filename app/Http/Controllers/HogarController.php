@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\hogar;
+use App\vivienda;
+use Auth;
 class HogarController extends Controller
 {
     //
-    public function verEncuestaHogar(){
-        return view('encuestaHogar');
+    public function verEncuestaHogar($vivienda_id){
+        $v = vivienda::find($vivienda_id);
+        return view('encuestaHogar')->with('vivienda',$v);
       }
-     
+
       public function crearEncuestaHogar (Request $request)
         {
-          $h = new hogar; 
+          $h = new hogar;
     // I. Identificación
           $h->codigo_area= $request->codigo_area;
           $h->numero_listado= $request->numero_listado;
@@ -116,7 +119,7 @@ class HogarController extends Controller
           $h->V10_M= $request->V10_M;
           $h->V11_M= $request->V11_M;
           $h->V12_M= $request->V12_M;
-          $h->V18_M= $request->V18_M;    
+          $h->V18_M= $request->V18_M;
           $h->V19_AM= $request->V19_AM;
           $h->T_Vi= $request->T_Vi;
     // HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES
@@ -169,9 +172,20 @@ class HogarController extends Controller
           $h->mal_tomado= $request->mal_tomado;
 
     $h->save();
-       
+
         return redirect(url('home'))->with('status','Formulario de Encuensta Hogar cargado');;
         }
 
-       
+        public function autogenerar($id)
+        {
+        $h = new hogar;
+
+        $h->user_id = Auth::user()->id;
+        $h->vivienda_id = $id;
+        $h->save();
+        //TODO rediccionar a la vista de vivienda $h->vivienda->id;
+        return redirect()->route('verListadoVivienda')->with('vivienda', $h->vivienda->id);
+        }
+
+
 }

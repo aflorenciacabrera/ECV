@@ -30,6 +30,8 @@ Route::get('encuesta/viviendas/generar', 'ViviendaController@autogenerar')->name
 Route::get('encuesta/hogar/{id}', 'HogarController@verEncuestaHogar')->name( 'verEncuestaHogar');
 Route::post( 'encuesta/hogar/crear', 'HogarController@crearEncuestaHogar')->name( 'crearEncuestaHogar');
 
+Route::get('encuesta/hogares/generar/{id}', 'HogarController@autogenerar')->name('autogenerarHogar');
+
 Route::get('encuesta/individuo', 'IndividuoController@verEncuestaIndividuo')->name( 'verEncuestaIndividuo');
 Route::post( 'encuesta/individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name( 'crearEncuestaIndividuo');
 
