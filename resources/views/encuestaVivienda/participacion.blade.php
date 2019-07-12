@@ -1,15 +1,15 @@
 {{-- @extends('layouts.app')
 @section('content') --}}
-<div class="card-body">    
+<div class="card-body">
         {{-- <hr>
-                <label for="" class="d-flex justify-content-center">PRIMERA PARTICIPACIÓN </label>                    
+                <label for="" class="d-flex justify-content-center">PRIMERA PARTICIPACIÓN </label>
         <hr>
                 --}}
         <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="codigo_area">Trimestre:</label>
-                        <input type="text" class="form-control" id="" name="trimestre" aria-describedby="" placeholder=" " >     
-                </div>       
+                        <input type="text" class="form-control" id="" name="trimestre" aria-describedby="" placeholder=" " >
+                </div>
                 <div class="form-group col-md-2">
                         <label for="numero_listado">Año:</label>
                         <input type="text" class="form-control" id="" name="ano4" placeholder="" >
@@ -26,8 +26,8 @@
                         <label for="respondiente">Persona entrevistada:</label>
                         <input type="text" class="form-control" id="" name="p_entrevistada" placeholder="" >
                 </div>
-        </div>   
-       
+        </div>
+
         <div class="form-row">
                 <div class="form-group col-md-6">
                         <table class="table table-striped table-bordered">
@@ -65,7 +65,7 @@
                         <label for="exampleInputPassword1">Entrevista Realizada</label>
                         <select class="form-control" name="entrevista_realizada"  >
                                 <option value="1">Si</option>
-                                <option value="2" >No</option>             
+                                <option value="2" >No</option>
                         </select>
                         <br>
                         <label for="exampleInputPassword1">Modalidad de Aplicación</label>
@@ -88,16 +88,16 @@
                                 <option value="1">Si</option>
                                 <option value="2">No</option>
                         </select>
-                </div>       
+                </div>
                 <div class="form-group col-md-4">
-                        <label for="numero_listado">Nombre:</label>
+                        <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" id="" name="nombre" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
-                        <label for="numero_listado">N°:</label>
-                        <input type="text" class="form-control" id="" name="numero" placeholder="" >
+                        <label for="numero_particion">N°:</label>
+                        <input type="text" class="form-control" id="" name="numero_particion" placeholder="" >
                 </div>
-        </div> 
+        </div>
 
-</div>           
+</div>
 {{-- @endsection --}}

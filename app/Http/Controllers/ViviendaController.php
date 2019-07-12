@@ -16,7 +16,17 @@ class ViviendaController extends Controller
 
     public function crearEncuestaVivienda(Request $request)
     {
+        $v = new vivienda;
+        $v->user_id = Auth::user()->id;
+        $v->fill($request->all());
+        $v->save();
+        return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
+    }
+
+    public function crearEncuestaVivienda2(Request $request)
+    {
     $v = new vivienda;
+    $v->user_id = Auth::user()->id;
     // seccion I. IDENTIFICACIÓN
     $v->codigo_area = $request->codigo_area;
     $v->numero_listado = $request->numero_listado;
@@ -37,7 +47,7 @@ class ViviendaController extends Controller
     $v->descripcion = $request->descripcion;
     //  Particion
     $v->trimestre=$request->trimestre;
-    $v->an04=$request->ano4;
+    $v->ano4=$request->ano4;
     $v->sem_referencia=$request->sem_referencia;
     $v->cant_hogar=$request->cant_hogar;
     $v->p_entrevistada=$request->p_entrevistada;

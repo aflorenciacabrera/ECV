@@ -19,7 +19,7 @@
             <div class="form-group col-md-6">
                 <label for="">2. ¿Cuántos ambientes/habitaciones tiene la vivienda en total? </label>
                 <small id="" class="form-text text-muted"> (sin contar baño/s, cocina, pasillo/s, lavadero, garage)</small>
-                 <input type="text" class="form-control" id="" name="IV2" placeholder="" maxlength="45" disabled>
+                 <input type="text" class="form-control" id="" name="IV2" placeholder="" maxlength="45" >
             </div>
         </div>
         <div class="form-row">
@@ -32,7 +32,7 @@
                                 <option value="3" >… Ladrillo suelto/ tierra?</option>
                                 <option value="4" >Otro material? (especificar)</option>
                         </select>
-                          <input type="text" class="form-control" id="" name="IV3_Esp" placeholder="" maxlength="45" disabled>
+                          <input type="text" class="form-control" id="" name="IV3_Esp" placeholder="" maxlength="45" >
 
                 </div>
                 <div class="form-group col-md-6">
@@ -88,7 +88,7 @@
                                 <option value="3">… Perforación con bomba manual?</option>
                                 <option value="4" >…Otra fuente? (especificar)</option>
                         </select>
-                        <input type="text" class="form-control" id="" name="IV3_Esp" placeholder="" maxlength="45" disabled>
+                        <input type="text" class="form-control" id="" name="IV7_Esp" placeholder="" maxlength="45" >
                 </div>
 
         </div>
@@ -201,10 +201,10 @@
    $('#internet').change(function(){
 
                 if($(this).val() == '1'){
-                    $('#conexion').removeAttr("disabled")
+                    $('#conexion').removeAttr("")
 
                 }else{
-                    $('#conexion').attr("disabled",'folse').attr('name','conexion')
+                    $('#conexion').attr("",'folse').attr('name','conexion')
 
                   $(this).attr('name','internet')
                 }
@@ -218,12 +218,12 @@
    $('#banio').change(function(){
 
                 if($(this).val() == '1'){
-                        $('#banio_tiene').removeAttr("disabled")
-                        $('#banio_lugar').removeAttr("disabled")
+                        $('#banio_tiene').removeAttr("")
+                        $('#banio_lugar').removeAttr("")
 
                 }else{
-                        $('#banio_tiene').attr("disabled",'folse').attr('name','banio_tiene')
-                        $('#banio_lugar').attr("disabled",'folse').attr('name','banio_lugar')
+                        $('#banio_tiene').attr("",'folse').attr('name','banio_tiene')
+                        $('#banio_lugar').attr("",'folse').attr('name','banio_lugar')
 
                   $(this).attr('name','banio')
                 }

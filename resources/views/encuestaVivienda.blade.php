@@ -88,6 +88,7 @@ $(document).ready(function () {
                             @include('encuestaVivienda.seccion_2')
                         </div>
                         <div id="seccion_3" class="content" role="tabpanel" aria-labelledby="seccion_3-trigger">
+                            @include('encuestaVivienda.participacion')
                             @include('encuestaVivienda.seccion_3_participacion')
                         </div>
                         <div id="seccion_4" class="content" role="tabpanel" aria-labelledby="seccion_4-trigger">
