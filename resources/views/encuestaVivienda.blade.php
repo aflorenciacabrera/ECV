@@ -1,23 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
-<script>
-$(document).ready(function () {
-  var stepper = new Stepper($('.bs-stepper')[0])
+<script src="{{asset('js/viviendas.js')}}">
 
-  $(".next").click(function(e){
-      e.preventDefault();
-      stepper.next();
-  })
-
-   $(".back").click(function(e){
-      e.preventDefault();
-      stepper.previous();
-  })
-})
 </script>
 <div class="container-fluid">
-    <a name="" id="" class="btn btn-primary" href="{{route('autogenerarVivienda')}}" role="button">GENERAR AUTOMÁTICO</a>
+    <a name="" id="form" class="btn btn-primary" href="{{route('autogenerarVivienda')}}" role="button">GENERAR AUTOMÁTICO</a>
         <form method="POST" action="{{route('crearEncuestaVivienda')}}">
             @csrf
         <div class="bs-stepper ">
@@ -107,7 +95,7 @@ $(document).ready(function () {
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                <button class="btn btn-primary btn-lg back" >Atras</button>
+                {{-- <button class="btn btn-primary btn-lg back" >Atras</button> --}}
                 <button class="btn btn-primary btn-lg next" >Siguiente</button>
                 </div>
             </div>

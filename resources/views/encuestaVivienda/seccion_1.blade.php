@@ -1,43 +1,43 @@
 
-<div class="card-body">      
+<div class="card-body">
         <div class="form-row">
             <div class="form-group col-md-3">
                     <label for="codigo_area">Código de área:</label>
-                    <input type="text" class="form-control" id="" name="codigo_area" aria-describedby="codigo_area" placeholder=" " >
+                    <input type="number" min="0" step="1" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " required>
                     {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>       
+            </div>
             <div class="form-group col-md-3">
                     <label for="numero_listado">Nº en el listado:</label>
-                    <input type="text" class="form-control" id="" name="numero_listado" placeholder="" >
+                    <input type="number" min="0" step="1" class="form-control" id="numero_listado" name="numero_listado" placeholder="" required>
             </div>
             <div class="form-group col-md-3">
                     <label for="numero_semana">Vivienda Nº:</label>
-            <input type="text" class="form-control" id="" name="numero_vivienda" placeholder="" >
+            <input type="number" min="0" step="1" class="form-control " id="numero_vivienda" name="numero_vivienda" placeholder="" required>
             </div>
             <div class="form-group col-md-3">
                     <label for="numero_semana">Semana Nº:</label>
-            <input type="text" class="form-control" id="" name="numero_semana" placeholder="" >
+            <input type="number" min="0" step="1" max="12" class="form-control" id="numero_semana" name="numero_semana" placeholder="" required>
             </div>
-        </div>   
-       
+        </div>
+
         <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="anio">Grupo Rotación:</label>
-                    <input type="text" class="form-control" id="" name="grupo_rotacion" placeholder="" >
+                    <input type="number" min="0" step="1" class="form-control" id="grupo_rotacion" name="grupo_rotacion" placeholder="" required>
                 </div>
                 <div class="form-group col-md-3">
                         <label for="numero_hogar">Teléfonos:</label>
                     <label for="respondiente">Hogar 1:</label>
-                    <input type="text" class="form-control" id="" name="telefono_hogar1" placeholder="" >
-                    
+                    <input type="text" class="form-control" id="telefono_hogar1" name="telefono_hogar1" placeholder="" required>
+
                 </div>
                 <div class="form-group col-md-3">
                         <label for="numero_hogar">Teléfonos:</label>
-                    
+
                     <label for="respondiente">Hogar 2:</label>
-                    <input type="text" class="form-control" id="" name="telefono_hogar2" placeholder="" >
+                    <input type="text" class="form-control" id="telefono_hogar2" name="telefono_hogar2" placeholder="" required>
                 </div>
-        </div>   
-       
+        </div>
+
     </div>
-            
+
