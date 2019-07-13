@@ -14,7 +14,15 @@ class HogarController extends Controller
         return view('encuestaHogar')->with('vivienda',$v);
       }
 
-      public function crearEncuestaHogar (Request $request)
+    public function crearEncuestaHogar(Request $request)
+      {
+        $h = new hogar;
+        $h->user_id = Auth::user()->id;
+        $h->fill($request->all());
+        $h->save();
+
+      }
+      public function crearEncuestaHogar2 (Request $request)
         {
           $h = new hogar;
     // I. Identificación
