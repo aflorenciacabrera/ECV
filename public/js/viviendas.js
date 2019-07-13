@@ -84,6 +84,7 @@ function validarPorSeccion(seccion)
                 t.focus();
                 console.log('invalido')
                 flag = false;
+                return false;
             }
             else
             {
