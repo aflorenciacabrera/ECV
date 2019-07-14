@@ -3,7 +3,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
                 <label for="codigo_area">Código de área</label>
-                <input type="number" class="form-control" id="" name="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
+                <input type="number" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
                 {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
         </div>       
         <div class="form-group col-md-6">
