@@ -1,25 +1,34 @@
 @extends('layouts.app')
 @section('content')
 
+<script src="{{asset('js/hogares.js')}}"></script>
+
+
 <script>
-$(document).ready(function () {
-  var stepper = new Stepper($('.bs-stepper')[0])
+/**
+ * Autocompletar mas rapido por JS que por blade un bajon
+ * */
+$(document).ready(function(){
 
-  $(".next").click(function(e){
-      e.preventDefault();
-      stepper.next();
-  })
+    hogar = ({!!  $hogar !!})//paso de laravel a javascript
+    //reviso cuando corresponde con el nomnbre
+    $('#form input').each(function(e){
+        input = $(this);
+        name = input.attr('name');
+        //ver si el name esta en el hogar
+        if(hogar[name])//si existe es porque es true
+        {
+            //entonce relleno el campo
+            input.val(hogar[name])
+        }
+    })
 
-   $(".back").click(function(e){
-      e.preventDefault();
-      stepper.previous();
-  })
 })
 </script>
 <div class="container-fluid">
-    <a name="" id="" class="btn btn-primary" href="{{route('autogenerarHogar',['id'=>$vivienda->id])}}" role="button">GENERAR AUTOMÁTICO</a>
-        <form method="POST" action="{{route('crearEncuestaHogar')}}">
-        <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}">
+
+        <form method="POST" action="{{route('crearEncuestaHogar')}}" id="form">
+        <input type="hidden" name="hogar_id" value="{{$hogar->id}}">
             @csrf
         <div class="bs-stepper ">
             <div class="card ">

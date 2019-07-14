@@ -18,41 +18,43 @@
         </thead>
         <tbody>
         <tr>
-            <td>1. </td>
-            <td>2. </td>
-            <td>3.(Anote en el siguiente orden) </td>
-            <td>4. (Anote en cada caso)</td>
-            <td>5. ¿En qué fecha nació? </td>
-            <td>6. ¿Cuántos años?</td>
-            <td>7. ¿Actualmen te está...</td>
-            <td>8. Tiene algún tipo de cobertura médica por </td>
-            <td>9. ¿En el último año consultó a un profesional de salud?</td>
-            <td>10. La ÚLTIMA consulta fue por…</td>
-            <td>11. Fue a través de… </td>
-            <td>12. Fue en un establecimiento </td>
-            <td>13. ¿Sabe leer y escribir?</td>
-            <td>14. Asiste o asistió a algún establecimiento educativo? (colegio, escuela universidad)</td>
-            <td>15. A qué edad dejó de asistir?</td>
-            <td>16. Por qué motivo dejó de asistir?</td>
-            <td>17. ¿Le gustaría volver a estudiar? Luego de esta pregunta pasa p19</td>
-            <td>18. Este establecimiento es….</td>
-            <td>19. ¿Cuál es el nivel más alto que cursa o cursó?</td>
-            <td>20. ¿Finalizó ese nivel?</td>
-            <td>21.¿Cuál fue el último año aprobado? </td>
-            <td>22. ¿Dónde Nació? </td>
-            <td>23. ¿Dónde vivía hace 5 años?</td>
-            <td>24. ¿Sufrió algún hecho delictivo en el último año?</td>
-            <td>25. ¿Realizó la denuncia?</td>
-          
-           
+            <td class="fit">1. </td>
+            <td class="fit">2. </td>
+            <td class="fit">3.(Anote en el siguiente orden) </td>
+            <td class="fit">4. (Anote en cada caso)</td>
+            <td class="fit">5. ¿En qué fecha nació? </td>
+            <td class="fit">6. ¿Cuántos años?</td>
+            <td class="fit">7. ¿Actualmen te está...</td>
+            <td class="fit">8. Tiene algún tipo de cobertura médica por </td>
+            <td class="fit">9. ¿En el último año consultó a un profesional de salud?</td>
+            <td class="fit">10. La ÚLTIMA consulta fue por…</td>
+            <td class="fit">11. Fue a través de… </td>
+            <td class="fit">12. Fue en un establecimiento </td>
+            <td class="fit">13. ¿Sabe leer y escribir?</td>
+            <td class="fit">14. Asiste o asistió a algún establecimiento educativo? (colegio, escuela universidad)</td>
+            <td class="fit">15. A qué edad dejó de asistir?</td>
+            <td class="fit">16. Por qué motivo dejó de asistir?</td>
+            <td class="fit">17. ¿Le gustaría volver a estudiar? Luego de esta pregunta pasa p19</td>
+            <td class="fit">18. Este establecimiento es….</td>
+            <td class="fit">19. ¿Cuál es el nivel más alto que cursa o cursó?</td>
+            <td class="fit">20. ¿Finalizó ese nivel?</td>
+            <td class="fit">21.¿Cuál fue el último año aprobado? </td>
+            <td class="fit">22. ¿Dónde Nació? </td>
+            <td class="fit">23. ¿Dónde vivía hace 5 años?</td>
+            <td class="fit">24. ¿Sufrió algún hecho delictivo en el último año?</td>
+            <td class="fit">25. ¿Realizó la denuncia?</td>
+
+
         </tr>
+        @foreach ($hogar->individuos as $item)
         <tr>
             {{-- 1 --}}
-            <td><input type="text" class="form-control" name="CH01"> </td>
+        <td><input type="number" class="form-control" name="CH01" value="{{$item->nro_componente}}"> </td>
             {{-- 2 --}}
-            <td><input type="number" class="form-control" name="CH02"> </td>
+        <td><input type="text" class="form-control" name="CH02" value="{{$item->nombre}}"> </td>
             {{-- 3 --}}
             <td><select name="CH03" id="" class="form-control">
+                    <option value=""></option>
                 <option value="01">Jefe/a</option>
                 <option value="02">Conyuge/pareja</option>
                 <option value="03">Hijo/a Hijastro/a</option>
@@ -66,6 +68,7 @@
                 </select> </td>
             {{-- 4 --}}
             <td><select name="CH04" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1.Varón</option>
                     <option value="2">2.Mujer</option>
                     </select> </td>
@@ -75,6 +78,7 @@
             <td><input type="number" class="form-control" name="CH06" step="1" min="0" max="99">  </td>
             {{-- 7 --}}
             <td><select name="CH07" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1 ...Unido/a?</option>
                     <option value="2">2 ...Casado/a?</option>
                     <option value="3">3 ...Separado/a o divorciado/a?</option>
@@ -83,6 +87,7 @@
                     </select>  </td>
             {{-- 8 --}}
             <td><select name="CH08" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Obra social (incluye PAMI)</option>
                     <option value="2">2. Mutual/Prepaga/Servicio de emergencia</option>
                     <option value="3">3. Planes y Seguros Público</option>
@@ -91,16 +96,19 @@
                     </select>  </td>
             {{-- 9 --}}
             <td><select name="CH08_A" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">Si</option>
                     <option value="2">No</option>
                     </select> </td>
             {{-- 10 --}}
             <td><select name="CH08_B" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Dolencia/afección/enfermedad</option>
                     <option value="2">2. Control/prevención</option>
                     </select> </td>
             {{-- 11 --}}
             <td><select name="CH08_C" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Emergencia</option>
                     <option value="2">2. Guardia</option>
                     <option value="3">3. Turno programado</option>
@@ -108,6 +116,7 @@
                     </select> </td>
             {{-- 12 --}}
             <td><select name="CH08_D" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Privado</option>
                     <option value="2">2. Público Nacional</option>
                     <option value="3">3. Público Provincial</option>
@@ -115,12 +124,14 @@
                     </select> </td>
              {{-- 13 --}}
             <td><select name="CH09" id="" class="form-control">
+                    <option value=""></option>
                 <option value="1">1. Si</option>
                 <option value="2">2. No</option>
                 <option value="3">3. Menor de 2 años (a p.22)</option>
                 </select> </td>
            {{-- 14 --}}
             <td><select name="CH10" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Si, asiste (pasa a p18)</option>
                     <option value="2">2. No asiste, pero asistió</option>
                     <option value="3">3. Nunca asistió (A p. 22)</option>
@@ -129,6 +140,7 @@
             <td><input type="number" class="form-control" name="CH10_E" step="1" min="0" max="99"></td>
             {{-- 16 --}}
             <td><select name="CH10_M" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Porque me costaba estudiar</option>
                     <option value="2">2. Porque tenía que trabajar</option>
                     <option value="3">3. Porque tenía que cuidar hermanos o familiares</option>
@@ -139,18 +151,21 @@
                     </select> </td>
            {{-- 17 --}}
             <td><select name="CH10_G" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Si</option>
                     <option value="2">2. No</option>
                     <option value="9">9. Ns/Nr</option>
                     </select> </td>
           {{-- 18 --}}
             <td><select name="CH11" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Público</option>
                     <option value="2">2. Privado</option>
                     <option value="3">9. Ns/Nr</option>
                     </select> </td>
           {{-- 19 --}}
             <td><select name="CH12" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Jardin/Prescolar</option>
                     <option value="2">2. Primario</option>
                     <option value="3">3. EGB</option>
@@ -163,11 +178,13 @@
                     </select> </td>
          {{-- 20 --}}
             <td><select name="CH13" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Si</option>
                     <option value="2">2. No</option>
                     </select> </td>
         {{-- 21 --}}
             <td><select name="CH14" id="" class="form-control">
+                    <option value=""></option>
                     <option value="00">00. Ninguno</option>
                     <option value="01">01. Primero</option>
                     <option value="02">02. Segundo</option>
@@ -183,16 +200,18 @@
                     </select>  </td>
                 {{-- 22 --}}
             <td><select name="CH15" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. En esta localidad</option>
                     <option value="2">2. En otra localidad de esta provincia </option>
                     <option value="3">3. En otra provincia  (especificar)</option>
                     <option value="4">4. En un país limítrofe (especificar Brasil, Bolivia,Chile, Paraguay, Uruguay)</option>
                     <option value="5">5. En otro país (especificar)</option>
-                    </select> 
+                    </select>
                     <input type="text" class="form-control" id="" name="CH15_Cod" placeholder=""  maxlength="3" disabled>
                  </td>
                 {{-- 23 --}}
             <td><select name="CH16" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. En esta localidad</option>
                     <option value="2">2. En otra localidad de esta provincia </option>
                     <option value="3">3. En otra provincia  (especificar)</option>
@@ -200,28 +219,32 @@
                     <option value="5">5. En otro país (especificar)</option>
                     <option value="6">6. No había nacido</option>
                     <option value="3">9. Ns/Nr</option>
-                    </select> 
+                    </select>
                     <input type="text" class="form-control" id="" name="CH16_Cod" placeholder=""  maxlength="3" disabled>
                   </td>
                 {{-- 24 --}}
             <td><select name="CH24" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Si (pasa a p25)</option>
                     <option value="2">2. No</option>
                     <option value="3">9. Ns/Nr</option>
                     </select></td>
                 {{-- 25 --}}
             <td><select name="CH25" id="" class="form-control">
+                    <option value=""></option>
                     <option value="1">1. Si</option>
                     <option value="2">2. No</option>
                     <option value="3">9. Ns/Nr</option>
                     </select> </td>
-           
+
         </tr>
+        @endforeach
+
       {{-- -------------------------------------------- --}}
-     
-   
+
+
 </tbody>
       </table>
 
-        
+
 </div>
