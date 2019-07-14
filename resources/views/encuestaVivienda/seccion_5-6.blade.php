@@ -128,7 +128,7 @@
                                 <option value="9">9. Otra razón
                                                 (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control input-sm" id="" placeholder="" name="MOTIVO-OTRO_{{$i}}">   </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control input-sm" id="" placeholder="" name="MOTIVO_OTRO_{{$i}}">   </td> {{-- FALTA DICCIONARIO --}}
                          {{-- 13 --}}
                         <td class="fit"><select name="CH13_{{$i}}" id="" class="form-control input-sm">
                             <option value=""        ></option>
@@ -152,7 +152,7 @@
                                         <option value="8">8. En prisión</option>
                                         <option value="9">9. Otra razón (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control input-sm" id="" placeholder="" name="CH14-OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control input-sm" id="" placeholder="" name="CH14_OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
                       {{-- 15 --}}
                         <td class="fit"><select name="CH15_{{$i}}" id="" class="form-control input-sm">
                             <option value=""        ></option>
@@ -176,7 +176,7 @@
                                         <option value="8">8. En prisión</option>
                                         <option value="9">9. Otra razón (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control input-sm" id="" placeholder="" name="CH16-OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control input-sm" id="" placeholder="" name="CH16_OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
 
                     </tr>
 
