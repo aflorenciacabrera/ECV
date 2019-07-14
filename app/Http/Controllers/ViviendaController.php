@@ -36,7 +36,9 @@ class ViviendaController extends Controller
             if($request['NRO_HOGAR_'.$i])///existe
             {
                 //
+                //guardo cada hogar
                 $_hogares[] = $request['NRO_HOGAR_' . $i];
+                //guardo cada nombre de inviduo
                 $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
 
                 $vs = new vivienda_seccion_v();
@@ -76,6 +78,7 @@ class ViviendaController extends Controller
             $h->save();
             foreach ($_componentes[$value] as $nro_componente => $nombre)
             {
+                // cre el registro de cada individuo ??
                 $hogar_id = $h->id;
                 $individuo = new individuo();
                 $individuo->hogar_id = $hogar_id;
@@ -89,11 +92,8 @@ class ViviendaController extends Controller
 
 
 
+        return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
 
-        // cre el registro de cada individuo ??
-
-
-        // return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
     }
 
 
