@@ -6,12 +6,12 @@
             <div class="form-group col-md-6">
                     <label for="codigo_area">3a. ¿Cuántos empleos/ocupaciones tiene?</label>
                     <small id="codigo_area" class="form-text text-muted"> (En el caso de tener más de un empleo, verifique que no haya trabajado en ninguno durante la semana pasada)</small>
-                    <input class="form-control" name="" >    
+                    <input class="form-control" type="number" name="PP03A" id="PP03A" step="1" min="0" max="99" >    
             </div>                       
              <div class="form-group col-md-6">
                      <br>
                     <label for="codigo_area">3b. ¿Cuántas horas semanales trabaja habitualmente en todos sus empleos/ocupaciones…</label>
-                     <select class="form-control" name=""  >
+                     <select class="form-control" name="PP03B" id="PP03B" >
                                 <option value="1">… menos de 35 horas semanales?</option>
                                 <option value="2" >… entre 35 y 45 horas?</option> 
                                 <option value="3" >… Más de 45 horas semanales?</option>   
@@ -25,14 +25,14 @@
         <div class="form-row">
            <div class="form-group col-md-6">
                     <label for="codigo_area">3c. La semana pasada, ¿tenía…</label>
-                     <select class="form-control" name=""  ><small id="" class="form-text text-muted"> </small>
+                     <select class="form-control" name="PP03C" id="PP03B" ><small id="" class="form-text text-muted"> </small>
                                 <option value="1">… un solo empleo/ocupación/actividad?</option>
                                 <option value="2" >… más de un empleo/ocupación/actividad?</option>             
                         </select>
             </div>    
              <div class="form-group col-md-6">
                     <label for="codigo_area">3d. ¿Cuántos?</label>
-                        <input type="text" class="form-control" name=""> 
+                        <input type="text" class="form-control" name="PP03D" id="PP03D" step="1" min="0" max="99"> 
             </div>    
         </div>   
          <div class="form-row">
@@ -77,7 +77,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row">Total de horas  </th>
-                                        <td>  <input type="text"  name=""></td>
+                                        <td>  <input type="text"  name="PP03E" id="PP03E"></td>
                                         </tr>
                                 </tbody>
                         </table>
@@ -123,7 +123,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row">Total de horas  </th>
-                                        <td>  <input type="text"  name=""></td>
+                                        <td>  <input type="text"  name="PP03F" id="PP03F"></td>
                                         </tr>
                                 </tbody>
                         </table>
@@ -132,7 +132,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="codigo_area"> 3g. La semana pasada, ¿Quéria trabajar más horas?</label>
-                     <select class="form-control" name=""  >
+                     <select class="form-control" name="PP03G" id="PP03G">
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>                                
                         </select>
@@ -140,7 +140,7 @@
             </div>   
              <div class="form-group col-md-6">
                     <label for="codigo_area">3h. ¿Si hubiera conseguido más horas…</label>
-                      <select class="form-control" name=""  >
+                      <select class="form-control" name="PP03H" id="PP03H">
                                 <option value="1">… podía trabajarlas esa semana?</option>
                                 <option value="2" >… podía empezar a trabajarlas en dos semanas a más tardar?</option>
                                 <option value="3">… no podía trabajar más horas?</option> 
@@ -155,7 +155,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="codigo_area">3i. En los últimos 30 días, ¿buscó trabajar más horas? </label>
-                     <select class="form-control" name=""  >
+                     <select class="form-control" name="PP03I" id="PP03I">
                                 <option value="1">Si</option>
                                 <option value="2" >No</option> 
                                 <option value="9" >NS/Nr</option>             
@@ -165,7 +165,7 @@
              <div class="form-group col-md-6">
                     <label for="codigo_area">3j. Aparte de este/os trabajo/s ¿estuvo buscando algún
 empleo/ocupación/actividad?</label>
-                      <select class="form-control" name=""  >
+                      <select class="form-control" name="PP03J" id="PP03J"  >
                                 <option value="1">Si</option>
                                 <option value="2" >No</option> 
                                 <option value="9" >NS/Nr</option>             
@@ -175,7 +175,7 @@ empleo/ocupación/actividad?</label>
         <div class="form-row">
                 <div class="form-group col-md-6">
                         <label for="codigo_area">3k. ¿Estuvo buscando porque…</label>
-                        <select class="form-control" name=""  >
+                        <select class="form-control" name="PP03K" id="PP03K" >
                                         <option value="1">… quería cambiar de trabajo?</option>
                                         <option value="2" >… quería agregar al que tiene?</option>
                                         <option value="3">… se termina el trabajo que tiene?</option> 
