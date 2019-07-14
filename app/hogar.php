@@ -159,6 +159,23 @@ class hogar extends Model
     }
     public function individuos()
     {
-        return $this->hasMany('App\individuos');
+        return $this->hasMany('App\individuo');
+    }
+
+    public function estado()
+    {
+
+        if(!$this->estado)
+        {
+            return 'Hogar Incompleto';
+        }
+
+        $individuos = $this->individuos;
+        foreach ($individuos as $individuo) {
+            if (!$individuo->estado) {
+                return 'individuo incompleto';
+            }
+        }
+        return 'ok';
     }
 }

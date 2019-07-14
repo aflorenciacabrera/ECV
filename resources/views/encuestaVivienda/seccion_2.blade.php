@@ -1,21 +1,21 @@
 {{-- @extends('layouts.app')
 @section('content') --}}
-<div class="card-body">      
+<div class="card-body">
         <div class="form-row">
             <div class="form-group col-md-4">
                     <label for="codigo_area">Manz.:</label>
-                    <input type="text" class="form-control" id="" name="manz" aria-describedby="" placeholder=" " >     
-            </div>       
+                    <input type="text" class="form-control" id="" name="manz" aria-describedby="" placeholder=" " >
+            </div>
             <div class="form-group col-md-4">
                     <label for="numero_listado">Lado:</label>
-                    <input type="text" class="form-control" id="" name="lado" placeholder="" >
+                    <input type="number" min="0" step="1" class="form-control" id="" name="lado" placeholder="" >
             </div>
             <div class="form-group col-md-4">
                         <label for="numero_listado">Calle:</label>
                         <input type="text" class="form-control" id="" name="calle" placeholder="" >
            </div>
-        </div>   
-       
+        </div>
+
         <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="anio">N°:</label>
@@ -41,7 +41,7 @@
                         <label for="respondiente">Descripción:</label>
                         <input type="text" class="form-control" id="" name="descripcion" placeholder="" >
                 </div>
-        </div>   
+        </div>
     </div>
-{{--             
+{{--
     @endsection --}}

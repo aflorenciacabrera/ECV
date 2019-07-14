@@ -123,6 +123,16 @@ class ViviendaController extends Controller
 
     }
 
+    public function verHogares($id_vivienda)
+    {
+        $vivienda = vivienda::find($id_vivienda);
+
+        //TODO aca mandamos al listado de hogares de la vivienda
+        // pero si tiene un solo hogar podriamos mandar directo al hogar pero bueno la proxima nomas
+
+        return view('hogares_en_vivienda')->with('vivienda',$vivienda);
+    }
+
 
 
 

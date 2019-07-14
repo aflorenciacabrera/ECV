@@ -139,6 +139,7 @@ class CreateViviendasTable extends Migration
             $table->text('observaciones')->nullable();
 
             $table->timestamps();
+
             $table->integer('estado')->default(0);//iniciado
         });
     }

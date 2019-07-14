@@ -27,6 +27,8 @@ Route::get('encuesta/viviendas/', 'ViviendaController@verListadoVivienda')->name
 Route::get('encuesta/vivienda/{id}', 'ViviendaController@verVivienda')->name( 'verDetalleVivienda');
 Route::get('encuesta/viviendas/generar', 'ViviendaController@autogenerar')->name('autogenerarVivienda');
 
+Route::get('vivienda/hogares/{id_vivienda}','ViviendaController@verHogares')->name('verHogares');
+
 Route::get('encuesta/hogar/{id}', 'HogarController@verEncuestaHogar')->name( 'verEncuestaHogar');
 Route::post( 'encuesta/hogar/crear', 'HogarController@crearEncuestaHogar')->name( 'crearEncuestaHogar');
 

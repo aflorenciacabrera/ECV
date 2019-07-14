@@ -8,10 +8,13 @@ use App\vivienda;
 use Auth;
 class HogarController extends Controller
 {
-    //
-    public function verEncuestaHogar($vivienda_id){
-        $v = vivienda::find($vivienda_id);
-        return view('encuestaHogar')->with('vivienda',$v);
+    /**
+     * El hogar ya existe cuando se completa el formulario de vivienda
+     * Entonces busco nomas el registro y lo devuelvo modo "editar"
+     */
+    public function verEncuestaHogar($hogar_id){
+        $hogar = hogar::find($hogar_id);
+        return view('encuestaHogar')->with('hogar',$hogar);
       }
 
     public function crearEncuestaHogar(Request $request)
