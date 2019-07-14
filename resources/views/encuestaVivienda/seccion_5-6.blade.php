@@ -152,7 +152,7 @@
                                         <option value="8">8. En prisión</option>
                                         <option value="9">9. Otra razón (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control input-sm" id="" placeholder="" name="CH14-otro_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control input-sm" id="" placeholder="" name="CH14-OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
                       {{-- 15 --}}
                         <td class="fit"><select name="CH15_{{$i}}" id="" class="form-control input-sm">
                             <option value=""        ></option>
