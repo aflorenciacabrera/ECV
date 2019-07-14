@@ -21,6 +21,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
     <link href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js" defer></script>
+    <style>
+    .fit{
+         white-space: nowrap;
+    }
+    </style>
 </head>
 <body>
     <div id="app">

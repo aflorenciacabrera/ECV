@@ -89,24 +89,31 @@ class CreateViviendasTable extends Migration
             $table->text('IV14')->nullable();
             $table->text('IV15')->nullable();
 
+            /**
+             * MANDE SECCION V a OTRA TABLA que se llama seccion5 jaja
+             */
     // Seccion V. CODICIÓN DE RESIDENCIA
-            $table->text('NRO_HOGAR')->nullable();
-            $table->text('NRO_COMPONENTE')->nullable();
-            $table->text('NOMBRE_JEFE')->nullable();
-            $table->text('VIVIO_SEM')->nullable();
-            $table->text('VIVIO_MES')->nullable();
-            $table->text('FIJAR_RES')->nullable();
-            $table->text('ESTABA')->nullable();
-            $table->text('AUSENCIA');///TODO Campo repetid->nullable()o
-            $table->text('OTRA_RES')->nullable();
-    // Seccion VI CONTROL DE CAMBIOS
-            $table->text('NO_ESTABA')->nullable();
-            $table->text('CAMBIOS')->nullable();
-            $table->text('MOTIVO')->nullable();
-            $table->text('CH13')->nullable();
-            $table->text('CH14')->nullable();
-            $table->text('CH15')->nullable();
-            $table->text('CH16')->nullable();
+    //         $table->text('NRO_HOGAR')->nullable();
+    //         $table->text('NRO_COMPONENTE')->nullable();
+    //         $table->text('NOMBRE_JEFE')->nullable();
+    //         $table->text('VIVIO_SEM')->nullable();
+    //         $table->text('VIVIO_MES')->nullable();
+    //         $table->text('FIJAR_RES')->nullable();
+    //         $table->text('ESTABA')->nullable();
+    //         $table->text('AUSENCIA');///TODO Campo repetid->nullable()o
+    //         $table->text('OTRA_RES')->nullable();
+    // // Seccion VI CONTROL DE CAMBIOS
+    //         $table->text('NO_ESTABA')->nullable();
+    //         $table->text('CAMBIOS')->nullable();
+    //         $table->text('MOTIVO')->nullable();
+    //         $table->text('CH13')->nullable();
+    //         $table->text('CH14')->nullable();
+    //         $table->text('CH15')->nullable();
+    //         $table->text('CH16')->nullable();
+                // $table->text('MOTIVO-OTRO')->nullable(); //TODO no estan en diccionario
+            // $table->text('CH14-OTRO')->nullable(); //TODO no estan en diccionario
+            // $table->text('CH16-OTRO')->nullable(); //TODO no estan en diccionario
+
             //Seccion VII. CAUSAS POR LA QUE NO SE REALIZÓ LA ENTREVISTA
             //  participación
             $table->text('CAUSAS')->nullable();

@@ -64,12 +64,15 @@
                 <div class="form-group col-md-6">
                         <label for="exampleInputPassword1">Entrevista Realizada</label>
                         <select class="form-control" name="entrevista_realizada"  >
+                            <option value=""></option>
+
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>
                         </select>
                         <br>
                         <label for="exampleInputPassword1">Modalidad de Aplicación</label>
                         <select class="form-control" name="modalidad_aplicacion"  >
+                            <option value=""></option>
                                 <option value="1">Personal Completa</option>
                                 <option value="2">Personal Telefónico</option>
                                 <option value="3">Solo Telefónica</option>
@@ -85,6 +88,7 @@
                 <div class="form-group col-md-4">
                         <label for="codigo_area">¿Se hizo acompañamiento?</label>
                         <select id="" class="form-control" id="" name="acompaniamiento">
+                            <option value=""></option>
                                 <option value="1">Si</option>
                                 <option value="2">No</option>
                         </select>

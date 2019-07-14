@@ -19,6 +19,7 @@ $(document).ready(function () {
 <div class="container-fluid">
     <a name="" id="" class="btn btn-primary" href="{{route('autogenerarHogar',['id'=>$vivienda->id])}}" role="button">GENERAR AUTOMÁTICO</a>
         <form method="POST" action="{{route('crearEncuestaHogar')}}">
+        <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}">
             @csrf
         <div class="bs-stepper ">
             <div class="card ">

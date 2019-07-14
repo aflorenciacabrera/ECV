@@ -7,6 +7,7 @@
                    <label for=""><h3> participación</h3>  </label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
                         <select class="form-control" name="CAUSAS"  >
+                              <option value=""></option>
                                 <option value="1">Deshabilitada</option>
                                 <option value="2" >Demolida</option>
                                 <option value="3" >Fin de semana</option>
@@ -20,6 +21,7 @@
             </div>
              <div class="form-group col-md-6">
                         <select class="form-control" name="DESHABILITADA"  >
+                              <option value=""></option>
                                 <option value="1">Venta o alquiler</option>
                                 <option value="2" >Sucesión o remate</option>
                                 <option value="3" >Deshabilitada en la semana de referencia</option>
@@ -27,6 +29,7 @@
                         </select>
                         <br>
                          <select class="form-control" name="DEMOLIDA"  >
+                               <option value=""></option>
                                 <option value="1">Fue demolida</option>
                                 <option value="2" >En demolición</option>
                                 <option value="3" >Levantada</option>
@@ -34,27 +37,32 @@
                         </select>
                         <br>
                         <select class="form-control" name="FIN_DE_SEMANA"  >
+                              <option value=""></option>
                                 <option value="1">de la semana</option>
                                 <option value="2" >Viven en otra vivienda la mayor parte del mes</option>
                                 <option value="3" >Viven en otra vivienda la mayor parte del año</option>
                         </select>
                         <br>
                          <select class="form-control" name="CONSTRUCCION"  >
+                               <option value=""></option>
                                 <option value="1">Se está construyendo</option>
                                 <option value="2" >Construcción paralizada</option>
                                 <option value="3" >Refacción</option>
                         </select>
                         <br>
                          <select class="form-control" name="ESTABLECIMIENTO"  >
+                               <option value=""></option>
                                 <option value="1">Conserva la comodidad de vivienda</option>
                         </select>
                         <br>
                          <select class="form-control" name="VARIACION"  >
+                               <option value=""></option>
                                 <option value="1">No existe lugar físico</option>
                                 <option value="2">No es vivienda</option>
                         </select>
                         <br>
                          <select class="form-control" name="AUSENCIA_PARTICIPACION"  >
+                               <option value=""></option>
                                 <option value="1">No se pudo contactar en tres visitas</option>
                                 <option value="2" >Por causas circunstanciales</option>
                                 <option value="3" >Viaje</option>
@@ -62,12 +70,14 @@
                         </select>
                          <br>
                          <select class="form-control" name="RECHAZO"  >
+                               <option value=""></option>
                                 <option value="1">Negativa rotunda</option>
                                 <option value="2" >Rechazo por el portero eléctrico</option>
                                 <option value="3" >Se acordaron entrevistas que no se concretaron</option>
                         </select>
                         <br>
                          <select class="form-control" name="OTRO"  >
+                               <option value=""></option>
                                 <option value="1">Duelo</option>
                                 <option value="2" >Alcoholismo, discapacidad, idioma</option>
                                 <option value="3" >Problema de seguridad</option>
