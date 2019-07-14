@@ -5,18 +5,19 @@ $(document).ready(function () {
      * inicio el bs-stepper
      */
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 1;
+    var paso = 5;
     stepper.to(paso);
 
 
     /**
      * Para que haga en el enviar con el Enter
      */
-        $('input').on('keyup keypress', function(e) {
+        $('input, select').on('keyup keypress', function(e) {
         var keyCode = e.keyCode || e.which;
         if (keyCode === 13) {
             e.preventDefault();
-            var inputs = $(this).closest('form').find(':input:visible');
+            e.keyCode = 9;
+            var inputs = $(this).closest('form').find(':input');
             inputs.eq( inputs.index(this)+ 1 ).focus();
             return false;
         }
@@ -64,7 +65,7 @@ $(document).ready(function () {
                     t.removeClass('is-invalid')
                 }
                 /**
-                 * TODO ACA TENEMOS QUE LLAMAR A LOS EVENTOS DE OCULTAR Y ESO
+                 * //TODO ACA TENEMOS QUE LLAMAR A LOS EVENTOS DE OCULTAR Y ESO
                  */
 
         })

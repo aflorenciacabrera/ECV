@@ -6,6 +6,7 @@
                    <label for="">¿Salió a supervisión?  </label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
                         <select class="form-control" name="supervision"  >
+                            <option value=""></option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>
                         </select>
@@ -48,6 +49,7 @@
                 <div class="form-group col-md-6">
                     <label for="exampleInputPassword1">Modalidad de Aplicación</label>
                         <select class="form-control" name="modalidad"  >
+                            <option value=""></option>
                                 <option value="1">Personal Completa</option>
                                 <option value="2">Personal Telefónico</option>
                                 <option value="3">Solo Telefónica</option>
@@ -55,6 +57,7 @@
                         <br>
                         <label for="exampleInputPassword1">El encuestador entregó...</label>
                         <select class="form-control" name="entrega"  >
+                            <option value=""></option>
                                 <option value="7">Ausencia</option>
                                 <option value="8" >Rechazo</option>
                                 <option value="9" >Otras causas</option>
