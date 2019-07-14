@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 use App\vivienda;
 use Auth;
+use App\hogar;
 use App\vivienda_seccion_v;
+use App\individuo;
 
 class ViviendaController extends Controller
 {
@@ -27,10 +29,16 @@ class ViviendaController extends Controller
 
         //grabo registro seccion v
         $vivienda_id = $v->id;
+        $_hogares = array();//guardo todos los numeros de hogar para despues
+        $_componentes = array();//guardo los individuales por cada hogar para crear los individuales
         for ($i=1; $i <= 14; $i++)
         {
             if($request['NRO_HOGAR_'.$i])///existe
             {
+                //
+                $_hogares[] = $request['NRO_HOGAR_' . $i];
+                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
+
                 $vs = new vivienda_seccion_v();
                 $vs->vivienda_id = $vivienda_id;
                 $vs->NRO_HOGAR = $request['NRO_HOGAR_'.$i];
@@ -55,14 +63,37 @@ class ViviendaController extends Controller
                 $vs->save();
             }
         }
+        print_r($_componentes);
+        $hogares = (array_unique(($_hogares)));
         // creo el registro de cada hogar ??
-        $vivienda_id = $v->id;
+        //Cuantos hogares son?
+        foreach ($hogares as $key => $value)
+        {
+            $h = new hogar();
+            $h->vivienda_id = $vivienda_id;
+            $h->numero_hogar = $value;
+            $h->user_id = Auth::user()->id;
+            $h->save();
+            foreach ($_componentes[$value] as $nro_componente => $nombre)
+            {
+                $hogar_id = $h->id;
+                $individuo = new individuo();
+                $individuo->hogar_id = $hogar_id;
+                $individuo->user_id = Auth::user()->id;
+                $individuo->nro_componente = $nro_componente;
+                $individuo->nombre = $nombre;
+                $individuo->save();
+
+            }
+        }
+
+
 
 
         // cre el registro de cada individuo ??
 
 
-        return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
+        // return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
     }
 
 

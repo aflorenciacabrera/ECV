@@ -179,6 +179,8 @@ class CreateHogarsTable extends Migration
             $table->text('entrega')->nullable();
             $table->text('mal_tomado')->nullable();
             $table->timestamps();
+
+            $table->integer('estado')->default(0);//iniciado
         });
     }
 

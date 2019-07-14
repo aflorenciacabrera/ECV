@@ -106,4 +106,8 @@ class vivienda extends Model
     {
         return $this->hasMany('App\hogar');
     }
+
+    public function seccionv(){ //para saber cuantos hogares cargaron en la seccion 5 para control
+        return $this->hasMany('App\vivienda_seccion_v');
+    }
 }
