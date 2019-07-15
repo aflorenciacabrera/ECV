@@ -22,6 +22,16 @@ $(document).ready(function(){
             input.val(hogar[name])
         }
     })
+    $('#form select').each(function(e){
+        input = $(this);
+        name = input.attr('name');
+        //ver si el name esta en el hogar
+        if(hogar[name])//si existe es porque es true
+        {
+            //entonce relleno el campo
+            input.val(hogar[name])
+        }
+    })
 
 })
 </script>
@@ -134,7 +144,7 @@ $(document).ready(function(){
                             @include('encuestaHogar.seccion_hogar_planes')
                         </div>
                          <div id="seccion_org" class="content" role="tabpanel" aria-labelledby="seccion_org-trigger">
-                            @include('encuestaHogar.seccion_hogar_planes')
+                            @include('encuestaHogar.seccion_org_hogar')
                         </div>
                         <div id="seccion_razones" class="content" role="tabpanel" aria-labelledby="seccion_razones-trigger">
                             @include('encuestaHogar.seccion_razones_no_encuesta')

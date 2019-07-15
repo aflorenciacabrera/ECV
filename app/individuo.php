@@ -11,4 +11,9 @@ class individuo extends Model
     {
         return $this->belongsTo('App\hogar');
     }
+
+    public function nolaboral()
+    {
+        return $this->hasOne('App\hogarSeccionSeis');
+    }
 }

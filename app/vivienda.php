@@ -113,11 +113,13 @@ class vivienda extends Model
 
     public function estado(){
         $hogares = $this->hogares;
+        $flag = 'ok';
         foreach ($hogares as $hogar)
         {
             if(!$hogar->estado)
             {
-                return 'hogar incompleto';
+                $flag = 'hogar incompleto';
+                return $flag;
             }
             else
             {
@@ -126,13 +128,13 @@ class vivienda extends Model
                 {
                     if(!$individuo->estado)
                     {
-                        return 'individuo incompleto';
+                        $flag = 'individuo incompleto';
                     }
 
                 }
             }
         }
-        return 'ok';
+        return $flag;
 
     }
 }

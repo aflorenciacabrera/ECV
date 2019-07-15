@@ -116,20 +116,23 @@ class CreateHogarsTable extends Migration
         // VI. Ingreso no laborales
             $table->text('VImes')->nullable();
             $table->text('VIcobr')->nullable();
-            $table->text('V2_M')->nullable();
-            $table->text('V21_M')->nullable();
-            $table->text('V22_M')->nullable();
-            $table->text('V3_M')->nullable();
-            $table->text('V4_M')->nullable();
-            $table->text('V5_M')->nullable();
-            $table->text('V8_M')->nullable();
-            $table->text('V9_M')->nullable();
-            $table->text('V10_M')->nullable();
-            $table->text('V11_M')->nullable();
-            $table->text('V12_M')->nullable();
-            $table->text('V18_M')->nullable();
-            $table->text('V19_AM')->nullable();
-            $table->text('T_Vi')->nullable();
+            /**
+             * MANDE A TABLA APARTE
+             */
+            // $table->text('V2_M')->nullable();
+            // $table->text('V21_M')->nullable();
+            // $table->text('V22_M')->nullable();
+            // $table->text('V3_M')->nullable();
+            // $table->text('V4_M')->nullable();
+            // $table->text('V5_M')->nullable();
+            // $table->text('V8_M')->nullable();
+            // $table->text('V9_M')->nullable();
+            // $table->text('V10_M')->nullable();
+            // $table->text('V11_M')->nullable();
+            // $table->text('V12_M')->nullable();
+            // $table->text('V18_M')->nullable();
+            // $table->text('V19_AM')->nullable();
+            // $table->text('T_Vi')->nullable();
         // HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES
             $table->text('DI')->nullable();
             $table->text('DI_1')->nullable();

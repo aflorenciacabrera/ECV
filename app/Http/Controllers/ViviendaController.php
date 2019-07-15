@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\vivienda;
 use Auth;
 use App\hogar;
+use App\hogarSeccionSeis;
 use App\vivienda_seccion_v;
 use App\individuo;
 
@@ -41,6 +42,7 @@ class ViviendaController extends Controller
                 //guardo cada nombre de inviduo
                 $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
 
+                //creo registro de vivienda_seccion_5
                 $vs = new vivienda_seccion_v();
                 $vs->vivienda_id = $vivienda_id;
                 $vs->NRO_HOGAR = $request['NRO_HOGAR_'.$i];
@@ -86,6 +88,13 @@ class ViviendaController extends Controller
                 $individuo->nro_componente = $nro_componente;
                 $individuo->nombre = $nombre;
                 $individuo->save();
+
+                // Tambien creo registro de la seccion 6 de hogar por cada coso
+                $seccion6 = new hogarSeccionSeis();
+                $seccion6->hogar_id = $hogar_id;
+                $seccion6->individuo_id = $individuo->id;
+                $seccion6->save();
+                //TODO no asignable
 
             }
         }

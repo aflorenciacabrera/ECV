@@ -27,6 +27,7 @@
                         <td>
                             @if($h->estado() =="individuo incompleto")
                             <a name="" id="" class="btn btn-primary btn-sm" href="" role="button">Completar Individuales</a>
+                            <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}"  role="button">Actualizar</a>
                             @else
                         <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}" role="button">Completar Formulario</a>
                             @endif

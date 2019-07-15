@@ -5,7 +5,7 @@ $(document).ready(function () {
      * inicio el bs-stepper
      */
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 4;
+    var paso = 1;
     stepper.to(paso);
 
 
