@@ -1,14 +1,11 @@
 
-<div class="card-body">
-    <label for="">HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES</label>
-<br>
 
 <div class="form-row">
     <div class="form-group col-md-4">
     <div class="form-row ">
         <div class="col-md-10">
                 <label for="numero_semana">1 ¿Quién realiza la mayor parte de las tareas de la casa?</label>
-        </div>   
+        </div>
     </div>
     <br>
     <div class="col-md-10">
@@ -17,7 +14,7 @@
                         <tr>
                         <th scope="col"> Nº</th>
                         <th scope="col">Nombre</th>
-                        
+
                         </tr>
                     </thead>
                     <tbody>
@@ -41,13 +38,15 @@
 
                 <div class="col-md-10" >
                     <select name="VII1" id="" class="form-control">
-                        <option value="96">Servicio doméstico</option> 
-                        <option value="97">Otra persona que no vive en el hogar</option>   
-                    </select> 
+                        <option value=""></option>
+
+                        <option value="96">Servicio doméstico</option>
+                        <option value="97">Otra persona que no vive en el hogar</option>
+                    </select>
                 </div>
         </div>
-    </div>  
-            {{-- ------------------------------------------------------------ --}}
+    </div>
+
     <hr>
     <div class="form-group col-md-4">
             <div class="form-row ">
@@ -55,7 +54,7 @@
                         <label for="numero_semana">2 ¿Qué otras personas ayudan en las tareas de la
                                 casa?</label>
                 </div>
-                    
+
             </div>
             <br>
             <div class="col-md-10">
@@ -64,7 +63,7 @@
                                 <tr>
                                 <th scope="col"> Nº</th>
                                 <th scope="col">Nombre</th>
-                                
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -87,24 +86,25 @@
                 <div class="form-row ">
                         <div class="col-md-10" >
                             <select name="VII2" id="" class="form-control">
-                                <option value="96">Servicio doméstico</option> 
-                                <option value="97">Otra persona que no vive en el hogar</option>   
-                                <option value="98">Ninguna</option>   
-                            </select> 
+                                <option value=""></option>
+                                <option value="96">Servicio doméstico</option>
+                                <option value="97">Otra persona que no vive en el hogar</option>
+                                <option value="98">Ninguna</option>
+                            </select>
                         </div>
                 </div>
-            </div>       
+            </div>
     <hr>
 
 
 <div class="form-group col-md-4">
-{{-- ---------------------------------------------------------------------------- --}}
+
 <div class="form-row ">
         <div class="col-md-10">
             <label for="numero_semana">3 ¿Hay en el hogar alguna persona con
                     discapacidad?</label>
     </div>
-        
+
 </div>
 <br>
 <div class="col-md-10">
@@ -113,7 +113,7 @@
                     <tr>
                     <th scope="col"> Nº</th>
                     <th scope="col">Nombre</th>
-                    
+
                     </tr>
                 </thead>
                 <tbody>
@@ -145,12 +145,13 @@
 
             <div class="col-md-10" >
                 <select name="VII3" id="" class="form-control">
+                    <option value=""></option>
                     <option value="98">Ninguna</option>
-                </select> 
+                </select>
             </div>
     </div>
 </div>
-</div>
+
     <div class="form-row ">
             <div class="form-group col-md-6">
             <div class="col-md-6">
@@ -159,11 +160,12 @@
             </div>
             <div class="col-md-4">
             <select class="form-control" name=""  >
+                <option value=""></option>
                     <option value="1">Si</option>
                     <option value="2">No</option>
                     <option value="3">No quiere darlo</option>
                     <option value="4">No respuesta</option>
-                    
+
             </select>
         </div>
             <div class="form-row ">
@@ -178,10 +180,10 @@
                                 <textarea name="" id="" cols="80" rows="3" class="form-control"></textarea>
                         </div>
             </div>
-                             
+
         </div>
-  
-    
+
+
 
 <div class="form-group col-md-6">
     <label for="">CUADRO RESUMEN</label>
@@ -227,5 +229,6 @@
     </div>
 
 </div>
-</div>  
 </div>
+</div>
+

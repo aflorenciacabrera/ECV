@@ -73,4 +73,9 @@ public function hasRole($role)
     return false;
 }
 
+
+public function viviendas(){
+    return $this->hasMany('App\vivienda');
+}
+
 }

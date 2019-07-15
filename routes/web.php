@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,14 +21,22 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Encuestas
-Route::get('Encuesta/Vivienda', 'ViviendaController@verEncuestaVivienda')->name( 'verEncuestaVivienda');
-Route::post('encuesta/Vivienda/crear', 'ViviendaController@crearEncuestaVivienda')->name( 'crearEncuestaVivienda');
+Route::get('encuesta/vivienda', 'ViviendaController@verEncuestaVivienda')->name( 'verEncuestaVivienda');
+Route::post('encuesta/vivienda/crear', 'ViviendaController@crearEncuestaVivienda')->name( 'crearEncuestaVivienda');
+Route::get('encuesta/viviendas/', 'ViviendaController@verListadoVivienda')->name( 'verListadoVivienda');
+Route::get('encuesta/vivienda/{id}', 'ViviendaController@verVivienda')->name( 'verDetalleVivienda');
+Route::get('encuesta/viviendas/generar', 'ViviendaController@autogenerar')->name('autogenerarVivienda');
 
-Route::get('Encuesta/Hogar', 'HogarController@verEncuestaHogar')->name( 'verEncuestaHogar');
-Route::post( 'Encuesta/Hogar/crear', 'HogarController@crearEncuestaHogar')->name( 'crearEncuestaHogar');
+Route::get('vivienda/hogares/{id_vivienda}','ViviendaController@verHogares')->name('verHogares');
 
-Route::get('Encuesta/Individuo', 'IndividuoController@verEncuestaIndividuo')->name( 'verEncuestaIndividuo');
-Route::post( 'Encuesta/Individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name( 'crearEncuestaIndividuo');
+Route::get('encuesta/hogar/{id}', 'HogarController@verEncuestaHogar')->name( 'verEncuestaHogar');
+Route::post( 'encuesta/hogar/crear', 'HogarController@crearEncuestaHogar')->name( 'crearEncuestaHogar');
+
+Route::get('encuesta/hogares/generar/{id}', 'HogarController@autogenerar')->name('autogenerarHogar');
+
+Route::get('encuesta/individuo', 'IndividuoController@verEncuestaIndividuo')->name( 'verEncuestaIndividuo');
+Route::post( 'encuesta/individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name( 'crearEncuestaIndividuo');
+Route::get('hogar/individuos/{id}','HogarController@verIndividuos')->name("individuosEnHogar");
 
 
 // Route::get('encuestaHogar/seccion_1', 'HogarController@verHogarseccion1')->name('Hogar_seccion1');

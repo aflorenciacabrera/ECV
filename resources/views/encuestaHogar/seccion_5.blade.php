@@ -9,6 +9,7 @@
             </div>
             <div class="col-md-2" >
                 <select class="form-control" name="V1"  >
+                    <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                 </select>
@@ -20,6 +21,7 @@
             </div>
             <div class="col-md-2" >
                 <select class="form-control" name="V2"  >
+                    <option value=""></option>
                     <option value="1">Si</option>
                     <option value="2">No</option>
                 </select>
@@ -31,6 +33,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V3"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -42,6 +45,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V4"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -53,6 +57,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V5"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -60,11 +65,12 @@
         </div>
         <div class="form-row ">
             <div class="col-md-10">
-                <label for="numero_semana">6… con  mercaderías,  ropa,  alimentos del gobierno, 
+                <label for="numero_semana">6… con  mercaderías,  ropa,  alimentos del gobierno,
                     iglesias, escuelas, etc.?</label>
             </div>
             <div class="col-md-2" >
                 <select class="form-control" name="V6"  >
+                    <option value=""></option>
                     <option value="1">Si</option>
                     <option value="2">No</option>
                 </select>
@@ -76,6 +82,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V7"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -87,6 +94,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V8"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -98,6 +106,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V9"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -108,7 +117,8 @@
                     <label for="numero_semana">10… intereses o rentas por plazos fijos/inversiones?</label>
                 </div>
                 <div class="col-md-2" >
-                    <select class="form-control" name="V10"  required>
+                    <select class="form-control" name="V10"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -119,7 +129,8 @@
                     <label for="numero_semana">11… una beca de estudio?</label>
                 </div>
                 <div class="col-md-2" >
-                    <select class="form-control" name="V11"  required>
+                    <select class="form-control" name="V11"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -131,6 +142,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V12"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -142,6 +154,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V13"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -153,6 +166,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V14"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -164,6 +178,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V15"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -175,6 +190,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V16"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -186,6 +202,7 @@
                 </div>
                 <div class="col-md-2" >
                     <select class="form-control" name="V17"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -196,7 +213,8 @@
                     <label for="numero_semana">18… Tuvieron otros ingresos en efectivo? (limosnas, juegos de azar, etc.)</label>
                 </div>
                 <div class="col-md-2" >
-                    <select class="form-control" name="V18"  required>
+                    <select class="form-control" name="V18"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
@@ -211,11 +229,13 @@
                                     …pidiendo?</label>
                 </div>
                 <div class="col-md-2" >
-                    <select class="form-control" name="V19_A"  required>
+                    <select class="form-control" name="V19_A"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
-                    <select class="form-control" name="V19_B"  required>
+                    <select class="form-control" name="V19_B"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2">No</option>
                     </select>
