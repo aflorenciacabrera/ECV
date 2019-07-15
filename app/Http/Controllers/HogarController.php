@@ -7,6 +7,7 @@ use App\hogar;
 use App\vivienda;
 use Auth;
 use App\hogarSeccionSeis;
+use App\hogar_seccion_cuatro;
 
 class HogarController extends Controller
 {
@@ -19,6 +20,12 @@ class HogarController extends Controller
         return view('encuestaHogar')->with('hogar',$hogar);
       }
 
+    public function verIndividuos($hogar_id)
+    {
+        $h = hogar::find($hogar_id);
+        return view('individuos_en_hogar')->with('hogar',$h);
+    }
+
     public function crearEncuestaHogar(Request $request)
       {
         //Actualizo Registro Hogar
@@ -27,6 +34,44 @@ class HogarController extends Controller
         $h->fill($request->all());
         $h->estado = 1;///cambio estado a completado
         $h->save();
+
+        //actualizo seccion 4
+        for ($i = 0; $i < 20; $i++) {
+            if ($request['CH01_' . $i]) {
+                //id de seccion
+                $carateristica_id = $request['carateristica_id_' . $i];
+                $c = hogar_seccion_cuatro::find($carateristica_id);
+               $c->CH01 = $request['CH01_'.$i];
+               $c->CH02 = $request['CH02_'.$i];
+               $c->CH03 = $request['CH03_'.$i];
+               $c->CH04 = $request['CH04_'.$i];
+               $c->CH05 = $request['CH05_'.$i];
+               $c->CH06 = $request['CH06_'.$i];
+               $c->CH07 = $request['CH07_'.$i];
+               $c->CH08 = $request['CH08_'.$i];
+               $c->CH08_A = $request['CH08_A_'.$i];
+               $c->CH08_B = $request['CH08_B_'.$i];
+               $c->CH08_C = $request['CH08_C_'.$i];
+               $c->CH08_D = $request['CH08_D_'.$i];
+               $c->CH09 = $request['CH09_'.$i];
+               $c->CH10 = $request['CH10_'.$i];
+               $c->CH10_E = $request['CH10_E_'.$i];
+               $c->CH10_M = $request['CH10_M_'.$i];
+               $c->CH10_G = $request['CH10_G_'.$i];
+               $c->CH11 = $request['CH11_'.$i];
+               $c->CH12 = $request['CH12_'.$i];
+               $c->CH13 = $request['CH13_'.$i];
+               $c->CH14 = $request['CH14_'.$i];
+               $c->CH15 = $request['CH15_'.$i];
+               $c->CH15_Cod = $request['CH15_Cod_'.$i];
+               $c->CH16 = $request['CH16_'.$i];
+               $c->CH16_Cod = $request['CH16_Cod_'.$i];
+               $c->CH24 = $request['CH24_'.$i];
+               $c->CH25 = $request['CH25_'.$i];
+
+                $c->save();
+            }
+        }
 
 
         //actualizo seccion 6

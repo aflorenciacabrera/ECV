@@ -36,6 +36,7 @@ Route::get('encuesta/hogares/generar/{id}', 'HogarController@autogenerar')->name
 
 Route::get('encuesta/individuo', 'IndividuoController@verEncuestaIndividuo')->name( 'verEncuestaIndividuo');
 Route::post( 'encuesta/individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name( 'crearEncuestaIndividuo');
+Route::get('hogar/individuos/{id}','HogarController@verIndividuos')->name("individuosEnHogar");
 
 
 // Route::get('encuestaHogar/seccion_1', 'HogarController@verHogarseccion1')->name('Hogar_seccion1');

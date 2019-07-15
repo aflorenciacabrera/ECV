@@ -11,6 +11,8 @@ use App\hogarSeccionSeis;
 use App\vivienda_seccion_v;
 use App\individuo;
 
+use App\hogar_seccion_cuatro;
+
 class ViviendaController extends Controller
 {
 
@@ -88,6 +90,12 @@ class ViviendaController extends Controller
                 $individuo->nro_componente = $nro_componente;
                 $individuo->nombre = $nombre;
                 $individuo->save();
+                // Tambien creo registro de la seccion 6 de hogar por cada coso
+                $seccion4 = new hogar_seccion_cuatro();
+                $seccion4->hogar_id = $hogar_id;
+                $seccion4->individuo_id = $individuo->id;
+                $seccion4->save();
+                //TODO no asignable
 
                 // Tambien creo registro de la seccion 6 de hogar por cada coso
                 $seccion6 = new hogarSeccionSeis();

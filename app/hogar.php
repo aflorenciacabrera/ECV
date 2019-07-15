@@ -178,4 +178,9 @@ class hogar extends Model
         }
         return 'ok';
     }
+
+    public function caracteristicas()
+    {
+        return $this->hasMany('app\hogar_seccion_cuatro');
+    }
 }
