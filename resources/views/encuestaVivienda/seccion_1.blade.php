@@ -11,8 +11,8 @@
                     <input type="number" min="0" step="1" class="form-control" id="numero_listado" name="numero_listado" placeholder="" required>
             </div>
             <div class="form-group col-md-3">
-                    <label for="numero_semana">Vivienda Nº:</label>
-            <input type="number" min="0" step="1" class="form-control " id="numero_vivienda" name="numero_vivienda" placeholder="" required>
+                    <label for="numero_vivienda">Vivienda Nº:</label>
+            <input type="number" min="0" step="1" class="form-control" id="numero_vivienda" name="numero_vivienda" placeholder="" required>
             </div>
             <div class="form-group col-md-3">
                     <label for="numero_semana">Semana Nº:</label>
@@ -22,19 +22,19 @@
 
         <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label for="anio">Grupo Rotación:</label>
+                    <label for="grupo_rotacion">Grupo Rotación:</label>
                     <input type="number" min="0" step="1" class="form-control" id="grupo_rotacion" name="grupo_rotacion" placeholder="" required>
                 </div>
                 <div class="form-group col-md-3">
-                        <label for="numero_hogar">Teléfonos:</label>
-                    <label for="respondiente">Hogar 1:</label>
+                        <label for="telefono_hogar1">Teléfonos:</label>
+                    <label for="telefono_hogar1">Hogar 1:</label>
                     <input type="text" class="form-control" id="telefono_hogar1" name="telefono_hogar1" placeholder="" required>
 
                 </div>
                 <div class="form-group col-md-3">
-                        <label for="numero_hogar">Teléfonos:</label>
+                        <label for="telefono_hogar2">Teléfonos:</label>
 
-                    <label for="respondiente">Hogar 2:</label>
+                    <label for="telefono_hogar2">Hogar 2:</label>
                     <input type="text" class="form-control" id="telefono_hogar2" name="telefono_hogar2" placeholder="" required>
                 </div>
         </div>

@@ -1,92 +1,117 @@
 {{-- @extends('layouts.app')
 @section('content') --}}
-<div class="card-body">      
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                    <label for="codigo_area">1a. En la semana pasada, <input type="text" class=" col-md-3" name=""> trabajó por lo menos una hora? </label><small id="" class="form-text text-muted">(sin contar las tareas de su hogar) </small>
-                     <select class="form-control" name=""  >
-                                <option value="1">Si</option>
-                                <option value="2" >No</option>             
-                        </select>
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>   
-             <div class="form-group col-md-6">
-                    <label for="codigo_area">1b. En esa semana, ¿hizo alguna changa, fabricó algo para vender, ayudó a un familiar/amigo en su negocio?</label>
-                     <select class="form-control" name=""  >
-                                <option value="1">Si</option>
-                                <option value="2" >No</option>             
-                        </select>
-                        
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>           
-             
-        </div> 
-        <div class="form-row">
-           <div class="form-group col-md-6">
-                    <label for="codigo_area">1c. ¿Es un trabajo pago, en dinero o en especie?</label>
-                     <select class="form-control" name=""  ><small id="" class="form-text text-muted"> </small>
-                                <option value="1">Si</option>
-                                <option value="2" >No</option>             
-                        </select>
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>    
-             <div class="form-group col-md-6">
-                    <label for="codigo_area">1d. ¿Trabajó…</label>
-                     <select class="form-control" name=""  >
-                                <option value="1">… con un familiar/amigo en su negocio, taller chacra?</option>
-                                <option value="2" >… como trabajador ad-honorem?(aprendiz, meritorio judicial, etc)</option>
-                                <option value="3">… de otra forma? (especificar)</option>             
-                        </select>
-                        <input type="text" class="form-control" name=""> 
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>    
-        </div>   
-         <div class="form-row">
-           <div class="form-group col-md-6">
-                    <label for="codigo_area">1e. La semana pasada…</label>
-                     <select class="form-control" name=""  ><small id="" class="form-text text-muted"> </small>
-                                <option value="1">… no deseaba/no quería trabajar?</option>
-                                <option value="2" >… no podía trabajar por razones personales? (cuidado del hogar, estudios, incapacidad)</option>
-                                <option value="3" >… no tenía/ no conseguía trabajo?</option>
-                                <option value="4" >… no tuvo pedidos/clientes?</option>
-                                <option value="5" >tenía un trabajo/negocio al que no concurrió?</option>             
-                        </select>
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>    
-             <div class="form-group col-md-6">
-                    <label for="codigo_area">1f- ¿No concurrió por….</label>
-                     <select class="form-control" name=""  >
-                                <option value="1">… vacaciones, licencia? (enfermedad, matrimonio, embarazo, etc.)</option>
-                                <option value="2" >… causas personales? (viajes, trámites, etc)</option>
-                                <option value="3">… huelga/conflicto laboral?</option>    
-                                <option value="4">… Suspensión?</option>  
-                                <option value="5">… otras causas laborales? (rotura de equipos, falta de materias primas, mal tiempo)</option>           
-                        </select>
-                        <input type="text" class="form-control" name=""> 
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>    
-        </div>       
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                    <label for="codigo_area">1g. ¿Le mantienen el pago durante la suspensión? </label>
-                     <select class="form-control" name=""  >
-                                <option value="1">Si</option>
-                                <option value="2" >No</option> 
-                                <option value="3" >NS/Nr</option>             
-                        </select>
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>   
-             <div class="form-group col-md-6">
-                    <label for="codigo_area">1h. ¿Volverá a ese trabajo a lo sumo en un mes?</label>
-                      <select class="form-control" name=""  >
-                                <option value="1">Si</option>
-                                <option value="2" >No</option> 
-                                <option value="3" >NS/Nr</option>             
-                        </select>
-                        
-                    {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-            </div>           
-             
-        </div>                   
+Ingresos de Otras Ocupaciones
+<div class="card-body">
+<div class="row border">
+    <div class="col-md-10">
+        <div class="form-group form-inline">
+        <label>Por el mes de</label>
+    <select name="seccion_12_mes" id="" class="form-control form-control-sm">
+        <option value=""></option>
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+    <label>cobró ingresos por algún trabajo/changa, o por otras ocupación/es?
+    </label>
+    <label class="text-muted">
+        (Incluye ocupacion secundaria y otras ocupaciones previas a la semana de
+referencia)
+    </label>
+    </div>
+
+    </div>
+    <div class="col-md-2">
+        <div class="form-group form-inline">
+            <label for="PP12A">Si/No</label>
+            <select name="PP12A" id="PP12A" class="form-control form-control-sm">
+                <option value=""></option>
+                <option value="1">1. Si</option>
+                <option value="2">2. No</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row border">
+
+<table class="table table-sm table-stripped">
+    <thead>
+        <tr>
+            <th>¿Cuanto Cobro por ...?</th>
+            <th>Trabajando para un patrón/negocio o empresa </br> <label class="text-muted">(incluye ayuda en negocio)</br></th>
+            <th>Trabajando para su propio negocio/actividad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                1. Ocupación secundaria y otras
+            </td>
+            <td>
+               <div class="form-group form-inline">
+                   <label for="PP12B1">$</label>
+                   <input type="number" name="PP12B1" id="PP12B1" class="form-control form-control-sm">
+               </div>
+            </td>
+            <td>
+               <div class="form-group form-inline">
+                   <label for="PP12B12">$</label>
+                   <input type="number" name="PP12B12" id="PP12B12" class="form-control form-control-sm">
+                   {{-- TODO Diccionario --}}
+               </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2. Ocupación previa a la semana de referencia </br>
+                (del mes de referenecia)
+            </td>
+            <td>
+               <div class="form-group form-inline">
+                   <label for="PP12B2">$</label>
+                   <input type="number" name="PP12B2" id="PP12B2" class="form-control form-control-sm">
+               </div>
+            </td>
+            <td>
+               <div class="form-group form-inline">
+                   <label for="PP12B22">$</label>
+                   <input type="number" name="PP12B22" id="PP12B22" class="form-control form-control-sm">
+                   {{-- TODO Diccionario --}}
+               </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3. Otras deudas / retroactivos </br>(por trabajos anteriores al mes de referencia)
+            </td>
+            <td>
+               <div class="form-group form-inline">
+                   <label for="PP12B3">$</label>
+                   <input type="number" name="PP12B3" id="PP12B3" class="form-control form-control-sm">
+               </div>
+            </td>
+            <td>
+               <div class="form-group form-inline">
+                   <label for="PP12B32">$</label>
+                   <input type="number" name="PP12B32" id="PP12B32" class="form-control form-control-sm">
+                   {{-- TODO Diccionario --}}
+               </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+
 </div>
 {{-- @endsection --}}

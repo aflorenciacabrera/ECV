@@ -1,9 +1,20 @@
 {{-- @extends('layouts.app')
 @section('content') --}}
+<div class="card-body">  
   <div class="container-fluid">
-          <div class="pull-right">
+        <div class="form-row">
+                <div class="form-group col-md-2">
+                <label for="Entrev_realiz">Entrevista Realizada</label></div>
+                <div class="form-group col-md-2">
+                <select class="form-control" name="Entrev_realiz" id="Entrev_realiz"  >
+                        <option value=""> </option>
+                        <option value="1">Si</option>
+                        <option value="2" >No</option>            
+                </select>  
+                </div>
+       </div>
+        <div class="pull-right">
            <div class="form-row">
-         
                 <div class="form-group col-md-4">
                         <label for="">N° de componente </label>    <label for=""> Respondente</label> 
                 </div>
@@ -14,12 +25,12 @@
                         <input type="number" class="form-control" step="1" min="0" name="responde1" id="responde1"> <input type="number" class="form-control" step="1" min="0" name="responde2" id="responde2"> 
                 </div>
         </div>
-        </div>
+        </div> 
   </div>
        
 
 <br><br><br>
-<div class="card-body">   
+ 
         <div class="form-row col-md-12">
             <div class="form-group col-md-2">
                 <label for="codigo_area">Código de área</label>
