@@ -65,33 +65,33 @@ class CreateHogarsTable extends Migration
             $table->text('III1_2')->nullable();
             $table->text('III2')->nullable();
         // IV. CARACTERÍSTICAS DE LOS MIEMBROS DEL HOGAR
-            $table->text('CH01')->nullable();
-            $table->text('CH02')->nullable();
-            $table->text('CH03')->nullable();
-            $table->text('CH04')->nullable();
-            $table->text('CH05')->nullable();
-            $table->text('CH06')->nullable();
-            $table->text('CH07')->nullable();
-            $table->text('CH08')->nullable();
-                $table->text('CH08_A')->nullable();
-                $table->text('CH08_B')->nullable();
-                $table->text('CH08_C')->nullable();
-                $table->text('CH08_D')->nullable();
-            $table->text('CH09')->nullable();
-            $table->text('CH10')->nullable();
-                $table->text('CH10_E')->nullable();
-                $table->text('CH10_M')->nullable();
-                $table->text('CH10_G')->nullable();
-            $table->text('CH11')->nullable();
-            $table->text('CH12')->nullable();
-            $table->text('CH13')->nullable();
-            $table->text('CH14')->nullable();
-            $table->text('CH15')->nullable();
-            $table->text('CH15_Cod')->nullable();
-            $table->text('CH16')->nullable();
-            $table->text('CH16_Cod')->nullable();
-            $table->text('CH24')->nullable();
-            $table->text('CH25')->nullable();
+            // $table->text('CH01')->nullable();
+            // $table->text('CH02')->nullable();
+            // $table->text('CH03')->nullable();
+            // $table->text('CH04')->nullable();
+            // $table->text('CH05')->nullable();
+            // $table->text('CH06')->nullable();
+            // $table->text('CH07')->nullable();
+            // $table->text('CH08')->nullable();
+            //     $table->text('CH08_A')->nullable();
+            //     $table->text('CH08_B')->nullable();
+            //     $table->text('CH08_C')->nullable();
+            //     $table->text('CH08_D')->nullable();
+            // $table->text('CH09')->nullable();
+            // $table->text('CH10')->nullable();
+            //     $table->text('CH10_E')->nullable();
+            //     $table->text('CH10_M')->nullable();
+            //     $table->text('CH10_G')->nullable();
+            // $table->text('CH11')->nullable();
+            // $table->text('CH12')->nullable();
+            // $table->text('CH13')->nullable();
+            // $table->text('CH14')->nullable();
+            // $table->text('CH15')->nullable();
+            // $table->text('CH15_Cod')->nullable();
+            // $table->text('CH16')->nullable();
+            // $table->text('CH16_Cod')->nullable();
+            // $table->text('CH24')->nullable();
+            // $table->text('CH25')->nullable();
         // V. ESTRATEGIAS DEL HOGAR
             $table->text('V1')->nullable();
             $table->text('V2')->nullable();
@@ -116,20 +116,23 @@ class CreateHogarsTable extends Migration
         // VI. Ingreso no laborales
             $table->text('VImes')->nullable();
             $table->text('VIcobr')->nullable();
-            $table->text('V2_M')->nullable();
-            $table->text('V21_M')->nullable();
-            $table->text('V22_M')->nullable();
-            $table->text('V3_M')->nullable();
-            $table->text('V4_M')->nullable();
-            $table->text('V5_M')->nullable();
-            $table->text('V8_M')->nullable();
-            $table->text('V9_M')->nullable();
-            $table->text('V10_M')->nullable();
-            $table->text('V11_M')->nullable();
-            $table->text('V12_M')->nullable();
-            $table->text('V18_M')->nullable();
-            $table->text('V19_AM')->nullable();
-            $table->text('T_Vi')->nullable();
+            /**
+             * MANDE A TABLA APARTE
+             */
+            // $table->text('V2_M')->nullable();
+            // $table->text('V21_M')->nullable();
+            // $table->text('V22_M')->nullable();
+            // $table->text('V3_M')->nullable();
+            // $table->text('V4_M')->nullable();
+            // $table->text('V5_M')->nullable();
+            // $table->text('V8_M')->nullable();
+            // $table->text('V9_M')->nullable();
+            // $table->text('V10_M')->nullable();
+            // $table->text('V11_M')->nullable();
+            // $table->text('V12_M')->nullable();
+            // $table->text('V18_M')->nullable();
+            // $table->text('V19_AM')->nullable();
+            // $table->text('T_Vi')->nullable();
         // HOGAR - PLANES Y PROGRAMAS GUBERNAMENTALES
             $table->text('DI')->nullable();
             $table->text('DI_1')->nullable();
@@ -179,6 +182,8 @@ class CreateHogarsTable extends Migration
             $table->text('entrega')->nullable();
             $table->text('mal_tomado')->nullable();
             $table->timestamps();
+
+            $table->integer('estado')->default(0);//iniciado
         });
     }
 

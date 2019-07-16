@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 
 use App\vivienda;
 use Auth;
+use App\hogar;
+use App\hogarSeccionSeis;
+use App\vivienda_seccion_v;
+use App\individuo;
+
+use App\hogar_seccion_cuatro;
+
 class ViviendaController extends Controller
 {
 
@@ -16,128 +23,96 @@ class ViviendaController extends Controller
 
     public function crearEncuestaVivienda(Request $request)
     {
+
+        ///creo el registro de vivienda
         $v = new vivienda;
         $v->user_id = Auth::user()->id;
         $v->fill($request->all());
         $v->save();
+
+        //grabo registro seccion v
+        $vivienda_id = $v->id;
+        $_hogares = array();//guardo todos los numeros de hogar para despues
+        $_componentes = array();//guardo los individuales por cada hogar para crear los individuales
+        for ($i=1; $i <= 14; $i++)
+        {
+            if($request['NRO_HOGAR_'.$i])///existe
+            {
+                //
+                //guardo cada hogar
+                $_hogares[] = $request['NRO_HOGAR_' . $i];
+                //guardo cada nombre de inviduo
+                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
+
+                //creo registro de vivienda_seccion_5
+                $vs = new vivienda_seccion_v();
+                $vs->vivienda_id = $vivienda_id;
+                $vs->NRO_HOGAR = $request['NRO_HOGAR_'.$i];
+                $vs->NRO_COMPONENTE = $request['NRO_COMPONENTE_'.$i];
+                $vs->NOMBRE_JEFE = $request['NOMBRE_JEFE_'.$i];
+                $vs->VIVIO_SEM = $request['VIVIO_SEM_'.$i];
+                $vs->VIVIO_MES = $request['VIVIO_MES_'.$i];
+                $vs->FIJAR_RES = $request['FIJAR_RES_'.$i];
+                $vs->ESTABA = $request['ESTABA_'.$i];
+                $vs->AUSENCIA = $request['AUSENCIA_'.$i];
+                $vs->OTRA_RES = $request['OTRA_RES_'.$i];
+                $vs->NO_ESTABA = $request['NO_ESTABA_'.$i];
+                $vs->CAMBIOS = $request['CAMBIOS_'.$i];
+                $vs->MOTIVO = $request['MOTIVO_'.$i];
+                $vs->MOTIVO_OTRO = $request['MOTIVO_OTRO_'.$i];
+                $vs->CH13 = $request['CH13_'.$i];
+                $vs->CH14 = $request['CH14_'.$i];
+                $vs->CH14_OTRO = $request['CH14_OTRO_'.$i];
+                $vs->CH15 = $request['CH15_'.$i];
+                $vs->CH16 = $request['CH16_'.$i];
+                $vs->CH16_OTRO = $request['CH16_OTRO_'.$i];
+                $vs->save();
+            }
+        }
+        print_r($_componentes);
+        $hogares = (array_unique(($_hogares)));
+        // creo el registro de cada hogar ??
+        //Cuantos hogares son?
+        foreach ($hogares as $key => $value)
+        {
+            $h = new hogar();
+            $h->vivienda_id = $vivienda_id;
+            $h->numero_hogar = $value;
+            $h->user_id = Auth::user()->id;
+            $h->save();
+            foreach ($_componentes[$value] as $nro_componente => $nombre)
+            {
+                // cre el registro de cada individuo ??
+                $hogar_id = $h->id;
+                $individuo = new individuo();
+                $individuo->hogar_id = $hogar_id;
+                $individuo->user_id = Auth::user()->id;
+                $individuo->nro_componente = $nro_componente;
+                $individuo->nombre = $nombre;
+                $individuo->save();
+                // Tambien creo registro de la seccion 6 de hogar por cada coso
+                $seccion4 = new hogar_seccion_cuatro();
+                $seccion4->hogar_id = $hogar_id;
+                $seccion4->individuo_id = $individuo->id;
+                $seccion4->save();
+                //TODO no asignable
+
+                // Tambien creo registro de la seccion 6 de hogar por cada coso
+                $seccion6 = new hogarSeccionSeis();
+                $seccion6->hogar_id = $hogar_id;
+                $seccion6->individuo_id = $individuo->id;
+                $seccion6->save();
+                //TODO no asignable
+
+            }
+        }
+
+
+
         return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
+
     }
 
-    public function crearEncuestaVivienda2(Request $request)
-    {
-    $v = new vivienda;
-    $v->user_id = Auth::user()->id;
-    // seccion I. IDENTIFICACIÓN
-    $v->codigo_area = $request->codigo_area;
-    $v->numero_listado = $request->numero_listado;
-    $v->numero_vivienda = $request->numero_vivienda;
-    $v->numero_semana = $request->numero_semana;
-    $v->grupo_rotacion = $request->grupo_rotacion;
-    $v->telefono_hogar1 = $request->telefono_hogar1;
-    $v->telefono_hogar2 = $request->telefono_hogar2;
-    // seccion II. UBICACIÓN
-    $v->manz = $request->manz;
-    $v->lado = $request->lado;
-    $v->calle = $request->calle;
-    $v->numero = $request->numero;
-    $v->piso = $request->piso;
-    $v->deptoocasa = $request->deptoocasa;
-    $v->habitacion = $request->habitacion;
-    $v->tipoVivienda = $request->tipoVivienda;
-    $v->descripcion = $request->descripcion;
-    //  Particion
-    $v->trimestre=$request->trimestre;
-    $v->ano4=$request->ano4;
-    $v->sem_referencia=$request->sem_referencia;
-    $v->cant_hogar=$request->cant_hogar;
-    $v->p_entrevistada=$request->p_entrevistada;
-    $v->visitas_fecha_hora_1=$request->visitas_fecha_hora_1;
-    $v->visitas_fecha_hora_2=$request->visitas_fecha_hora_2;
-    $v->visitas_fecha_hora_3=$request->visitas_fecha_hora_3;
-    $v->visitas_fecha_hora_4=$request->visitas_fecha_hora_4;
-    $v->visitas_fecha_hora_5=$request->visitas_fecha_hora_5;
-    $v->entrevista_realizada=$request->entrevista_realizada;
-    $v->modalidad_aplicacion=$request->modalidad_aplicacion;
-    $v->encuestador=$request->encuestador;
-    $v->numero_encuestador=$request->numero_encuestador;
-    $v->acompaniamiento=$request->acompaniamiento;
-    $v->nombre=$request->nombre;
-    $v->numero=$request->numero;
-    //  Particion -- Seccion III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES
-    $v->otra_viv_direc=$request->otra_viv_direc;
-    $v->comparten_gastos=$request->comparten_gastos;
-    $v->N_hogar_viv=$request->N_hogar_viv;
-    $v->domestico_cama_adentro=$request->domestico_cama_adentro;
-    $v->pensionistas=$request->pensionistas;
-    //Seccion IV. CARACTERÍSTICA DE LA VIVIENDA
-    $v->IV1= $request->IV1;
-    $v->IV1_Esp= $request->IV1_Esp;
-    $v->IV2= $request->IV2;
-    $v->IV3= $request->IV3;
-    $v->IV3_Esp= $request->IV3_Esp;
-    $v->IV4= $request->IV4;
-    $v->IV5= $request->IV5;
-    $v->IVE= $request->IVE;
-    $v->IV6= $request->IV6;
-    $v->IV7= $request->IV7;
-    $v->IV7_Esp= $request->IV7_Esp;
-    $v->IV8= $request->IV8;
-    $v->IV9= $request->IV9;
-    $v->IV10= $request->IV10;
-    $v->IV11= $request->IV11;
-    $v->IV12_1= $request->IV12_1;
-    $v->IV12_2= $request->IV12_2;
-    $v->IV12_3= $request->IV12_3;
-    $v->IV14= $request->IV14;
-    $v->IV15= $request->IV15;
-    // Seccion V. CODICIÓN DE RESIDENCIA
-    $v->NRO_HOGAR = $request->NRO_HOGAR;
-    $v->NRO_COMPONENTE = $request->NRO_COMPONENTE;
-    $v->NOMBRE_JEFE = $request->NOMBRE_JEFE;
-    $v->VIVIO_SEM = $request->VIVIO_SEM;
-    $v->VIVIO_MES = $request->VIVIO_MES;
-    $v->FIJAR_RES = $request->FIJAR_RES;
-    $v->ESTABA = $request->ESTABA;
-    $v->AUSENCIA = $request->AUSENCIA;
-    $v->OTRA_RES = $request->OTRA_RES;
-    // Seccion VI CONTROL DE CAMBIOS
-    $v->NO_ESTABA = $request->NO_ESTABA;
-    $v->CAMBIOS = $request->CAMBIOS;
-    $v->MOTIVO = $request->MOTIVO;
-    $v->CH13 = $request->CH13;
-    $v->CH14 = $request->CH14;
-    $v->CH15 = $request->CH15;
-    $v->CH16 = $request->CH16;
-    //Seccion VII. CAUSAS POR LA QUE NO SE REALIZÓ LA ENTREVISTA
-    //  participación
-    $v->CAUSAS=$request->CAUSAS;
-    $v->DESHABILITADA=$request->DESHABILITADA;
-    $v->DEMOLIDA=$request->DEMOLIDA;
-    $v->FIN_DE_SEMANA=$request->FIN_DE_SEMANA;
-    $v->CONSTRUCCION=$request->CONSTRUCCION;
-    $v->ESTABLECIMIENTO=$request->ESTABLECIMIENTO;
-    $v->VARIACION=$request->VARIACION;
-    $v->AUSENCIA=$request->AUSENCIA;
-    $v->RECHAZO=$request->RECHAZO;
-    $v->OTRO=$request->OTRO;
-    $v->INFORMANTE=$request->INFORMANTE;
-
-    //Seccion  VIII . CONTROL DE CAMPO DE LA RECUPERACIÓN DE AUSENCIAS,RECHAZOS Y OTRAS CAUSAS
-    //  participación
-    $v->supervision=$request->supervision;
-    $v->num_super=$request->num_super;
-    $v->visita_1=$request->visita_1;
-    $v->visita_2=$request->visita_2;
-    $v->visita_3=$request->visita_3;
-    $v->modalidad=$request->modalidad;
-    $v->entrega=$request->entrega;
-    $v->observaciones=$request->observaciones;
-
-    $v->save();
-
-
-      return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
-    }
 
     public function verListadoVivienda()
     {
@@ -163,6 +138,16 @@ class ViviendaController extends Controller
         //devuelvo el ultimo generado
         return redirect()->route('verListadoVivienda')->with('vivienda',$v->id);
 
+    }
+
+    public function verHogares($id_vivienda)
+    {
+        $vivienda = vivienda::find($id_vivienda);
+
+        //TODO aca mandamos al listado de hogares de la vivienda
+        // pero si tiene un solo hogar podriamos mandar directo al hogar pero bueno la proxima nomas
+
+        return view('hogares_en_vivienda')->with('vivienda',$vivienda);
     }
 
 

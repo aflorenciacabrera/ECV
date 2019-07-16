@@ -9,7 +9,6 @@
                     Viviendas Ingresadas por <strong>{{Auth::user()->name}}</strong>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">{{$viviendas->count()}}</h4>
                     <table class="table table-striped table-inverse  table-sm">
                         <thead class="thead-inverse">
                             <tr>
@@ -27,7 +26,9 @@
                                 <th>Habitación</th>
                                 <th>Tipo Vivienda</th>
                                 {{-- <th>Descripción</th> --}}
-                                <th>Participación</th>
+                                <th>trimestre</th>
+                                <th>ano4</th>
+                                <th>estado</th>
                                 <th>Acción</th>
                                 {{-- <th>Cargar Hogar</th> --}}
                             </tr>
@@ -35,25 +36,43 @@
                             <tbody>
                                 @foreach ($viviendas as $item)
                                 <tr>
-                                <td>{{$item->id}}</td>
-                                <td>99</td>
-                                <td>235</td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>444</td>
-                                <td>5</td>
-                                <td>Nombre de la Calle</td>
-                                <td>139</td>
-                                <td>0</td>
-                                <td>Casa</td>
-                                <td>9</td>
-                                <td>B</td>
-
-                                <td>4</td>
+                                <td>{{$item->codigo_area}}</td>
+                                <td>{{$item->numero_listado}}</td>
+                                <td>{{$item->numero_vivienda}}</td>
+                                <td>{{$item->numero_semana}}</td>
+                                <td>{{$item->grupo_rotacion}}</td>
+                                <td>{{$item->manz}}</td>
+                                <td>{{$item->lado}}</td>
+                                <td>{{$item->calle}}</td>
+                                <td>{{$item->numero}}</td>
+                                <td>{{$item->piso}}</td>
+                                <td>{{$item->deptoocasa}}</td>
+                                <td>{{$item->habitacion}}</td>
+                                <td>{{$item->tipoVivienda}}</td>
+                                <td>{{$item->trimestre}}</td>
+                                <td>{{$item->ano4}}</td>
                                 <td>
-                                    {{-- TODO ruta pra ver detalle de area --}}
-                                <a name="" id="" class="btn btn-sm btn-primary" href="{{route('verDetalleVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Ver Detalle <i class="fa fa-eye" aria-hidden="true"></i></a>
-                                <a name="" id="" class="btn btn-sm btn-primary" href="{{route('verEncuestaHogar',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Cargar Hogar <i class="fa fa-home" aria-hidden="true"></i></a>
+                                    @if ($item->estado() == 'ok')
+                                        <div class="alert alert-success" role="alert">
+                                            Completo
+                                        </div>
+
+                                    @else
+                                        <div class="alert alert-warning" role="alert">
+                                            {{$item->estado()}}
+                                        </div>
+
+                                    @endif
+                                </td>
+
+                                {{-- <th>Cargar Hogar</th> --}}
+                                <td>
+                               @if($item->estado() !== 'ok')
+
+                                        {{-- TODO ruta pra ver detalle de area --}}
+                                <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('verDetalleVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Ver Detalle <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
+                               @endif
                                 </td>
 
                             </tr>

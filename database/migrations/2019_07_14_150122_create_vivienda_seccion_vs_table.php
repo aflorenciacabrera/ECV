@@ -26,19 +26,19 @@ class CreateViviendaSeccionVsTable extends Migration
             $table->text('VIVIO_MES')->nullable();
             $table->text('FIJAR_RES')->nullable();
             $table->text('ESTABA')->nullable();
-            $table->text('AUSENCIA');///TODO Campo repetid->nullable()o
+            $table->text('AUSENCIA')->nullable();///TODO Campo repetid->nullable()o
             $table->text('OTRA_RES')->nullable();
     // Seccion VI CONTROL DE CAMBIOS
             $table->text('NO_ESTABA')->nullable();
             $table->text('CAMBIOS')->nullable();
             $table->text('MOTIVO')->nullable();
-            $table->text('MOTIVO-OTRO')->nullable(); //TODO no estan en diccionario
+            $table->text('MOTIVO_OTRO')->nullable(); //TODO no estan en diccionario
             $table->text('CH13')->nullable();
             $table->text('CH14')->nullable();
-            $table->text('CH14-OTRO')->nullable(); //TODO no estan en diccionario
+            $table->text('CH14_OTRO')->nullable(); //TODO no estan en diccionario
             $table->text('CH15')->nullable();
             $table->text('CH16')->nullable();
-            $table->text('CH16-OTRO')->nullable(); //TODO no estan en diccionario
+            $table->text('CH16_OTRO')->nullable(); //TODO no estan en diccionario
         });
     }
 

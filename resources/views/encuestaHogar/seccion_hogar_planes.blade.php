@@ -23,6 +23,7 @@
 
       <div class="col-md-2" >
           <select class="form-control" name="DI"  >
+              <option value=""></option>
                   <option value="1">Si</option>
                   <option value="2">No</option>
           </select>
@@ -42,6 +43,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="AI"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -61,6 +63,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="MI"  required>
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
 
@@ -81,6 +84,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="TSA"  required>
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -100,6 +104,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="TV"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -122,6 +127,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="TE"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -141,6 +147,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="TM"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -160,6 +167,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="TS"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -179,6 +187,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="PM"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -198,6 +207,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="BE"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
@@ -214,6 +224,7 @@
 
         <div class="col-md-2" >
             <select class="form-control" name="AUH"  >
+                <option value=""></option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
                 <option value="9">Ns/Nr</option>

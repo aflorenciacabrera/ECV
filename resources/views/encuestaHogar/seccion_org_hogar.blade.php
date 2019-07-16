@@ -38,6 +38,8 @@
 
                 <div class="col-md-10" >
                     <select name="VII1" id="" class="form-control">
+                        <option value=""></option>
+
                         <option value="96">Servicio doméstico</option>
                         <option value="97">Otra persona que no vive en el hogar</option>
                     </select>
@@ -84,6 +86,7 @@
                 <div class="form-row ">
                         <div class="col-md-10" >
                             <select name="VII2" id="" class="form-control">
+                                <option value=""></option>
                                 <option value="96">Servicio doméstico</option>
                                 <option value="97">Otra persona que no vive en el hogar</option>
                                 <option value="98">Ninguna</option>
@@ -142,6 +145,7 @@
 
             <div class="col-md-10" >
                 <select name="VII3" id="" class="form-control">
+                    <option value=""></option>
                     <option value="98">Ninguna</option>
                 </select>
             </div>
@@ -156,6 +160,7 @@
             </div>
             <div class="col-md-4">
             <select class="form-control" name=""  >
+                <option value=""></option>
                     <option value="1">Si</option>
                     <option value="2">No</option>
                     <option value="3">No quiere darlo</option>

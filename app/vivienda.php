@@ -102,8 +102,39 @@ class vivienda extends Model
         'modalidad',
         'entrega',
         'observaciones'];
-    public function hogar()
+    public function hogares()
     {
         return $this->hasMany('App\hogar');
+    }
+
+    public function seccionv(){ //para saber cuantos hogares cargaron en la seccion 5 para control
+        return $this->hasMany('App\vivienda_seccion_v');
+    }
+
+    public function estado(){
+        $hogares = $this->hogares;
+        $flag = 'ok';
+        foreach ($hogares as $hogar)
+        {
+            if(!$hogar->estado)
+            {
+                $flag = 'hogar incompleto';
+                return $flag;
+            }
+            else
+            {
+                $individuos = $hogar->individuos;
+                foreach ($individuos as $individuo)
+                {
+                    if(!$individuo->estado)
+                    {
+                        $flag = 'individuo incompleto';
+                    }
+
+                }
+            }
+        }
+        return $flag;
+
     }
 }

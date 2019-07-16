@@ -1,21 +1,21 @@
 
-<div class="card-body">      
+<div class="card-body">
     <div class="form-row">
         <div class="form-group col-md-6">
                 <label for="codigo_area">Código de área</label>
                 <input type="number" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
                 {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
-        </div>       
+        </div>
         <div class="form-group col-md-6">
                 <label for="numero_listado">Nº en el listado</label>
                 <input type="number" class="form-control" id="" name="numero_listado" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
         </div>
-    </div>   
+    </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="numero_semana">Semana Nº</label>
                 <input type="number" class="form-control" id="" name="numero_semana" placeholder="" step="1" min="0" >
-            
+
             </div>
             <div class="form-group col-md-6">
                     <label for="trimestre">Trimestre</label>
@@ -26,13 +26,13 @@
             <div class="form-group col-md-6">
                 <label for="anio">Año</label>
                  <input type="number" class="form-control" id="" name="ano4" placeholder="" step="1" min="0" max="9999" >
-               
+
             </div>
             <div class="form-group col-md-6">
                 <label for="numero_vivienda">Vivienda Nº</label>
                 <input type="number" class="form-control" id="" name="numero_vivienda" placeholder="" step="1" min="0" >
             </div>
-    </div>   
+    </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="numero_hogar">Hogar Nº</label>
@@ -42,7 +42,7 @@
                 <label for="respondiente">Respondiente</label>
                 <input type="text" class="form-control" id="" name="respondiente" placeholder="" >
             </div>
-    </div>   
+    </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                    <table class="table table-striped table-bordered">
@@ -79,6 +79,7 @@
                 <div class="form-group col-md-6">
                     <label for="exampleInputPassword1">Entrevista Realizada</label>
                     <select class="form-control" name="entrevista_realizada"  >
+                        <option value=""></option>
                         <option value="1">Si</option>
                         <option value="2" >No</option>
                         <option value="3">Salido</option>
@@ -87,6 +88,7 @@
                     <br>
                     <label for="exampleInputPassword1">Modalidad de Aplicación</label>
                     <select class="form-control" name="modalidad_aplicacion"  >
+                        <option value=""></option>
                         <option value="1">Personal Completa</option>
                         <option value="2">Personal Telefónico</option>
                         <option value="3">Solo Telefónica</option>
@@ -97,6 +99,5 @@
                     <label for="numero_encuestador">Nº</label>
                     <input type="number" class="form-control" id="" name="numero_encuestador" placeholder="" step="1" min="0" >
                 </div>
-    </div>                    
+    </div>
 </div>
-           

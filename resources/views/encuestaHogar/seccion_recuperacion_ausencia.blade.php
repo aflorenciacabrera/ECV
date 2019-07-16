@@ -9,13 +9,14 @@
                         </div>
                             <div class="col-md-2" >
                                     <select name="supervision" id="" class="form-control">
+                                        <option value=""></option>
                                             <option value="">Si</option>
-                                            <option value="">No</option>                                        
+                                            <option value="">No</option>
                                     </select>
-                            </div>                                       
+                            </div>
                 </div>
-                
-            </div>   
+
+            </div>
             <div class="form-group col-md-6">
                 <div class="form-row ">
                     <div class="col-md-2">
@@ -24,8 +25,8 @@
                     <div class="col-md-6" >
                         <input type="text" name="super_nombre" class="form-control">
                     </div>
-                   
-                </div>  
+
+                </div>
                 <br>
                 <div class="form-row ">
                     <div class="col-md-2">
@@ -33,11 +34,11 @@
                     </div>
                     <div class="col-md-2" >
                         <input type="text" name="super_num" class="form-control">
-                    </div> 
+                    </div>
                 </div>
-            </div>  
+            </div>
         </div>
-      
+
         <div class="form-row">
                 <div class="form-group col-md-4">
                     <div class="form-row ">
@@ -46,14 +47,14 @@
                                         <tr>
                                         <th scope="col">Visita Nº</th>
                                         <th scope="col">Fecha y Hora</th>
-                                       
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
                                             <td><input type="datetime-local" name="r_visitas_fecha_hora_1"   value="" ></td>
-                                            
+
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
@@ -72,11 +73,11 @@
                                             <td><input type="datetime-local" name="r_visitas_fecha_hora_5"  value="" ></td>
                                         </tr>
                                     </tbody>
-                            </table>                              
+                            </table>
                     </div>
 
-                </div> 
-                  
+                </div>
+
                 <div class="form-group col-md-6">
                         <div class="form-row ">
                             <br>
@@ -85,22 +86,23 @@
                             </div>
                             <div class="col-md-4" >
                                <select name="entrega" id=""  class="form-control">
+                                   <option value=""></option>
                                    <option value="">...Ausencia</option>
                                    <option value="">...Rechazo</option>
                                    <option value="">...Otras causas</option>
                                </select>
                             </div>
-                           
-                        </div>  
+
+                        </div>
                         <div class="form-row ">
                             <div class="col-md-3">
                                 <label for="">Mal Tomado:</label>
                             </div>
                             <div class="col-md-2" >
                               <input type="checkbox" name="mal_tomado" id="">
-                            </div> 
+                            </div>
                         </div>
-                    </div>  
+                    </div>
             </div>
-           
+
 </div>
