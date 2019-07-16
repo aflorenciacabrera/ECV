@@ -5,7 +5,7 @@ $(document).ready(function () {
      * inicio el bs-stepper
      */
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 5;
+    var paso = 1;
     stepper.to(paso);
 
 
@@ -32,6 +32,11 @@ $(document).ready(function () {
                 {
                     stepper.next();
                     paso++;
+                    console.log(paso)
+                    if(paso==7)
+                    {
+                            $(".next").addClass("d-none");
+                    }
                 }
                 else
                 {
