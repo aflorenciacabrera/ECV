@@ -73,7 +73,17 @@
         <option value=3>3. menos de todo el mes</option>
     </select>
 </div>
- <div class="form-group form-inline">
+<div class="form-group form-inline">
+        <label for="PP08G1" class="text-danger">xxxx. ¿Cuantos dias por semana? &nbsp;<label>
+            <input type="number" class="form-control form-control-sm" name="PP08G1" id="PP08G1">
+
+    </div>
+    <div class="form-group form-inline">
+        <label for="PP08G2" class="text-danger">xxxx cuantos dias en el mes? &nbsp;<label>
+            <input type="number" class="form-control form-control-sm" name="PP08G2" id="PP08G2">
+
+    </div>
+    <div class="form-group form-inline">
         <label for="PP08H" >8h. ¿A cuántas horas por día corresponde? &nbsp;<label>
             <input type="number" class="form-control form-control-sm" name="PP08H" id="PP08H">
 
