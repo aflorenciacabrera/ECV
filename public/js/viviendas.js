@@ -5,7 +5,7 @@ $(document).ready(function () {
      * inicio el bs-stepper
      */
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 1;
+    var paso = 5;
     stepper.to(paso);
 
 
@@ -76,7 +76,7 @@ $(document).ready(function () {
 function validarPorSeccion(seccion)
 {
     flag = true;
-    $("#"+seccion+" input").each(function(e){
+    $("#" + seccion + " input, #" + seccion +" select").each(function(e){
             t = $(this);
             console.log(t.attr('name')+" ")
             if(!t[0].checkValidity()) // es valido segun html5?
