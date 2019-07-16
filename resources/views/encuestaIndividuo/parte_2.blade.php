@@ -5,6 +5,7 @@
             <div class="form-group col-md-6">
                     <label for="codigo_area">2a. Si la semana pasada conseguía un trabajo, ¿podía empezar a trabajar ya ( o a más tardar en dos semanas) (no lea escuche la respuesta y marque la que corresponda)</label>
                      <select class="form-control" name="PP02A" id="PP02A">
+                               <option value=""> </option>
                                 <option value="1">Sí, podía</option>
                                 <option value="2" >Sí, pero con ciertas condiciones laborales (horarios, tipo detrabajo, distancia, etc)</option>  
                                 <option value="3">No podía por razones personales momentáneas</option>
@@ -15,6 +16,7 @@
              <div class="form-group col-md-6">
                     <label for="codigo_area">2b. ¿Durante los útlimos 30 días, estuvo buscando trabajo de alguna manera?</label>
                      <select class="form-control" name="PP02B" id="PP02B"  >
+                               <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>             
                         </select>                        
@@ -26,6 +28,7 @@
            <div class="form-group col-md-6">
                     <label for="codigo_area">2c. ¿De qué manera estuvo buscando trabajo?</label>
                      <select class="form-control" name="PP02C" id="PP02C"  >
+                               <option value=""> </option>
                                 <option value="1">Hizo contactos, entrevistas</option>
                                 <option value="2" >Mandó Curriculum/puso/contestó avisos (diarios, internet)</option> 
                                 <option value="3" >Se presentó en establecimientos</option>
@@ -40,6 +43,7 @@
              <div class="form-group col-md-6">
                     <label for="codigo_area">2d. ¿Durante esos 30 días, consultó amigos/ parientes, puso carteles, hizo algo para ponerse por su cuenta?</label>
                         <select class="form-control" name="PP02D" id="PP02D"  >
+                                  <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2">No</option>                                           
                         </select>
@@ -50,6 +54,7 @@
            <div class="form-group col-md-6">
                     <label for="codigo_area">2e. ¿durante esos 20 días, no buscó trabajo porque….</label>
                      <select class="form-control" name="PP02E" id="PP02E" >
+                               <option value=""> </option>
                                 <option value="1" >…. Está suspendido?</option>
                                 <option value="2" >…. Ya tiene trabajo asegurado?</option>
                                 <option value="3" >… se cansó de buscar trabajo?</option>
@@ -61,6 +66,7 @@
              <div class="form-group col-md-6">
                     <label for="codigo_area">2f. ¿Durante los últimos 30 días, estuvo buscando trabajo de alguna manera?</label>
                         <select class="form-control" name="PP02F" id="PP02F" >
+                                  <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>      
                         </select>                  
@@ -70,6 +76,7 @@
                 <div class="form-group col-md-6">
                     <label for="codigo_area">2g. ¿Puede……… empezar a trabajar ya? (o a más tardar en dos semanas)</label>
                       <select class="form-control" name="PP02G" id="PP02G" >
+                                <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>            
                         </select>                       
@@ -77,6 +84,7 @@
             <div class="form-group col-md-6">
                     <label for="codigo_area">2h. En los últimos 12 meses ¿buscó trabajo en algún momento? </label>
                      <select class="form-control" name="PP02H" id="PP02H"  >
+                               <option value=""> </option>
                                  <option value="1">Si</option>
                                 <option value="2" >No</option>             
                         </select>                  
@@ -86,6 +94,7 @@
                 <div class="form-group col-md-6">
                     <label for="codigo_area">2i. En los últimos 12 meses ¿trabajó en algún momento?</label>
                       <select class="form-control" name="PP02I" id="PP02I"  >
+                                <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>            
                         </select>                       
