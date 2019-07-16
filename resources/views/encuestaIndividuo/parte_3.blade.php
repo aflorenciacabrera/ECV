@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+{{-- @extends('layouts.app')
+@section('content') --}}
 <div class="card-body">      
         <small id="" class="form-text text-muted"><h5>OCUPADOS QUE NO TRABAJARON EN LA SEMANA</h5> </small>
         <div class="form-row">   
@@ -190,4 +190,4 @@ empleo/ocupación/actividad?</label>
                 </div>              
         </div>  
 </div>
-@endsection
+{{-- @endsection --}}
