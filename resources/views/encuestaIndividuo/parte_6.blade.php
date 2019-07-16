@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+
 <div class="card-body">      
           <div class="row justify-content-center">
                 <div class="display5 text-center col-md-6">
@@ -129,4 +128,3 @@
         </div>    
                          
 </div>
-@endsection
