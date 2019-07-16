@@ -3,43 +3,43 @@
 <div class="card-body">
         <div class="form-row">
             <div class="form-group col-md-4">
-                    <label for="codigo_area">Manz.:</label>
-                    <input type="text" class="form-control" id="" name="manz" aria-describedby="" placeholder=" " >
+                    <label for="manz">Manz.:</label>
+                    <input type="number" min="0" max="9999" step="1" class="form-control" id="manz" name="manz" aria-describedby="" placeholder=" " >
             </div>
             <div class="form-group col-md-4">
-                    <label for="numero_listado">Lado:</label>
-                    <input type="number" min="0" step="1" class="form-control" id="" name="lado" placeholder="" >
+                    <label for="lado">Lado:</label>
+                    <input type="number" min="0" step="1" class="form-control" id="lado" name="lado" placeholder="" >
             </div>
             <div class="form-group col-md-4">
-                        <label for="numero_listado">Calle:</label>
-                        <input type="text" class="form-control" id="" name="calle" placeholder="" >
+                        <label for="calle">Calle:</label>
+                        <input type="text" class="form-control" id="calle" name="calle" placeholder="" >
            </div>
         </div>
 
         <div class="form-row">
                 <div class="form-group col-md-2">
-                        <label for="anio">N°:</label>
-                        <input type="text" class="form-control" id="" name="numero" placeholder="" >
+                        <label for="numero">N°:</label>
+                        <input type="number"  class="form-control" id="numero" name="numero" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
-                        <label for="respondiente">Piso:</label>
-                        <input type="text" class="form-control" id="" name="piso" placeholder="" >
+                        <label for="piso">Piso:</label>
+                        <input type="text" class="form-control" id="piso" name="piso" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
-                        <label for="respondiente">Depto o casa:</label>
-                        <input type="text" class="form-control" id="" name="deptoocasa" placeholder="" >
+                        <label for="deptoocasa">Depto o casa:</label>
+                        <input type="text" class="form-control" id="deptoocasa" name="deptoocasa" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
-                        <label for="respondiente">Habitación:</label>
-                        <input type="text" class="form-control" id="" name="habitacion" placeholder="" >
+                        <label for="habitacion">Habitación:</label>
+                        <input type="text" class="form-control" id="habitacion" name="habitacion" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
-                        <label for="respondiente">Tipo de vivienda:</label>
-                        <input type="text" class="form-control" id="" name="tipoVivienda" placeholder="" >
+                        <label for="tipoVivienda">Tipo de vivienda:</label>
+                        <input type="text" class="form-control" id="tipoVivienda" name="tipoVivienda" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
-                        <label for="respondiente">Descripción:</label>
-                        <input type="text" class="form-control" id="" name="descripcion" placeholder="" >
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="" >
                 </div>
         </div>
     </div>

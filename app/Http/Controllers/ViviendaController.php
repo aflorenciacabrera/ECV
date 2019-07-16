@@ -41,6 +41,7 @@ class ViviendaController extends Controller
                 //
                 //guardo cada hogar
                 $_hogares[] = $request['NRO_HOGAR_' . $i];
+
                 //guardo cada nombre de inviduo
                 $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
 
@@ -87,8 +88,10 @@ class ViviendaController extends Controller
                 $individuo = new individuo();
                 $individuo->hogar_id = $hogar_id;
                 $individuo->user_id = Auth::user()->id;
+
                 $individuo->nro_componente = $nro_componente;
                 $individuo->nombre = $nombre;
+
                 $individuo->save();
                 // Tambien creo registro de la seccion 6 de hogar por cada coso
                 $seccion4 = new hogar_seccion_cuatro();
