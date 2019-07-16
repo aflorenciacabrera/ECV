@@ -40,7 +40,7 @@
                      </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
-                                        <label for="codigo_area">3… vehículo?</label>
+                          <label for="codigo_area">3… vehículo?</label>
                         </div>
                         <div class="form-group col-md-4">
                                 <select class="form-control" name="PP05C_3" id="PP05C_3">
