@@ -5,7 +5,7 @@
             <div class="form-group col-md-6 form-inline">
                    <label for="supervision">¿Salió a supervisión? </label>
                         {{-- <small id="" class="form-text text-muted">(por observación)</small> --}}
-                        <select class="form-control form-control-sm" name="supervision" id="supervision"  >
+                        <select class="form-control form-control-sm" required name="supervision" id="supervision" onchange="sesuperviso(this.value)" >
                             <option value=""></option>
                                 <option value="1">1. Si</option>
                                 <option value="2">2. No</option>
@@ -13,11 +13,11 @@
                         <hr>
             </div>
         </div>
-        <div class="border">
+        <div class="border  d-none" id="sesuperviso">
          <div class="form-group col-md-6 form-inline">
                <label for="num_super"><h3> Participación</h3></label>
                 <div class="col-md-3"> Supervisor Nº </div>
-                <input type="number" class="form-control form-control-sm" name="num_super" id="num_super">
+                <input type="number" class="form-control form-control-sm semi-required" name="num_super" id="num_super">
 
             </div>
             <hr>
@@ -33,7 +33,7 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">1</th>
-                                        <td><input type="datetime-local" class="form-control form-control-sm" name="visita_1" id="visita_1"   value="">
+                                        <td><input type="datetime-local" class="form-control form-control-sm semi-required" name="visita_1" id="visita_1"   value="">
                                         </td>
                                         </tr>
                                         <tr>
@@ -53,7 +53,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="modalidad">Modalidad de Aplicación</label>
-                        <select class="form-control form-control-sm" name="modalidad" id="modalidad"  >
+                        <select class="form-control form-control-sm semi-required" name="modalidad" id="modalidad"  >
                             <option value=""></option>
                                 <option value="1">1. Personal Completa</option>
                                 <option value="2">2. Personal Telefónico</option>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="form-group">
                         <label for="entrega">El encuestador entregó...</label>
-                        <select class="form-control form-control-sm" name="entrega" id="entrega"  >
+                        <select class="form-control form-control-sm semi-required" name="entrega" id="entrega"  >
                             <option value=""></option>
                                 <option value="7">7. Ausencia</option>
                                 <option value="8">8. Rechazo</option>
@@ -78,10 +78,26 @@
              <div class="form-group row">
                 <div class=" form-group col-md-12">
                     <label for="observaciones">OBSERVACIONES:</label>
-                    <textarea   class="form-control form-control-sm"name="observaciones" id= id="observaciones" cols="200" rows="3"></textarea>
+                    <textarea   class="form-control form-control-sm"name="observaciones"  id="observaciones" cols="200" rows="3"></textarea>
                 </div>
             </div>
 </div>
  </div>
 
 {{-- @endsection --}}
+<script>
+function sesuperviso(value)
+{
+    if(value == 1)
+    {
+        $("#sesuperviso").removeClass("d-none");
+        $(".semi-required").attr('required',true)
+
+    }
+    else
+    {
+        $("#sesuperviso").addClass("d-none");
+        $(".semi-required").removeAttr('required')
+    }
+}
+</script>

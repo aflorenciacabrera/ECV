@@ -193,11 +193,7 @@
 
 function actualizar_seccion_5()
     {
-         $(".otros-campos").each(function(){
-
-                        $(this).attr('disabled',true);
-
-                })
+         $(".otros-campos").attr('disabled',true);
 
         $(".primer-campo").each(function ()
         {
