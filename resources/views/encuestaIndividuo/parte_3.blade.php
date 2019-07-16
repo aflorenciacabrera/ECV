@@ -12,6 +12,7 @@
                      <br>
                     <label for="codigo_area">3b. ¿Cuántas horas semanales trabaja habitualmente en todos sus empleos/ocupaciones…</label>
                      <select class="form-control" name="PP03B" id="PP03B" >
+                                <option value=""> </option>
                                 <option value="1">… menos de 35 horas semanales?</option>
                                 <option value="2" >… entre 35 y 45 horas?</option> 
                                 <option value="3" >… Más de 45 horas semanales?</option>   
@@ -133,6 +134,7 @@
             <div class="form-group col-md-6">
                     <label for="codigo_area"> 3g. La semana pasada, ¿Quéria trabajar más horas?</label>
                      <select class="form-control" name="PP03G" id="PP03G">
+                               <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>                                
                         </select>
@@ -141,6 +143,7 @@
              <div class="form-group col-md-6">
                     <label for="codigo_area">3h. ¿Si hubiera conseguido más horas…</label>
                       <select class="form-control" name="PP03H" id="PP03H">
+                                <option value=""> </option>
                                 <option value="1">… podía trabajarlas esa semana?</option>
                                 <option value="2" >… podía empezar a trabajarlas en dos semanas a más tardar?</option>
                                 <option value="3">… no podía trabajar más horas?</option> 
@@ -156,6 +159,7 @@
             <div class="form-group col-md-6">
                     <label for="codigo_area">3i. En los últimos 30 días, ¿buscó trabajar más horas? </label>
                      <select class="form-control" name="PP03I" id="PP03I">
+                               <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option> 
                                 <option value="9" >NS/Nr</option>             
@@ -166,6 +170,7 @@
                     <label for="codigo_area">3j. Aparte de este/os trabajo/s ¿estuvo buscando algún
 empleo/ocupación/actividad?</label>
                       <select class="form-control" name="PP03J" id="PP03J"  >
+                                <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option> 
                                 <option value="9" >NS/Nr</option>             
@@ -176,10 +181,11 @@ empleo/ocupación/actividad?</label>
                 <div class="form-group col-md-6">
                         <label for="codigo_area">3k. ¿Estuvo buscando porque…</label>
                         <select class="form-control" name="PP03K" id="PP03K" >
-                                        <option value="1">… quería cambiar de trabajo?</option>
-                                        <option value="2" >… quería agregar al que tiene?</option>
-                                        <option value="3">… se termina el trabajo que tiene?</option> 
-                                        <option value="4" >estaba sin trabajo?</option>             
+                                  <option value=""> </option>
+                                <option value="1">… quería cambiar de trabajo?</option>
+                                <option value="2" >… quería agregar al que tiene?</option>
+                                <option value="3">… se termina el trabajo que tiene?</option> 
+                                <option value="4" >estaba sin trabajo?</option>             
                                 </select>
                 </div>              
         </div>  
