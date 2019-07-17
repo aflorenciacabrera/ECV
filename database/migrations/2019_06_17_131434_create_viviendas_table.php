@@ -60,7 +60,7 @@ class CreateViviendasTable extends Migration
             $table->text('numero_encuestador')->nullable();
             $table->text('acompaniamiento')->nullable();
             $table->text('nombre')->nullable();
-            $table->text('numero_particion');//TODO (creo que fuimos nosotros te pregunto mañana )preguntar en el diccionario dice numero nomas pero esta repetido con numero de call->nullable()e
+            $table->text('numero_particion')->nullable();//TODO (creo que fuimos nosotros te pregunto mañana )preguntar en el diccionario dice numero nomas pero esta repetido con numero de call->nullable()e
     //  Particion -- Seccion III. IDENTIFICACIÓN DE VIVIENDAS Y HOGARES
             $table->text('otra_viv_direc')->nullable();
             $table->text('comparten_gastos')->nullable();
