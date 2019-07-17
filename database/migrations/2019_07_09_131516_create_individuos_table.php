@@ -22,8 +22,8 @@ class CreateIndividuosTable extends Migration
             $table->unsignedInteger('hogar_id');
             $table->foreign('hogar_id')->references('id')->on('hogars');
 
-            $table->integer('nro_componente');//borra nomas en el merge
-            $table->text('nombre'); //borra nomas en el merge
+            $table->integer('nro_componente')->nullable();//borra nomas en el merge
+            $table->text('nombre')->nullable(); //borra nomas en el merge
 
             $table->integer('estado')->default(0);//iniciado
             $table->timestamps();
