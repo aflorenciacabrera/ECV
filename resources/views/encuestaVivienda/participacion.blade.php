@@ -5,15 +5,15 @@
         <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="trimestre">Trimestre:</label>
-                        <input type="number" min="1" max="4" step="1" class="form-control form-control-sm" id="trimestre" name="trimestre" aria-describedby="" placeholder=" " >
+                        <input type="number" min="1" max="4" step="1" class="form-control form-control-sm" id="trimestre" name="trimestre" aria-describedby="" placeholder=" " required >
                 </div>
                 <div class="form-group col-md-2">
                         <label for="ano4">Año:</label>
-                        <input type="number" class="form-control form-control-sm" id="ano4" name="ano4" max="2019" min="2019" value="2019" pattern="2019" step="1" disabled>
+                        <input type="number" class="form-control form-control-sm" id="ano4" name="ano4" max="2019" min="2019" value="2019" pattern="2019" step="1" disabled required>
                 </div>
                 <div class="form-group col-md-2">
                         <label for="sem_referencia">Semana de referencia:</label>
-                        <input type="text" class="form-control form-control-sm" id="sem_referencia" name="sem_referencia" >
+                        <input type="text" class="form-control form-control-sm" id="sem_referencia" name="sem_referencia" required>
                 </div>
                 <div class="form-group col-md-3">
                         <label for="cant_hogar">Cantidad de hogares en la vivienda:</label>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-group col-md-6">
                         <label for="entrevista_realizada">Entrevista Realizada</label>
-                        <select class="form-control form-control-sm" name="entrevista_realizada" id="entrevista_realizada"  >
+                        <select class="form-control form-control-sm" name="entrevista_realizada" id="entrevista_realizada" onchange="entrevistaRealizada(this.value)" required >
                             <option value=""></option>
 
                                 <option value="1">1.Si</option>
