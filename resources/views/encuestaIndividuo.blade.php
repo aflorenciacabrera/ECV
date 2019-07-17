@@ -1,11 +1,25 @@
 @extends('layouts.app')
 @section('content')
+<script>
+// para generar el diccionario borrar nomas
+$(document).ready(function(){
+
+    // pa la migracion
+    migracion=""
+
+    $("input,textarea,select").each(function(){
+        migracion +=$(this).attr("name")+","
+    })
+
+    console.log(migracion)
+})
+</script>
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header ">
-                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Vivienda  </label>                            
+                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Vivienda  </label>
                 </div>
                 <div class="card-body">
                     {{-- Alert mesaje --}}
@@ -215,10 +229,10 @@
                               </div>
                             </div>
                             <div class="card-footer text-muted d-flex justify-content-end">
-                                <button class="btn btn-success" type="submit">Cargar</button>  
+                                <button class="btn btn-success" type="submit">Cargar</button>
                             </div>
                         </div>
-                       
+
                     </form>
                 </div>
             </div>
