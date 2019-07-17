@@ -19,7 +19,7 @@ class CreateViviendasTable extends Migration
             //
 
              // Relaciones
-                $table->unsignedInteger('user_id');//ingresador
+                $table->unsignedInteger('user_id')->nullable();//ingresador
                 $table->foreign('user_id')->references('id')->on('users');
                 $table->unsignedInteger('encuestador_id')->nullable();
                 $table->foreign('encuestador_id')->references('id')->on('users');
@@ -37,7 +37,7 @@ class CreateViviendasTable extends Migration
             $table->text('manz')->nullable();
             $table->text('lado')->nullable();
             $table->text('calle')->nullable();
-            $table->text('numero');////TODO preguntar en el diccionario dice numero nomas pero esta repetido con numero de call->nullable()e
+            $table->text('numero')->nullable();////TODO preguntar en el diccionario dice numero nomas pero esta repetido con numero de call->nullable()e
             $table->text('piso')->nullable();
             $table->text('deptoocasa')->nullable();
             $table->text('habitacion')->nullable();
@@ -123,7 +123,7 @@ class CreateViviendasTable extends Migration
             $table->text('CONSTRUCCION')->nullable();
             $table->text('ESTABLECIMIENTO')->nullable();
             $table->text('VARIACION')->nullable();
-            $table->text('AUSENCIA_PARTICIPACION');//TODO campo repetido en seccion 6 se renombr->nullable()o
+            $table->text('AUSENCIA_PARTICIPACION')->nullable();//TODO campo repetido en seccion 6 se renombr->nullable()o
             $table->text('RECHAZO')->nullable();
             $table->text('OTRO')->nullable();
             $table->text('INFORMANTE')->nullable();

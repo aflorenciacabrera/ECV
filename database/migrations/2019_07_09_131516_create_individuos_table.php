@@ -16,10 +16,10 @@ class CreateIndividuosTable extends Migration
         Schema::create('individuos', function (Blueprint $table) {
             $table->increments('id');
             // Relaciones
-            $table->unsignedInteger('user_id');//ingresador
+            $table->unsignedInteger('user_id')->nullable();//ingresador
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->unsignedInteger('hogar_id');
+            $table->unsignedInteger('hogar_id')->nullable();
             $table->foreign('hogar_id')->references('id')->on('hogars');
 
             $table->integer('nro_componente')->nullable();//borra nomas en el merge
