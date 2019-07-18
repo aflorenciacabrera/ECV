@@ -25,6 +25,7 @@
     .fit{
          white-space: nowrap;
     }
+
     </style>
 </head>
 <body>

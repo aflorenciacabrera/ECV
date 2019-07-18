@@ -186,9 +186,9 @@ Ultima Ocupación Changa
         </div>
         {{-- 11.l.1 --}}
          <div class="form-group form-inline">
-            <label for="PP11L" >11l.1 ¿Ese trabajo era …&nbsp;</label>
+            <label for="PP11L1" >11l.1 ¿Ese trabajo era …&nbsp;</label>
 
-            <select name="PP11L" id="PP11L" class="form-control form-control-sm">
+            <select name="PP11L1" id="PP11L1" class="form-control form-control-sm">
                 <option value=""></option>
 
                 <option value=1>1. ...una changa, trabajo transitorio, por tarea   u obra, suplencia, etc?   </option>
