@@ -47,41 +47,39 @@
         </div>   
          <div class="form-row">
            <div class="form-group col-md-6">
-                    <label for="PP01E">1e. La semana pasada…</label>
-                     <select class="form-control" name="PP01E" id="PP01E"><small id="" class="form-text text-muted"> </small>
-                                <option value=""> </option>
-                                <option value="1">… no deseaba/no quería trabajar?</option>
-                                <option value="2" >… no podía trabajar por razones personales? (cuidado del hogar, estudios, incapacidad)</option>
-                                <option value="3" >… no tenía/ no conseguía trabajo?</option>
-                                <option value="4" >… no tuvo pedidos/clientes?</option>
-                                <option value="5" >tenía un trabajo/negocio al que no concurrió?</option>             
-                        </select>
+                <label for="PP01E">1e. La semana pasada…</label>
+                <select class="form-control" name="PP01E" id="PP01E"><small id="" class="form-text text-muted"> </small>
+                        <option value=""> </option>
+                        <option value="1">… no deseaba/no quería trabajar?</option>
+                        <option value="2" >… no podía trabajar por razones personales? (cuidado del hogar, estudios, incapacidad)</option>
+                        <option value="3" >… no tenía/ no conseguía trabajo?</option>
+                        <option value="4" >… no tuvo pedidos/clientes?</option>
+                        <option value="5" >tenía un trabajo/negocio al que no concurrió?</option>             
+                </select>
                   
             </div>    
              <div class="form-group col-md-6">
-                    <label for="PP01F">1f- ¿No concurrió por….</label>
-                     <select class="form-control" name="PP01F" id="PP01F" >
-                               <option value=""> </option>
-                                <option value="1">… vacaciones, licencia? (enfermedad, matrimonio, embarazo, etc.)</option>
-                                <option value="2" >… causas personales? (viajes, trámites, etc)</option>
-                                <option value="3">… huelga/conflicto laboral?</option>    
-                                <option value="4">… Suspensión?</option>  
-                                <option value="5">… otras causas laborales? (rotura de equipos, falta de materias primas, mal tiempo)</option>           
-                        </select>
+                <label for="PP01F">1f- ¿No concurrió por….</label>
+                <select class="form-control" name="PP01F" id="PP01F" >
+                        <option value=""> </option>
+                        <option value="1">… vacaciones, licencia? (enfermedad, matrimonio, embarazo, etc.)</option>
+                        <option value="2" >… causas personales? (viajes, trámites, etc)</option>
+                        <option value="3">… huelga/conflicto laboral?</option>    
+                        <option value="4">… Suspensión?</option>  
+                        <option value="5">… otras causas laborales? (rotura de equipos, falta de materias primas, mal tiempo)</option>           
+                </select>
                         <input type="text" class="form-control" name="PP01F_Esp" id="PP01F_Esp"> 
-                  
             </div>    
         </div>       
         <div class="form-row">
             <div class="form-group col-md-6">
-                    <label for="PP01G">1g. ¿Le mantienen el pago durante la suspensión? </label>
-                     <select class="form-control" name="PP01G" id="PP01G" >
-                               <option value=""> </option>
-                                <option value="1">Si</option>
-                                <option value="2" >No</option> 
-                                <option value="9" >NS/Nr</option>             
-                        </select>
-                  
+                <label for="PP01G">1g. ¿Le mantienen el pago durante la suspensión? </label>
+                <select class="form-control" name="PP01G" id="PP01G" >
+                        <option value=""> </option>
+                        <option value="1">Si</option>
+                        <option value="2" >No</option> 
+                        <option value="9" >NS/Nr</option>             
+                </select>           
             </div>   
              <div class="form-group col-md-6">
                     <label for="PP01H">1h. ¿Volverá a ese trabajo a lo sumo en un mes?</label>

@@ -101,46 +101,58 @@ $(document).ready(function () {
                 break;
             case 2:
                 // todos completos?
-                return (validarPorSeccion("seccion_2"));
+                return (validarPorSeccion("parte_1"));
                 break;
             case 3:
                 // todos completos?
-                return (validarPorSeccion("seccion_3"));
+                return (validarPorSeccion("parte_2"));
                 break;
             case 4:
                 // todos completos?
-                return (validarPorSeccion("seccion_4"));
+                return (validarPorSeccion("parte_3"));
                 break;
             case 5:
                 // todos completos?
-                return (validarPorSeccion("seccion_5"));
+                return (validarPorSeccion("parte_4"));
                 break;
             case 6:
                 // todos completos?
-                return (validarPorSeccion("seccion_6"));
+                return (validarPorSeccion("parte_5"));
                 break;
             case 7:
                 // todos completos?
-                return (validarPorSeccion("seccion_hogar"));
+                return (validarPorSeccion("parte_6"));
                 break;
             case 8:
                 // todos completos?
-                return (validarPorSeccion("seccion_org"));
+                return (validarPorSeccion("parte_7"));
                 break;
             case 9:
                 // todos completos?
-                return (validarPorSeccion("seccion_razones"));
+                return (validarPorSeccion("parte_8"));
                 break;
             case 10:
                 // todos completos?
-                return (validarPorSeccion("seccion_recuperacion"));
+                return (validarPorSeccion("parte_9"));
                 break;
-
+            case 11:
+                // todos completos?
+                return (validarPorSeccion("parte_10"));
+                break;
+            case 12:
+                // todos completos?
+                return (validarPorSeccion("parte_11"));
+                break;
+            case 13:
+                // todos completos?
+                return (validarPorSeccion("parte_12"));
+                break;
+            case 14:
+                // todos completos?
+                return (validarPorSeccion("parte_13"));
+                break;
             default:
                 break;
         }
     }
 })
-
-
-
