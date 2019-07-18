@@ -116,6 +116,34 @@ $(document).ready(function(){
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
+                         <div class="line"></div>
+                        <div class="step" data-target="#parte_10">
+                            <button type="button" class="step-trigger" role="tab" aria-controls="parte_10" id="parte_10-trigger">
+                                <span class="bs-stepper-circle">11</span>
+                                   <span class="bs-stepper-label"></span>
+                            </button>
+                        </div>
+                         <div class="line"></div>
+                        <div class="step" data-target="#parte_11">
+                            <button type="button" class="step-trigger" role="tab" aria-controls="parte_11" id="parte_11-trigger">
+                                <span class="bs-stepper-circle">12</span>
+                                   <span class="bs-stepper-label"></span>
+                            </button>
+                        </div>
+                         <div class="line"></div>
+                        <div class="step" data-target="#parte_12">
+                            <button type="button" class="step-trigger" role="tab" aria-controls="parte_12" id="parte_12-trigger">
+                                <span class="bs-stepper-circle">13</span>
+                                   <span class="bs-stepper-label"></span>
+                            </button>
+                        </div>
+                         <div class="line"></div>
+                        <div class="step" data-target="#parte_13">
+                            <button type="button" class="step-trigger" role="tab" aria-controls="parte_13" id="parte_13-trigger">
+                                <span class="bs-stepper-circle">14</span>
+                                   <span class="bs-stepper-label"></span>
+                            </button>
+                        </div>
                     </div>
 
                 </div>
@@ -149,8 +177,24 @@ $(document).ready(function(){
                         <div id="parte_7" class="content" role="tabpanel" aria-labelledby="parte_7-trigger">
                             @include('encuestaIndividuo.parte_7')
                         </div>
-                        <div id="parte_8" class="content" role="tabpanel" aria-labelledby="sparte_8-trigger">
+                         <div id="parte_8" class="content" role="tabpanel" aria-labelledby="parte_8-trigger">
                             @include('encuestaIndividuo.parte_8')
+                        </div>
+                         <div id="parte_9" class="content" role="tabpanel" aria-labelledby="parte_9-trigger">
+                            @include('encuestaIndividuo.parte_9')
+                        </div>
+                         <div id="parte_10" class="content" role="tabpanel" aria-labelledby="parte_10-trigger">
+                            @include('encuestaIndividuo.parte_10')
+                        </div>
+                         <div id="parte_11" class="content" role="tabpanel" aria-labelledby="parte_11-trigger">
+                            @include('encuestaIndividuo.parte_11')
+                        </div>
+                         <div id="parte_12" class="content" role="tabpanel" aria-labelledby="parte_12-trigger">
+                            @include('encuestaIndividuo.parte_12')
+                        </div>
+                        
+                        <div id="parte_13" class="content" role="tabpanel" aria-labelledby="sparte_13-trigger">
+                            @include('encuestaIndividuo.parte_13')
                             <button type="submit" class="btn btn-success btn-lg">GUARDAR</button>
                         </div>
 
