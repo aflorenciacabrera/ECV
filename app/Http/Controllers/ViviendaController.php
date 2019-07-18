@@ -17,9 +17,10 @@ class ViviendaController extends Controller
 {
 
 
-    public function verEncuestaVivienda(){
+    public function verEncuestaVivienda()
+    {
         return view('encuestaVivienda');
-      }
+    }
 
     public function crearEncuestaVivienda(Request $request)
     {
@@ -131,17 +132,7 @@ class ViviendaController extends Controller
         return "... en contruccion";
     }
 
-    public function autogenerar(){
 
-
-        $v = new vivienda;
-
-        $v->user_id = Auth::user()->id;
-        $v->save();
-        //devuelvo el ultimo generado
-        return redirect()->route('verListadoVivienda')->with('vivienda',$v->id);
-
-    }
 
     public function verHogares($id_vivienda)
     {

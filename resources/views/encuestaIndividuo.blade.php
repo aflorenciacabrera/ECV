@@ -35,6 +35,20 @@
 
 // })
 //</script>
+<script>
+// para generar el diccionario borrar nomas
+$(document).ready(function(){
+
+    // pa la migracion
+    migracion=""
+
+    $("input,textarea,select").each(function(){
+        migracion +=$(this).attr("name")+","
+    })
+
+    console.log(migracion)
+})
+</script>
 <div class="container-fluid">
 
         <form method="POST" action="{{route('crearEncuestaIndividuo')}}" id="form">
