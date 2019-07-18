@@ -9,7 +9,7 @@
     </div>
     <br>
     <div class="col-md-10">
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered table-sm">
                     <thead>
                         <tr>
                         <th scope="col"> Nº</th>
@@ -19,16 +19,16 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><input type="text" class="form-control"></th>
-                            <td><input type="text" class="form-control"></td>
+                            <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                            <td><input type="text" class="form-control form-control-sm"></td>
                         </tr>
                         <tr>
-                            <th scope="row"><input type="text" class="form-control"></th>
-                            <td><input type="text" class="form-control"></td>
+                            <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                            <td><input type="text" class="form-control form-control-sm"></td>
                         </tr>
                         <tr>
-                            <th scope="row"><input type="text" class="form-control"></th>
-                            <td><input type="text" class="form-control"></td>
+                            <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                            <td><input type="text" class="form-control form-control-sm"></td>
                         </tr>
                     </tbody>
             </table>
@@ -37,11 +37,11 @@
         <div class="form-row ">
 
                 <div class="col-md-10" >
-                    <select name="VII1" id="" class="form-control">
+                    <select name="VII1" id="" class="form-control form-control-sm">
                         <option value=""></option>
 
-                        <option value="96">Servicio doméstico</option>
-                        <option value="97">Otra persona que no vive en el hogar</option>
+                        <option value="96">96. Servicio doméstico</option>
+                        <option value="97">97. Otra persona que no vive en el hogar</option>
                     </select>
                 </div>
         </div>
@@ -68,16 +68,16 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row"><input type="text" class="form-control"></th>
-                                    <td><input type="text" class="form-control"></td>
+                                    <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                                    <td><input type="text" class="form-control form-control-sm"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><input type="text" class="form-control"></th>
-                                    <td><input type="text" class="form-control"></td>
+                                    <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                                    <td><input type="text" class="form-control form-control-sm"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><input type="text" class="form-control"></th>
-                                    <td><input type="text" class="form-control"></td>
+                                    <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                                    <td><input type="text" class="form-control form-control-sm"></td>
                                 </tr>
                             </tbody>
                     </table>
@@ -85,11 +85,11 @@
                 <br>
                 <div class="form-row ">
                         <div class="col-md-10" >
-                            <select name="VII2" id="" class="form-control">
+                            <select name="VII2" id="" class="form-control form-control-sm">
                                 <option value=""></option>
-                                <option value="96">Servicio doméstico</option>
-                                <option value="97">Otra persona que no vive en el hogar</option>
-                                <option value="98">Ninguna</option>
+                                <option value="96">96. Servicio doméstico</option>
+                                <option value="97">97. Otra persona que no vive en el hogar</option>
+                                <option value="98">98. Ninguna</option>
                             </select>
                         </div>
                 </div>
@@ -118,24 +118,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><input type="text" class="form-control"></th>
-                        <td><input type="text" class="form-control"></td>
+                        <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <td><input type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input type="text" class="form-control"></th>
-                        <td><input type="text" class="form-control"></td>
+                        <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <td><input type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input type="text" class="form-control"></th>
-                        <td><input type="text" class="form-control"></td>
+                        <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <td><input type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input type="text" class="form-control"></th>
-                        <td><input type="text" class="form-control"></td>
+                        <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <td><input type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input type="text" class="form-control"></th>
-                        <td><input type="text" class="form-control"></td>
+                        <th scope="row"><input type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <td><input type="text" class="form-control form-control-sm"></td>
                     </tr>
                 </tbody>
         </table>
@@ -144,9 +144,9 @@
     <div class="form-row ">
 
             <div class="col-md-10" >
-                <select name="VII3" id="" class="form-control">
+                <select name="VII3" id="" class="form-control form-control-sm">
                     <option value=""></option>
-                    <option value="98">Ninguna</option>
+                    <option value="98">98. Ninguna</option>
                 </select>
             </div>
     </div>
@@ -159,12 +159,12 @@
                     <label for=""> - ¿Tiene este hogar teléfono?</label>
             </div>
             <div class="col-md-4">
-            <select class="form-control" name=""  >
+            <select class="form-control form-control-sm" name=""  >
                 <option value=""></option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
-                    <option value="3">No quiere darlo</option>
-                    <option value="4">No respuesta</option>
+                    <option value="1">1. Si</option>
+                    <option value="2">2. No</option>
+                    <option value="3">3. No quiere darlo</option>
+                    <option value="4">4. No respuesta</option>
 
             </select>
         </div>
@@ -173,11 +173,11 @@
                             <label for="numero_semana">Número</label>
                     </div>
                         <div class="col-md-6" >
-                            <input type="number" class="form-control">
+                            <input type="number" class="form-control form-control-sm">
                         </div>
                         <div class="col-md-10">
                                 <label for="">Observaciones…</label>
-                                <textarea name="" id="" cols="80" rows="3" class="form-control"></textarea>
+                                <textarea name="" id="" cols="80" rows="3" class="form-control form-control-sm"></textarea>
                         </div>
             </div>
 
@@ -192,7 +192,7 @@
                     <label for="numero_semana">PERSONAS QUE HABITAN EL HOGAR</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control form-control-sm">
                 </div>
     </div>
     <div class="form-row ">
@@ -200,7 +200,7 @@
                     <label for="numero_semana">PERSONAS MENORES DE 10 AÑOS</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control form-control-sm">
                 </div>
     </div>
     <div class="form-row ">
@@ -208,7 +208,7 @@
                     <label for="numero_semana">PERSONAS DE 10 AÑOS Y MÁS</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control form-control-sm">
                 </div>
     </div>
     <div class="form-row ">
@@ -216,7 +216,7 @@
                     <label for="numero_semana">-ENCUESTADAS</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control form-control-sm">
                 </div>
     </div>
     <div class="form-row ">
@@ -224,7 +224,7 @@
                     <label for="numero_semana">-NO ENCUESTADAS</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control form-control-sm">
                 </div>
     </div>
 
