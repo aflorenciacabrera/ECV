@@ -3,42 +3,42 @@
 
 <script src="{{asset('js/individuos.js')}}"></script>
 
-<script>
-/**
- * Autocompletar mas rapido por JS que por blade un bajon
- * */
-$(document).ready(function(){
+//<script>
+// /**
+//  * Autocompletar mas rapido por JS que por blade un bajon
+//  * */
+// $(document).ready(function(){
 
-    indiviuo = ({!!  $indiviuo !!})//paso de laravel a javascript
-    //reviso cuando corresponde con el nomnbre
-    $('#form input').each(function(e){
-        input = $(this);
-        name = input.attr('name');
-        //ver si el name esta en el hogar
-        if(indiviuo[name])//si existe es porque es true
-        {
-            //entonce relleno el campo
-            input.val(indiviuo[name])
-        }
-    })
-    $('#form select').each(function(e){
-        input = $(this);
-        name = input.attr('name');
-        //ver si el name esta en el hogar
-        if(indiviuo[name])//si existe es porque es true
-        {
-            //entonce relleno el campo
-            input.val(indiviuo[name])
-        }
-    })
+//     individuo = ({!!  $individuo !!})//paso de laravel a javascript
+//     //reviso cuando corresponde con el nomnbre
+//     $('#form input').each(function(e){
+//         input = $(this);
+//         name = input.attr('name');
+//         //ver si el name esta en el hogar
+//         if(individuo[name])//si existe es porque es true
+//         {
+//             //entonce relleno el campo
+//             input.val(individuo[name])
+//         }
+//     })
+//     $('#form select').each(function(e){
+//         input = $(this);
+//         name = input.attr('name');
+//         //ver si el name esta en el hogar
+//         if(individuo[name])//si existe es porque es true
+//         {
+//             //entonce relleno el campo
+//             input.val(individuo[name])
+//         }
+//     })
 
 
-})
-</script>
+// })
+//</script>
 <div class="container-fluid">
 
         <form method="POST" action="{{route('crearEncuestaIndividuo')}}" id="form">
-        <input type="hidden" name="indiviuo_id" value="{{$indiviuo->id}}">
+        <input type="hidden" name="individuo_id" value="{{$individuo->id}}">
             @csrf
         <div class="bs-stepper ">
             <div class="card ">
