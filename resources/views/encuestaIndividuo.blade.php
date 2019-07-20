@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header ">
-                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Vivienda  </label>                            
+                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Vivienda  </label>
                 </div>
                 <div class="card-body">
                     {{-- Alert mesaje --}}
@@ -15,7 +15,7 @@
                         </div>
                     @endif
                      {{-- <form method="POST" action="{{url('encuesta/Vivienda/crear')}}"> --}}
-                    <form method="POST" action="{{route('crearEncuestaVivienda')}}">
+                    <form method="POST" action="{{route('crearEncuestaIndividuo')}}">
                         @csrf
                         <div class="accordion" id="accordionExample">
                             <div class="card">
@@ -215,10 +215,10 @@
                               </div>
                             </div>
                             <div class="card-footer text-muted d-flex justify-content-end">
-                                <button class="btn btn-success" type="submit">Cargar</button>  
+                                <button class="btn btn-success" type="submit">Cargar</button>
                             </div>
                         </div>
-                       
+
                     </form>
                 </div>
             </div>

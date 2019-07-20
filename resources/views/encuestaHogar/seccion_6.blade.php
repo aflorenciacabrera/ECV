@@ -1,23 +1,9 @@
 
 
-Para finalizar, en el mes de  <select name="VImes" id=""  >
-                                <option value=""></option>
-                                <option value="1">enero</option>
-                                <option value="2">febrero</option>
-                                <option value="3">marzo</option>
-                                <option value="4">abril</option>
-                                <option value="5">mayo</option>
-                                <option value="6">junio</option>
-                                <option value="7">julio</option>
-                                <option value="8">agosto</option>
-                                <option value="9">septiembre</option>
-                                <option value="10">octubre</option>
-                                <option value="11">noviembre</option>
-                                <option value="12">diciembre</option>
-                            </select>   ¿cuánto cobró por <input type="number"  name="VIcobr"> ?
+Para finalizar, en el mes de ____  ¿cuánto cobró por _____ ?
 (indagar sólo en los ítems 2 a 5, 8 a 12 y 19.a marcados con sí en el Bloque estrategias del hogar)
 <br><br>
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered table-sm">
     <thead >
         <tr class="table-secondary">
             <th scope="col">Quién lo Cobra?</th>

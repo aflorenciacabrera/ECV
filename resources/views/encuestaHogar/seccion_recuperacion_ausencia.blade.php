@@ -5,13 +5,13 @@
             <div class="form-group col-md-5">
                 <div class="form-row ">
                         <div class="col-md-5">
-                                <label for="">¿Salió a supervisión?</label>
+                                <label for="supervision">¿Salió a supervisión?</label>
                         </div>
                             <div class="col-md-2" >
-                                    <select name="supervision" id="" class="form-control">
+                                    <select name="supervision" id="supervision" class="form-control form-control-sm">
                                         <option value=""></option>
-                                            <option value="">Si</option>
-                                            <option value="">No</option>
+                                            <option value="1">1. Si</option>
+                                            <option value="2">2. No</option>
                                     </select>
                             </div>
                 </div>
@@ -20,20 +20,20 @@
             <div class="form-group col-md-6">
                 <div class="form-row ">
                     <div class="col-md-2">
-                        <label for="">Supervisor:</label>
+                        <label for="super_nombre">Supervisor:</label>
                     </div>
                     <div class="col-md-6" >
-                        <input type="text" name="super_nombre" class="form-control">
+                        <input type="text" name="super_nombre" id="super_nombre" class="form-control form-control-sm">
                     </div>
 
                 </div>
                 <br>
                 <div class="form-row ">
                     <div class="col-md-2">
-                        <label for="">N°:</label>
+                        <label for="super_num">N°:</label>
                     </div>
                     <div class="col-md-2" >
-                        <input type="text" name="super_num" class="form-control">
+                        <input type="number"  name="super_num" id="super_num" class="form-control form-control-sm">
                     </div>
                 </div>
             </div>
@@ -53,24 +53,24 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_1"   value="" ></td>
+                                            <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="r_visitas_fecha_hora_1"   value="" ></td>
 
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
-                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_2"  value="" ></td>
+                                            <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="r_visitas_fecha_hora_2"  value="" ></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
-                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_3" value="" ></td>
+                                            <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="r_visitas_fecha_hora_3" value="" ></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
-                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_4"  value="" ></td>
+                                            <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="r_visitas_fecha_hora_4"  value="" ></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">5</th>
-                                            <td><input type="datetime-local" name="r_visitas_fecha_hora_5"  value="" ></td>
+                                            <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="r_visitas_fecha_hora_5"  value="" ></td>
                                         </tr>
                                     </tbody>
                             </table>
@@ -85,21 +85,21 @@
                                 <label for="">El encuestador entregó...</label>
                             </div>
                             <div class="col-md-4" >
-                               <select name="entrega" id=""  class="form-control">
+                               <select name="entrega" id=""  class="form-control form-control-sm">
                                    <option value=""></option>
-                                   <option value="">...Ausencia</option>
-                                   <option value="">...Rechazo</option>
-                                   <option value="">...Otras causas</option>
+                                   <option value="7">7. ...Ausencia</option>
+                                   <option value="8">8. ...Rechazo</option>
+                                   <option value="9">9. ...Otras causas</option>
                                </select>
                             </div>
 
                         </div>
                         <div class="form-row ">
                             <div class="col-md-3">
-                                <label for="">Mal Tomado:</label>
+                                <label for="mal_tomado">Mal Tomado:</label>
                             </div>
                             <div class="col-md-2" >
-                              <input type="checkbox" name="mal_tomado" id="">
+                              <input type="checkbox" name="mal_tomado" id="mal_tomado">
                             </div>
                         </div>
                     </div>

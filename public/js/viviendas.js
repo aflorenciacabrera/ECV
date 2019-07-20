@@ -1,12 +1,29 @@
+entrevista_realizada = true;
 
+function entrevistaRealizada(value)
+{
+    if(value == 2)
+    {
+        entrevista_realizada = false;
+    }
+    else
+    {
+        entrevista_realizada = true;
+    }
+
+
+}
 
 $(document).ready(function () {
     /**
      * inicio el bs-stepper
+     *
      */
+    $('input,textarea,select').filter('[required=required]').prev().append(" *")
     var stepper = new Stepper($('.bs-stepper')[0])
     var paso = 1;
     stepper.to(paso);
+
 
 
     /**
@@ -30,8 +47,22 @@ $(document).ready(function () {
             e.preventDefault();
                 if(validar(paso))
                 {
+                    if (paso == 2 && !entrevista_realizada)
+                    {
+                        paso=6;
+                        stepper.to(paso);
+                        //remove all requireds fields
+                        $('input,textarea,select').filter('[required=required]').removeAttr('required');
+                        return
+                    }
+
+
                     stepper.next();
                     paso++;
+                    if(paso==7)
+                    {
+                            $(".next").addClass("d-none");
+                    }
                 }
                 else
                 {
@@ -76,7 +107,7 @@ $(document).ready(function () {
 function validarPorSeccion(seccion)
 {
     flag = true;
-    $("#"+seccion+" input").each(function(e){
+    $("#" + seccion + " input, #" + seccion +" select").each(function(e){
             t = $(this);
             console.log(t.attr('name')+" ")
             if(!t[0].checkValidity()) // es valido segun html5?

@@ -16,14 +16,14 @@
                     <div class="step" data-target="#seccion_1">
                         <button type="button" class="step-trigger" role="tab" aria-controls="seccion_1" id="seccion_1-trigger">
                             <span class="bs-stepper-circle">1</span>
-                            <span class="bs-stepper-label">Identificación</span>
+                            <span class="bs-stepper-label">Identificación</br> Ubicación</span>
                         </button>
                     </div>
                     <div class="line"></div>
                         <div class="step" data-target="#seccion_2">
                             <button type="button" class="step-trigger" role="tab" aria-controls="seccion_2" id="seccion_2-trigger">
                                 <span class="bs-stepper-circle">2</span>
-                                <span class="bs-stepper-label">Ubicación</span>
+                                <span class="bs-stepper-label">Participacion</span>
                             </button>
                         </div>
                     <div class="line"></div>
@@ -70,12 +70,13 @@
                     <div class="bs-stepper-content">
                     <!-- your steps content here -->
                         <div id="seccion_1" class="content" role="tabpanel" aria-labelledby="seccion_1-trigger">
+                            <h3 class="card-title">I. Identificación</h3>
                             @include('encuestaVivienda.seccion_1')
+                            <h3 class="card-title">II. Ubicación</h3>
+                            @include('encuestaVivienda.seccion_2')
                         </div>
                         <div id="seccion_2" class="content" role="tabpanel" aria-labelledby="seccion_2-trigger">
                             {{--  --}}
-                            @include('encuestaVivienda.seccion_2')
-                            <h2>Participación</h2>
                             @include('encuestaVivienda.participacion')
                         </div>
                         <div id="seccion_3" class="content" role="tabpanel" aria-labelledby="seccion_3-trigger">

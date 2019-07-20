@@ -38,32 +38,32 @@
 
                     <tr>
                         {{-- 1 --}}
-                        <td class="fit"><input type="text" class="form-control form-control-sm" name="NRO_HOGAR_{{$i}}"> </td>
+                    <td class="fit"><input type="text" class="form-control form-control-sm primer-campo" @if($i==1) required @endif data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
                         {{-- 2 --}}
-                        <td class="fit"><input type="text" class="form-control form-control-sm" name="NRO_COMPONENTE_{{$i}}"> </td>
+                        <td class="fit"><input type="text" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
                         {{-- 3 --}}
-                        <td class="fit"><input type="text" class="form-control form-control-sm" name="NOMBRE_JEFE_{{$i}}"> </td>
+                        <td class="fit"><input type="text" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NOMBRE_JEFE_{{$i}}"> </td>
                         {{-- 4 --}}
-                        <td class="fit"><select name="VIVIO_SEM_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="VIVIO_SEM_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""></option>
                             <option value="1">1. Si  </option>
                                 <option value="2">2. No (pasa a p.8)</option>
                                 </select> </td>
                         {{-- 5 --}}
-                        <td class="fit"><select name="VIVIO_MES_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="VIVIO_MES_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Si (Residente FIN)</option>
                                         <option value="2">2. No </option>
                                         </select> </td>
                         {{-- 6 --}}
-                        <td class="fit"><select name="FIJAR_RES_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="FIJAR_RES_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Si (Residente FIN)</option>
                                         <option value="2">2. No </option>
                                         <option value="3">3. N/s </option>
                                         </select> </td>
                         {{-- 7 --}}
-                        <td class="fit"><select name="ESTABA_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="ESTABA_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""></option>
                             <option value="1">1 ...vi2. no a visitar clientes, transporta pasajeros, mercadería pero vive en otro lugar (viajantes)</option>
                                 <option value="2">2... Vi2. no de paseo/visita o a cuidar a familiares/amigos pero vive en otro lugar?</option>
@@ -73,20 +73,20 @@
                                 <option value="6">6 ...Estudia aquí</option>
                                 </select>  </td>
                         {{-- 8 --}}
-                        <td class="fit"><select name="AUSENCIA_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="AUSENCIA_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Si (2. NO Residente FIN)</option>
                                         <option value="2">2. No </option>
                                         </select> </td>
                         {{-- 9 --}}
-                        <td class="fit"><select name="OTRA_RES_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="OTRA_RES_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""></option>
                             <option value="1">1. Si (2. NO  RESIDENTE. FIN)</option>
                                 <option value="2">2. No</option>
                                 <option value="3">3. N/S</option>
                                 </select> </td>
                         {{-- 10 --}}
-                        <td class="fit"><select name="NO_ESTABA_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="NO_ESTABA_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""></option>
                             <option value="1">1…Viaja por trabajo, ve clientes, transporta
                                                 personas, mercaderías, etc. Pero vive acá?
@@ -104,7 +104,7 @@
                                 <option value="8">8. Fallecimiento</option>
                                 </select> </td>
                         {{-- 11 --}}
-                        <td class="fit"><select name="CAMBIOS_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="CAMBIOS_{{$i}}" id="" class="form-control form-control-sm otros-campos">
                             <option value=""        ></option>
                             <option value="1">1. Continúa en el hogar</option>
                                         <option value="2">2. Entrado (aplicar
@@ -113,7 +113,7 @@
                                         <option value="4">4. Mal tomado</option>
                                 </select> </td>
                         {{-- 12 --}}
-                        <td class="fit"><select name="MOTIVO_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="MOTIVO_{{$i}}" id="" class="form-control form-control-sm otros-campos">
                             <option value=""></option>
                             <option value="1">1. Nacimiento
                                                 /adopción</option>
@@ -130,7 +130,7 @@
                                 </select>
                                 <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="MOTIVO_OTRO_{{$i}}">   </td> {{-- FALTA DICCIONARIO --}}
                          {{-- 13 --}}
-                        <td class="fit"><select name="CH13_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="CH13_{{$i}}" id="" class="form-control form-control-sm otros-campos">
                             <option value=""        ></option>
                             <option value="1">1. Continúa en el
                                                         hogar</option>
@@ -140,7 +140,7 @@
                                         <option value="4">4. Mal tomado</option>
                             </select> </td>
                        {{-- 14 --}}
-                        <td class="fit"><select name="CH14_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="CH14_{{$i}}" id="" class="form-control form-control-sm otros-campos">
                             <option value=""        ></option>
                             <option value="1">1. Nacimiento /adopción</option>
                                         <option value="2">2. Matrimonio /Unión</option>
@@ -154,7 +154,7 @@
                                 </select>
                                 <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="CH14_OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
                       {{-- 15 --}}
-                        <td class="fit"><select name="CH15_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="CH15_{{$i}}" id="" class="form-control form-control-sm otros-campos">
                             <option value=""        ></option>
                             <option value="1">1. Continúa en el
                                                         hogar</option>
@@ -164,7 +164,7 @@
                                         <option value="4">4. Mal tomado</option>
                                 </select></td>
                         {{-- 16 --}}
-                        <td class="fit"><select name="CH16_{{$i}}" id="" class="form-control form-control-sm">
+                        <td class="fit"><select name="CH16_{{$i}}" id="" class="form-control form-control-sm otros-campos">
                             <option value=""        ></option>
                             <option value="1">1. Nacimiento /adopción</option>
                                         <option value="2">2. Matrimonio /Unión</option>
@@ -189,3 +189,33 @@
 </div>
 {{--
 @endsection --}}
+<script>
+
+function actualizar_seccion_5()
+    {
+         $(".otros-campos").attr('disabled',true);
+
+        $(".primer-campo").each(function ()
+        {
+            if($(this).val() != "")
+            {
+                indice = $(this).data('indice');
+                $(".otros-campos").each(function(){
+                    if($(this).data('indice') == indice)
+                    {
+                        $(this).removeAttr('disabled');
+                    }
+                })
+            }
+        })
+    }
+
+$(document).ready(function ()
+{
+    actualizar_seccion_5();
+
+    $(".primer-campo").keyup(function(){
+        actualizar_seccion_5();
+    })
+})
+</script>
