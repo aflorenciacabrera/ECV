@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header ">
-                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Vivienda  </label>
+                        <label for="" class="d-flex justify-content-center" >Cargar Encuesta de Individual  </label>
                 </div>
                 <div class="card-body">
                     {{-- Alert mesaje --}}
