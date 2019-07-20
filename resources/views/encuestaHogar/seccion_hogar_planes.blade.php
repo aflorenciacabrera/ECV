@@ -77,13 +77,13 @@
 
             <div class="col-md-10">
               <label for="numero_semana">4.1 ¿Porcentaje?</label>
-              <input type="number" class="form-control form-control-sm" name="TSA_1" step="1" min="0"  max="999">
+              <input type="number" class="form-control form-control-sm" name="TS_1" step="1" min="0"  max="999">
           </div>
 
       </div>
 
         <div class="col-md-2" >
-            <select class="form-control form-control-sm" name="TSA"  >
+            <select class="form-control form-control-sm" name="TS"  >
                 <option value=""></option>
                 <option value="1">1. Si</option>
                 <option value="2">2. No</option>
@@ -160,13 +160,13 @@
 
             <div class="col-md-10">
               <label for="numero_semana">8.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control form-control-sm" name="TS_1" step="1" min="0"  max="99">
+              <input type="number" class="form-control form-control-sm" name="TSAP_1" step="1" min="0"  max="99">
           </div>
 
       </div>
 
         <div class="col-md-2" >
-            <select class="form-control form-control-sm" name="TS"  >
+            <select class="form-control form-control-sm" name="TSAP"  >
                 <option value=""></option>
                 <option value="1">1. Si</option>
                 <option value="2">2. No</option>

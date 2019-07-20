@@ -96,19 +96,19 @@
                     <option value="9" @if($item->caracteristicas->CH08 == "9" ) selected @endif >9. Ns/Nr</option>
                     </select>  </td>
             {{-- 9 --}}
-            <td><select name="CH08_A_{{$index}}" value="{{$item->caracteristicas->CH08_A}}" id="" class="form-control form-control-sm">
+            <td><select name="CH08A_{{$index}}" value="{{$item->caracteristicas->CH08_A}}" id="" class="form-control form-control-sm">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH08_A == "1" ) selected @endif >1. Si</option>
                     <option value="2"  @if($item->caracteristicas->CH08_A == "2" ) selected @endif >2. No</option>
                     </select> </td>
             {{-- 10 --}}
-            <td><select name="CH08_B_{{$index}}" value="{{$item->caracteristicas->CH08_B}}" id="" class="form-control form-control-sm">
+            <td><select name="CH08B_{{$index}}" value="{{$item->caracteristicas->CH08_B}}" id="" class="form-control form-control-sm">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH08_B == "1" ) selected @endif >1. Dolencia/afección/enfermedad</option>
                     <option value="2"  @if($item->caracteristicas->CH08_B == "2" ) selected @endif >2. Control/prevención</option>
                     </select> </td>
             {{-- 11 --}}
-            <td><select name="CH08_B_C_{{$index}}" value="{{$item->caracteristicas->CH08_C}}" id="" class="form-control form-control-sm">
+            <td><select name="CH08C_{{$index}}" value="{{$item->caracteristicas->CH08_C}}" id="" class="form-control form-control-sm">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH08_C == "1" ) selected @endif >1. Emergencia</option>
                     <option value="2"  @if($item->caracteristicas->CH08_C == "2" ) selected @endif >2. Guardia</option>
@@ -116,7 +116,7 @@
                     <option value="4"  @if($item->caracteristicas->CH08_C == "4" ) selected @endif >4. Consulta Médica domiciliaria</option>
                     </select> </td>
             {{-- 12 --}}
-            <td><select name="CH08_D_{{$index}}" value="{{$item->caracteristicas->CH08_D}}" id="" class="form-control form-control-sm">
+            <td><select name="CH08D_{{$index}}" value="{{$item->caracteristicas->CH08_D}}" id="" class="form-control form-control-sm">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH08_D == "1" ) selected @endif >1. Privado</option>
                     <option value="2"  @if($item->caracteristicas->CH08_D == "2" ) selected @endif >2. Público Nacional</option>
