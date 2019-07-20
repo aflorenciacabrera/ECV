@@ -1,7 +1,7 @@
 {{-- @extends('layouts.app')
 @section('content') --}}
 <div class="card-body">
-
+{{-- Prueba refs #3 --}}
         <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="trimestre">Trimestre:</label>
