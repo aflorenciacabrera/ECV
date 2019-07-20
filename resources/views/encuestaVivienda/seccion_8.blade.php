@@ -33,17 +33,17 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">1</th>
-                                        <td><input type="datetime-local" class="form-control form-control-sm semi-required" name="visita_1" id="visita_1"   value="">
+                                        <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm semi-required" name="visita_1" id="visita_1"   value="">
                                         </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">2</th>
-                                        <td><input type="datetime-local" class="form-control form-control-sm" name="visita_2" id="visita_2"  value="">
+                                        <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="visita_2" id="visita_2"  value="">
                                         </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">3</th>
-                                        <td><input type="datetime-local" class="form-control form-control-sm" name="visita_3" id="visita_3" value="">
+                                        <td><input type="datetime-local"   min="2019-01-01T00:00" max="2019-12-31T23:59"  class="form-control form-control-sm" name="visita_3" id="visita_3" value="">
                                         </td>
                                         </tr>
 

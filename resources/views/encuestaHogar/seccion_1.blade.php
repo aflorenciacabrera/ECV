@@ -55,23 +55,23 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">1</th>
-                                        <td><input type="datetime-local" name="visitas_fecha_hora_1"   value=""></td>
+                                        <td><input type="datetime-local"  min="2019-01-01T00:00" max="2019-12-31T23:59" name="visitas_fecha_hora_1"   value=""></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">2</th>
-                                        <td><input type="datetime-local" name="visitas_fecha_hora_2"  value=""></td>
+                                        <td><input type="datetime-local" min="2019-01-01T00:00" max="2019-12-31T23:59"  name="visitas_fecha_hora_2"  value=""></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">3</th>
-                                        <td><input type="datetime-local" name="visitas_fecha_hora_3" value=""></td>
+                                        <td><input type="datetime-local" min="2019-01-01T00:00" max="2019-12-31T23:59"  name="visitas_fecha_hora_3" value=""></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">4</th>
-                                        <td><input type="datetime-local" name="visitas_fecha_hora_4"  value=""></td>
+                                        <td><input type="datetime-local" min="2019-01-01T00:00" max="2019-12-31T23:59"  name="visitas_fecha_hora_4"  value=""></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">5</th>
-                                        <td><input type="datetime-local" name="visitas_fecha_hora_5"  value=""></td>
+                                        <td><input type="datetime-local" min="2019-01-01T00:00" max="2019-12-31T23:59"  name="visitas_fecha_hora_5"  value=""></td>
                                         </tr>
                                 </tbody>
                         </table>
