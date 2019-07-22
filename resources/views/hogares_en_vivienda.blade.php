@@ -4,7 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <table class="table table-sm table-stripped">
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Detalle Vivienda Nro Listado: {{$vivienda->numero_listado}}</h5>
+                    <p class="card-text">
+                          <table class="table table-sm table-stripped">
             <thead>
                 <tr>
                     <th>Nro de Hogar</th>
@@ -17,10 +22,10 @@
                 @foreach ($vivienda->hogares as $h)
                     <tr>
                     <td scope="row">{{$h->numero_hogar}}</td>
-                    <td></td>
+                    <td>{{$h->individuos->count()}}</td>
                     @if($h->estado() != 'ok')
                         <td>
-                            <div class="alert alert-warning" role="alert">
+                            <div class="alert alert-warning alert-sm" role="alert">
                                   {{$h->estado()}}
                             </div>
                         </td>
@@ -39,6 +44,13 @@
 
             </tbody>
         </table>
+
+                    </p>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 </div>

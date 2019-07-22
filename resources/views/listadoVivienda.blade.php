@@ -3,12 +3,25 @@
 @section('content')
 <div class="container-fluid">
 
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-text">
+                    <a  href="{{route('verEncuestaVivienda')}}" role="button" class="btn btn-lg btn-primary" role="button" aria-pressed="true"> Cargar Nueva Vivienda
+                        <i><span class="fa fa-plus"></span></i>
+
+                    </a></p>
+            </div>
+        </div>
         <div class="card text-left">
             <div class="card">
+
                 <div class="card-header">
                     Viviendas Ingresadas por <strong>{{Auth::user()->name}}</strong>
                 </div>
+
                 <div class="card-body">
+
                     <table class="table table-striped table-inverse  table-sm">
                         <thead class="thead-inverse">
                             <tr>

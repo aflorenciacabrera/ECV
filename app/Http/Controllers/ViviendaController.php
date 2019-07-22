@@ -138,7 +138,8 @@ class ViviendaController extends Controller
 
 
 
-        return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
+        // return redirect(url('home'))->with('status', 'Formulario Vivienda Cargado')->with('vivienda',$v);
+        return redirect(route('verHogares',['id_vivienda'=>$v->id]));
 
     }
 

@@ -4,7 +4,17 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <table class="table table-sm table-stripped">
+        <div class="card">
+            <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                <h5 class="card-title">Detalle <a href="{{route('verHogares',['id_vivienda'=>$hogar->vivienda->id])}}">  Vivienda {{$hogar->Vivienda->numero_listado}} </a> Hogar #{{$hogar->numero_hogar}}</h5>
+                </div>
+
+            </div>
+
+                <p class="card-text">
+                    <table class="table table-sm table-stripped">
             <thead>
                 <tr>
                     <th>Nro de Componente</th>
@@ -45,6 +55,9 @@
 
             </tbody>
         </table>
+                </p>
+            </div>
+        </div>
         </div>
     </div>
 </div>
