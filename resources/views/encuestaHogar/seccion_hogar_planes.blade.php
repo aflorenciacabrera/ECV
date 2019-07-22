@@ -91,35 +91,12 @@
         </div>
       </div>
       <br>
-      <div class="form-row ">
+       <div class="form-row ">
         <div class="col-md-6">
-            <label for="numero_semana">5. Tarjeta verde?</label>
-
-              {{-- <div class="col-md-10">
-                <label for="numero_semana">5.1 ¿Porcentaje?</label>
-                <input type="number" class="form-control form-control-sm" name="TV_1" step="1" min="0"  max="999">
-            </div> --}}
-
-      </div>
-
-        <div class="col-md-2" >
-            <select class="form-control form-control-sm" name="TV"  >
-                <option value=""></option>
-                <option value="1">1. Si</option>
-                <option value="2">2. No</option>
-            </select>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="form-group col-md-6">
-
-      <div class="form-row ">
-        <div class="col-md-6">
-            <label for="numero_semana">6.Tiene Tarifa Social de energía?</label>
+            <label for="numero_semana">5.Tiene Tarifa Social de energía?</label>
 
             <div class="col-md-10">
-              <label for="numero_semana">6.1¿Monto total de boleta de energía?</label>
+              <label for="numero_semana">5.1¿Monto total de boleta de energía?</label>
               <input type="number" class="form-control form-control-sm" name="TE_1" step="1" min="0"  max="999999">
           </div>
 
@@ -133,6 +110,26 @@
             </select>
         </div>
       </div>
+     
+    <br>
+    <div class="form-group col-md-6">
+       <div class="form-row ">
+        <div class="col-md-6">
+            <label for="numero_semana">6. Tarjeta verde?</label>
+              {{-- <div class="col-md-10">
+                <label for="numero_semana">5.1 ¿Porcentaje?</label>
+                <input type="number" class="form-control form-control-sm" name="TV_1" step="1" min="0"  max="999">
+            </div> --}}
+      </div>
+        <div class="col-md-2" >
+            <select class="form-control form-control-sm" name="TV"  >
+                <option value=""></option>
+                <option value="1">1. Si</option>
+                <option value="2">2. No</option>
+            </select>
+        </div>
+      </div>
+    </div>
       <br>
       <div class="form-row ">
         <div class="col-md-6">
@@ -154,6 +151,26 @@
         </div>
       </div>
       <br>
+       <div class="form-row ">
+        <div class="col-md-6">
+            <label for="numero_semana">9. Plan mamá? (Mbareté)</label>
+
+            <div class="col-md-10">
+              <label for="numero_semana">9.1¿Cuántos miembros?</label>
+              <input type="number" class="form-control form-control-sm" name="PM_1" step="1" min="0"  max="99">
+          </div>
+
+      </div>
+
+        <div class="col-md-2" >
+            <select class="form-control form-control-sm" name="PM"  >
+                <option value=""></option>
+                <option value="1">1. Si</option>
+                <option value="2">2. No</option>
+            </select>
+        </div>
+      </div>
+       <br>
       <div class="form-row ">
         <div class="col-md-6">
             <label for="numero_semana">8. Tarjeta Sapucay?</label>
@@ -173,26 +190,8 @@
             </select>
         </div>
       </div>
-      <br>
-      <div class="form-row ">
-        <div class="col-md-6">
-            <label for="numero_semana">9. Plan mamá? (Mbareté)</label>
-
-            <div class="col-md-10">
-              <label for="numero_semana">9.1¿Cuántos miembros?</label>
-              <input type="number" class="form-control form-control-sm" name="PM_1" step="1" min="0"  max="99">
-          </div>
-
-      </div>
-
-        <div class="col-md-2" >
-            <select class="form-control form-control-sm" name="PM"  >
-                <option value=""></option>
-                <option value="1">1. Si</option>
-                <option value="2">2. No</option>
-            </select>
-        </div>
-      </div>
+     
+     
       <br>
        <div class="form-row ">
         <div class="col-md-6">
