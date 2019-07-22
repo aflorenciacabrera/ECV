@@ -71,15 +71,27 @@ class ViviendaController extends Controller
                 $vs->save();
             }
         }
-        print_r($_componentes);
+        // print_r($_componentes);
         $hogares = (array_unique(($_hogares)));
         // creo el registro de cada hogar ??
         //Cuantos hogares son?
-        foreach ($hogares as $key => $value)
+        foreach ($hogares as $value)
         {
             $h = new hogar();
             $h->vivienda_id = $vivienda_id;
             $h->numero_hogar = $value;
+            print_r($value);
+            print_r($h->numero_hogar);
+            // campos similares
+            $h->codigo_area = $v->codigo_area;
+            $h->numero_listado = $v->numero_listado;
+            $h->numero_semana = $v->numero_semana;
+            $h->trimestre = $v->trimestre;
+            $h->ano4 = $v->ano4;
+            $h->numero_vivienda = $v->numero_vivienda;
+
+
+            //
             $h->user_id = Auth::user()->id;
             $h->save();
             foreach ($_componentes[$value] as $nro_componente => $nombre)

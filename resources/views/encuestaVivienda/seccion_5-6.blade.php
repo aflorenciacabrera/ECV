@@ -38,9 +38,9 @@
 
                     <tr>
                         {{-- 1 --}}
-                    <td class="fit"><input type="text" class="form-control form-control-sm primer-campo" @if($i==1) required @endif data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
+                    <td class="fit"><input type="number" min=0 max=99  class="form-control form-control-sm primer-campo" @if($i==1) required @endif data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
                         {{-- 2 --}}
-                        <td class="fit"><input type="text" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
+                        <td class="fit"><input type="number" min=0 max=99 class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
                         {{-- 3 --}}
                         <td class="fit"><input type="text" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NOMBRE_JEFE_{{$i}}"> </td>
                         {{-- 4 --}}
@@ -186,7 +186,7 @@
                   </table>
 
             <div class="form-group col-md-6">
-                <label for="IV3_1">3,1 ¿Hay otras personas temporalmente ausentes?¿Menores de un año?¿Alguien más que no haya mencionado?</label>
+                <label for="IV3_1">3.1 ¿Hay otras personas temporalmente ausentes?¿Menores de un año?¿Alguien más que no haya mencionado?</label>
                 <select class="form-control form-control-sm" name="IV3_1" id="IV3_1">
                     <option value=""></option>
                     <option value="1">1. Si </option>

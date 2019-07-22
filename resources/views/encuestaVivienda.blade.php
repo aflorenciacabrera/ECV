@@ -5,7 +5,7 @@
 
 </script>
 <div class="container-fluid">
-    <a name="" id="form" class="btn btn-primary" href="{{route('autogenerarVivienda')}}" role="button">GENERAR AUTOMÁTICO</a>
+
         <form method="POST" action="{{route('crearEncuestaVivienda')}}">
             @csrf
         <div class="bs-stepper ">

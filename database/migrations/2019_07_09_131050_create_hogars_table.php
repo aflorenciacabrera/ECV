@@ -30,9 +30,9 @@ class CreateHogarsTable extends Migration
             $table->text('numero_listado')->nullable();
             $table->text('numero_semana')->nullable();
             $table->text('trimestre')->nullable();
-            $table->text('ano4')->nullable();
-            $table->text('numero_vivienda')->nullable();
-            $table->text('numero_hogar')->nullable();
+            $table->integer('ano4', false)->nullable();
+            $table->integer('numero_vivienda')->nullable();
+            $table->integer('numero_hogar')->nullable();
             $table->text('respondiente')->nullable();
             $table->text('visitas_fecha_hora_1')->nullable();
             $table->text('visitas_fecha_hora_2')->nullable();

@@ -11,6 +11,7 @@
 $(document).ready(function(){
 
     hogar = ({!!  $hogar !!})//paso de laravel a javascript
+    console.log(hogar)
     //reviso cuando corresponde con el nomnbre
     $('#form input').each(function(e){
         input = $(this);
