@@ -185,7 +185,14 @@
             </tbody>
                   </table>
 
-
+            <div class="form-group col-md-6">
+                <label for="IV3.1">3,1 ¿Hay otras personas temporalmente ausentes?¿Menores de un año?¿Alguien más que no haya mencionado?</label>
+                <select   required class="form-control form-control-sm" name="IV3.1" id="IV3.1"  onchange='validarseccioncuatro()'>
+                    <option value=""></option>
+                    <option value="1">1. Si </option>
+                    <option value="2">2. No</option>
+                </select>                         
+            </div>
 </div>
 {{--
 @endsection --}}
