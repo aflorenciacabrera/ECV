@@ -1,13 +1,62 @@
 @extends('layouts.app')
 @section('content')
+@if($editar)
+<script>
+    var editar = true;
+    $(document).ready(function(){
+        console.log("AUTORELLENAR PARA EDICION")
+        individuo = ({!!  $vivienda !!})//paso de laravel a javascript
+        console.log(individuo);
+    //reviso cuando corresponde con el nomnbre
+    $('#form input, #form textarea').each(function(e){
+        input = $(this);
+        name = input.attr('name');
+        //ver si el name esta en el hogar
+        if(individuo[name])//si existe es porque es true
+        {
+            //entonce relleno el campo
+            input.val(individuo[name])
 
-<script src="{{asset('js/viviendas.js')}}">
+        }
+        else
+        {
+            console.log(name);
+        }
 
+    })
+    $('#form select').each(function(e){
+        input = $(this);
+        name = input.attr('name');
+        //ver si el name esta en el hogar
+        if(individuo[name])//si existe es porque es true
+        {
+            //entonce relleno el campo
+            input.val(individuo[name])
+        }
+         console.log(name);
+    })
+
+
+})
 </script>
+@endif
+<script src="{{asset('js/viviendas.js')}}"></script>
+
 <div class="container-fluid">
 
-        <form method="POST" action="{{route('crearEncuestaVivienda')}}">
+        <form method="POST" id="form"
+
+        @if($editar)
+        action="{{route('actualizarVivienda')}}"
+        @else
+        action="{{route('crearEncuestaVivienda')}}"
+        @endif
+        >
             @csrf
+
+            @if ($editar)
+                {{-- <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}"> --}}
+            @endif
         <div class="bs-stepper ">
             <div class="card ">
                 <div class="card-header ">
