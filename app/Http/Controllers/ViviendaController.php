@@ -105,6 +105,19 @@ class ViviendaController extends Controller
                 $individuo->nro_componente = $nro_componente;
                 $individuo->nombre = $nombre;
 
+
+                //
+                $individuo->codigo_area = $v->codigo_area;
+                $individuo->numero_listado = $v->numero_listado;
+                $individuo->numero_semana = $v->numero_semana;
+                $individuo->trimestre = $v->trimestre;
+                $individuo->ano4 = $v->ano4;
+                $individuo->numero_vivienda = $v->numero_vivienda;
+                $individuo->numero_hogar = $h->numero_hogar;
+
+
+                //
+
                 $individuo->save();
                 // Tambien creo registro de la seccion 6 de hogar por cada coso
                 $seccion4 = new hogar_seccion_cuatro();

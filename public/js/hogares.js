@@ -1,9 +1,12 @@
 
 
 $(document).ready(function () {
+
+    $('input,textarea,select').filter('[required=required]').prev().append(" *")
     /**
      * inicio el bs-stepper
      */
+
     var stepper = new Stepper($('.bs-stepper')[0])
     var paso = 1;
     stepper.to(paso);
@@ -66,13 +69,12 @@ $(document).ready(function () {
          */
 
     })
-
     /**
      * Validar la seccion al dar click en siguiente
      */
     function validarPorSeccion(seccion) {
         flag = true;
-        $("#" + seccion + " input , " + "#" + seccion + " select").each(function (e) {
+        $("#" + seccion + " input, #" + seccion + " select").each(function (e) {
             t = $(this);
             console.log(t.attr('name') + " ")
             if (!t[0].checkValidity()) // es valido segun html5?
@@ -85,7 +87,7 @@ $(document).ready(function () {
             }
             else {
                 t.removeClass('is-invalid')
-                console.log('valido')
+                console.log('invalido')
             }
         })
         return flag

@@ -7,8 +7,10 @@ use App\individuo;
 class IndividuoController extends Controller
 {
     //
-    public function verEncuestaIndividuo(){
-        return view('encuestaIndividuo');
+    public function verEncuestaIndividuo($individuo_id){
+        // return view('encuestaIndividuo');
+        $individuo = individuo::find($individuo_id);
+        return view('encuestaIndividuo')->with('individuo', $individuo);
       }
 
         public function crearEncuestaIndividuo (Request $request)
@@ -48,7 +50,7 @@ class IndividuoController extends Controller
           $i->PP02G = $request->PP02G;
           $i->PP02H = $request->PP02H;
           $i->PP02I = $request->PP02I;
-    //Parte 3 
+    //Parte 3
           $i->PP03A = $request->PP03A;
           $i->PP03B = $request->PP03B;
           $i->PP03C = $request->PP03C;
@@ -132,9 +134,9 @@ class IndividuoController extends Controller
     $i->PP08D4 = $request->PP08D4;
     $i->PP08E = $request->PP08E;
     $i->PP08D2 = $request->PP08D2;
-          
+
           $i->save();
-       
+
         return redirect(url('home'))->with('status','Formulario de Encuensta Individuo cargado');;
         }
 }

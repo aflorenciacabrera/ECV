@@ -38,7 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('encuesta/hogares/generar/{id}', 'HogarController@autogenerar')->name('autogenerarHogar');
 
-    Route::get('encuesta/individuo', 'IndividuoController@verEncuestaIndividuo')->name('verEncuestaIndividuo');
+    Route::get('encuesta/individuo/{id}', 'IndividuoController@verEncuestaIndividuo')->name('verEncuestaIndividuo');
     Route::post('encuesta/individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name('crearEncuestaIndividuo');
     Route::get('hogar/individuos/{id}', 'HogarController@verIndividuos')->name("individuosEnHogar");
 

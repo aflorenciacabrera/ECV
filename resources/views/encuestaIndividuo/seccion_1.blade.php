@@ -36,32 +36,32 @@
         <div class="form-row col-md-12">
             <div class="form-group col-md-2">
                 <label for="codigo_area">Código de área</label>
-                <input type="number" class="form-control" id="codigo_area" name="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
+                <input type="number" class="form-control" id="codigo_area" disabled name="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
                     {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
             </div>
             <div class="form-group col-md-2">
                 <label for="numero_listado">Nº en el listado</label>
-                <input type="number" class="form-control" id="numero_listado" name="numero_listado" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
+                <input type="number" class="form-control" id="numero_listado" disabled name="numero_listado" aria-describedby="codigo_area" placeholder=" " step="1" min="0" >
             </div>
             <div class="form-group col-md-2">
                     <label for="numero_semana">Semana Nº</label>
-                <input type="number" class="form-control" id="numero_semana" name="numero_semana" placeholder="" step="1" min="0" >
+                <input type="number" class="form-control" id="numero_semana" disabled name="numero_semana" placeholder="" step="1" min="0" >
             </div>
             <div class="form-group col-md-1">
                     <label for="trimestre">Trimestre</label>
-             <input type="number" class="form-control" id="trimestre" name="trimestre" placeholder="" step="1" min="0" max="9" >
+             <input type="number" class="form-control" id="trimestre" disabled name="trimestre" placeholder="" step="1" min="0" max="9" >
             </div>
             <div class="form-group col-md-1">
                    <label for="anio">Año</label>
-                 <input type="number" class="form-control" id="ano4" name="ano4" placeholder="" step="1" min="0" max="9999" >
+                 <input type="number" class="form-control" id="ano4" disabled name="ano4" placeholder="" step="1" min="0" max="9999" >
             </div>
             <div class="form-group col-md-2">
                     <label for="numero_vivienda">Vivienda Nº</label>
-                <input type="number" class="form-control" id="numero_vivienda" name="numero_vivienda" placeholder="" step="1" min="0" >
+                <input type="number" class="form-control" id="numero_vivienda" disabled name="numero_vivienda" placeholder="" step="1" min="0" >
             </div>
             <div class="form-group col-md-2">
                   <label for="numero_hogar">Hogar Nº</label>
-                 <input type="number" class="form-control" id="numero_hogar" name="numero_hogar" placeholder="" step="1" min="0" >
+                 <input type="number" class="form-control" id="numero_hogar" disabled name="numero_hogar" placeholder="" step="1" min="0" >
             </div>
         </div>
 </div>

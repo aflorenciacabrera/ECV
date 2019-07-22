@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<script src="{{asset('js/hogares.js')}}"></script>
+
 
 
 <script>
@@ -37,6 +37,7 @@ $(document).ready(function(){
 
 })
 </script>
+<script src="{{asset('js/hogares.js')}}"></script>
 <div class="container-fluid">
 
         <form method="POST" action="{{route('crearEncuestaHogar')}}" id="form">
