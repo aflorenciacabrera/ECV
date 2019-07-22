@@ -28,9 +28,9 @@ class CreateIndividuosTable extends Migration
 
             $table->text("Entrev_realiz")->nullable();
             $table->text("N_compo1")->nullable();
-            // $table->text("N_compo2")->nullable();
+
             $table->text("responde1")->nullable();
-            // $table->text("responde2")->nullable();
+
             $table->text("codigo_area")->nullable();
             $table->text("numero_listado")->nullable();
             $table->text("numero_semana")->nullable();
@@ -243,7 +243,6 @@ class CreateIndividuosTable extends Migration
             $table->text("seccion_13_fecha3")->nullable();
             $table->text("seccion_13_hora3")->nullable();
             $table->text("seccion_13_modalidad")->nullable();
-
 
             //
             $table->integer('estado')->default(0);//iniciado

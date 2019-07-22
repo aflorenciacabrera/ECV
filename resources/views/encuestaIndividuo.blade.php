@@ -11,7 +11,7 @@ $(document).ready(function(){
     individuo = ({!!  $individuo !!})//paso de laravel a javascript
     console.log(individuo);
     //reviso cuando corresponde con el nomnbre
-    $('#form input').each(function(e){
+    $('#form input, #form textarea').each(function(e){
         input = $(this);
         name = input.attr('name');
         //ver si el name esta en el hogar
@@ -46,6 +46,8 @@ $(document).ready(function(){
         migracion +=$(this).attr("name")+","
     })
 
+    $(".form-control").addClass('form-control-sm')
+
     console.log(migracion)
 })
 </script>
@@ -59,34 +61,35 @@ $(document).ready(function(){
                 <div class="card-header ">
                     <div class="bs-stepper-header " role="tablist">
                     <!-- your steps here -->
+                        {{-- <div class="line"></div> --}}
                     <div class="step" data-target="#seccion_1">
                         <button type="button" class="step-trigger" role="tab" aria-controls="seccion_1" id="seccion_1-trigger">
                             <span class="bs-stepper-circle">1</span>
                                <span class="bs-stepper-label"></span>
                         </button>
                     </div>
-                    <div class="line"></div>
+                    {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_1">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_1" id="parte_1-trigger">
                                 <span class="bs-stepper-circle">2</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                    <div class="line"></div>
+                    {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_2">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_2" id="parte_2-trigger">
                                 <span class="bs-stepper-circle">3</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                    <div class="line"></div>
+                    {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_3">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_3" id="parte_3-trigger">
                                 <span class="bs-stepper-circle">4</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                    <div class="line"></div>
+                    {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_4">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_4" id="parte_4-trigger">
                                 <span class="bs-stepper-circle">5</span>
@@ -95,63 +98,63 @@ $(document).ready(function(){
                             </button>
                         </div>
 
-                    <div class="line"></div>
+                    {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_5">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_5" id="parte_5-trigger">
                                 <span class="bs-stepper-circle">6</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                    <div class="line"></div>
+                    {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_6">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_6" id="parte_6-trigger">
                                 <span class="bs-stepper-circle">7</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_7">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_7" id="parte_7-trigger">
                                 <span class="bs-stepper-circle">8</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_8">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_8" id="parte_8-trigger">
                                 <span class="bs-stepper-circle">9</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_9">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_9" id="parte_9-trigger">
                                 <span class="bs-stepper-circle">10</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_10">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_10" id="parte_10-trigger">
                                 <span class="bs-stepper-circle">11</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_11">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_11" id="parte_11-trigger">
                                 <span class="bs-stepper-circle">12</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_12">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_12" id="parte_12-trigger">
                                 <span class="bs-stepper-circle">13</span>
                                    <span class="bs-stepper-label"></span>
                             </button>
                         </div>
-                         <div class="line"></div>
+                         {{-- <div class="line"></div> --}}
                         <div class="step" data-target="#parte_13">
                             <button type="button" class="step-trigger" role="tab" aria-controls="parte_13" id="parte_13-trigger">
                                 <span class="bs-stepper-circle">14</span>
@@ -159,7 +162,7 @@ $(document).ready(function(){
                             </button>
                         </div>
                     </div>
-
+    <div class="line"></div>
                 </div>
                 <div class="card-body">
                     <div class="bs-stepper-content">
@@ -169,9 +172,6 @@ $(document).ready(function(){
                         </div>
                         <div id="parte_1" class="content" role="tabpanel" aria-labelledby="parte_1-trigger">
                             @include('encuestaIndividuo.parte_1')
-                        </div>
-                        <div id="parte_2" class="content" role="tabpanel" aria-labelledby="parte_2-trigger">
-                            @include('encuestaIndividuo.parte_2')
                         </div>
                         <div id="parte_2" class="content" role="tabpanel" aria-labelledby="parte_2-trigger">
                             @include('encuestaIndividuo.parte_2')

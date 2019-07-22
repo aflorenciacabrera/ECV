@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                {{-- <button class="btn btn-primary btn-lg back" >Atras</button> --}}
+                <button class="btn btn-primary btn-lg back" >Atras</button>
                 <button class="btn btn-primary btn-lg next" >Siguiente</button>
                 </div>
             </div>
