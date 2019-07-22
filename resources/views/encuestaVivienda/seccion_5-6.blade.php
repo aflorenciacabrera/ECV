@@ -65,8 +65,8 @@
                         {{-- 7 --}}
                         <td class="fit"><select name="ESTABA_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""></option>
-                            <option value="1">1 ...vi2. no a visitar clientes, transporta pasajeros, mercadería pero vive en otro lugar (viajantes)</option>
-                                <option value="2">2... Vi2. no de paseo/visita o a cuidar a familiares/amigos pero vive en otro lugar?</option>
+                            <option value="1">1 ...vino a visitar clientes, transporta pasajeros, mercadería pero vive en otro lugar (viajantes)</option>
+                                <option value="2">2... Vino de paseo/visita o a cuidar a familiares/amigos pero vive en otro lugar?</option>
                                 <option value="3">3 ...Trabajaba en esta ciudad</option>
                                 <option value="4">4 ...Busca/ba trabajo en esta ciudad</option>
                                 <option value="5">5 ...Vino con familiares que trabajan o buscan trabajo aquí</option>
@@ -186,12 +186,12 @@
                   </table>
 
             <div class="form-group col-md-6">
-                <label for="IV3.1">3,1 ¿Hay otras personas temporalmente ausentes?¿Menores de un año?¿Alguien más que no haya mencionado?</label>
-                <select   required class="form-control form-control-sm" name="IV3.1" id="IV3.1"  onchange='validarseccioncuatro()'>
+                <label for="IV3_1">3,1 ¿Hay otras personas temporalmente ausentes?¿Menores de un año?¿Alguien más que no haya mencionado?</label>
+                <select class="form-control form-control-sm" name="IV3_1" id="IV3_1">
                     <option value=""></option>
                     <option value="1">1. Si </option>
                     <option value="2">2. No</option>
-                </select>                         
+                </select>
             </div>
 </div>
 {{--
