@@ -69,7 +69,7 @@
         </div>
         <div class="form-row">
                 <div class="form-group col-md-6">
-                        <label for="numero_semana">6. ¿Utiliza alguno de éstos…. (nombre los si de la preg.4)</label>
+                        <label for="numero_semana">6. ¿Utiliza alguno de éstos exclusivamente como lugar de trabajo?</label>
                         <select class="form-control form-control-sm" name="II6"  >
                             <option value=""></option>
                                 <option value="1">1. Si</option>

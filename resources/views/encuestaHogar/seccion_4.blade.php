@@ -138,9 +138,9 @@
                     <option value="3"  @if($item->caracteristicas->CH10 == "3" ) selected @endif >3. Nunca asistió (A p. 22)</option>
                     </select> </td>
           {{-- 15 --}}
-            <td><input type="number" class="form-control form-control-sm" name="CH10_E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1" min="0" max="99"></td>
+            <td><input type="number" class="form-control form-control-sm" name="CH10E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1" min="0" max="99"></td>
             {{-- 16 --}}
-            <td><select name="CH10_M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" id="" class="form-control form-control-sm">
+            <td><select name="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" id="" class="form-control form-control-sm">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH10_M == "1" ) selected @endif >1. Porque me costaba estudiar</option>
                     <option value="2"  @if($item->caracteristicas->CH10_M == "2" ) selected @endif >2. Porque tenía que trabajar</option>
@@ -149,9 +149,10 @@
                     <option value="5"  @if($item->caracteristicas->CH10_M == "5" ) selected @endif >5. Por enfermedad</option>
                     <option value="6"  @if($item->caracteristicas->CH10_M == "6" ) selected @endif >6. Por problemas de consumo de alcohol/drogas</option>
                     <option value="7"  @if($item->caracteristicas->CH10_M == "7" ) selected @endif >7. Otros (especificar)</option>
-                    </select> </td>
+                    </select> 
+                 <td><input type="text" class="form-control form-control-sm" name="CH10M_Esp_{{$index}}" maxlength="45" ></td></td>
            {{-- 17 --}}
-            <td><select name="CH10_G_{{$index}}" value="{{$item->caracteristicas->CH10_G}}" id="" class="form-control form-control-sm">
+            <td><select name="CH10G_{{$index}}" value="{{$item->caracteristicas->CH10_G}}" id="" class="form-control form-control-sm">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH10_G == "1" ) selected @endif >1. Si</option>
                     <option value="2"  @if($item->caracteristicas->CH10_G == "2" ) selected @endif >2. No</option>

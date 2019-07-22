@@ -95,10 +95,10 @@
         <div class="col-md-6">
             <label for="numero_semana">5. Tarjeta verde?</label>
 
-            <div class="col-md-10">
-              <label for="numero_semana">5.1 ¿Porcentaje?</label>
-              <input type="number" class="form-control form-control-sm" name="TV_1" step="1" min="0"  max="999">
-          </div>
+              {{-- <div class="col-md-10">
+                <label for="numero_semana">5.1 ¿Porcentaje?</label>
+                <input type="number" class="form-control form-control-sm" name="TV_1" step="1" min="0"  max="999">
+            </div> --}}
 
       </div>
 
@@ -119,7 +119,7 @@
             <label for="numero_semana">6.Tiene Tarifa Social de energía?</label>
 
             <div class="col-md-10">
-              <label for="numero_semana">6.1¿Monto pagado Total?</label>
+              <label for="numero_semana">6.1¿Monto total de boleta de energía?</label>
               <input type="number" class="form-control form-control-sm" name="TE_1" step="1" min="0"  max="999999">
           </div>
 
@@ -176,7 +176,7 @@
       <br>
       <div class="form-row ">
         <div class="col-md-6">
-            <label for="numero_semana">9. Plan mamá?</label>
+            <label for="numero_semana">9. Plan mamá? (Mbareté)</label>
 
             <div class="col-md-10">
               <label for="numero_semana">9.1¿Cuántos miembros?</label>
@@ -196,7 +196,7 @@
       <br>
        <div class="form-row ">
         <div class="col-md-6">
-            <label for="numero_semana">10. Boleto Estudiantil?</label>
+            <label for="numero_semana">10.Boleto gratuito de transporte público?</label>
 
             <div class="col-md-10">
               <label for="numero_semana">10.1 Cuantos Miembros</label>
