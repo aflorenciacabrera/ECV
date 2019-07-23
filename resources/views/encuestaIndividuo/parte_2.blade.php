@@ -3,7 +3,7 @@
 <div class="card-body">      
         <div class="form-row">
             <div class="form-group col-md-6">
-                    <label for="PP02A">2a. Si la semana pasada conseguía un trabajo, ¿podía empezar a trabajar ya ( o a más tardar en dos semanas) (no lea escuche la respuesta y marque la que corresponda)</label>
+                    <label for="PP02A">2a. Si la semana pasada conseguía un trabajo, ¿podía empezar a trabajar ya ( o a más tardar en dos semanas) </label>
                      <select class="form-control" name="PP02A" id="PP02A">
                                <option value=""> </option>
                                 <option value="1">Sí, podía</option>

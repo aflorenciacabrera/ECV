@@ -16,11 +16,7 @@
                 <label for="seccion_13_encuestador_numero">N°</label>
                     <input type="number" min=0 step=1 name="seccion_13_encuestador_numero" id="seccion_13_encuestador_numero" class="form-control inline">
             </div>
-
            </div>
-
-
-
         </div>
         <div class="col-md-4">
             <div class="row border">

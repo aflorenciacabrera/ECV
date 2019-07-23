@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\individuo;
 class IndividuoController extends Controller
 {
-    //
+      //
+      
     public function verEncuestaIndividuo($individuo_id){
         // return view('encuestaIndividuo');
         $individuo = individuo::find($individuo_id);

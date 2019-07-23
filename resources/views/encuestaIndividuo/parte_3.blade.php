@@ -5,7 +5,7 @@
         <div class="form-row">   
             <div class="form-group col-md-6">
                     <label for="PP03A">3a. ¿Cuántos empleos/ocupaciones tiene?</label>
-                    <small id="PP03A" class="form-text text-muted"> (En el caso de tener más de un empleo, verifique que no haya trabajado en ninguno durante la semana pasada)</small>
+                   
                     <input class="form-control" type="number" name="PP03A" id="PP03A" step="1" min="0" max="99" >    
             </div>                       
              <div class="form-group col-md-6">
