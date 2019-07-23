@@ -9,19 +9,15 @@
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>             
                         </select>
-                  
             </div>   
              <div class="form-group col-md-6">
                     <label for="PP01B">1b. En esa semana, ¿hizo alguna changa, fabricó algo para vender, ayudó a un familiar/amigo en su negocio?</label>
-                     <select class="form-control" name="PP01B" id="PP01B"  >
+                        <select class="form-control" name="PP01B" id="PP01B"  >
                                <option value=""> </option>
                                 <option value="1">Si</option>
                                 <option value="2" >No</option>             
-                        </select>
-                        
-                  
+                        </select> 
             </div>           
-             
         </div> 
         <div class="form-row">
            <div class="form-group col-md-6">
@@ -30,8 +26,7 @@
                                   <option value=""> </option>
                                   <option value="1">Si</option>
                                 <option value="2" >No</option>             
-                        </select>
-                  
+                        </select>     
             </div>    
              <div class="form-group col-md-6">
                     <label for="PP01D">1d. ¿Trabajó…</label>
@@ -42,7 +37,6 @@
                                 <option value="3">… de otra forma? (especificar)</option>             
                         </select>
                         <input type="text" class="form-control" name="PP01D_Esp" id="PP01D_Esp"> 
-                  
             </div>    
         </div>   
          <div class="form-row">

@@ -56,8 +56,18 @@ $(document).ready(function () {
                         return
                     }
 
+                    // if(paso == 4 && editar)
+                    // {
+                    //     paso = 6;
+                    //     stepper.to(paso);
+                    //     //remove all requireds fields
+                    //     $('input,textarea,select').filter('[required=required]').removeAttr('required');
+                    //     return
+                    // }
+
 
                     stepper.next();
+                    $("#form").scrollTop(0)
                     paso++;
                     if(paso==7)
                     {
@@ -77,6 +87,23 @@ $(document).ready(function () {
 
         $(".back").click(function(e){
         e.preventDefault();
+            if (paso == 6 && !entrevista_realizada) {
+                paso = 2;
+                stepper.to(paso);
+                //remove all requireds fields
+                $('input,textarea,select').filter('[required=required]').removeAttr('required');
+                return
+            }
+            // if (paso == 6 && editar) {
+            //     paso = 4;
+            //     stepper.to(paso);
+            //     //remove all requireds fields
+            //     $('input,textarea,select').filter('[required=required]').removeAttr('required');
+            //     return
+            // }
+
+
+        paso--;
         stepper.previous();
         })
 

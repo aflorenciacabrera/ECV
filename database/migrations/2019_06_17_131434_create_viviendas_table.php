@@ -45,7 +45,7 @@ class CreateViviendasTable extends Migration
             $table->text('descripcion')->nullable();
     //  Particion
             $table->text('trimestre')->nullable();
-            $table->text('ano4')->nullable();
+            $table->integer('ano4',false)->nullable();
             $table->text('sem_referencia')->nullable();
             $table->text('cant_hogar')->nullable();
             $table->text('p_entrevistada')->nullable();

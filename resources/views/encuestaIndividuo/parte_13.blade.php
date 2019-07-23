@@ -3,7 +3,7 @@
 <div class="card-body border">
        <div class="form-group">
          <label for="">Observaciones</label>
-         <textarea class="form-control" name="seccion_13_observaciones" id="" rows="3"></textarea>
+         <textarea class="form-control" name="seccion_13_observaciones" id="seccion_13_observaciones" rows="3"></textarea>
        </div>
        <div class="row border">
         <div class="col-md-4 border ">
@@ -16,11 +16,7 @@
                 <label for="seccion_13_encuestador_numero">N°</label>
                     <input type="number" min=0 step=1 name="seccion_13_encuestador_numero" id="seccion_13_encuestador_numero" class="form-control inline">
             </div>
-
            </div>
-
-
-
         </div>
         <div class="col-md-4">
             <div class="row border">

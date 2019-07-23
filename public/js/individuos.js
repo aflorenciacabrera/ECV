@@ -30,6 +30,7 @@ $(document).ready(function () {
         e.preventDefault();
         if (validar(paso)) {
             stepper.next();
+            $("#form").scrollTop(0)
             paso++;
         }
         else {
@@ -44,6 +45,7 @@ $(document).ready(function () {
 
     $(".back").click(function (e) {
         e.preventDefault();
+        paso--;
         stepper.previous();
     })
 

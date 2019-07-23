@@ -26,6 +26,8 @@ class HogarController extends Controller
         return view('individuos_en_hogar')->with('hogar',$h);
     }
 
+
+
     public function crearEncuestaHogar(Request $request)
       {
         //Actualizo Registro Hogar
@@ -102,7 +104,8 @@ class HogarController extends Controller
             }
         }
 
-        return redirect()->route('verListadoVivienda');
+        // return redirect()->route('verListadoVivienda');
+        return redirect(route("individuosEnHogar",['hogar'=>$h->id]));
 
       }
 

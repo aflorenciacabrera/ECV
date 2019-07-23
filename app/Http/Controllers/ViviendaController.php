@@ -19,7 +19,22 @@ class ViviendaController extends Controller
 
     public function verEncuestaVivienda()
     {
-        return view('encuestaVivienda');
+        return view('encuestaVivienda')->with('editar',false);
+    }
+
+    public function editarVivienda($id_vivienda){
+        $v = vivienda::find($id_vivienda);
+
+        return view('encuestaVivienda')->with('editar',true)->with('vivienda',$v);
+    }
+
+    public function actualizarVivienda(request $request)
+    {
+        $v = vivienda::find($request->vivienda_id);
+        $v->fill($request->all());
+        $v->save();
+
+        return view('encuestaVivienda')->with('editar', true);
     }
 
     public function crearEncuestaVivienda(Request $request)
@@ -71,15 +86,27 @@ class ViviendaController extends Controller
                 $vs->save();
             }
         }
-        print_r($_componentes);
+        // print_r($_componentes);
         $hogares = (array_unique(($_hogares)));
         // creo el registro de cada hogar ??
         //Cuantos hogares son?
-        foreach ($hogares as $key => $value)
+        foreach ($hogares as $value)
         {
             $h = new hogar();
             $h->vivienda_id = $vivienda_id;
             $h->numero_hogar = $value;
+            print_r($value);
+            print_r($h->numero_hogar);
+            // campos similares
+            $h->codigo_area = $v->codigo_area;
+            $h->numero_listado = $v->numero_listado;
+            $h->numero_semana = $v->numero_semana;
+            $h->trimestre = $v->trimestre;
+            $h->ano4 = $v->ano4;
+            $h->numero_vivienda = $v->numero_vivienda;
+
+
+            //
             $h->user_id = Auth::user()->id;
             $h->save();
             foreach ($_componentes[$value] as $nro_componente => $nombre)
@@ -90,8 +117,21 @@ class ViviendaController extends Controller
                 $individuo->hogar_id = $hogar_id;
                 $individuo->user_id = Auth::user()->id;
 
-                $individuo->nro_componente = $nro_componente;
+                $individuo->numero_componente = $nro_componente;
                 $individuo->nombre = $nombre;
+
+
+                //
+                $individuo->codigo_area = $v->codigo_area;
+                $individuo->numero_listado = $v->numero_listado;
+                $individuo->numero_semana = $v->numero_semana;
+                $individuo->trimestre = $v->trimestre;
+                $individuo->ano4 = $v->ano4;
+                $individuo->numero_vivienda = $v->numero_vivienda;
+                $individuo->numero_hogar = $h->numero_hogar;
+
+
+                //
 
                 $individuo->save();
                 // Tambien creo registro de la seccion 6 de hogar por cada coso
@@ -113,7 +153,8 @@ class ViviendaController extends Controller
 
 
 
-        return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
+        // return redirect(url('home'))->with('status', 'Formulario Vivienda Cargado')->with('vivienda',$v);
+        return redirect(route('verHogares',['id_vivienda'=>$v->id]));
 
     }
 
