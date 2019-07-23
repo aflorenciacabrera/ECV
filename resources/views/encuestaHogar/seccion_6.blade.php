@@ -51,9 +51,9 @@ Para finalizar, en el mes de ____  ¿cuánto cobró por _____ ?
                 </td>
                 @foreach ($hogar->individuos as $index=>$item)
                 <td>
-                <input type="hidden" class="form-control afectado" disabled name="numero_componente_{{$index}}" value="{{$item->nro_componente}}">
-                <input type="hidden" class="form-control afectado" disabled name="id_componente_{{$index}}" value="{{$item->id}}">
-                <input type="hidden" class="form-control afectado" disabled name="id_seccion_{{$index}}" value="{{$item->nolaboral->id}}">
+                <input type="hidden" class="form-control afectado"  name="numero_componente_{{$index}}" value="{{$item->nro_componente}}">
+                <input type="hidden" class="form-control afectado"  name="id_componente_{{$index}}" value="{{$item->id}}">
+                <input type="hidden" class="form-control afectado"  name="id_seccion_{{$index}}" value="{{$item->nolaboral->id}}">
                         <input type="number" class="form-control afectado" disabled name="V21_M_{{$index}}" value="{{$item->nolaboral->V21_M}}" data-relative="#V2">
 
                     </td>
