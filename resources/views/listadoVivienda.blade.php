@@ -3,12 +3,25 @@
 @section('content')
 <div class="container-fluid">
 
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-text">
+                    <a  href="{{route('verEncuestaVivienda')}}" role="button" class="btn btn-lg btn-primary" role="button" aria-pressed="true"> Cargar Nueva Vivienda
+                        <i><span class="fa fa-plus"></span></i>
+
+                    </a></p>
+            </div>
+        </div>
         <div class="card text-left">
             <div class="card">
+
                 <div class="card-header">
                     Viviendas Ingresadas por <strong>{{Auth::user()->name}}</strong>
                 </div>
+
                 <div class="card-body">
+
                     <table class="table table-striped table-inverse  table-sm">
                         <thead class="thead-inverse">
                             <tr>
@@ -70,7 +83,7 @@
                                @if($item->estado() !== 'ok')
 
                                         {{-- TODO ruta pra ver detalle de area --}}
-                                <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('verDetalleVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Ver Detalle <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                {{-- <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a> --}}
                                 <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
                                @endif
                                 </td>

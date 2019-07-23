@@ -1,7 +1,7 @@
 {{-- @extends('layouts.app')
 @section('content') --}}
 <div class="card-body">
-
+{{-- Prueba refs #3 --}}
         <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="trimestre">Trimestre:</label>
@@ -9,7 +9,7 @@
                 </div>
                 <div class="form-group col-md-2">
                         <label for="ano4">Año:</label>
-                        <input type="number" class="form-control form-control-sm" id="ano4" name="ano4" max="2019" min="2019" value="2019" pattern="2019" step="1" disabled required>
+                        <input type="number" class="form-control form-control-sm" id="ano4" name="ano4" max="2019" min="2019" value="2019" pattern="2019" step="1" required>
                 </div>
                 <div class="form-group col-md-2">
                         <label for="sem_referencia">Semana de referencia:</label>

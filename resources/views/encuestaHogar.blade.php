@@ -1,7 +1,22 @@
 @extends('layouts.app')
 @section('content')
+<script>
+$(document).ready(function(){
+    console.log("MIGRACION HOGARES")
+    // pa la migracion
+    migracion=""
 
-<script src="{{asset('js/hogares.js')}}"></script>
+    $("input,textarea,select").each(function(){
+        migracion +="$table->text('"+$(this).attr("name")+"')->nullable();"
+    })
+
+    $(".form-control").addClass('form-control-sm')
+
+    console.log(migracion)
+})
+
+</script>
+
 
 
 <script>
@@ -11,6 +26,7 @@
 $(document).ready(function(){
 
     hogar = ({!!  $hogar !!})//paso de laravel a javascript
+    console.log(hogar)
     //reviso cuando corresponde con el nomnbre
     $('#form input').each(function(e){
         input = $(this);
@@ -33,9 +49,28 @@ $(document).ready(function(){
         }
     })
 
+     $(".afectado").each(function(){
+
+        relativo = $(this).data("relative");
+        relativo = $(relativo);
+
+        relativo = relativo.children("option:selected").val();
+
+        if(relativo == 1)
+        {
+            $(this).removeAttr('disabled')
+        }
+        else
+        {
+            $(this).attr('disabled',true)
+        }
+
+    })
+
 
 })
 </script>
+<script src="{{asset('js/hogares.js')}}"></script>
 <div class="container-fluid">
 
         <form method="POST" action="{{route('crearEncuestaHogar')}}" id="form">

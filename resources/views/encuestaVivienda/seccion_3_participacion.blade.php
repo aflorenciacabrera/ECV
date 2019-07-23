@@ -4,7 +4,7 @@
         <div class="form-row">
             <div class="form-group col-md-4 border">
                         <label for="otra_viv_direc">1. ¿Existen otras viviendas en esta misma dirección? </label>
-                        <small class="form-text text-muted">(Verifique si están incluidas en el listado. Revise la hoja de ruta) </small>
+                        
                         <select class="form-control form-control-sm" name="otra_viv_direc" id="otra_viv_direc" required >
                                 <option value=""></option>
                                 <option value="1">1. Si</option>

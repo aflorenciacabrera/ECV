@@ -39,6 +39,8 @@ class CreateViviendaSeccionVsTable extends Migration
             $table->text('CH15')->nullable();
             $table->text('CH16')->nullable();
             $table->text('CH16_OTRO')->nullable(); //TODO no estan en diccionario
+            $table->text('IV3_1')->nullable(); //TODO no estan en diccionario
+
         });
     }
 
