@@ -8,7 +8,7 @@ Para finalizar, en el mes de ____  ¿cuánto cobró por _____ ?
         <tr class="table-secondary">
             <th scope="col">Quién lo Cobra?</th>
             @foreach ($hogar->individuos as $item)
-                <th scope="col">Componente N° {{$item->nro_componente}} </br>  {{$item->nombre}}</th>
+                <th scope="col">Componente N° {{$item->numero_componente}} </br>  {{$item->nombre}}</th>
 
             @endforeach
             <th scope="col">No asignable a una persona en particular</th>

@@ -26,7 +26,7 @@
             <tbody>
                 @foreach ($hogar->individuos as $i)
                     <tr>
-                    <td scope="row">{{$i->nro_componente}}</td>
+                    <td scope="row">{{$i->numero_componente}}</td>
                     <td scope="row">{{$i->nombre}}</td>
                     @if($i->estado == 1)
                         <td>

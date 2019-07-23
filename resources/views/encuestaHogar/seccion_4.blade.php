@@ -51,8 +51,8 @@
         <input type="hidden" name="carateristica_id_{{$index}}" id="carateristica_id_{{$index}}" value="{{$item->caracteristicas->id}}">
             {{-- 1 --}}
         <td>
-            <input  type="number" class="form-control form-control-sm" disabled value="{{$item->nro_componente}}">
-            <input  type="hidden" class="form-control form-control-sm" name="CH01_{{$index}}" id="CH01_{{$index}}" value="{{$item->nro_componente}}">
+            <input  type="number" class="form-control form-control-sm" disabled value="{{$item->numero_componente}}">
+            <input  type="hidden" class="form-control form-control-sm" name="CH01_{{$index}}" id="CH01_{{$index}}" value="{{$item->numero_componente}}">
         </td>
             {{-- 2 --}}
         <td>

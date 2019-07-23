@@ -117,7 +117,7 @@ class ViviendaController extends Controller
                 $individuo->hogar_id = $hogar_id;
                 $individuo->user_id = Auth::user()->id;
 
-                $individuo->nro_componente = $nro_componente;
+                $individuo->numero_componente = $nro_componente;
                 $individuo->nombre = $nombre;
 
 
