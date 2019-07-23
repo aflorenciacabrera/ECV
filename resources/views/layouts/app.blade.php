@@ -89,9 +89,9 @@
                                     </form> --}}
 
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a id="navbarDropdown" class="btn btn-secondary active  " role="button" href="#" role="button" >
+                                {{-- <a id="navbarDropdown" class="btn btn-secondary active  " role="button" href="#" role="button" >
                                     {{ Auth::user()->name }} <i class="fa fa-user"></i>{{--  <span class="caret"></span> --}}
-                                </a>
+                                {{-- </a> --}}
                                 <a class="btn btn-secondary active" role="button" href="{{route('home')}}">INICIO <i class="fa fa-home"></i></a>
 
                                  <a class=" btn btn-secondary active" role="button" href="{{ route('logout') }}"

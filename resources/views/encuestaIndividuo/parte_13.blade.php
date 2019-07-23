@@ -3,7 +3,7 @@
 <div class="card-body border">
        <div class="form-group">
          <label for="">Observaciones</label>
-         <textarea class="form-control" name="seccion_13_observaciones" id="" rows="3"></textarea>
+         <textarea class="form-control" name="seccion_13_observaciones" id="seccion_13_observaciones" rows="3"></textarea>
        </div>
        <div class="row border">
         <div class="col-md-4 border ">

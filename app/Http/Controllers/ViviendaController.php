@@ -19,7 +19,22 @@ class ViviendaController extends Controller
 
     public function verEncuestaVivienda()
     {
-        return view('encuestaVivienda');
+        return view('encuestaVivienda')->with('editar',false);
+    }
+
+    public function editarVivienda($id_vivienda){
+        $v = vivienda::find($id_vivienda);
+
+        return view('encuestaVivienda')->with('editar',true)->with('vivienda',$v);
+    }
+
+    public function actualizarVivienda(request $request)
+    {
+        $v = vivienda::find($request->vivienda_id);
+        $v->fill($request->all());
+        $v->save();
+
+        return view('encuestaVivienda')->with('editar', true);
     }
 
     public function crearEncuestaVivienda(Request $request)
@@ -138,7 +153,8 @@ class ViviendaController extends Controller
 
 
 
-        return redirect(url('home'))->with('status', 'Formulario de Encuensta Vivienda cargado');;
+        // return redirect(url('home'))->with('status', 'Formulario Vivienda Cargado')->with('vivienda',$v);
+        return redirect(route('verHogares',['id_vivienda'=>$v->id]));
 
     }
 
