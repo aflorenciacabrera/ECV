@@ -119,7 +119,7 @@
                 <tbody>
                     <tr>
                         <th scope="row"><input name="discapacidad_hogar_numero_1" id="discapacidad_hogar_numero_1" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
-                        <td><input name="discapacidad_hogar_nombre_2" id="discapacidad_hogar_nombre_2" type="text" class="form-control form-control-sm"></td>
+                        <td><input name="discapacidad_hogar_nombre_2" id="discapacidad_hogar_nombre_1" type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
                         <th scope="row"><input name="discapacidad_hogar_numero_2" id="discapacidad_hogar_numero_2" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
@@ -216,7 +216,7 @@
                     <label for="resumen_encuestadas">-ENCUESTADAS</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control form-control-sm" name="resumen_encuestadas"> id="resumen_encuestadas">>
+                    <input type="number" class="form-control form-control-sm" name="resumen_encuestadas">
                 </div>
     </div>
     <div class="form-row ">
@@ -224,7 +224,7 @@
                     <label for="resumen_no_encuestadas">-NO ENCUESTADAS</label>
             </div>
                 <div class="col-md-2" >
-                    <input type="number" class="form-control form-control-sm" name="resumen_no_encuestadas"> id="resumen_no_encuestadas">>
+                    <input type="number" class="form-control form-control-sm" name="resumen_no_encuestadas">
                 </div>
     </div>
 

@@ -1,6 +1,21 @@
 @extends('layouts.app')
 @section('content')
+<script>
+$(document).ready(function(){
+    console.log("MIGRACION HOGARES")
+    // pa la migracion
+    migracion=""
 
+    $("input,textarea,select").each(function(){
+        migracion +="$table->text('"+$(this).attr("name")+"')->nullable();"
+    })
+
+    $(".form-control").addClass('form-control-sm')
+
+    console.log(migracion)
+})
+
+</script>
 
 
 
@@ -32,6 +47,24 @@ $(document).ready(function(){
             //entonce relleno el campo
             input.val(hogar[name])
         }
+    })
+
+     $(".afectado").each(function(){
+
+        relativo = $(this).data("relative");
+        relativo = $(relativo);
+
+        relativo = relativo.children("option:selected").val();
+
+        if(relativo == 1)
+        {
+            $(this).removeAttr('disabled')
+        }
+        else
+        {
+            $(this).attr('disabled',true)
+        }
+
     })
 
 

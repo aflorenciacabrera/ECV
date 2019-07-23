@@ -8,7 +8,7 @@ $(document).ready(function () {
      */
 
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 7;
+    var paso = 1;
     stepper.to(paso);
 
 

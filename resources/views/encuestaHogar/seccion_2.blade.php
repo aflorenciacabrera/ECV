@@ -77,8 +77,8 @@
                         </select>
                 </div>
                 <div class="form-group col-md-6">
-                        <label for="II6">6.1 ¿Cuántos?</label>
-                        <input type="number" disabled class="form-control form-control-sm" name="II6" id="II6_1" placeholder="cuantos?"   step="1" min="0" max="99" >
+                        <label for="II6_1">6.1 ¿Cuántos?</label>
+                        <input type="number" disabled class="form-control form-control-sm" name="II6_1" id="II6_1" placeholder="cuantos?"   step="1" min="0" max="99" >
                 </div>
         </div>
         <div class="form-row">
