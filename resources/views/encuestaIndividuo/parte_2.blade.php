@@ -6,10 +6,10 @@
                     <label for="PP02A">2a. Si la semana pasada conseguía un trabajo, ¿podía empezar a trabajar ya ( o a más tardar en dos semanas) </label>
                      <select class="form-control" name="PP02A" id="PP02A">
                                <option value=""> </option>
-                                <option value="1">Sí, podía</option>
-                                <option value="2">Sí, pero con ciertas condiciones laborales (horarios, tipo detrabajo, distancia, etc)</option>
-                                <option value="3">No podía por razones personales momentáneas</option>
-                                <option value="4">No, porque no desea trabajar</option>
+                                <option value="1">1. Sí, podía</option>
+                                <option value="2">2. Sí, pero con ciertas condiciones laborales (horarios, tipo detrabajo, distancia, etc)</option>
+                                <option value="3">3. No podía por razones personales momentáneas</option>
+                                <option value="4">4. No, porque no desea trabajar</option>
                         </select>
 
             </div>
@@ -17,8 +17,8 @@
                     <label for="PP02B">2b. ¿Durante los útlimos 30 días, estuvo buscando trabajo de alguna manera?</label>
                      <select class="form-control" name="PP02B" id="PP02B"  >
                                <option value=""> </option>
-                                <option value="1">Si</option>
-                                <option value="2">No</option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
                         </select>
 
             </div>
@@ -55,11 +55,11 @@
                     <label for="PP02E">2e. ¿durante esos 20 días, no buscó trabajo porque….</label>
                      <select class="form-control" name="PP02E" id="PP02E">
                                <option value=""> </option>
-                                <option value="1">…. Está suspendido?</option>
-                                <option value="2">…. Ya tiene trabajo asegurado?</option>
-                                <option value="3">… se cansó de buscar trabajo?</option>
-                                <option value="4">… hay poco trabajo en esta época del año?</option>
-                                <option value="5"> … por otras razones? (especificar)</option>
+                                <option value="1">1. …. Está suspendido?</option>
+                                <option value="2">2. …. Ya tiene trabajo asegurado?</option>
+                                <option value="3">3. … se cansó de buscar trabajo?</option>
+                                <option value="4">4. … hay poco trabajo en esta época del año?</option>
+                                <option value="5">5.  … por otras razones? (especificar)</option>
                                 <input type="text" class="form-control" name="PP02E_Esp" id="PP02E_Esp">
                         </select>
             </div>
@@ -67,8 +67,8 @@
                     <label for="PP02F">2f. ¿Durante los últimos 30 días, estuvo buscando trabajo de alguna manera?</label>
                         <select class="form-control" name="PP02F" id="PP02F">
                                   <option value=""> </option>
-                                <option value="1">Si</option>
-                                <option value="2">No</option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
                         </select>
             </div>
         </div>
@@ -77,16 +77,16 @@
                     <label for="PP02G">2g. ¿Puede……… empezar a trabajar ya? (o a más tardar en dos semanas)</label>
                       <select class="form-control" name="PP02G" id="PP02G">
                                 <option value=""> </option>
-                                <option value="1">Si</option>
-                                <option value="2">No</option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
                         </select>
             </div>
             <div class="form-group col-md-6">
                     <label for="PP02H">2h. En los últimos 12 meses ¿buscó trabajo en algún momento? </label>
                      <select class="form-control" name="PP02H" id="PP02H"  >
                                <option value=""> </option>
-                                 <option value="1">Si</option>
-                                <option value="2">No</option>
+                                 <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
                         </select>
             </div>
         </div>
@@ -95,8 +95,8 @@
                     <label for="PP02I">2i. En los últimos 12 meses ¿trabajó en algún momento?</label>
                       <select class="form-control" name="PP02I" id="PP02I"  >
                                 <option value=""> </option>
-                                <option value="1">Si</option>
-                                <option value="2">No</option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
                         </select>
             </div>
             <div class="form-group col-md-6">
