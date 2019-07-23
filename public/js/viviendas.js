@@ -67,6 +67,7 @@ $(document).ready(function () {
 
 
                     stepper.next();
+                    $("#form").scrollTop(0)
                     paso++;
                     if(paso==7)
                     {

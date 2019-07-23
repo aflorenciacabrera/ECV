@@ -33,6 +33,7 @@ $(document).ready(function () {
         e.preventDefault();
         if (validar(paso)) {
             stepper.next();
+            $("#form").scrollTop(0)
             paso++;
         }
         else {
