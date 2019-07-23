@@ -43,7 +43,7 @@ $(document).ready(function(){
     migracion=""
 
     $("input,textarea,select").each(function(){
-        migracion +=$(this).attr("name")+","
+        migracion +="$table->text('"$(this).attr("name")+"')->nullable();"
     })
 
     $(".form-control").addClass('form-control-sm')

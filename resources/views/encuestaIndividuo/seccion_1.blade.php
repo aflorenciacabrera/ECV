@@ -16,13 +16,13 @@
         <div class="pull-right">
            <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="N_compo">N° de componente </label>
-                    <label for="responde"> Respondente</label>
+                    <label for="numero_componente">N° de componente </label>
+                    <label for="numero_respondente"> Respondente</label>
                     <label for="nombre">Nombre</label>
                 </div>
                 <div class="form-group col-md-4">
-                        <input type="number" class="form-control" step="1" min="0" name="N_compo" id="N_compo">
-                        <input type="number" class="form-control" step="1" min="0" name="responde" id="responde">
+                        <input type="number" class="form-control" step="1" min="0" name="numero_componente" id="numero_componente">
+                        <input type="number" class="form-control" step="1" min="0" name="numero_respondente" id="numero_respondente">
                         <input type="text" class="form-control" step="1" min="0" name="nombre" id="nombre">
                 </div>
                 <br>
