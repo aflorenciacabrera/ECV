@@ -162,18 +162,36 @@
                         </select></div>
                 </div>
                 <br>
-                 <label for=" PP07F1_1">7f1. ¿Para realizar su trabajo tiene que utilizar… </label>
-                     <select class="form-control" name="PP07F1_1" id="PP07F1_1">
-                             <option value=" ">   </option>
-                                <option value="1">1. Sus propias maquinarias/equipos?</option>
-                                <option value="2">2. Local Propio?</option>
-                                <option value="3">3. Vehículo propio?</option>
-                        </select>
+                 <label for=" PP07F1">7f1. ¿Para realizar su trabajo tiene que utilizar… </label>
+                <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="PP07F11">1. Sus propias maquinarias/equipos?</label></div>
+                        <div class="form-group col-md-4">
+                        <select class="form-control" name="PP07F11" id="PP07F11">
+                                <option value=" ">   </option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
+                        </select></div>
+                         <div class="form-group col-md-6">
+                         <label for="PP07F12">2. Local Propio?</label></div>
+                          <div class="form-group col-md-4">
+                        <select class="form-control" name="PP07F12" id="PP07F12">
+                                <option value=" ">   </option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
+                        </select></div>
+                         <div class="form-group col-md-6">
+                        <label for="PP07F13">3. Vehículo propio?</label></div>
+                         <div class="form-group col-md-4">
+                        <select class="form-control" name="PP07F13" id="PP07F13">
+                                <option value=" ">   </option>
+                                <option value="1">1. Si</option>
+                                <option value="2">2. No</option>
+                        </select></div>
+                </div>
                 </div>
             </div>
-
         <div class="form-row">
-
              <div class="form-group col-md-6">
                   <label for="PP07H ">7h.¿Por ese trabajo tiene descuento jubilatorio?</label>
                     <select class="form-control" name="PP07H" id="PP07H">
