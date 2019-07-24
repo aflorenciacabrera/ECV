@@ -19,7 +19,7 @@
         <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="numero">N°:</label>
-                        <input type="text"  class="form-control form-control-sm" id="numero"  pattern="[1-9]*|s\/n|S\/N"  name="numero" placeholder=""  >
+                        <input type="text"  class="form-control form-control-sm" id="numero"  pattern="[0-9]*|s\/n|S\/N"  name="numero" placeholder=""  >
                 </div>
                 <div class="form-group col-md-2">
                         <label for="piso">Piso:</label>
