@@ -82,25 +82,27 @@ class HogarController extends Controller
             if($request['V2_M_'.$i])
             {
                 //id de seccion
-                $seccion_id = $request['id_seccion_'.$i];
+                $seccion_id = $request['_'.$i];
                 $s = hogarSeccionSeis::find($seccion_id);
-
-                $s->V2_M = $request['V2_M_'.$i];
-                $s->V21_M = $request['V21_M_'.$i];
-                $s->V22_M = $request['V22_M_'.$i];
-                $s->V3_M = $request['V3_M_'.$i];
-                $s->V4_M = $request['V4_M_'.$i];
-                $s->V5_M = $request['V5_M_'.$i];
-                $s->V8_M = $request['V8_M_'.$i];
-                $s->V9_M = $request['V9_M_'.$i];
-                $s->V10_M = $request['V10_M_'.$i];
-                $s->V11_M = $request['V11_M_'.$i];
-                $s->V12_M = $request['V12_M_'.$i];
-                $s->V18_M = $request['V18_M_'.$i];
-                $s->V19_AM = $request['V19_AM_'.$i];
-                ///sumatoria
-                $s->T_Vi = $s->V2_M + $s->V21_M + $s->V22_M +$s->V3_M +$s->V4_M +$s->V5_M +$s->V8_M +$s->V9_M +$s->V10_M +$s->V11_M +$s->V12_M +$s->V18_M +$s->V19_AM;
-                $s->save();
+                if($s)
+                {
+                    $s->V2_M = $request['V2_M_'.$i];
+                    $s->V21_M = $request['V21_M_'.$i];
+                    $s->V22_M = $request['V22_M_'.$i];
+                    $s->V3_M = $request['V3_M_'.$i];
+                    $s->V4_M = $request['V4_M_'.$i];
+                    $s->V5_M = $request['V5_M_'.$i];
+                    $s->V8_M = $request['V8_M_'.$i];
+                    $s->V9_M = $request['V9_M_'.$i];
+                    $s->V10_M = $request['V10_M_'.$i];
+                    $s->V11_M = $request['V11_M_'.$i];
+                    $s->V12_M = $request['V12_M_'.$i];
+                    $s->V18_M = $request['V18_M_'.$i];
+                    $s->V19_AM = $request['V19_AM_'.$i];
+                    ///sumatoria
+                    $s->T_Vi = $s->V2_M + $s->V21_M + $s->V22_M +$s->V3_M +$s->V4_M +$s->V5_M +$s->V8_M +$s->V9_M +$s->V10_M +$s->V11_M +$s->V12_M +$s->V18_M +$s->V19_AM;
+                    $s->save();
+                }
             }
         }
 
