@@ -27,6 +27,11 @@ Route::group(['middleware' => ['auth']], function () {
     // Encuestas
     Route::get('encuesta/vivienda', 'ViviendaController@verEncuestaVivienda')->name('verEncuestaVivienda');
     Route::post('encuesta/vivienda/crear', 'ViviendaController@crearEncuestaVivienda')->name('crearEncuestaVivienda');
+
+
+    Route::get('encuesta/vivienda/editar/{id_vivienda}', 'ViviendaController@editarVivienda')->name('editarVivienda');
+    Route::post('encuesta/vivienda/editar', 'ViviendaController@actualizarVivienda')->name('actualizarVivienda');
+
     Route::get('encuesta/viviendas/', 'ViviendaController@verListadoVivienda')->name('verListadoVivienda');
     Route::get('encuesta/vivienda/{id}', 'ViviendaController@verVivienda')->name('verDetalleVivienda');
     Route::get('encuesta/viviendas/generar', 'ViviendaController@autogenerar')->name('autogenerarVivienda');
@@ -38,11 +43,11 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('encuesta/hogares/generar/{id}', 'HogarController@autogenerar')->name('autogenerarHogar');
 
-    Route::get('encuesta/individuo', 'IndividuoController@verEncuestaIndividuo')->name('verEncuestaIndividuo');
+    Route::get('encuesta/individuo/{id}', 'IndividuoController@verEncuestaIndividuo')->name('verEncuestaIndividuo');
     Route::post('encuesta/individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name('crearEncuestaIndividuo');
     Route::get('hogar/individuos/{id}', 'HogarController@verIndividuos')->name("individuosEnHogar");
 
-
+   
 
 });
 

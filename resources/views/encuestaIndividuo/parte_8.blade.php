@@ -74,12 +74,12 @@
     </select>
 </div>
 <div class="form-group form-inline">
-        <label for="PP08G1" class="text-danger">xxxx. ¿Cuantos dias por semana? &nbsp;<label>
+        <label for="PP08G1" >&nbsp;8g.1. ¿Cuantos dias por semana? &nbsp;<label>
             <input type="number" class="form-control form-control-sm" name="PP08G1" id="PP08G1">
 
     </div>
     <div class="form-group form-inline">
-        <label for="PP08G2" class="text-danger">xxxx cuantos dias en el mes? &nbsp;<label>
+        <label for="PP08G2" >&nbsp;8g.2. ¿Cuantos dias en el mes? &nbsp;<label>
             <input type="number" class="form-control form-control-sm" name="PP08G2" id="PP08G2">
 
     </div>

@@ -174,7 +174,7 @@
                        </div>
                  </div>
                         <div class="form-group col-md-6">
-                                <label for="IV14">14. Dispone de conexión a internet en la vivienda?</label>
+                                <label for="IV14">14. Tiene acceso a internet en la vivienda?</label>
                                 {{-- <small "form-text text-muted">(por observación)</small> --}}
                                 <select   required class="form-control form-control-sm" name="IV14" id="IV14"  onchange='validarseccioncuatro()'>
                                       <option value=""></option>
@@ -185,7 +185,7 @@
                                 {{-- <small "form-text text-muted">(a p.12)</small> --}}
                                 <select   disabled class="form-control form-control-sm" name="IV15" id="IV15"  onchange='validarseccioncuatro()'>
                                       <option value=""></option>
-                                        <option value="1">1. Solo FIJA (4Incluye conexión por WiFi o satelital)</option>
+                                        <option value="1">1. Solo FIJA (Incluye conexión por WiFi o satelital)</option>
                                         <option value="2">2. Sólo MÓVIL (Conexión por medio de red celular y puede pertenecer a cualquiera de los residentes)</option>
                                         <option value="3">3. Ambas</option>
                                         <option value="4">4. Ns/Nc</option>

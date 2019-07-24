@@ -5,23 +5,7 @@ Ingresos de Otras Ocupaciones
 <div class="row border">
     <div class="col-md-10">
         <div class="form-group form-inline">
-        <label>Por el mes de</label>
-    <select name="seccion_12_mes" id="" class="form-control form-control-sm">
-        <option value=""></option>
-        <option value="1">Enero</option>
-        <option value="2">Febrero</option>
-        <option value="3">Marzo</option>
-        <option value="4">Abril</option>
-        <option value="5">Mayo</option>
-        <option value="6">Junio</option>
-        <option value="7">Julio</option>
-        <option value="8">Agosto</option>
-        <option value="9">Septiembre</option>
-        <option value="10">Octubre</option>
-        <option value="11">Noviembre</option>
-        <option value="12">Diciembre</option>
-    </select>
-    <label>cobró ingresos por algún trabajo/changa, o por otras ocupación/es?
+        <label>Por el mes de _____  cobró ingresos por algún trabajo/changa, o por otras ocupación/es?
     </label>
     <label class="text-muted">
         (Incluye ocupacion secundaria y otras ocupaciones previas a la semana de
