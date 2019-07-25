@@ -6,7 +6,7 @@
             <div class="form-group col-md-6">
                     <label for="PP03A">3a. ¿Cuántos empleos/ocupaciones tiene?</label>
 
-                    <input class="form-control" type="number"  min=0 step=1 pattern="[0-9]* " disabled onchange="update_parte_3()" name="PP03A" id="PP03A" step="1" min="0" max="99">
+                    <input class="form-control" type="number"  min=0 step=1  disabled onchange="update_parte_3()" name="PP03A" id="PP03A" step="1" min="0" max="99">
             </div>
              <div class="form-group col-md-6">
                      <br>
@@ -27,7 +27,8 @@
            <div class="form-group col-md-6">
                     <label for="PP03C">3c. La semana pasada, ¿tenía…</label>
                      <select class="form-control" disabled onchange="update_parte_3()" name="PP03C" id="PP03C"><small id="" class="form-text text-muted"> </small>
-                                <option value="1">1. … un solo empleo/ocupación/actividad?</option>
+                        <option value=""></option>
+                        <option value="1">1. … un solo empleo/ocupación/actividad?</option>
                                 <option value="2">2. … más de un empleo/ocupación/actividad?</option>
                         </select>
             </div>
@@ -50,35 +51,35 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">Domingo? </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*"  class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_domigo"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_domigo"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">lunes?    </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_lunes"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_lunes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">martes? </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_martes"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_martes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">miercoles?    </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_miercoles"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_miercoles"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">jueves?   </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_jueves"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_jueves"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">viernes? </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*"  class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_viernes"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_viernes"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">sabado?   </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*"  class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_sabado"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_sabado"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Total de horas  </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03E" max="999"  disabled onchange="update_parte_3()" name="PP03E" id="PP03E"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" max="999"  disabled onchange="update_parte_3()" name="PP03E" id="PP03E"></td>
                                         </tr>
                                 </tbody>
                         </table>
@@ -96,31 +97,31 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">Domingo? </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*"  class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_domingo"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_domingo"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">lunes?    </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_lunes"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_lunes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">martes? </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_martes"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_martes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">miercoles?    </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_miercoles"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_miercoles"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">jueves?   </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*" class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_jueves"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_jueves"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">viernes? </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*"  class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_viernes"> </td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_viernes"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">sabado?   </th>
-                                        <td>  <input type="number"  min=0 step=1 pattern="[0-9]*"  class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_sabado"></td>
+                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_sabado"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Total de horas  </th>
@@ -218,14 +219,14 @@ function update_parte_3()
     j = getSelectedValue("#PP03J");
     k = getSelectedValue("#PP03K");
 
-       ($("#PP03A").val) ? activar("#PP01B"): desactivar("#PP01B");
-       (c == 2) ? activar("#PP01D"): desactivar("#PP01D");
+       ($("#PP03A").val()) ? activar("#PP03B"): desactivar("#PP03B");
+       (c == 2) ? activar("#PP03D"): desactivar("#PP03D");
        (c == 2 || c == 1) ? activar(".PP03E"): desactivar(".PP03E");
        (c == 2 || c == 1) ? activar(".PP03F"): desactivar(".PP03F");
        (c == 2 || c == 1) || (b == 1 || b == 2 || b == 3 || b == 4 || b == 5 || b == 9) ? activar("#PP03G"): desactivar("#PP03G");
 
        (g == 2) ? activar("#PP03H"): desactivar("#PP03H");
-       (g == 1) ? activar("#PP03I"): desactivar("#PP03I");
+       (g == 1 || h >= 1) ? activar("#PP03I"): desactivar("#PP03I");
        (i == 1 || i == 2  || i == 9) ? activar("#PP03J"): desactivar("#PP03J");
        (j == 1) ? activar("#PP03K"): desactivar("#PP03K");
 
