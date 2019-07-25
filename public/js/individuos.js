@@ -1,11 +1,55 @@
 
 
+var entrevistaRealizada = null;
+function getSelectedValue(selector)
+{
+    value = $(selector).children("option:selected").val();
+    return value;
+}
+
+function desactivar(selector) {
+    console.log("Activar "+selector);
+    $(selector).attr("disabled",true);
+
+    setOpcional(selector);
+
+}
+
+function activar(selector) {
+    $(selector).removeAttr('disabled')
+    setRequired(selector);
+}
+
+function setRequired(selector){
+   $(selector).attr('required',true);
+}
+function setOpcional(selector) {
+    $(selector).removeAttr('required')
+}
+
+
+
+function setEntrevistaRealizada(value)
+{
+
+    entrevistaRealizada = value;
+
+    if(value == 1)
+    {
+        $("#numero_respondente").attr('required',true);
+        $("#nombre_respondente").attr('required', true);
+    }
+    else
+    {
+        $("#numero_respondente").removeAttr('required');
+        $("#nombre_respondente").removeAttr('required');
+    }
+}
+
 $(document).ready(function () {
-    /**
-     * inicio el bs-stepper
-     */
+
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 1;
+    var paso = 2;
     stepper.to(paso);
 
 
@@ -28,7 +72,28 @@ $(document).ready(function () {
      */
     $(".next").click(function (e) {
         e.preventDefault();
+        console.log({ entrevistaRealizada });
         if (validar(paso)) {
+
+            switch (paso) {
+                case 1:
+                   if(entrevistaRealizada == 2)
+                   {
+                    console.log("paso al final")
+                      paso = 14
+                      stepper.to(paso);
+                        $("#form").scrollTop(0)
+                      return;
+                   }
+
+
+                    break;
+
+                default:
+                    break;
+            }
+
+
             stepper.next();
             $("#form").scrollTop(0)
             paso++;
@@ -45,6 +110,22 @@ $(document).ready(function () {
 
     $(".back").click(function (e) {
         e.preventDefault();
+        switch (paso) {
+            case 14:
+                if (entrevistaRealizada == 2) {
+                    console.log("paso al final")
+                    paso = 1
+                    stepper.to(paso);
+                    $("#form").scrollTop(0)
+                    return;
+                }
+
+                break;
+
+            default:
+                break;
+        }
+
         paso--;
         stepper.previous();
     })
@@ -157,4 +238,12 @@ $(document).ready(function () {
                 break;
         }
     }
+
+
+
+    // validaciones
+
+        update_parte_1();
+        update_parte_2();
+
 })

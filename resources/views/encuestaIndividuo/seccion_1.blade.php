@@ -6,10 +6,10 @@
                 <div class="form-group col-md-2">
                 <label for="Entrev_realiz">Entrevista Realizada</label></div>
                 <div class="form-group col-md-2">
-                <select class="form-control" name="Entrev_realiz" id="Entrev_realiz"  >
+                <select class="form-control" name="Entrev_realiz" id="Entrev_realiz" onchange="setEntrevistaRealizada(this.value)"  required>
                         <option value=""> </option>
-                        <option value="1">Si</option>
-                        <option value="2" >No</option>
+                        <option value="1">1. Si</option>
+                        <option value="2">2. No</option>
                 </select>
                 </div>
        </div>
@@ -17,13 +17,14 @@
            <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="numero_componente">N° de componente </label>
-                    <label for="numero_respondente"> Respondente</label>
-                    <label for="nombre">Nombre</label>
+                    <label for="numero_respondente">Respondente</label></br>
+                    <label for="nombre_respondente">Nombre</label>
                 </div>
                 <div class="form-group col-md-4">
-                        <input type="number" class="form-control" step="1" min="0" name="numero_componente" id="numero_componente">
+                        <input type="number" class="form-control" step="1" min="0" name="numero_componente" id="numero_componente" disabled>
+                        <input type="hidden" class="form-control" name="numero_componente" id="numero_componente">
                         <input type="number" class="form-control" step="1" min="0" name="numero_respondente" id="numero_respondente">
-                        <input type="text" class="form-control" step="1" min="0" name="nombre" id="nombre">
+                        <input type="text" class="form-control" name="nombre_respondente" id="nombre_respondente">
                 </div>
                 <br>
         </div>

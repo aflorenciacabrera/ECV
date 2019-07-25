@@ -10,6 +10,7 @@ class individuo extends Model
     protected $fillable = ['Entrev_realiz',
 'numero_componente',
 'numero_respondente',
+        'nombre_respondente',
 'nombre',
 'codigo_area',
 'numero_listado',

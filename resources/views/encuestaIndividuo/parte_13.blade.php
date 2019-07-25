@@ -70,3 +70,8 @@
 
 </div>
 {{-- @endsection --}}
+<script>
+function update_parte_13()
+{
+
+}</script>

@@ -123,3 +123,9 @@
             </div>
 </div>
 {{-- @endsection --}}
+<script>
+function update_parte_10()
+{
+
+}
+</script>

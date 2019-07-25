@@ -48,7 +48,7 @@ $(document).ready(function(){
 
     $(".form-control").addClass('form-control-sm')
 
-    console.log(migracion)
+    // console.log(migracion)
 })
 </script>
 <div class="container-fluid">
