@@ -49,7 +49,7 @@ function setEntrevistaRealizada(value)
 $(document).ready(function () {
 
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 2;
+    var paso = 1;
     stepper.to(paso);
 
 
