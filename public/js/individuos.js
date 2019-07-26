@@ -8,9 +8,9 @@ function getSelectedValue(selector)
 }
 
 function desactivar(selector) {
-    console.log("Activar "+selector);
-    $(selector).attr("disabled",true);
 
+    $(selector).val("")
+    $(selector).attr("disabled",true);
     setOpcional(selector);
 
 }
@@ -49,7 +49,7 @@ function setEntrevistaRealizada(value)
 $(document).ready(function () {
 
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 6;
+    var paso = 1;
     stepper.to(paso);
 
 
@@ -248,6 +248,8 @@ $(document).ready(function () {
     update_parte_3();
     update_parte_4();
     update_parte_5();
+    update_parte_7();
+    update_parte_8();
 
 
 })

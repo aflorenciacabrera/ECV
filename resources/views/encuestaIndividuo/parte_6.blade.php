@@ -31,7 +31,7 @@
         <div class="form-row">
            <div class="form-group col-md-6">
                     <label for="PP06D">6d. Por el mes………………………… ¿cuánto ganó…………. en su negocio/empresa/actividad considerando sólo la parte que le corresponde a el/ella</label>
-                    <small id="PP06D" class="form-text text-muted">(descontando los gastos) </small>
+                    <small  class="form-text text-muted">(descontando los gastos) </small>
                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06D" id="PP06D" step="1" min="0" max="9999999999">
                      <select class="form-control" disabled onchange="update_parte_6()" name="PP06D_op" id="PP06D_op">
                                  <option value=" "> </option>
@@ -64,7 +64,8 @@
                     <label for="PP06G">6g. ¿Cuánto cobró por el mes de ………….….… como sueldo?</label>
                      <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06G" id="PP06G" step="1" min="0" max="9999999999">
                      <select class="form-control" disabled onchange="update_parte_6()" name="PP06G_op" id="PP06G_op">
-                                <option value="8">No cobró nada</option>
+                        <option value=""></option>
+                        <option value="8">No cobró nada</option>
                         </select>
             </div>
         </div>
@@ -132,6 +133,69 @@
 
 function update_parte_6()
 {
+console.log("Update_parte_6")
+A = getSelectedValue("#PP06A");
+B = $("#PP06B").val();
+C = $("#PP06C").val();
+C_op = getSelectedValue("#PP06C_op");
+D = $("#PP06D").val();
+D_op = getSelectedValue("#PP06D_op");
+E = getSelectedValue("#PP06E");
+F = getSelectedValue("#PP06F");
+G = $("#PP06G").val();
+G_op = getSelectedValue("#PP06G_op");
+
+H = getSelectedValue("#PP06H");
+H_Esp = $("#PP06H_Esp").val();
+I = getSelectedValue("#PP06I");
+J = getSelectedValue("#PP06J");
+H_Esp = $("#PP06H_Esp").val();
+L = getSelectedValue("#PP06L");
+K = getSelectedValue("#PP06K");
+k_sem = $("#PP06k_sem").val();
+k_mes = $("#PP06k_mes").val();
+
+// activar("#PP06A");
+
+A == 1 ? activar("#PP06B"):desactivar("#PP06B");
+
+A == 2 ? activar("#PP06C"):desactivar("#PP06C");
+A == 2 ? activar("#PP06C_op"):desactivar("#PP06C_op");
+
+A == 2 ? setOpcional("#PP06C"):false;
+A == 2 ? setOpcional("#PP06C_op"):false;
+
+
+B? activar("#PP06D"):desactivar("#PP06D");
+B? activar("#PP06D_op"):desactivar("#PP06D_op");
+B? setOpcional("#PP06D"):false;
+B? setOpcional("#PP06D_op"):false;
+
+
+//
+(D || D_op == 8 )? activar("#PP06E"):desactivar("#PP06E");
+//TODO pasa al 9
+(D_op == 7 || C_op == 7)? activar("#PP09A"):desactivar("#PP09A");
+//
+(E == 1)? activar("#PP06F"):desactivar("#PP06F");
+(E == 2 || C || C_op == 8 || G || G_op == 8 || H >= 1)? activar("#PP06I"):desactivar("#PP06I");
+
+(F == 1)? activar("#PP06G"):desactivar("#PP06G");
+(F == 1)? activar("#PP06G_op"):desactivar("#PP06G_op");
+
+(F == 1)? setOpcional("#PP06G"):false;
+(F == 1)? setOpcional("#PP06G_op"):false;
+
+
+(H == 2)? activar("#PP06H_Esp"):desactivar("#PP06H_Esp");
+(I >= 1)? activar("#PP06J"):desactivar("#PP06J");
+(J >= 1)? activar("#PP06K"):desactivar("#PP06K");
+(K == 1 || K == 2 )? activar("#PP06K_sem"):desactivar("#PP06K_sem");
+(K == 3)? activar("#PP06K_mes"):desactivar("#PP06K_mes");
+(k_mes || k_sem)?activar("#PP06L"):desactivar("#PP06L");
+
+
+
 
 }
 </script>
