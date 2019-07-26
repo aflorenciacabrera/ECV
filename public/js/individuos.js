@@ -46,9 +46,10 @@ function setEntrevistaRealizada(value)
     }
 }
 
+var stepper;
 $(document).ready(function () {
 
-    var stepper = new Stepper($('.bs-stepper')[0])
+    stepper = new Stepper($('.bs-stepper')[0])
     var paso = 1;
     stepper.to(paso);
 

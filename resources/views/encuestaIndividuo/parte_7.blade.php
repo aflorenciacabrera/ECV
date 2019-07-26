@@ -280,7 +280,7 @@ K = getSelectedValue("#PP07K");
 (H == 2) ? activar("#PP07I"):desactivar("#PP07I");
 (J >= 1)?activar("#PP07K"):desactivar("#PP07K");
 //TODO salta a 8
-(K >= 1 || K<= 4)? activar("#PP08A"):desactivar("#PP08A");
+(K >= 1 && K<= 4)? activar("#PP08A"):desactivar("#PP08A");
 //TODO salta a 9
 (K == 5)? activar("#PP09A"):desactivar("#PP09A");
 
