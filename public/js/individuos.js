@@ -98,6 +98,10 @@ $(document).ready(function () {
             stepper.next();
             $("#form").scrollTop(0)
             paso++;
+            if (paso == 14) {//qquito todas las restricciones en el ultimo paso hardcoding
+                $('input,textarea,select').filter('[required=required]').removeAttr('required');
+            }
+
         }
         else {
             console.log("Erro validar Paso " + paso)
