@@ -222,7 +222,11 @@ function update_parte_3()
        ($("#PP03A").val()) ? activar("#PP03B"): desactivar("#PP03B");
        (c == 2) ? activar("#PP03D"): desactivar("#PP03D");
        (c == 2 || c == 1) ? activar(".PP03E"): desactivar(".PP03E");
-       (c == 2 || c == 1) ? activar(".PP03F"): desactivar(".PP03F");
+       (c == 2 || c == 1) ? setOpcional(".PP03E"):false;
+
+       (c == 2) ? activar(".PP03F"): desactivar(".PP03F");
+       (c == 2 || c == 1) ? setOpcional(".PP03F"):false;
+
        (c == 2 || c == 1) || (b == 1 || b == 2 || b == 3 || b == 4 || b == 5 || b == 9) ? activar("#PP03G"): desactivar("#PP03G");
 
        (g == 2) ? activar("#PP03H"): desactivar("#PP03H");
@@ -230,7 +234,7 @@ function update_parte_3()
        (i == 1 || i == 2  || i == 9) ? activar("#PP03J"): desactivar("#PP03J");
        (j == 1) ? activar("#PP03K"): desactivar("#PP03K");
 
-    // update parte 4-> (j =2 || j = 9 || k = *)
+    update_parte_4();
 
 }
 </script>
