@@ -5,7 +5,7 @@
             <div class="form-group col-md-6">
                     <label for="PP01A">1a. En la semana pasada,_________________ trabajó por lo menos una hora? </label>
                     <small id="" class="form-text text-muted">(sin contar las tareas de su hogar) </small>
-                     <select class="form-control" onchange="update_parte_1()" name="PP01A" id="PP01A">
+                     <select class="form-control" required onchange="update_parte_1()" name="PP01A" id="PP01A">
                                <option value=""> </option>
                                 <option value="1">1. Si</option>
                                 <option value="2">2. No</option>

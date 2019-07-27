@@ -151,7 +151,10 @@ function update_parte_4()
       (g >= 1)?activar("#PP05A"):desactivar("#PP05A");
 
       //TODO pase a la 7
-      (b4)?activar(".PP07F"):desactivar(".PP07F");
+    p7_C = getSelectedValue("#PP07C");
+    p7_D = getSelectedValue("#PP07D");
+    p7_E = getSelectedValue("#PP07E");
+      (b4) || (p7_C == 2) || (p7_D >= 1 && p7_E >= 1) ? activar(".PP07F"):desactivar(".PP07F");
 
 
 }

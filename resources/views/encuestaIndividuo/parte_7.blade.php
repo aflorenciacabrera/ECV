@@ -269,7 +269,7 @@ K = getSelectedValue("#PP07K");
 ((A >= 5 && A <= 9) || B )>= 1 ? activar("#PP07C"):desactivar("#PP07C");
 (B == 8) ? activar("#PP07B_Esp"):desactivar("#PP07B_Esp");
 (C == 1 || C == 9) ? activar("#PP07D"):desactivar("#PP07D");
-(C == 2) || (D >= 1 && E >= 1) ? activar(".PP07F"):desactivar(".PP07F");
+// (C == 2) || (D >= 1 && E >= 1) ? activar(".PP07F"):desactivar(".PP07F"); se combina con la parte 4
 (D >= 1) ? activar("#PP07E"):desactivar("#PP07E");
 //
 (F1 >=1 && F2 >=1  && F3 >=1 && F4 >=1)?activar(".PP07F1"):desactivar(".PP07F1");

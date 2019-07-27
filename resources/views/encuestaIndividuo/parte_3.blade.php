@@ -40,7 +40,7 @@
          <div class="form-row">
            <div class="form-group col-md-6">
                     <label for="PP03E">3e. En su ocupación…</label>
-                    <small id="PP03E" class="form-text text-muted"> (la que habitualmente le lleva más horas)</small>
+                    <small class="form-text text-muted"> (la que habitualmente le lleva más horas)</small>
                      <table class="table table-striped table-bordered">
                                 <thead>
                                         <tr>
@@ -223,9 +223,12 @@ function update_parte_3()
        (c == 2) ? activar("#PP03D"): desactivar("#PP03D");
        (c == 2 || c == 1) ? activar(".PP03E"): desactivar(".PP03E");
        (c == 2 || c == 1) ? setOpcional(".PP03E"):false;
+       (c == 2 || c == 1) ? setRequired("#PP03E"):false;
+
 
        (c == 2) ? activar(".PP03F"): desactivar(".PP03F");
        (c == 2 || c == 1) ? setOpcional(".PP03F"):false;
+       (c == 2 || c == 1) ? setRequired("#PP03F"):false;
 
        (c == 2 || c == 1) || (b == 1 || b == 2 || b == 3 || b == 4 || b == 5 || b == 9) ? activar("#PP03G"): desactivar("#PP03G");
 

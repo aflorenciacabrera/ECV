@@ -19,6 +19,11 @@ $(document).ready(function(){
         {
             //entonce relleno el campo
             input.val(individuo[name])
+            updateAll();
+        }
+        else
+        {
+            console.log("No existe campo para "+name);
         }
     })
     $('#form select').each(function(e){
@@ -29,6 +34,11 @@ $(document).ready(function(){
         {
             //entonce relleno el campo
             input.val(individuo[name])
+            updateAll();
+        }
+        else
+        {
+              console.log("No existe campo para "+name);
         }
     })
 
@@ -167,49 +177,49 @@ $(document).ready(function(){
                 <div class="card-body">
                     <div class="bs-stepper-content">
                     <!-- your steps content here -->
-                        <div id="seccion_1" class="content" role="tabpanel" aria-labelledby="seccion_1-trigger">
+                        <div id="seccion_1" class="content" role="tabpanel"  data-paso="1" aria-labelledby="seccion_1-trigger">
                             @include('encuestaIndividuo.seccion_1')
                         </div>
-                        <div id="parte_1" class="content" role="tabpanel" aria-labelledby="parte_1-trigger">
+                        <div id="parte_1" class="content" role="tabpanel"  data-paso="2" aria-labelledby="parte_1-trigger">
                             @include('encuestaIndividuo.parte_1')
                         </div>
-                        <div id="parte_2" class="content" role="tabpanel" aria-labelledby="parte_2-trigger">
+                        <div id="parte_2" class="content" role="tabpanel"  data-paso="3" aria-labelledby="parte_2-trigger">
                             @include('encuestaIndividuo.parte_2')
                         </div>
-                        <div id="parte_3" class="content" role="tabpanel" aria-labelledby="parte_3-trigger">
+                        <div id="parte_3" class="content" role="tabpanel"  data-paso="4" aria-labelledby="parte_3-trigger">
                             @include('encuestaIndividuo.parte_3')
                         </div>
-                        <div id="parte_4" class="content" role="tabpanel" aria-labelledby="parte_4-trigger">
+                        <div id="parte_4" class="content" role="tabpanel"  data-paso="5" aria-labelledby="parte_4-trigger">
                             @include('encuestaIndividuo.parte_4')
                         </div>
-                        <div id="parte_5" class="content" role="tabpanel" aria-labelledby="parte_5-trigger">
+                        <div id="parte_5" class="content" role="tabpanel"  data-paso="6" aria-labelledby="parte_5-trigger">
                             @include('encuestaIndividuo.parte_5')
                         </div>
-                         <div id="parte_6" class="content" role="tabpanel" aria-labelledby="parte_6-trigger">
+                         <div id="parte_6" class="content" role="tabpanel"  data-paso="7" aria-labelledby="parte_6-trigger">
                             @include('encuestaIndividuo.parte_6')
                         </div>
-                        <div id="parte_7" class="content" role="tabpanel" aria-labelledby="parte_7-trigger">
+                        <div id="parte_7" class="content" role="tabpanel"  data-paso="8" aria-labelledby="parte_7-trigger">
                             @include('encuestaIndividuo.parte_7')
                         </div>
-                         <div id="parte_8" class="content" role="tabpanel" aria-labelledby="parte_8-trigger">
+                         <div id="parte_8" class="content" role="tabpanel"  data-paso="9" aria-labelledby="parte_8-trigger">
                             @include('encuestaIndividuo.parte_8')
                         </div>
-                         <div id="parte_9" class="content" role="tabpanel" aria-labelledby="parte_9-trigger">
+                         <div id="parte_9" class="content" role="tabpanel"  data-paso="10" aria-labelledby="parte_9-trigger">
                             @include('encuestaIndividuo.parte_9')
                         </div>
-                         <div id="parte_10" class="content" role="tabpanel" aria-labelledby="parte_10-trigger">
+                         <div id="parte_10" class="content" role="tabpanel"  data-paso="11" aria-labelledby="parte_10-trigger">
                             @include('encuestaIndividuo.parte_10')
                         </div>
-                         <div id="parte_11" class="content" role="tabpanel" aria-labelledby="parte_11-trigger">
+                         <div id="parte_11" class="content" role="tabpanel"  data-paso="12" aria-labelledby="parte_11-trigger">
                             @include('encuestaIndividuo.parte_11')
                         </div>
-                         <div id="parte_12" class="content" role="tabpanel" aria-labelledby="parte_12-trigger">
+                         <div id="parte_12" class="content" role="tabpanel"  data-paso="13" aria-labelledby="parte_12-trigger">
                             @include('encuestaIndividuo.parte_12')
                         </div>
 
-                        <div id="parte_13" class="content" role="tabpanel" aria-labelledby="sparte_13-trigger">
+                        <div id="parte_13" class="content" role="tabpanel"  data-paso="14" aria-labelledby="sparte_13-trigger">
                             @include('encuestaIndividuo.parte_13')
-                            <button type="submit" class="btn btn-success btn-lg">GUARDAR</button>
+                            <button type="submit" id="btn_guardar" class="btn btn-success btn-lg">GUARDAR</button>
                         </div>
 
                     </div>

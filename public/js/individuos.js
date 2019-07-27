@@ -9,14 +9,14 @@ function getSelectedValue(selector)
 
 function desactivar(selector) {
 
-    $(selector).val("")
+    // $(selector).val("")
     $(selector).attr("disabled",true);
     setOpcional(selector);
 
 }
 
 function activar(selector) {
-    $(selector).removeAttr('disabled')
+    $(selector).removeAttr('disabled').focus();
     setRequired(selector);
 }
 
@@ -50,10 +50,16 @@ var stepper;
 $(document).ready(function () {
 
     stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 1;
+    var paso = 12;
     stepper.to(paso);
 
+    $("#btn_guardar").click(function (e) {
+        e.preventDefault();
+        var validator = $("#form").validate()
+        console.log(validator);
 
+
+    })
     /**
      * Para que haga en el enviar con el Enter
      */
@@ -73,7 +79,7 @@ $(document).ready(function () {
      */
     $(".next").click(function (e) {
         e.preventDefault();
-        console.log({ entrevistaRealizada });
+        // console.log({ entrevistaRealizada });
         if(paso >=14)
         {
             return false;
@@ -105,11 +111,11 @@ $(document).ready(function () {
             if (paso == 14) {//qquito todas las restricciones en el ultimo paso hardcoding
                 $('input,textarea,select').filter('[required=required]').removeAttr('required');
             }
+            console.log("Paso "+paso+ " ok ");
 
         }
         else {
             console.log("Erro validar Paso " + paso)
-            // swal
         }
 
     })
@@ -168,18 +174,19 @@ $(document).ready(function () {
         flag = true;
         $("#" + seccion + " input , " + "#" + seccion + " select").each(function (e) {
             t = $(this);
-            console.log(t.attr('name') + " ")
+            // console.log(t.attr('name') + " ")
             if (!t[0].checkValidity()) // es valido segun html5?
             {
                 t.addClass('is-invalid')/// lo pongo en rojito
                 t.focus();
-                console.log('invalido')
+                // console.log('invalido')
+                console.error(t.attr('name') + " ");
                 flag = false;
                 return false;
             }
             else {
                 t.removeClass('is-invalid')
-                console.log('valido')
+
             }
         })
         return flag
@@ -255,13 +262,27 @@ $(document).ready(function () {
 
     // validaciones
 
-        update_parte_1();
+
+    // update_parte_9();
+    // update_parte_8();
+
+
+})
+
+function updateAll()
+{
+    update_parte_1();
     update_parte_2();
     update_parte_3();
     update_parte_4();
     update_parte_5();
+    update_parte_6();
     update_parte_7();
     update_parte_8();
-
-
-})
+    update_parte_9();
+    update_parte_10();
+    update_parte_11();
+    // update_parte_12();
+    // update_parte_13();
+    // update_parte_14();
+}
