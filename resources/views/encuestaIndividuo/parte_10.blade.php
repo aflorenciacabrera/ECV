@@ -161,6 +161,7 @@ function update_parte_10()
     D = getSelectedValue("#PP10D");
     E = getSelectedValue("#PP10E");
       p2_i = getSelectedValue("#PP02I");
+      p12A = getSelectedValue("#PP12A");
 
     A >= 1 ? activar(".PP10B") : desactivar(".PP10B");
 
@@ -168,7 +169,7 @@ function update_parte_10()
 
     C == 1 || D == 1 ? activar("#PP10E") : desactivar("#PP10E");
     C == 2 ? activar("#PP10D") : desactivar("#PP10D");
-    D == 2 || p2_i == 2 ? activar("#PP13A") : desactivar("#PP13A");
+    D == 2 || p2_i == 2 || p12A == 2 ? activar("#PP13A") : desactivar("#PP13A");
     (E >= 1 && E <= 5)?activar("#PP11A") : desactivar("#PP11A");
 
 

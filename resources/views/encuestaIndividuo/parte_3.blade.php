@@ -220,10 +220,9 @@ function update_parte_3()
     k = getSelectedValue("#PP03K");
 
        ($("#PP03A").val()) ? activar("#PP03B"): desactivar("#PP03B");
-       (c == 2) ? activar("#PP03D"): desactivar("#PP03D");
-       (c == 2 || c == 1) ? activar(".PP03E"): desactivar(".PP03E");
-       (c == 2 || c == 1) ? setOpcional(".PP03E"):false;
+       (c == 2 || c == 1) ? activar(".PP03E",false,false): desactivar(".PP03E",false,false);
        (c == 2 || c == 1) ? setRequired("#PP03E"):false;
+       (c == 2) ? activar("#PP03D"): desactivar("#PP03D");
 
 
        (c == 2) ? activar(".PP03F"): desactivar(".PP03F");

@@ -57,13 +57,18 @@ function update_parte_9()
 A = getSelectedValue("#PP09A");
 B = getSelectedValue("#PP09B");
 C = getSelectedValue("#PP09C");
+//
+    P11_T = getSelectedValue("#PP11T");
+    P11_J = getSelectedValue("#PP11J");
+    P11_L = getSelectedValue("#PP11L");
+    P11_O = getSelectedValue("#PP11O");
 
 A == 2 || A == 3 ? activar("#PP09B"):desactivar("#PP09B");
 A == 3 ? activar("#PP09A_ESP"):desactivar("#PP09A_ESP");
 
 B >= 1 ? activar("#PP09C"):desactivar("#PP09C");
 B == 10 ? activar("#PP09B_ESP"):desactivar("#PP09B_ESP");
-
+C >= 1  || P11_T == 1 || P11_J == 2 || P11_L >= 1 ||  P11_O == 2 || P11_O == 3? activar("#PP12A"):desactivar("#PP12A");
 }
 
 </script>

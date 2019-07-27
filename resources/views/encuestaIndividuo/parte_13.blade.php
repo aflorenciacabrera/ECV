@@ -3,7 +3,7 @@
 <div class="card-body border">
        <div class="form-group">
          <label for="">Observaciones</label>
-         <textarea class="form-control" name="seccion_13_observaciones" id="seccion_13_observaciones" rows="3"></textarea>
+         <textarea required class="form-control" name="seccion_13_observaciones" id="seccion_13_observaciones" rows="3"></textarea>
        </div>
        <div class="row border">
         <div class="col-md-4 border ">
@@ -26,7 +26,7 @@
                 <div class="col-md-6">
                     <div class="form-group form-inline">
                       <label for="seccion_13_fecha1">1°</label>
-                      <input type="date" class="form-control form-control-sm" name="seccion_13_fecha1" id="seccion_13_fecha1">
+                      <input  required type="date" class="form-control form-control-sm" name="seccion_13_fecha1" id="seccion_13_fecha1">
                     </div>
                 </div>
                 <div class="col-md-6">

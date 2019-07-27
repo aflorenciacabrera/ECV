@@ -127,8 +127,8 @@ function update_parte_1()
     (b == 2) ? desactivar("#PP01D"):false;
     (e == 5) ? activar("#PP01F"): desactivar("#PP01F");
     (f == 4) ? activar("#PP01G"): desactivar("#PP01G");
-    (f == 5) ? activar("#PP01H"): desactivar("#PP01H");
     (f == 5) ? activar("#PP01F_Esp"): desactivar("#PP01F_Esp");
+    (f == 5) ? activar("#PP01H"): desactivar("#PP01H");
 
 
     update_parte_2();

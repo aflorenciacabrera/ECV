@@ -129,7 +129,6 @@ function update_parte_2(){
     h = getSelectedValue("#PP02H");
     i = getSelectedValue("#PP02I");
 
-    console.log(a);
 
     (a == 1 || a == 2)?activar("#PP02B"):desactivar("#PP02B");
     (b == 1)?activar("#PP02C"):desactivar("#PP02C");
