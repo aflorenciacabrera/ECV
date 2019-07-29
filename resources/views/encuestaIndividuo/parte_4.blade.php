@@ -6,7 +6,7 @@
             <div class="form-group col-md-6">
                 <label for=" PP04A">4a. ¿El negocio/empresa/institución/actividad en la que trabaja es… </label><small  class="form-text text-muted">(se refiere al que trabaja más horas semanales) </small>
                 <select class="form-control" disabled onchange="update_parte_4()" name="PP04A" id="PP04A">
-                                <option value=" "> </option>
+                                <option value=""> </option>
                                 <option value="1">1.… estatal?</option>
                                 <option value="2">2.… privada?</option>
                                 <option value="3">3.… de otro tipo? (especificar)</option>
@@ -17,7 +17,7 @@
                                 <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04B" id="PP04B" maxlength="45"><br>
                         <label for="">4b1. Si presta servicios domésticos en hogares particulares, Marque</label>
                                 <select class="form-control" disabled onchange="update_parte_4()" name="PP04B1" id="PP04B1">
-                                        <option value=" "> </option>
+                                        <option value=""> </option>
                                         <option value="1">1.Casa de familia</option>
                                 </select><br>
                         <div class="form-row">
@@ -51,7 +51,7 @@
                       <label for=" PP04C">4c. ¿Cuántas personas, incluido____________ trabajan allí en total?</label>
                 <small  class="form-text text-muted">(sólo si no sabe lea las opciónes y después marque la que corresponda)</small>
                 <select class="form-control" disabled onchange="update_parte_4()" name="PP04C" id="PP04C">
-                        <option value=" "> </option>
+                        <option value=""> </option>
                         <option value="1">1. 1 persona</option>
                         <option value="2">2. 2 personas</option>
                         <option value="3">3. 3 personas</option>
@@ -68,7 +68,7 @@
                 </select>
 
                  <select class="form-control" disabled onchange="update_parte_4()" name="PP04C99" id="PP04C99">
-                        <option value=" "> </option>
+                        <option value=""> </option>
                         <option value="1">1.Hasta 5</option>
                         <option value="2">2.De 6 a 40</option>
                         <option value="3">3.Más de 40</option>
@@ -87,7 +87,7 @@
                      <label for="PP04G">4g. ¿Dónde realiza principalmente sus tareas? </label>
                      <small  class="form-text text-muted">(no lea, escuche la respuesta y marque la que corresponda)</small>
                      <select class="form-control" disabled onchange="update_parte_4()" name="PP04G" id="PP04G">
-                        <option value=" "> </option>
+                        <option value=""> </option>
                         <option value="1">1.-En un local/oficina/establecimiento/negocio/taller/chacra/finca</option>
                         <option value="2">2.-En un puesto o kiosco fijo callejero</option>
                         <option value="3">3.-En vehículos: bicicleta, moto, auto, barco, bote (no inlcuye servicio de transporte)</option>
@@ -135,15 +135,18 @@ function update_parte_4()
       (a >= 1)? activar("#PP04B"):desactivar("#PP04B");
       (a == 3)? activar("#PP04A_Esp"):desactivar("#PP04A_Esp");
       (b)?activar("#PP04B1"):desactivar("#PP04B1");
-      (b1 == 1)?activar("#PP04B2"):desactivar("#PP04B2");
       (b1 == 1)?activar(".PP04B3"):desactivar(".PP04B3");
       (b1 == 1)?activar("#PP04B4"):desactivar("#PP04B4");
+      (b1 == 1)?activar("#PP04B2"):desactivar("#PP04B2");
+
       (!(b1 == 1) && b)?activar("#PP04C"):desactivar("#PP04C");
+
       (c == 99)?activar("#PP04C99"):desactivar("#PP04C99");
-      (!(b1 == 1) && c >= 1)?activar("#PP04D"):desactivar("#PP04D");
-      (!(b1 == 1) && c >= 1)?activar("#PP04E"):desactivar("#PP04E");
+
+      (!(b1 == 1) && c >= 1)?activar("#PP04G"):desactivar("#PP04G");
       (!(b1 == 1) && c >= 1)?activar("#PP04F"):desactivar("#PP04F");
-      ( !(b1 == 1) && c >= 1)?activar("#PP04G"):desactivar("#PP04G");
+      (!(b1 == 1) && c >= 1)?activar("#PP04E"):desactivar("#PP04E");
+      (!(b1 == 1) && c >= 1)?activar("#PP04D"):desactivar("#PP04D");
 
       (g == 10)?activar("#PP04G_Esp"):desactivar("#PP04G_Esp");
 
@@ -151,7 +154,10 @@ function update_parte_4()
       (g >= 1)?activar("#PP05A"):desactivar("#PP05A");
 
       //TODO pase a la 7
-      (b4)?activar(".PP07F"):desactivar(".PP07F");
+    p7_C = getSelectedValue("#PP07C");
+    p7_D = getSelectedValue("#PP07D");
+    p7_E = getSelectedValue("#PP07E");
+      (b4) || (p7_C == 2) || (p7_D >= 1 && p7_E >= 1) ? activar(".PP07F"):desactivar(".PP07F");
 
 
 }
