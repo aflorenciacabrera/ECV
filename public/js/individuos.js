@@ -74,6 +74,10 @@ $(document).ready(function () {
     $(".next").click(function (e) {
         e.preventDefault();
         console.log({ entrevistaRealizada });
+        if(paso >=14)
+        {
+            return false;
+        }
         if (validar(paso)) {
 
             switch (paso) {
@@ -95,9 +99,9 @@ $(document).ready(function () {
             }
 
 
-            stepper.next();
-            $("#form").scrollTop(0)
             paso++;
+            stepper.to(paso);
+            $("#form").scrollTop(0)
             if (paso == 14) {//qquito todas las restricciones en el ultimo paso hardcoding
                 $('input,textarea,select').filter('[required=required]').removeAttr('required');
             }
@@ -131,8 +135,11 @@ $(document).ready(function () {
                 break;
         }
 
-        paso--;
-        stepper.previous();
+        if(paso>1)
+        {
+            paso--;
+            stepper.to(paso);
+        }
     })
 
     /**
