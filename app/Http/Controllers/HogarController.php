@@ -32,6 +32,14 @@ class HogarController extends Controller
       {
         //Actualizo Registro Hogar
         $h = hogar::find($request->hogar_id);
+        if($h)
+        {
+          echo "Continue";
+        }
+        else
+        {
+          return "No se Encontro el Hogar"
+        }
         $h->user_id = Auth::user()->id;
         $h->fill($request->all());
         $h->estado = 1;///cambio estado a completado
@@ -39,10 +47,18 @@ class HogarController extends Controller
 
         //actualizo seccion 4
         for ($i = 0; $i < 20; $i++) {
-            if ($request['CH01_' . $i]) {
+            if ($request['carateristica_id_' . $i]) {
                 //id de seccion
                 $carateristica_id = $request['carateristica_id_' . $i];
                 $c = hogar_seccion_cuatro::find($carateristica_id);
+                  if($c)
+                  {
+                    echo "Continue";
+                  }
+                  else
+                  {
+                    return "No se Encontro caracteristica del hogar"
+                  }
                $c->CH01 = $request['CH01_'.$i];
                $c->CH02 = $request['CH02_'.$i];
                $c->CH03 = $request['CH03_'.$i];
@@ -103,6 +119,7 @@ class HogarController extends Controller
                     $s->T_Vi = $s->V2_M + $s->V21_M + $s->V22_M +$s->V3_M +$s->V4_M +$s->V5_M +$s->V8_M +$s->V9_M +$s->V10_M +$s->V11_M +$s->V12_M +$s->V18_M +$s->V19_AM;
                     $s->save();
                 }
+                
             }
         }
 
