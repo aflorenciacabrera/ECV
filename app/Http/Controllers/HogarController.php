@@ -38,7 +38,7 @@ class HogarController extends Controller
         }
         else
         {
-          return "No se Encontro el Hogar"
+          return "No se Encontro el Hogar";
         }
         $h->user_id = Auth::user()->id;
         $h->fill($request->all());
@@ -57,7 +57,7 @@ class HogarController extends Controller
                   }
                   else
                   {
-                    return "No se Encontro caracteristica del hogar"
+                    return "No se Encontro caracteristica del hogar";
                   }
                $c->CH01 = $request['CH01_'.$i];
                $c->CH02 = $request['CH02_'.$i];
@@ -98,7 +98,7 @@ class HogarController extends Controller
             if($request['id_seccion_'.$i])
             {
                 //id de seccion
-                $seccion_id = $request['_'.$i];
+                $seccion_id = $request['id_seccion__'.$i];
                 $s = hogarSeccionSeis::find($seccion_id);
                 if($s)
                 {
