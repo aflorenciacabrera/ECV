@@ -39,7 +39,7 @@ class HogarController extends Controller
 
         //actualizo seccion 4
         for ($i = 0; $i < 20; $i++) {
-            if ($request['CH01_' . $i]) {
+            if ($request['carateristica_id_' . $i]) {
                 //id de seccion
                 $carateristica_id = $request['carateristica_id_' . $i];
                 $c = hogar_seccion_cuatro::find($carateristica_id);
@@ -82,7 +82,7 @@ class HogarController extends Controller
             if($request['id_seccion_'.$i])
             {
                 //id de seccion
-                $seccion_id = $request['_'.$i];
+                $seccion_id = $request['id_seccion_'.$i];
                 $s = hogarSeccionSeis::find($seccion_id);
                 if($s)
                 {

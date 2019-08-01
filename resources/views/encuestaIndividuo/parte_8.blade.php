@@ -2,18 +2,54 @@
    <div class="row">
        {{-- left --}}
     <div class="col-md-6">
-        <div class="form-group form-inline">
+        <div class="form-group">
         <label for="PP08A">8a. En ese trabajó cobró </label>
-        <select onchange="update_parte_8()" disabled name="PP08A" id="PP08A" class="form-control form-control-sm">
-            <option value=""></option>
-            <option value=1>1. sueldos </option>
-            <option value=2>2. salario </option>
-            <option value=3>3. horas extras </option>
-            <option value=4>4. otras </option>
-            <option value=5>5. Ticket </option>
-            <option value=6>6. Ninguna</option>
-        </select>
-        </div>
+
+
+
+         <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_1" name="PP08A_1" value="1">1. sueldos
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_2" name="PP08A_2" value="2">2. salario
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_3" name="PP08A_3"  value="3">3. horas extras
+                    </div>
+                </div>
+            </div>
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_4" name="PP08A_4" value="4">4. otras
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_5" name="PP08A_5" value="5">5. Ticket
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_6" name="PP08A_6"  value="6">6. Ninguna
+                    </div>
+                </div>
+            </div>
+             </div>
         {{--  --}}
         <label>8d. Cuanto cobró por ese mes&nbsp;</label>
     <div class="form-group form-inline">
@@ -33,14 +69,32 @@
             <input type="number" min=0 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D4" id="PP08D4">
         </div>
         {{--  --}}
-        <div class="form-group form-inline">
-<label for="PP08E">8e. Cobró &nbsp;</label>
-<select onchange="update_parte_8()" disabled name="PP08E" id="PP08E" class="form-control form-control-sm">
-    <option value=""></option>
-    <option value=1>1. Comisión  </option>
-    <option value=2>2. Propina </option>
-    <option value=3>3. ninguno</option>
-</select>
+        <div class="form-group ">
+            <label for="PP08E">8e.Por el mes de _____¿Cobró &nbsp;</label>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08E" disabled onchange="update_parte_8()" id="PP08E_1" name="PP08E_1" value="1">1. Comision por venta/produccion?
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08E" disabled onchange="update_parte_8()" id="PP08E_2" name="PP08E_2" value="2">2. Propinas?
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="PP08E" disabled onchange="update_parte_8()"id="PP08E_3"  name="PP08E_3"  value="3">3. Ninguna
+                    </div>
+                </div>
+            </div>
+
+            {{--  --}}
 </div>
 
 
@@ -165,14 +219,25 @@
 function update_parte_8()
 {
 console.log("Update Parte 8")
-A = getSelectedValue("#PP08A");
+// A = getSelectedValue("#PP08A");
+A_1 = $("#PP08A_1").is(':checked');
+A_2 = $("#PP08A_2").is(':checked');
+A_3 = $("#PP08A_3").is(':checked');
+A_4 = $("#PP08A_4").is(':checked');
+A_5 = $("#PP08A_5").is(':checked');
+A_6 = $("#PP08A_6").is(':checked');
+
 B = getSelectedValue("#PP08B");
 C = $("#PP08C").val();
 D2 =parseFloat ($("#PP08D2").val());
 D3 =parseFloat ($("#PP08D3").val());
 D4 =parseFloat ($("#PP08D4").val());
 $("#PP08DTOTAL").val((D2?D2:0) + (D3?D3:0) + (D4?D4:0));
-E = getSelectedValue("#PP08E");
+// E = getSelectedValue("#PP08E");
+E_1 = $("#PP08E_1").is(':checked');
+E_2 = $("#PP08E_2").is(':checked');
+E_3 = $("#PP08E_3").is(':checked');
+
 F1 = $("#PP08F1").val();
 F2 = $("#PP08F2").val();
 G = getSelectedValue("#PP08G");
@@ -185,23 +250,38 @@ J2 = $("#PP08J2").val();
 J3 = $("#PP08J3").val();
 K = getSelectedValue("#PP08K");
 
-// activar("PP08A");
+activar(".PP08A",false,false);
 
 
-(A >= 1 && A <= 5) || B == 1? activar(".PP08D"):desactivar(".PP08D");
-(A == 6)? activar("#PP08B"):desactivar("#PP08B");
-(B == 2 || B == 3)?activar("#PP08C"):desactivar("#PP08C");
-((B == 4) || (D2>=0 && D3>=0 && D4>=0) || C)?activar("#PP08E"):desactivar("#PP08E");
+(A_1 || A_2 || A_3 || A_4 || A_5) || B == 1? activar(".PP08D",true,false):desactivar(".PP08D");
+(A_6)? activar("#PP08B",true,false):desactivar("#PP08B");
+if(A_6)
+{
+        $("#PP08A_1").prop('checked', false);
+        $("#PP08A_2").prop('checked', false);
+        $("#PP08A_3").prop('checked', false);
+        $("#PP08A_4").prop('checked', false);
+        $("#PP08A_5").prop('checked', false);
+        desactivar(".PP08D");
+}
+(B == 2 || B == 3)?activar("#PP08C",true,false):desactivar("#PP08C");
+((B == 4) || (D2>=0 && D3>=0 && D4>=0) || C)?activar(".PP08E",false,false):desactivar(".PP08E");
 //
-(E==1 || E == 2)?activar(".PP08F"):desactivar(".PP08F");
-(E==3 || F1 || F2 )?activar("#PP08G"):desactivar("#PP08G");
+(E_1 || E_2)?activar(".PP08F",true,false):desactivar(".PP08F");
+(E_3 || F1 || F2 )?activar("#PP08G",true,false):desactivar("#PP08G");
+if(E_3)
+{
+        $("#PP08E_1").prop('checked', false);
+        $("#PP08E_2").prop('checked', false);
 
-(G == 1 || G == 2 )? activar("#PP08G1"):desactivar("#PP08G1");
-(G == 3)? activar("#PP08G2"):desactivar("#PP08G2");
-(G1 || G2)?activar("#PP08H"):desactivar("#PP08H");
-(H)?activar("#PP08I"):desactivar("#PP08I");
-(I ==1 || I == 2 || I == 3)?activar(".PP08J"):desactivar(".PP08J");
-(I ==5 || J1 || J2 || J3)?activar("#PP08K"):desactivar("#PP08K");
+}
+
+(G == 1 || G == 2 )? activar("#PP08G1",true,false):desactivar("#PP08G1");
+(G == 3)? activar("#PP08G2",true,false):desactivar("#PP08G2");
+(G1 || G2)?activar("#PP08H",true,false):desactivar("#PP08H");
+(H)?activar("#PP08I",true,false):desactivar("#PP08I");
+(I ==1 || I == 2 || I == 3)?activar(".PP08J",true,false):desactivar(".PP08J");
+(I ==5 || J1 || J2 || J3)?activar("#PP08K",true,false):desactivar("#PP08K");
 (K >= 1)?activar("#PP09A"):desactivar("#PP09A");
 
 

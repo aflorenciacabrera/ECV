@@ -64,9 +64,9 @@ $(document).ready(function () {
         e.preventDefault();
         if(validarTodo())
         {
-           console.log("TODO OK?");
+
+           var validator = $("#form").trigger("submit");
         }
-        // var validator = $("#form").trigger("submit");
         // console.log(validator);
 
 
@@ -224,7 +224,7 @@ function validarPorSeccion(seccion) {
             irASeccion(seccion);
             t.focus();
             // console.log('invalido')
-            console.error(t.attr('name') + " ");
+            console.log(t.attr('name') + " ");
 
             flag = false;
             return false;
