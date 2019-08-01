@@ -7,7 +7,8 @@
 
             <div class="card">
                 <div class="card-body">
-                <h5 class="card-title">Detalle Vivienda Nro Listado: {{$vivienda->numero_listado}}</h5>
+                <h4 class="card-title text-center">Vivienda ( Área: {{$vivienda->codigo_area}} - Nro Listado: {{$vivienda->numero_listado}} - Vivienda:{{$vivienda->numero_vivienda}})</h4>
+                <h4 class="card-title text-center">( Trimestre: {{$vivienda->trimestre}} - Semana: {{$vivienda->numero_semana}} - Año:{{$vivienda->ano4}})</h4>
                     <p class="card-text">
                           <table class="table table-sm table-stripped">
             <thead>
@@ -23,6 +24,7 @@
                     <tr>
                     <td scope="row">{{$h->numero_hogar}}</td>
                     <td>{{$h->individuos->count()}}</td>
+
                     @if($h->estado() != 'ok')
                         <td>
                             <div class="alert alert-warning alert-sm" role="alert">
@@ -31,11 +33,24 @@
                         </td>
                         <td>
                             @if($h->estado() =="individuo incompleto")
-                        <a name="" id="" class="btn btn-primary btn-sm" href="{{route('individuosEnHogar',['id'=>$h->id])}}" role="button">Completar Individuales</a>
-                            <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}"  role="button">Actualizar</a>
+                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('individuosEnHogar',['id'=>$h->id])}}" role="button">Completar Individuales</a>
+                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}"  role="button">Actualizar Hogar</a>
                             @else
-                        <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}" role="button">Completar Formulario</a>
+                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}" role="button">Completar Formulario</a>
                             @endif
+                        </td>
+                    @else
+                         <td>
+                            <div class="alert alert-success alert-sm" role="alert">
+                                 Completo
+                            </div>
+                        </td>
+                        <td>
+
+                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('individuosEnHogar',['id'=>$h->id])}}" role="button">Ver Individuales</a>
+                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}"  role="button">Actualizar Hogar</a>
+
+
                         </td>
                         @endif
 

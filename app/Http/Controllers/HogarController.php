@@ -98,7 +98,7 @@ class HogarController extends Controller
             if($request['id_seccion_'.$i])
             {
                 //id de seccion
-                $seccion_id = $request['id_seccion__'.$i];
+                $seccion_id = $request['id_seccion_'.$i];
                 $s = hogarSeccionSeis::find($seccion_id);
                 if($s)
                 {
@@ -119,7 +119,7 @@ class HogarController extends Controller
                     $s->T_Vi = $s->V2_M + $s->V21_M + $s->V22_M +$s->V3_M +$s->V4_M +$s->V5_M +$s->V8_M +$s->V9_M +$s->V10_M +$s->V11_M +$s->V12_M +$s->V18_M +$s->V19_AM;
                     $s->save();
                 }
-                
+
             }
         }
 

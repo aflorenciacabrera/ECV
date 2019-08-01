@@ -1,5 +1,6 @@
 
-
+var stepper;
+var paso = 1;
 $(document).ready(function () {
 
     $('input,textarea,select').filter('[required=required]').prev().append(" *")
@@ -31,6 +32,11 @@ $(document).ready(function () {
      */
     $(".next").click(function (e) {
         e.preventDefault();
+        if(paso >=10 )
+        {
+            return false;
+        }
+
         if (validar(paso)) {
             stepper.next();
             $("#form").scrollTop(0)
@@ -48,8 +54,11 @@ $(document).ready(function () {
 
     $(".back").click(function (e) {
         e.preventDefault();
-        paso--;
-        stepper.previous();
+       if(paso !== 1)
+       {
+           paso--;
+           stepper.previous();
+       }
     })
 
     /**

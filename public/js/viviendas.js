@@ -1,4 +1,6 @@
 entrevista_realizada = true;
+var stepper ;
+var paso = 1;
 
 function entrevistaRealizada(value)
 {
@@ -13,16 +15,46 @@ function entrevistaRealizada(value)
 
 
 }
+function getSelectedValue(selector) {
+    value = $(selector).children("option:selected").val();
+    return value;
+}
+
+function desactivar(selector) {
+
+    // $(selector).val("")
+    $(selector).attr("disabled", true);
+    setOpcional(selector);
+
+}
+
+function activar(selector, required = true, focus = true) {
+    $(selector).removeAttr('disabled')
+    if (focus) {
+        $(selector).focus();
+    }
+    if (required) {
+        setRequired(selector);
+    }
+}
+
+function setRequired(selector) {
+    $(selector).attr('required', true);
+}
+function setOpcional(selector) {
+    $(selector).removeAttr('required')
+}
+
 
 $(document).ready(function () {
     /**
      * inicio el bs-stepper
      *
      */
-    $('input,textarea,select').filter('[required=required]').prev().append(" *")
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 1;
+    $('input,textarea,select').filter('[required=required]').prev().append(" *")
     stepper.to(paso);
+    $(".back").hide();
 
 
 
@@ -56,14 +88,14 @@ $(document).ready(function () {
                         return
                     }
 
-                    // if(paso == 4 && editar)
-                    // {
-                    //     paso = 6;
-                    //     stepper.to(paso);
-                    //     //remove all requireds fields
-                    //     $('input,textarea,select').filter('[required=required]').removeAttr('required');
-                    //     return
-                    // }
+                    if(paso == 4 && editar)
+                    {
+                        paso = 6;
+                        stepper.to(paso);
+                        //remove all requireds fields
+                        $('input,textarea,select').filter('[required=required]').removeAttr('required');
+                        return
+                    }
 
 
                     stepper.next();
@@ -71,13 +103,21 @@ $(document).ready(function () {
                     paso++;
                     if(paso==7)
                     {
-                            $(".next").addClass("d-none");
+                            $(".next").hide();
+                    }
+                    else
+                    {
+                        $(".next").show();
                     }
                 }
                 else
                 {
                     console.log("Erro validar Paso "+paso)
                     // swal
+                }
+                if(paso>=1)
+                {
+                    $(".back").show();
                 }
 
         })
@@ -86,25 +126,40 @@ $(document).ready(function () {
      */
 
         $(".back").click(function(e){
-        e.preventDefault();
-            if (paso == 6 && !entrevista_realizada) {
-                paso = 2;
-                stepper.to(paso);
-                //remove all requireds fields
-                $('input,textarea,select').filter('[required=required]').removeAttr('required');
-                return
-            }
-            // if (paso == 6 && editar) {
-            //     paso = 4;
-            //     stepper.to(paso);
-            //     //remove all requireds fields
-            //     $('input,textarea,select').filter('[required=required]').removeAttr('required');
-            //     return
-            // }
+            e.preventDefault();
+            if(paso !== 1)
+            {
 
 
-        paso--;
-        stepper.previous();
+                    if (paso == 6 && !entrevista_realizada) {
+                        paso = 2;
+                        stepper.to(paso);
+                        //remove all requireds fields
+                        $('input,textarea,select').filter('[required=required]').removeAttr('required');
+                        return
+                    }
+
+                    if (paso == 6 && editar) {
+                        paso = 4;
+                        stepper.to(paso);
+                        //remove all requireds fields
+                        $('input,textarea,select').filter('[required=required]').removeAttr('required');
+                        return
+                    }
+
+
+                paso--;
+                stepper.previous();
+                if(paso == 1)
+                {
+                    $(this).hide();
+                    $(".next").show();
+                }
+                else
+                {
+                    $(".next").show();
+                }
+                }
         })
 
     /**
@@ -196,3 +251,5 @@ function validar(paso)
 
 
 })
+
+

@@ -16,6 +16,7 @@
         {
             //entonce relleno el campo
             input.val(individuo[name])
+            update();
 
         }
         else
@@ -32,12 +33,27 @@
         {
             //entonce relleno el campo
             input.val(individuo[name])
+            update();
         }
          console.log(name);
     })
 
+    // update validation
+    function update()
+{
+    update_participacion();
+    update_seccion_3()
+    update_seccion_4();
+    actualizar_seccion_5();
+
+}
+
 
 })
+</script>
+@else
+<script>
+editar = false;
 </script>
 @endif
 <script src="{{asset('js/viviendas.js')}}"></script>
@@ -55,7 +71,7 @@
             @csrf
 
             @if ($editar)
-                {{-- <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}"> --}}
+                <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}">
             @endif
         <div class="bs-stepper ">
             <div class="card ">
@@ -92,7 +108,7 @@
                     <div class="line"></div>
                         <div class="step" data-target="#seccion_5">
                             <button type="button" class="step-trigger" role="tab" aria-controls="seccion_5" id="seccion_5-trigger">
-                                <span class="bs-stepper-circle">5/6</span>
+                                <span class="bs-stepper-circle">5-6</span>
                                 <span class="bs-stepper-label">Condición de Residencia </br> Control de Cambios</span>
 
                             </button>
@@ -146,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer text-muted">
+                <div class="card-footer text-muted fixed-bottom">
                 <button class="btn btn-primary btn-lg back" >Atras</button>
                 <button class="btn btn-primary btn-lg next" >Siguiente</button>
                 </div>

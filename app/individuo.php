@@ -139,6 +139,15 @@ class individuo extends Model
 'PP07I',
 'PP07J',
 'PP07K',
+'PP08A_1',
+'PP08A_2',
+'PP08A_3',
+'PP08A_4',
+'PP08A_5',
+'PP08A_6',
+'PP08E_1',
+'PP08E_2',
+'PP08E_3',
 'PP08A',
 'PP08B',
 'PP08C',
@@ -239,5 +248,25 @@ class individuo extends Model
     public function caracteristicas()
     {
         return $this->hasOne('App\hogar_seccion_cuatro');
+    }
+
+    public function edad()
+    {
+        return $this->caracteristicas["CH06"];
+    }
+    public function sexo()
+    {
+        switch ($this->caracteristicas["CH04"]) {
+            case 1:
+                return "Hombre";
+                break;
+            case 2:
+                return "Mujer";
+                break;
+
+            default:
+                # code...
+                break;
+        };
     }
 }
