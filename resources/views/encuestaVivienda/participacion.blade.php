@@ -125,7 +125,7 @@ visitas_fecha_hora_4? activar("#visitas_fecha_hora_5",false,false):desactivar("#
 
 entrevistaRealizada == 1 && se_hizo_acompaniamiento == 1 ? activar(".se_hizo_acompaniamiento",true,false):desactivar(".se_hizo_acompaniamiento");
 entrevistaRealizada == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
-entrevistaRealizada == 1 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
+entrevistaRealizada == 2 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
 entrevistaRealizada == 2 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
 
 entrevistaRealizada == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");

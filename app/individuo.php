@@ -240,4 +240,24 @@ class individuo extends Model
     {
         return $this->hasOne('App\hogar_seccion_cuatro');
     }
+
+    public function edad()
+    {
+        return $this->caracteristicas["CH06"];
+    }
+    public function sexo()
+    {
+        switch ($this->caracteristicas["CH04"]) {
+            case 1:
+                return "Hombre";
+                break;
+            case 2:
+                return "Mujer";
+                break;
+
+            default:
+                # code...
+                break;
+        };
+    }
 }

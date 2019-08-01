@@ -153,6 +153,11 @@ $(document).ready(function () {
                 if(paso == 1)
                 {
                     $(this).hide();
+                    $(".next").show();
+                }
+                else
+                {
+                    $(".next").show();
                 }
                 }
         })
@@ -247,7 +252,4 @@ function validar(paso)
 
 })
 
-function update()
-{
 
-}

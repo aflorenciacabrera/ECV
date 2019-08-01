@@ -16,6 +16,7 @@
         {
             //entonce relleno el campo
             input.val(individuo[name])
+            update();
 
         }
         else
@@ -32,9 +33,20 @@
         {
             //entonce relleno el campo
             input.val(individuo[name])
+            update();
         }
          console.log(name);
     })
+
+    // update validation
+    function update()
+{
+    update_participacion();
+    update_seccion_3()
+    update_seccion_4();
+    actualizar_seccion_5();
+
+}
 
 
 })
@@ -59,7 +71,7 @@ editar = false;
             @csrf
 
             @if ($editar)
-                {{-- <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}"> --}}
+                <input type="hidden" name="vivienda_id" value="{{$vivienda->id}}">
             @endif
         <div class="bs-stepper ">
             <div class="card ">
