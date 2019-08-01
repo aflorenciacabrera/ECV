@@ -1,6 +1,6 @@
 entrevista_realizada = true;
 var stepper ;
-var paso = 4;
+var paso = 1;
 
 function entrevistaRealizada(value)
 {
@@ -103,7 +103,11 @@ $(document).ready(function () {
                     paso++;
                     if(paso==7)
                     {
-                            $(".next").addClass("d-none");
+                            $(".next").hide();
+                    }
+                    else
+                    {
+                        $(".next").show();
                     }
                 }
                 else

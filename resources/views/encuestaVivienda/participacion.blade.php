@@ -116,6 +116,8 @@ se_hizo_acompaniamiento = getSelectedValue("#acompaniamiento");
 
 
 entrevistaRealizada == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");
+
+
 visitas_fecha_hora_1? activar("#visitas_fecha_hora_2",false,false):desactivar("#visitas_fecha_hora_2");
 visitas_fecha_hora_2? activar("#visitas_fecha_hora_3",false,false):desactivar("#visitas_fecha_hora_3");
 visitas_fecha_hora_3? activar("#visitas_fecha_hora_4",false,false):desactivar("#visitas_fecha_hora_4");
@@ -123,6 +125,13 @@ visitas_fecha_hora_4? activar("#visitas_fecha_hora_5",false,false):desactivar("#
 
 entrevistaRealizada == 1 && se_hizo_acompaniamiento == 1 ? activar(".se_hizo_acompaniamiento",true,false):desactivar(".se_hizo_acompaniamiento");
 entrevistaRealizada == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
+entrevistaRealizada == 1 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
+entrevistaRealizada == 2 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
+
+entrevistaRealizada == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
+entrevistaRealizada == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
+
+
 }
 
 

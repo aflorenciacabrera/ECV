@@ -38,7 +38,7 @@
 
                     <tr>
                         {{-- 1 --}}
-                    <td class="fit"><input type="number" min=0 max=99  class="form-control form-control-sm primer-campo" @if($i==1) required @endif data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
+                    <td class="fit"><input type="number" min=0 max=99  class="form-control form-control-sm primer-campo"  data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
                         {{-- 2 --}}
                         <td class="fit"><input type="number" min=0 max=99 class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
                         {{-- 3 --}}
