@@ -62,15 +62,15 @@
             {{-- 3 --}}
             <td><select name="CH03_{{$index}}" id="CH03_{{$index}}" class="form-control form-control-sm">
                     <option value=> </option>
-                <option value="01" @if($item->caracteristicas->CH03 == "01" ) selected @endif>1. Jefe/a</option>
-                <option value="02" @if($item->caracteristicas->CH03 == "02" ) selected @endif>2. Conyuge/pareja</option>
-                <option value="03" @if($item->caracteristicas->CH03 == "03" ) selected @endif>3. Hijo/a Hijastro/a</option>
-                <option value="04" @if($item->caracteristicas->CH03 == "04" ) selected @endif>4. Yerno/Nuera</option>
-                <option value="05" @if($item->caracteristicas->CH03 == "05" ) selected @endif>5. Nieto/a</option>
-                <option value="06" @if($item->caracteristicas->CH03 == "06" ) selected @endif>6. Madre/Padre</option>
-                <option value="07" @if($item->caracteristicas->CH03 == "07" ) selected @endif>7. Suegro/a</option>
-                <option value="08" @if($item->caracteristicas->CH03 == "08" ) selected @endif>8. Hermano/a</option>
-                <option value="09" @if($item->caracteristicas->CH03 == "09" ) selected @endif>9. Otros familiares</option>
+                <option value="01" @if($item->caracteristicas->CH03 == "1" ) selected @endif>1. Jefe/a</option>
+                <option value="02" @if($item->caracteristicas->CH03 == "2" ) selected @endif>2. Conyuge/pareja</option>
+                <option value="03" @if($item->caracteristicas->CH03 == "3" ) selected @endif>3. Hijo/a Hijastro/a</option>
+                <option value="04" @if($item->caracteristicas->CH03 == "4" ) selected @endif>4. Yerno/Nuera</option>
+                <option value="05" @if($item->caracteristicas->CH03 == "5" ) selected @endif>5. Nieto/a</option>
+                <option value="06" @if($item->caracteristicas->CH03 == "6" ) selected @endif>6. Madre/Padre</option>
+                <option value="07" @if($item->caracteristicas->CH03 == "7" ) selected @endif>7. Suegro/a</option>
+                <option value="08" @if($item->caracteristicas->CH03 == "8" ) selected @endif>8. Hermano/a</option>
+                <option value="09" @if($item->caracteristicas->CH03 == "9" ) selected @endif>9. Otros familiares</option>
                 <option value="10" @if($item->caracteristicas->CH03 == "10" ) selected @endif>10. No Familiares</option>
                 </select> </td>
             {{-- 4 --}}
