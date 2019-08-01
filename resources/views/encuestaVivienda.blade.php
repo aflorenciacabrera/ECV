@@ -39,6 +39,10 @@
 
 })
 </script>
+@else
+<script>
+editar = false;
+</script>
 @endif
 <script src="{{asset('js/viviendas.js')}}"></script>
 

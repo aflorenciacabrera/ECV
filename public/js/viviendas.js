@@ -1,6 +1,6 @@
 entrevista_realizada = true;
 var stepper ;
-var paso = 3;
+var paso = 4;
 
 function entrevistaRealizada(value)
 {
