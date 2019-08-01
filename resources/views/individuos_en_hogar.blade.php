@@ -7,8 +7,9 @@
         <div class="card">
             <div class="card-body">
             <div class="row">
-                <div class="col-md-8">
-                <h5 class="card-title">Detalle <a href="{{route('verHogares',['id_vivienda'=>$hogar->vivienda->id])}}">  Vivienda {{$hogar->Vivienda->numero_listado}} </a> Hogar #{{$hogar->numero_hogar}}</h5>
+                <div class="col-md-12">
+                <h4 class="card-title text-center">Hogar Nro:{{$hogar->numero_hogar}}</br> ( Área: {{$hogar->vivienda->codigo_area}} - Nro Listado: {{$hogar->vivienda->numero_listado}} - Vivienda:{{$hogar->vivienda->numero_vivienda}})</h4>
+                <h4 class="card-title text-center">( Trimestre: {{$hogar->vivienda->trimestre}} - Semana: {{$hogar->vivienda->numero_semana}} - Año:{{$hogar->vivienda->ano4}})</h4>
                 </div>
 
             </div>

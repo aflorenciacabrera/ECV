@@ -250,7 +250,7 @@ J2 = $("#PP08J2").val();
 J3 = $("#PP08J3").val();
 K = getSelectedValue("#PP08K");
 
-activar(".PP08A",false,false);
+// activar(".PP08A",false,false);
 
 
 (A_1 || A_2 || A_3 || A_4 || A_5) || B == 1? activar(".PP08D",true,false):desactivar(".PP08D");
