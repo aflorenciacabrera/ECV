@@ -59,7 +59,11 @@ editar = false;
 <script src="{{asset('js/viviendas.js')}}"></script>
 
 <div class="container-fluid">
-
+    <div class="card">
+        <div class="card-header">
+            <h3>Formulario Vivienda</h3>
+        </div>
+    </div>
         <form method="POST" id="form"
 
         @if($editar)

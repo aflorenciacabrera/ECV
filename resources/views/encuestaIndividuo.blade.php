@@ -64,7 +64,7 @@ $(document).ready(function(){
 <div class="container-fluid">
     <div class="card">
             <div class="card-header text-center">
-
+                <h3>Formulario Individuo</h3>
             <h4>Area: {{$individuo->hogar->codigo_area}} - N° Listado: {{$individuo->hogar->numero_listado}} - Vivienda: {{$individuo->hogar->numero_vivienda}} - Hogar: {{$individuo->hogar->numero_hogar}}</h4>
             <h4>Semana: {{$individuo->hogar->numero_semana}} - Trimestre: {{$individuo->hogar->trimestre}}</h4>
             <h4>Nro Componente: {{$individuo->numero_componente}} -  {{$individuo->nombre}}</h4>
