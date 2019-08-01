@@ -72,7 +72,15 @@ $(document).ready(function(){
 </script>
 <script src="{{asset('js/hogares.js')}}"></script>
 <div class="container-fluid">
+           <div class="card">
+            <div class="card-header text-center">
 
+            <h4>Area: {{$hogar->codigo_area}} - N° Listado: {{$hogar->numero_listado}} - Vivienda: {{$hogar->numero_vivienda}} - Hogar: {{$hogar->numero_hogar}}</h4>
+            <h4>Semana: {{$hogar->numero_semana}} - Trimestre: {{$hogar->trimestre}}</h2>
+            </div>
+
+
+           </div>
         <form method="POST" action="{{route('crearEncuestaHogar')}}" id="form">
         <input type="hidden" name="hogar_id" value="{{$hogar->id}}">
             @csrf
@@ -192,7 +200,7 @@ $(document).ready(function(){
 
                     </div>
                 </div>
-                <div class="card-footer text-muted">
+                <div class="card-footer text-muted fixed-bottom">
                 <button class="btn btn-primary btn-lg back" >Atras</button>
                 <button class="btn btn-primary btn-lg next" >Siguiente</button>
                 </div>
