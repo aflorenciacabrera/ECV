@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group col-md-2">
                         <label for="tipoVivienda">Tipo de vivienda:</label>
-                        <input type="text" class="form-control form-control-sm" id="tipoVivienda" name="tipoVivienda" placeholder=""  maxlength="1" pattern="[A-Za-z]">
+                        <input type="text" required class="form-control form-control-sm" id="tipoVivienda" name="tipoVivienda" placeholder=""  maxlength="1" pattern="[A-Za-z]">
                 </div>
                 <div class="form-group col-md-2">
                         <label for="descripcion">Descripción:</label>
