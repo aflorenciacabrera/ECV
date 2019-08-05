@@ -80,8 +80,10 @@
 
         otra_viv_direc == 1 ? activar("#comparten_gastos") : desactivar("#comparten_gastos");
         otra_viv_direc == 1 && comparten_gastos == 2 ? activar("#N_hogar_viv") : desactivar("#N_hogar_viv");
-        otra_viv_direc == 1 && comparten_gastos == 2 && nhogar >= 1 ? activar("#domestico_cama_adentro") : desactivar("#domestico_cama_adentro");
-        otra_viv_direc == 1 && comparten_gastos == 2 && nhogar >= 1 ? activar("#pensionistas") : desactivar("#pensionistas");
+        // otra_viv_direc == 1 && comparten_gastos == 2 && nhogar >= 1 ? activar("#domestico_cama_adentro") : desactivar("#domestico_cama_adentro");
+        otra_viv_direc ? activar("#domestico_cama_adentro") : desactivar("#domestico_cama_adentro");
+        // otra_viv_direc == 1 && comparten_gastos == 2 && nhogar >= 1 ? activar("#pensionistas") : desactivar("#pensionistas");
+        otra_viv_direc ? activar("#pensionistas") : desactivar("#pensionistas");
         //
         otra_viv_direc ? activar("#IV1") : desactivar("#IV1");
 

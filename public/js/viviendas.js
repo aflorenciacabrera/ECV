@@ -113,7 +113,7 @@ $(document).ready(function () {
                 else
                 {
                     console.log("Erro validar Paso "+paso)
-                    // swal
+
                 }
                 if(paso>=1)
                 {
