@@ -81,7 +81,7 @@ b15 = getSelectedValue("#PP05B1");
 
 
 (K8 >= 1 || K7 == 5 || D_op6 == 7 || C_op6 == 7 || L6  ||b15 == 2 || b15 == 3)?activar("#PP09A"):desactivar("#PP09A");
-
+// activar("#PP09A")
 //
 }
 

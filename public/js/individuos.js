@@ -1,6 +1,6 @@
 
 var stepper;
-var paso = 7;
+var paso = 14;
 
 
 var entrevistaRealizada = null;

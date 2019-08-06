@@ -412,9 +412,9 @@ function update_parte_11(){
     B3 = $("#PP11B3").val();
     C = getSelectedValue("#PP11C");
     C99 = getSelectedValue("#PP11C99");
-    D = getSelectedValue("#PP11D");
-    E = getSelectedValue("#PP11E");
-    F = getSelectedValue("#PP11F");
+    D = $("#PP11D").val();
+    E = $("#PP11E").val();
+    F = $("#PP11F").val();
     G_ANO = $("#PP11G_ANO").val();
     G_MES = $("#PP11G_MES").val();
     G_DIA = $("#PP11G_DIA").val();
@@ -453,13 +453,12 @@ function update_parte_11(){
 
     H == 1 || J == 1 ? activar("#PP11K"):desactivar("#PP11K");
     H == 2 ? activar("#PP11I"):desactivar("#PP11I");
-    H == 3 || K2 == 7 || K3 > 1? activar("#PP11L"):desactivar("#PP11L");
+     K2 == 7 || K3 >= 1? activar("#PP11L"):desactivar("#PP11L");
 
-    L == 1 ? activar("#PP11L1"):desactivar("#PP11L1");
-    L == 2 ? activar("#PP11J"):desactivar("#PP11J");
+    H == 3 || I == 1 || L == 1 ? activar("#PP11L1"):desactivar("#PP11L1");
+    I == 2 ? activar("#PP11J"):desactivar("#PP11J");
     // J == 1 ? activar("#PP11K"):desactivar("#PP11K");
-
-
+    update_parte_9();
     /**
      * PAGINA 2
      * */
@@ -472,7 +471,7 @@ function update_parte_11(){
     // K3 > 1 =  ? activar("#PP11L"):desactivar("#PP11L");
 
     L1 == 1 || L1 == 3 || M >= 1? activar("#PP11M"):desactivar("#PP11M");
-    L1 == 2? activar("#PP11M1"):desactivar("#PP11M1");
+    L1 == 2 || M >=1? activar("#PP11M1"):desactivar("#PP11M1");
     // M1 >=1 ? activar("#PP11N"):desactivar("#PP11N");
     N >=1 ? activar("#PP11O"):desactivar("#PP11O");
     O == 1 ? activar("#PP11P"):desactivar("#PP11P");

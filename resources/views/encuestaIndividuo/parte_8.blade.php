@@ -262,7 +262,7 @@ if(A_6)
         $("#PP08A_3").prop('checked', false);
         $("#PP08A_4").prop('checked', false);
         $("#PP08A_5").prop('checked', false);
-        desactivar(".PP08D");
+        B == 1 ? activar(".PP08D") : desactivar(".PP08D");
 }
 (B == 2 || B == 3)?activar("#PP08C",true,false):desactivar("#PP08C");
 ((B == 4) || (D2>=0 && D3>=0 && D4>=0) || C)?activar(".PP08E",false,false):desactivar(".PP08E");
