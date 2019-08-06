@@ -9,7 +9,6 @@ $(document).ready(function () {
      */
 
     var stepper = new Stepper($('.bs-stepper')[0])
-    var paso = 1;
     stepper.to(paso);
 
 
@@ -38,9 +37,9 @@ $(document).ready(function () {
         }
 
         if (validar(paso)) {
+            paso++;
             stepper.next();
             $("#form").scrollTop(0)
-            paso++;
         }
         else {
             console.log("Erro validar Paso " + paso)
