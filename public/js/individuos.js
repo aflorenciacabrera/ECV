@@ -22,7 +22,7 @@ function activar(selector,required = true,focus = true) {
     $(selector).removeAttr('disabled')
     if(focus)
     {
-        $(selector).focus();
+        // $(selector).focus();
     }
     if(required)
     {
