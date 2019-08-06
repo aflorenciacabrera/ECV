@@ -134,7 +134,7 @@ function update_parte_4()
 
       (a >= 1)? activar("#PP04B"):desactivar("#PP04B");
       (a == 3)? activar("#PP04A_Esp"):desactivar("#PP04A_Esp");
-      (b)?activar("#PP04B1"):desactivar("#PP04B1");
+      (b)?activar("#PP04B1",false,false):desactivar("#PP04B1");
       (b1 == 1)?activar(".PP04B3"):desactivar(".PP04B3");
       (b1 == 1)?activar("#PP04B4"):desactivar("#PP04B4");
       (b1 == 1)?activar("#PP04B2"):desactivar("#PP04B2");

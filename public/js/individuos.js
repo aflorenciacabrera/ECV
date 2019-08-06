@@ -48,12 +48,15 @@ function setEntrevistaRealizada(value)
     {
         $("#numero_respondente").attr('required',true);
         $("#nombre_respondente").attr('required', true);
+        activar("#PP01A")
     }
     else
     {
         $("#numero_respondente").removeAttr('required');
         $("#nombre_respondente").removeAttr('required');
+        desactivar("#PP01A");
     }
+    
 }
 $(document).ready(function () {
 

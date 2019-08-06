@@ -16,7 +16,7 @@
             <label for="comparten_gastos ">2. ¿Todas las personas que residen en esta vivienda comparten los gastos de
                 comida y/o de alquiler,
                 impuestos, servicios, etc.?</label>
-            <select class="form-control form-control-sm" disabled onchange="update_seccion_3()" name="comparten_gastos"
+            <select class="form-control form-control-sm"  onchange="update_seccion_3()" name="comparten_gastos"
                 id="comparten_gastos">
                 <option value=""></option>
                 <option value="1">1. Si</option>
@@ -78,7 +78,7 @@
         comparten_gastos = getSelectedValue("#comparten_gastos");
         nhogar = $("#N_hogar_viv").val();;
 
-        otra_viv_direc == 1 ? activar("#comparten_gastos") : desactivar("#comparten_gastos");
+        otra_viv_direc ? activar("#comparten_gastos") : desactivar("#comparten_gastos");
         otra_viv_direc == 1 && comparten_gastos == 2 ? activar("#N_hogar_viv") : desactivar("#N_hogar_viv");
         // otra_viv_direc == 1 && comparten_gastos == 2 && nhogar >= 1 ? activar("#domestico_cama_adentro") : desactivar("#domestico_cama_adentro");
         otra_viv_direc ? activar("#domestico_cama_adentro") : desactivar("#domestico_cama_adentro");
