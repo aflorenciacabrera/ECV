@@ -115,7 +115,7 @@ function update_parte_2(){
     p1_e = getSelectedValue("#PP01E");
     p1_g = getSelectedValue("#PP01G");
     p1_h = getSelectedValue("#PP01H");
-    (p1_d == 3 || p1_e == 3 || p1_e == 4 || p1_g ==2 || p1_g == 9 || p1_h == 2 || p1_h == 9 || p1_e == 1 || p1_e == 2) ?activar("#PP02Obser"):desactivar("#PP02Obser");
+    (p1_d == 3 || p1_e == 3 || p1_e == 4 || p1_g ==2 || p1_g == 9 || p1_h == 2 || p1_h == 9 || p1_e == 1 || p1_e == 2) ?activar("#PP02Obser",false,false):desactivar("#PP02Obser");
     (p1_d == 3 || p1_e == 3 || p1_e == 4 || p1_g ==2 || p1_g == 9 || p1_h == 2 || p1_h == 9) ?activar("#PP02A"):desactivar("#PP02A");
     (p1_e == 1 || p1_e == 2) ?activar("#PP02F"):desactivar("#PP02F");
 
@@ -134,7 +134,8 @@ function update_parte_2(){
     (b == 1)?activar("#PP02C"):desactivar("#PP02C");
     (b == 2)?activar("#PP02D"):desactivar("#PP02D");
     (d == 2)?activar("#PP02E"):desactivar("#PP02E");
-    // (d == 1)?activar("#PP010A"):desactivar("#PP010A");
+
+    (d == 1 || e == 1 || e == 2 || c >= 1 || g == 1)?activar("#PP10A"):desactivar("#PP10A");//TODO saltar a la 10
     (f == 1)?activar("#PP02G"):desactivar("#PP02G");
     (f == 2 || a == 3 || a == 4 || e == 3 || e == 4 || e == 5)?activar("#PP02H"):desactivar("#PP02H");
     (h == 1 || h == 2 || g == 2)?activar("#PP02I"):desactivar("#PP02I");
@@ -142,7 +143,7 @@ function update_parte_2(){
     (c == 8)?activar("#PP02C_Esp"):desactivar("#PP02C_Esp");
     (e == 5)?activar("#PP02E_Esp"):desactivar("#PP02E_Esp");
 
-
+    update_parte_9();
 
 
 

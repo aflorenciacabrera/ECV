@@ -103,7 +103,7 @@ referencia)
 
 function update_parte_12(){
 
-// activar("#PP12A")
+
 A= getSelectedValue("#PP12A");
 B1= $("#PP12B1").val();
 B12= $("#PP12B12").val();
