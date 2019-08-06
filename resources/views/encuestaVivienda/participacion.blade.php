@@ -14,8 +14,8 @@
                 <div class="form-group col-md-2">
                         <label for="sem_referencia">Semana de referencia:</label>
 
-                        <input type="datetime-local" min="2019-01-01T00:00" max="2019-12-31T23:59" class="form-control form-control-sm sem_referencia" id="sem_referencia"  onchange="update_participacion()" name="sem_referencia" placeholder="desde" required>
-                        <input type="datetime-local" min="2019-01-01T00:00" max="2019-12-31T23:59" class="form-control form-control-sm sem_referencia"   onchange="update_participacion()" name="sem_referencia_2" placeholder="hasta" required>
+                        <input type="date" min="2019-01-01" max="2019-12-31" class="form-control form-control-sm sem_referencia" id="sem_referencia"  onchange="update_participacion()" name="sem_referencia" placeholder="desde" required>
+                        <input type="date" min="2019-01-01" max="2019-12-31" class="form-control form-control-sm sem_referencia"   onchange="update_participacion()" name="sem_referencia_2" placeholder="hasta" required>
                 </div>
                 <div class="form-group col-md-3">
                         <label for="cant_hogar">Cantidad de hogares en la vivienda:</label>

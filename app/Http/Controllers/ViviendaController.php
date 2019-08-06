@@ -34,7 +34,7 @@ class ViviendaController extends Controller
         $v->fill($request->all());
         $v->save();
 
-        // return view('encuestaVivienda')->with('editar', true);
+
         return redirect(route("verListadoVivienda"));
     }
 
