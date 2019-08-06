@@ -154,7 +154,7 @@ function update_parte_5()
             h = getSelectedValue("#PP05H");
 
             // activar("#PP05A");
-            (a == 1 || b == 2) ? activar(".PP05C"):desactivar(".PP05C");
+            (a == 1 || b1 == 1) ? activar(".PP05C"):desactivar(".PP05C");
             (a == 3 || b == 1) ? activar("#PP07A"):desactivar("#PP07A");
             a == 2 ? activar("#PP05B"):desactivar("#PP05B");
             b == 2 ? activar("#PP05B1"):desactivar("#PP05B1");
@@ -169,9 +169,9 @@ function update_parte_5()
             //TODO salta a 6
             (h >= 1)? activar("#PP06A"):desactivar("#PP06A");
             //TODO salta a 9
-            (b1 == 2 || b1 == 3) ? activar("#PP09A"):desactivar("#PP09A");
 
-            update_parte_6();
+
+            update_parte_9();
 
 }
 </script>

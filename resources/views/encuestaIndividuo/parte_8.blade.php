@@ -282,7 +282,8 @@ if(E_3)
 (H)?activar("#PP08I",true,false):desactivar("#PP08I");
 (I ==1 || I == 2 || I == 3)?activar(".PP08J",true,false):desactivar(".PP08J");
 (I ==5 || J1 || J2 || J3)?activar("#PP08K",true,false):desactivar("#PP08K");
-(K >= 1)?activar("#PP09A"):desactivar("#PP09A");
+
+update_parte_9();
 
 
 }

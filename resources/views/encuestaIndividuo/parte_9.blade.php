@@ -70,6 +70,19 @@ A == 3 ? activar("#PP09A_ESP"):desactivar("#PP09A_ESP");
 B >= 1 ? activar("#PP09C"):desactivar("#PP09C");
 B == 10 ? activar("#PP09B_ESP"):desactivar("#PP09B_ESP");
 C >= 1 || I2 == 1 || P11_T == 1 || P11_J == 2 || P11_L >= 1 ||  P11_O == 2 || P11_O == 3? activar("#PP12A"):desactivar("#PP12A");
+
+//
+K8 = getSelectedValue("#PP08K");
+K7 = getSelectedValue("#PP07K");
+D_op6 = getSelectedValue("#PP06C_op");
+C_op6 = getSelectedValue("#PP06D_op");
+L6 = $("#PP06L").val();
+b15 = getSelectedValue("#PP05B1");
+
+
+(K8 >= 1 || K7 == 5 || D_op6 == 7 || C_op6 == 7 || L6  ||b15 == 2 || b15 == 3)?activar("#PP09A"):desactivar("#PP09A");
+
+//
 }
 
 </script>

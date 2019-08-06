@@ -282,7 +282,7 @@ K = getSelectedValue("#PP07K");
 //TODO salta a 8
 (K >= 1 && K<= 4)? activar(".PP08A",false):desactivar(".PP08A");
 //TODO salta a 9
-(K == 5)? activar("#PP09A"):desactivar("#PP09A");
+update_parte_9();
 
 setOpcional("#PP07G5");
 setOpcional("#PP07F5");

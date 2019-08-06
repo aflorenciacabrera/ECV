@@ -14,7 +14,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="PP06B">6b. ¿Cuántos socios, (familiares o no), son en total (incluyendo a ……………………………)?</label>
-                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06B" id="PP06B" step="1" min="0" max="99">
+                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06B" id="PP06B" step="1" min="0" max="99" pattern=[0-9]*>
             </div>
              <div class="form-group col-md-6">
                     <label for="PP06C">6c. Por el mes de…………………. ¿Cuánto ganó en su negocio/empresa/actividad?</label>
@@ -152,8 +152,8 @@ J = getSelectedValue("#PP06J");
 H_Esp = $("#PP06H_Esp").val();
 L = getSelectedValue("#PP06L");
 K = getSelectedValue("#PP06K");
-k_sem = $("#PP06k_sem").val();
-k_mes = $("#PP06k_mes").val();
+k_sem = $("#PP06K_sem").val();
+k_mes = $("#PP06K_mes").val();
 
 // activar("#PP06A");
 
@@ -175,10 +175,11 @@ B? setOpcional("#PP06D_op"):false;
 //
 (D || D_op == 8 )? activar("#PP06E"):desactivar("#PP06E");
 //TODO pasa al 9
-(D_op == 7 || C_op == 7)? activar("#PP09A"):desactivar("#PP09A");
+
 //
 (E == 1)? activar("#PP06F"):desactivar("#PP06F");
-(E == 2 || C || C_op == 8 || G || G_op == 8 || H >= 1)? activar("#PP06I"):desactivar("#PP06I");
+( C || C_op == 8 || G || G_op == 8 || H >= 1)? activar("#PP06I"):desactivar("#PP06I");
+(E == 2 || E == 3) ? activar("#PP06H"):desactivar("#PP06H");
 
 (F == 1)? activar("#PP06G"):desactivar("#PP06G");
 (F == 1)? activar("#PP06G_op"):desactivar("#PP06G_op");
@@ -192,9 +193,9 @@ B? setOpcional("#PP06D_op"):false;
 (J >= 1)? activar("#PP06K"):desactivar("#PP06K");
 (K == 1 || K == 2 )? activar("#PP06K_sem"):desactivar("#PP06K_sem");
 (K == 3)? activar("#PP06K_mes"):desactivar("#PP06K_mes");
-(k_mes || k_sem)?activar("#PP06L"):desactivar("#PP06L");
+(k_mes  || k_sem) & K ?activar("#PP06L"):desactivar("#PP06L");
 
-
+update_parte_9();
 
 
 }

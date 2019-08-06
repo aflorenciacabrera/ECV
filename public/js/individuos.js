@@ -1,6 +1,6 @@
 
 var stepper;
-var paso = 1;
+var paso = 7;
 
 
 var entrevistaRealizada = null;
@@ -56,7 +56,7 @@ function setEntrevistaRealizada(value)
         $("#nombre_respondente").removeAttr('required');
         desactivar("#PP01A");
     }
-    
+
 }
 $(document).ready(function () {
 
