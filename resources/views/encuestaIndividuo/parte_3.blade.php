@@ -155,7 +155,7 @@
             </div>
         </div>
         <hr>
-        <small id="" class="form-text text-muted"><h5>OCUPADOS QUE NO TRABAJARON EN LA SEMANA</h5> </small>
+        <small id="" class="form-text text-muted"><h5>PARA TODOS LOS OCUPADOS</h5> </small>
         <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="PP03I">3i. En los últimos 30 días, ¿buscó trabajar más horas? </label>
@@ -232,7 +232,7 @@ function update_parte_3()
        (c == 2 || c == 1) || (b == 1 || b == 2 || b == 3 || b == 4 || b == 5 || b == 9) ? activar("#PP03G"): desactivar("#PP03G");
 
        (g == 1) ? activar("#PP03H"): desactivar("#PP03H");
-       (g == 1 || h >= 1) ? activar("#PP03I"): desactivar("#PP03I");
+       (g == 2 || h >= 1) ? activar("#PP03I"): desactivar("#PP03I");
        (i == 1 || i == 2  || i == 9) ? activar("#PP03J"): desactivar("#PP03J");
        (j == 1) ? activar("#PP03K"): desactivar("#PP03K");
 
