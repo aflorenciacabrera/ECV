@@ -208,7 +208,7 @@
                     <option value="99"  @if($item->caracteristicas->CH14 == "99" ) selected @endif>99 Ns/Nr</option>
                     </select>  </td>
                 {{-- 22 --}}
-            <td><select name="CH15_{{$index}}" id="CH15_{{$index}}" value="{{$item->caracteristicas->CH15}}" class="form-control form-control-sm opcional" data-opcional="#CH15_Cod_{{$index}}" data-condicion="5">
+            <td><select name="CH15_{{$index}}" id="CH15_{{$index}}" value="{{$item->caracteristicas->CH15}}" class="form-control form-control-sm opcional" data-opcional="#CH15_Cod_{{$index}}" data-condicion="5,3">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH15 == "1" ) selected @endif >1. En esta localidad</option>
                     <option value="2"  @if($item->caracteristicas->CH15 == "2" ) selected @endif >2. En otra localidad de esta provincia </option>
@@ -219,7 +219,7 @@
                     <input type="text" class="form-control form-control-sm" name="CH15_Cod_{{$index}}" id="CH15_Cod_{{$index}}" value="{{$item->caracteristicas->CH15_Cod}}" placeholder=""  maxlength="3" disabled>
                  </td>
                 {{-- 23 --}}
-            <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="5">
+            <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="5,3">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH16 == "1" ) selected @endif >1. En esta localidad</option>
                     <option value="2"  @if($item->caracteristicas->CH16 == "2" ) selected @endif >2. En otra localidad de esta provincia </option>
@@ -266,7 +266,7 @@ $(document).ready(function(){
     $(".opcional").change(function(){
 
         target = $(this).data("opcional");
-        condicion = $(this).data("condicion");
+        condicion = $(this).data("condicion");//TODO condicion multiple IN(condicion)
         value = $(this).children("option:selected").val();
         if(value == condicion)
         {
