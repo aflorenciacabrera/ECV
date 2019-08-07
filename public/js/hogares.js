@@ -1,6 +1,38 @@
 
 var stepper;
 var paso = 1;
+function getSelectedValue(selector) {
+    value = $(selector).children("option:selected").val();
+    return value;
+}
+
+function desactivar(selector) {
+
+    // $(selector).val("")
+    $(selector).attr("disabled", true);
+    setOpcional(selector);
+
+}
+
+function activar(selector, required = true, focus = true) {
+    $(selector).removeAttr('disabled')
+    if (focus) {
+        // $(selector).focus();
+    }
+    if (required) {
+        setRequired(selector);
+    }
+}
+
+function setRequired(selector) {
+    $(selector).attr('required', true);
+}
+function setOpcional(selector) {
+    $(selector).removeAttr('required')
+}
+
+
+
 $(document).ready(function () {
 
     $('input,textarea,select').filter('[required=required]').prev().append(" *")

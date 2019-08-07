@@ -192,8 +192,9 @@ B? setOpcional("#PP06D_op"):false;
 (I >= 1)? activar("#PP06J"):desactivar("#PP06J");
 (J >= 1)? activar("#PP06K"):desactivar("#PP06K");
 (K == 1 || K == 2 )? activar("#PP06K_sem"):desactivar("#PP06K_sem");
+(K == 1 || K == 2 || K == 3)? activar("#PP06L"):desactivar("#PP06L");
 (K == 3)? activar("#PP06K_mes"):desactivar("#PP06K_mes");
-(k_mes  || k_sem) & K ?activar("#PP06L"):desactivar("#PP06L");
+// (k_mes  || k_sem) & K ?activar("#PP06L"):desactivar("#PP06L");
 
 update_parte_9();
 

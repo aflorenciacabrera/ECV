@@ -70,7 +70,7 @@
                         </select>
                         <br>
                         <label for="modalidad_aplicacion">Modalidad de Aplicación</label>
-                        <select class="form-control form-control-sm depende_de_entrevista_realizada" disabled onchange="update_participacion()" name="modalidad_aplicacion" id="modalidad_aplicacion"  >
+                        <select class="form-control form-control-sm "  onchange="update_participacion()" name="modalidad_aplicacion" id="modalidad_aplicacion"  >
                             <option value=""></option>
                                 <option value="1">1. Personal Completa</option>
                                 <option value="2">2. Personal Telefónico</option>
@@ -78,15 +78,15 @@
                         </select>
                         <br>
                         <label for="encuestador">Encuestador</label>
-                        <input type="text" class="form-control form-control-sm depende_de_entrevista_realizada" disabled onchange="update_participacion()" name="encuestador" id="encuestador" >
+                        <input type="text" class="form-control form-control-sm " required  onchange="update_participacion()" name="encuestador" id="encuestador" >
                         <label for="numero_encuestador">Nº</label>
-                        <input type="text" class="form-control form-control-sm depende_de_entrevista_realizada" disabled onchange="update_participacion()" name="numero_encuestador" id="numero_encuestador" >
+                        <input type="text" class="form-control form-control-sm " required  onchange="update_participacion()" name="numero_encuestador" id="numero_encuestador" >
                 </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-4">
                         <label for="acompaniamiento">¿Se hizo acompañamiento?</label>
-                        <select class="form-control form-control-sm depende_de_entrevista_realizada" id="acompaniamiento" disabled onchange="update_participacion()" name="acompaniamiento">
+                        <select class="form-control form-control-sm " id="acompaniamiento" required  onchange="update_participacion()" name="acompaniamiento">
                             <option value=""></option>
                                 <option value="1">1. Si</option>
                                 <option value="2">2. No</option>
@@ -94,11 +94,11 @@
                 </div>
                 <div class="form-group col-md-4">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" class="form-control form-control-sm  se_hizo_acompaniamiento" id="nombre" disabled onchange="update_participacion()" name="nombre" >
+                        <input type="text" class="form-control form-control-sm se_hizo_acompaniamiento " id="nombre"   onchange="update_participacion()" name="nombre" >
                 </div>
                 <div class="form-group col-md-4">
                         <label for="numero_particion">N°:</label>
-                        <input type="number" min="0" step="1" max="999" class="form-control form-control-sm  se_hizo_acompaniamiento" id="numero_particion" disabled onchange="update_participacion()" name="numero_particion" >
+                        <input type="number" min="0" step="1" max="999" class="form-control form-control-sm se_hizo_acompaniamiento "  id="numero_particion"  onchange="update_participacion()" name="numero_particion" >
                 </div>
         </div>
 
@@ -125,7 +125,7 @@ visitas_fecha_hora_2? activar("#visitas_fecha_hora_3",false,false):desactivar("#
 visitas_fecha_hora_3? activar("#visitas_fecha_hora_4",false,false):desactivar("#visitas_fecha_hora_4");
 visitas_fecha_hora_4? activar("#visitas_fecha_hora_5",false,false):desactivar("#visitas_fecha_hora_5");
 
-entrevistaRealizada == 1 && se_hizo_acompaniamiento == 1 ? activar(".se_hizo_acompaniamiento",true,false):desactivar(".se_hizo_acompaniamiento");
+se_hizo_acompaniamiento == 1 ? activar(".se_hizo_acompaniamiento",true,false):desactivar(".se_hizo_acompaniamiento");
 entrevistaRealizada == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
 entrevistaRealizada == 2 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
 entrevistaRealizada == 2 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");

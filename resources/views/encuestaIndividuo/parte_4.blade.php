@@ -124,10 +124,9 @@ function update_parte_4()
       c = getSelectedValue("#PP04C");
       c99 = getSelectedValue("#PP04C99");
       g = getSelectedValue("#PP04G");
-
-
-
-
+    PP04B3_ANO = $("#PP04B3_ANO").val();
+PP04B3_MES = $("#PP04B3_MES").val();
+PP04B3_DIA = $("#PP04B3_DIA").val();
 
       (p3_j == 2 || p3_j == 9 || p3_k >= 1)?activar("#PP04A"):desactivar("#PP04A");
     //   activar("#PP04A");//para prueba
@@ -135,7 +134,13 @@ function update_parte_4()
       (a >= 1)? activar("#PP04B"):desactivar("#PP04B");
       (a == 3)? activar("#PP04A_Esp"):desactivar("#PP04A_Esp");
       (b)?activar("#PP04B1",false,false):desactivar("#PP04B1");
-      (b1 == 1)?activar(".PP04B3"):desactivar(".PP04B3");
+      (b1 == 1)?activar(".PP04B3",false):desactivar(".PP04B3");
+
+        PP04B3_ANO || PP04B3_DIA ? desactivar("#PP04B3_MES",false):false;
+        PP04B3_ANO || PP04B3_MES ? desactivar("#PP04B3_DIA",false):false;
+        PP04B3_DIA || PP04B3_MES ? desactivar("#PP04B3_ANO",false):false;
+
+
       (b1 == 1)?activar("#PP04B4"):desactivar("#PP04B4");
       (b1 == 1)?activar("#PP04B2"):desactivar("#PP04B2");
 
@@ -144,7 +149,7 @@ function update_parte_4()
       (c == 99)?activar("#PP04C99"):desactivar("#PP04C99");
 
       (!(b1 == 1) && c >= 1)?activar("#PP04G"):desactivar("#PP04G");
-      (!(b1 == 1) && c >= 1)?activar("#PP04F"):desactivar("#PP04F");
+      (!(b1 == 1) && c >= 1)?activar("#PP04F",false):desactivar("#PP04F");
       (!(b1 == 1) && c >= 1)?activar("#PP04E"):desactivar("#PP04E");
       (!(b1 == 1) && c >= 1)?activar("#PP04D"):desactivar("#PP04D");
 

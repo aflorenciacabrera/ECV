@@ -146,7 +146,7 @@
           {{-- 15 --}}
             <td><input type="number" class="form-control form-control-sm" name="CH10E_{{$index}}" id="CH10E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1" min="0" max="99"></td>
             {{-- 16 --}}
-            <td><select name="CH10M_{{$index}}" id="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="7">
+            <td><select name="CH10M_{{$index}}" id="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="8">
                     <option value=> </option>
                     <option value="1"  @if($item->caracteristicas->CH10_M == "1" ) selected @endif >1. Porque me costaba estudiar</option>
                     <option value="2"  @if($item->caracteristicas->CH10_M == "2" ) selected @endif >2. Porque tenía que trabajar</option>
@@ -154,7 +154,8 @@
                     <option value="4"  @if($item->caracteristicas->CH10_M == "4" ) selected @endif >4. Por maternidad/paternidad</option>
                     <option value="5"  @if($item->caracteristicas->CH10_M == "5" ) selected @endif >5. Por enfermedad</option>
                     <option value="6"  @if($item->caracteristicas->CH10_M == "6" ) selected @endif >6. Por problemas de consumo de alcohol/drogas</option>
-                    <option value="7"  @if($item->caracteristicas->CH10_M == "7" ) selected @endif >7. Otros (especificar)</option>
+                    <option value="7"  @if($item->caracteristicas->CH10_M == "7" ) selected @endif >7. Finalizo</option>
+                    <option value="8"  @if($item->caracteristicas->CH10_M == "8" ) selected @endif >8. Otros (especificar)</option>
                     </select>
                  <input type="text" disabled class="form-control form-control-sm" name="CH10M_Esp_{{$index}}" id="CH10M_Esp_{{$index}}" maxlength="45" >
             </td>
@@ -175,15 +176,20 @@
           {{-- 19 --}}
             <td><select name="CH12_{{$index}}" id="CH12_{{$index}}" value="{{$item->caracteristicas->CH12}}" class="form-control form-control-sm">
                     <option value=> </option>
-                    <option value="1"  @if($item->caracteristicas->CH12 == "1" ) selected @endif >1. Jardin/Prescolar</option>
-                    <option value="2"  @if($item->caracteristicas->CH12 == "2" ) selected @endif >2. Primario</option>
-                    <option value="3"  @if($item->caracteristicas->CH12 == "3" ) selected @endif >3. EGB</option>
-                    <option value="4"  @if($item->caracteristicas->CH12 == "4" ) selected @endif >4. Secundario</option>
-                    <option value="5"  @if($item->caracteristicas->CH12 == "5" ) selected @endif >5. Polimodal</option>
-                    <option value="6"  @if($item->caracteristicas->CH12 == "6" ) selected @endif >6. Terciario</option>
-                    <option value="7"  @if($item->caracteristicas->CH12 == "7" ) selected @endif >7. Universitario</option>
-                    <option value="8"  @if($item->caracteristicas->CH12 == "8" ) selected @endif >8. Posgrado Universitario</option>
-                    <option value="9"  @if($item->caracteristicas->CH12 == "9" ) selected @endif >9. Educación Especial (discapacidad)</option>
+                    <option value="1"  @if($item->caracteristicas->CH12 == "1" ) selected @endif >1. Mitaí Roga</option>
+                    <option value="2"  @if($item->caracteristicas->CH12 == "2" ) selected @endif >2. CDI</option>
+                    <option value="3"  @if($item->caracteristicas->CH12 == "3" ) selected @endif >3. Guarderia o Jardin Maternal</option>
+                    <option value="4"  @if($item->caracteristicas->CH12 == "4" ) selected @endif >4. Jardin</option>
+                    <option value="5"  @if($item->caracteristicas->CH12 == "5" ) selected @endif >5. Primario</option>
+                    <option value="6"  @if($item->caracteristicas->CH12 == "6" ) selected @endif >6. EGB</option>
+                    <option value="7"  @if($item->caracteristicas->CH12 == "7" ) selected @endif >7. Secundario</option>
+                    <option value="8"  @if($item->caracteristicas->CH12 == "8" ) selected @endif >8. Polimodal</option>
+                    <option value="9"  @if($item->caracteristicas->CH12 == "9" ) selected @endif >9. CENS</option>
+                    <option value="10"  @if($item->caracteristicas->CH12 == "10" ) selected @endif >10. Fines</option>
+                    <option value="11"  @if($item->caracteristicas->CH12 == "11" ) selected @endif >11. Terciario</option>
+                    <option value="12"  @if($item->caracteristicas->CH12 == "12" ) selected @endif >12. Universitario</option>
+                    <option value="13"  @if($item->caracteristicas->CH12 == "13" ) selected @endif >13. Posgrado Universitario</option>
+                    <option value="14"  @if($item->caracteristicas->CH12 == "14" ) selected @endif >14. Educación Especial </option>
                     </select> </td>
          {{-- 20 --}}
             <td><select name="CH13_{{$index}}" id="CH13_{{$index}}" value="{{$item->caracteristicas->CH13}}" class="form-control form-control-sm">
