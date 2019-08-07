@@ -238,55 +238,55 @@
 
 function update_parte_7()
 {
-A = getSelectedValue("#PP07A");
-B = getSelectedValue("#PP07B");
-// B_Esp = getSelectedValue("#PP07B_Esp");
-C = getSelectedValue("#PP07C");
-D = getSelectedValue("#PP07D");
-E = getSelectedValue("#PP07E");
-G1 = getSelectedValue("#PP07G1");
-G2 = getSelectedValue("#PP07G2");
-G3 = getSelectedValue("#PP07G3");
-G4 = getSelectedValue("#PP07G4");
-G5 = getSelectedValue("#PP07G5");
-F1 = getSelectedValue("#PP07F1");
-F2 = getSelectedValue("#PP07F2");
-F3 = getSelectedValue("#PP07F3");
-F4 = getSelectedValue("#PP07F4");
-F5 = getSelectedValue("#PP07F5");
-F11 = getSelectedValue("#PP07F11");
-F12 = getSelectedValue("#PP07F12");
-F13 = getSelectedValue("#PP07F13");
-H = getSelectedValue("#PP07H");
-I = getSelectedValue("#PP07I");
-J = getSelectedValue("#PP07J");
-K = getSelectedValue("#PP07K");
+    A = getSelectedValue("#PP07A");
+    B = getSelectedValue("#PP07B");
+    // B_Esp = getSelectedValue("#PP07B_Esp");
+    C = getSelectedValue("#PP07C");
+    D = getSelectedValue("#PP07D");
+    E = getSelectedValue("#PP07E");
+    G1 = getSelectedValue("#PP07G1");
+    G2 = getSelectedValue("#PP07G2");
+    G3 = getSelectedValue("#PP07G3");
+    G4 = getSelectedValue("#PP07G4");
+    G5 = getSelectedValue("#PP07G5");
+    F1 = getSelectedValue("#PP07F1");
+    F2 = getSelectedValue("#PP07F2");
+    F3 = getSelectedValue("#PP07F3");
+    F4 = getSelectedValue("#PP07F4");
+    F5 = getSelectedValue("#PP07F5");
+    F11 = getSelectedValue("#PP07F11");
+    F12 = getSelectedValue("#PP07F12");
+    F13 = getSelectedValue("#PP07F13");
+    H = getSelectedValue("#PP07H");
+    I = getSelectedValue("#PP07I");
+    J = getSelectedValue("#PP07J");
+    K = getSelectedValue("#PP07K");
 
-// activar("#PP07A");
+    // activar("#PP07A");
 
 
-(A >= 1 && A <= 4)? activar("#PP07B"):desactivar("#PP07B");
-((A >= 5 && A <= 9) || B )>= 1 ? activar("#PP07C"):desactivar("#PP07C");
-(B == 8) ? activar("#PP07B_Esp"):desactivar("#PP07B_Esp");
-(C == 1 || C == 9) ? activar("#PP07D"):desactivar("#PP07D");
+    (A >= 1 && A <= 4)? activar("#PP07B"):desactivar("#PP07B");
+    ((A >= 5 && A <= 9) || B )>= 1 ? activar("#PP07C"):desactivar("#PP07C");
+    (B == 8) ? activar("#PP07B_Esp"):desactivar("#PP07B_Esp");
+    (C == 1 || C == 9) ? activar("#PP07D"):desactivar("#PP07D");
 
-(D >= 1) ? activar("#PP07E"):desactivar("#PP07E");
-//
-(F1 >=1 && F2 >=1  && F3 >=1 && F4 >=1)?activar(".PP07F1"):desactivar(".PP07F1");
-(F11 >= 1 && F12 >= 1 && F13 >= 1)?activar(".PP07G"):desactivar(".PP07G");
+    (D >= 1) ? activar("#PP07E"):desactivar("#PP07E");
+    //
+    (F1 >=1 && F2 >=1  && F3 >=1 && F4 >=1)?activar(".PP07F1"):desactivar(".PP07F1");
+    (F11 >= 1 && F12 >= 1 && F13 >= 1)?activar(".PP07G"):desactivar(".PP07G");
+    //
+    (G1 >= 1 && G2 >= 1 && G3 >= 1 && G4 >= 1)?activar("#PP07H"):desactivar("#PP07H");
+    (H == 1) || (I == 1 || I == 2) ? activar("#PP07J"):desactivar("#PP07J");
+    (H == 2) ? activar("#PP07I"):desactivar("#PP07I");
+    (J >= 1) ? activar("#PP07K"):desactivar("#PP07K");
+    //TODO salta a 8
+    (K >= 1 && K<= 4)? activar(".PP08A",false,false):desactivar(".PP08A");
+    //TODO salta a 9
+    update_parte_9();
+    update_parte_4();
 
-(G1 >= 1 && G2 >= 1 && G3 >= 1 && G4 >= 1)?activar("#PP07H"):desactivar("#PP07H");
-(H == 1) || (I == 1 || I == 2)? activar("#PP07J"):desactivar("#PP07J");
-(H == 2) ? activar("#PP07I"):desactivar("#PP07I");
-(J >= 1)?activar("#PP07K"):desactivar("#PP07K");
-//TODO salta a 8
-(K >= 1 && K<= 4)? activar(".PP08A",false,false):desactivar(".PP08A");
-//TODO salta a 9
-update_parte_9();
-update_parte_4();
-
-setOpcional("#PP07G5");
-setOpcional("#PP07F5");
+    setOpcional("#PP07G5");
+    setOpcional("#PP07F5");
 
 
 }
