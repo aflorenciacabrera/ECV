@@ -44,16 +44,26 @@ class HomeController extends Controller
     public function make(){
 
         $users = [
-        ["Alberto Ojeda",   "aojeda", "262",'encuestador'],
-        ["Rosario Garrido", "rgarrido","479",'encuestador'],
-        ["Silvia Gauna" ,   "sgauna","898",'encuestador'],
-        ["Micaela Miranda" ,'mmiranda' ,"592",'encuestador'],
-        ["Anahi Rodriguez" , 'arodriguez',"861",'encuestador'],
-        ["Alejandro González" ,'agonzalez', "098",'encuestador'],
-        ["Karana Solís" , 'ksolis',"828",'encuestador'],
-        ["Ayelén Obregón" , 'aobregon',"223",'encuestador'],
-        ["Joaquina Sanchez",'jsanchez' , "037",'admin'],
-        ["Gustavo" ,'gustavo', "233",'encuestador']];
+        ["Alberto Ojeda",
+                                    "aojeda", "262",'encuestador'],
+        ["Rosario Garrido",
+                                    "rgarrido","479",'encuestador'],
+        ["Silvia Gauna" ,
+                                    "sgauna","898",'encuestador'],
+        ["Micaela Miranda" ,
+                                    'mmiranda' ,"592",'encuestador'],
+        ["Anahi Rodriguez" ,
+                                    'arodriguez',"861",'encuestador'],
+        ["Alejandro González" ,
+                                    'agonzalez', "098",'encuestador'],
+        ["Karana Solís" ,
+                                    'ksolis',"828",'encuestador'],
+        ["Ayelén Obregón" ,
+                                    'aobregon',"223",'encuestador'],
+        ["Joaquina Sanchez",
+                                    'jsanchez' , "037",'admin'],
+        ["Gustavo" ,
+                                    'gustavo', "233",'encuestador']];
 
         foreach ($users as $user)
         {

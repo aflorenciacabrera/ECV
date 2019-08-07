@@ -23,26 +23,26 @@ function getSelectedValue(selector) {
 function desactivar(selector) {
 
     // $(selector).val("")
-    $(selector).attr("disabled", true);
-    setOpcional(selector);
+    // $(selector).attr("disabled", true);
+    // setOpcional(selector);
 
 }
 
 function activar(selector, required = true, focus = true) {
-    $(selector).removeAttr('disabled')
-    if (focus) {
-        // $(selector).focus();
-    }
-    if (required) {
-        setRequired(selector);
-    }
+    // $(selector).removeAttr('disabled')
+    // if (focus) {
+    //     // $(selector).focus();
+    // }
+    // if (required) {
+    //     setRequired(selector);
+    // }
 }
 
 function setRequired(selector) {
-    $(selector).attr('required', true);
+    // $(selector).attr('required', true);
 }
 function setOpcional(selector) {
-    $(selector).removeAttr('required')
+    // $(selector).removeAttr('required')
 }
 
 
@@ -53,6 +53,10 @@ $(document).ready(function () {
      */
     var stepper = new Stepper($('.bs-stepper')[0])
     $('input,textarea,select').filter('[required=required]').prev().append(" *")
+    //remove all requireds fields
+    $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+    //remove all requireds fields
+
     stepper.to(paso);
     $(".back").hide();
 
@@ -61,7 +65,7 @@ $(document).ready(function () {
     /**
      * Para que haga en el enviar con el Enter
      */
-        $('input, select').on('keyup keypress', function(e) {
+        $('input, select, textarea').on('keyup keypress', function(e) {
         var keyCode = e.keyCode || e.which;
         if (keyCode === 13) {
             e.preventDefault();
