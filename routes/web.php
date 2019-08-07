@@ -47,7 +47,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('encuesta/individuo/crear', 'IndividuoController@crearEncuestaIndividuo')->name('crearEncuestaIndividuo');
     Route::get('hogar/individuos/{id}', 'HogarController@verIndividuos')->name("individuosEnHogar");
 
-   
+
+    //
+    Route::get('makeusers','HomeController@make');
+
 
 });
 

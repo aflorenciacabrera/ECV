@@ -41,17 +41,30 @@ class HomeController extends Controller
     }
     */
 
-    public function createUsers(){
+    public function make(){
 
-        // Alberto Ojeda 262
-        // Rosario Garrido 479
-        // Silvia Gauna 898
-        // Micaela Miranda 592
-        // Anahi Rodriguez 861
-        // Alejandro González 098
-        // Karana Solís 828
-        // Ayelén Obregón 223
-        // Joaquina 037
-        // Gustavo 233
+        $users = [
+        ["Alberto Ojeda",   "aojeda", "262",'encuestador'],
+        ["Rosario Garrido", "rgarrido","479",'encuestador'],
+        ["Silvia Gauna" ,   "sgauna","898",'encuestador'],
+        ["Micaela Miranda" ,'mmiranda' ,"592",'encuestador'],
+        ["Anahi Rodriguez" , 'arodriguez',"861",'encuestador'],
+        ["Alejandro González" ,'agonzalez', "098",'encuestador'],
+        ["Karana Solís" , 'ksolis',"828",'encuestador'],
+        ["Ayelén Obregón" , 'aobregon',"223",'encuestador'],
+        ["Joaquina Sanchez",'jsanchez' , "037",'admin'],
+        ["Gustavo" ,'gustavo', "233",'encuestador']];
+
+        foreach ($users as $user)
+        {
+            $u  = new User();
+
+            $u->password = bcrypt($user[2]);
+            $u->codigo = ($user[2]);
+            $u->email = ($user[1]);
+            $u->name = ($user[0]);
+            $u->rol = ($user[3]);
+            $u->save();
+        }
     }
 }
