@@ -102,7 +102,7 @@
 {{--  --}}
 
  <div class="form-group form-inline">
-<label for="PP08K">8k. Su patron o empleador es </label>
+<label for="PP08K">8k. Su patron o empleador es  &nbsp;</label>
 <select onchange="update_parte_8()" disabled name="PP08K" id="PP08K" class="form-control form-control-sm">
     <option value=""></option>
     <option value=1>1. contratistas </option>
