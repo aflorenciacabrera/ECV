@@ -22,27 +22,27 @@ function getSelectedValue(selector) {
 
 function desactivar(selector) {
 
-    // $(selector).val("")
-    // $(selector).attr("disabled", true);
-    // setOpcional(selector);
+    $(selector).val("")
+    $(selector).attr("disabled", true);
+    setOpcional(selector);
 
 }
 
 function activar(selector, required = true, focus = true) {
-    // $(selector).removeAttr('disabled')
-    // if (focus) {
-    //     // $(selector).focus();
-    // }
-    // if (required) {
-    //     setRequired(selector);
-    // }
+    $(selector).removeAttr('disabled')
+    if (focus) {
+        // $(selector).focus();
+    }
+    if (required) {
+        setRequired(selector);
+    }
 }
 
 function setRequired(selector) {
-    // $(selector).attr('required', true);
+    $(selector).attr('required', true);
 }
 function setOpcional(selector) {
-    // $(selector).removeAttr('required')
+    $(selector).removeAttr('required')
 }
 
 
