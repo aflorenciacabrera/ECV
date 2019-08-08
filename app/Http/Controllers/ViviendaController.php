@@ -154,7 +154,7 @@ class ViviendaController extends Controller
 
 
 
-       return view("listadoVivienda")->with('viviendas', $v);
+        return redirect(route("verListadoVivienda"));
         // return redirect(route('verHogares',['id_vivienda'=>$v->id]));
 
     }

@@ -2,6 +2,13 @@
 @section('content')
 
 <script src="{{asset('js/individuos.js')}}"></script>
+<script>
+
+rol = "{!! Auth::user()->rol !!}"
+console.log(rol);
+
+
+</script>
 /<script>
 /**
  * Autocompletar mas rapido por JS que por blade un bajon
@@ -61,6 +68,7 @@ $(document).ready(function(){
     // console.log(migracion)
 })
 </script>
+
 <div class="container-fluid">
     <div class="card">
             <div class="card-header text-center">

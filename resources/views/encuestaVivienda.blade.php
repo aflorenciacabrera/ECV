@@ -56,6 +56,13 @@
 editar = false;
 </script>
 @endif
+<script>
+
+rol = "{!! Auth::user()->rol !!}"
+console.log(rol);
+
+
+</script>
 <script src="{{asset('js/viviendas.js')}}"></script>
 
 <div class="container-fluid">

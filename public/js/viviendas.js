@@ -16,33 +16,38 @@ function entrevistaRealizada(value)
 
 }
 function getSelectedValue(selector) {
-    value = $(selector).children("option:selected").val();
-    return value;
+    if (rol != 'admin') {
+        value = $(selector).children("option:selected").val();
+        return value;
+    }
 }
 
 function desactivar(selector) {
 
-    $(selector).val("")
-    $(selector).attr("disabled", true);
-    setOpcional(selector);
+    if (rol != 'admin') {
+        $(selector).attr("disabled", true);
+        setOpcional(selector);
+    }
 
 }
 
 function activar(selector, required = true, focus = true) {
-    $(selector).removeAttr('disabled')
-    if (focus) {
-        // $(selector).focus();
-    }
-    if (required) {
-        setRequired(selector);
+    if (rol != 'admin') {
+        $(selector).removeAttr('disabled')
+        if (focus) {
+            // $(selector).focus();
+        }
+        if (required) {
+            setRequired(selector);
+        }
     }
 }
 
 function setRequired(selector) {
-    $(selector).attr('required', true);
+    if (rol != 'admin') { $(selector).attr('required', true); }
 }
 function setOpcional(selector) {
-    $(selector).removeAttr('required')
+    if (rol != 'admin') { $(selector).removeAttr('required') }
 }
 
 
@@ -54,7 +59,16 @@ $(document).ready(function () {
     var stepper = new Stepper($('.bs-stepper')[0])
     $('input,textarea,select').filter('[required=required]').prev().append(" *")
     //remove all requireds fields
-    $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+    // quitar restricciones si el usuario es admin
+    if (rol == 'admin') {
+        $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+    }
+
+    setInterval(() => {
+        if (rol == 'admin') {
+            $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+        }
+    }, 100);
     //remove all requireds fields
 
     stepper.to(paso);

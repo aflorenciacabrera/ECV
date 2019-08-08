@@ -4,54 +4,53 @@ var paso = 1;
 
 
 var entrevistaRealizada = null;
-function getSelectedValue(selector)
-{
-    value = $(selector).children("option:selected").val();
-    return value;
+function getSelectedValue(selector) {
+    if (rol != 'admin') {
+        value = $(selector).children("option:selected").val();
+        return value;
+    }
 }
 
 function desactivar(selector) {
 
-    // $(selector).val("")
-    $(selector).attr("disabled",true);
-    setOpcional(selector);
+    if (rol != 'admin') {
+        $(selector).attr("disabled", true);
+        setOpcional(selector);
+    }
 
 }
 
-function activar(selector,required = true,focus = true) {
-    $(selector).removeAttr('disabled')
-    if(focus)
-    {
-        // $(selector).focus();
-    }
-    if(required)
-    {
-        setRequired(selector);
+function activar(selector, required = true, focus = true) {
+    if (rol != 'admin') {
+        $(selector).removeAttr('disabled')
+        if (focus) {
+            // $(selector).focus();
+        }
+        if (required) {
+            setRequired(selector);
+        }
     }
 }
 
-function setRequired(selector){
-   $(selector).attr('required',true);
+function setRequired(selector) {
+    if (rol != 'admin') { $(selector).attr('required', true); }
 }
 function setOpcional(selector) {
-    $(selector).removeAttr('required')
+    if (rol != 'admin') { $(selector).removeAttr('required') }
 }
 
 
 
-function setEntrevistaRealizada(value)
-{
+function setEntrevistaRealizada(value) {
 
     entrevistaRealizada = value;
 
-    if(value == 1)
-    {
-        $("#numero_respondente").attr('required',true);
+    if (value == 1) {
+        $("#numero_respondente").attr('required', true);
         $("#nombre_respondente").attr('required', true);
         activar("#PP01A")
     }
-    else
-    {
+    else {
         $("#numero_respondente").removeAttr('required');
         $("#nombre_respondente").removeAttr('required');
         desactivar("#PP01A");
@@ -60,16 +59,21 @@ function setEntrevistaRealizada(value)
 }
 $(document).ready(function () {
 
-    $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+
+    // quitar restricciones si el usuario es admin
+    if (rol == 'admin') {
+        $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+    }
+
+
     stepper = new Stepper($('.bs-stepper')[0])
     stepper.to(paso);
 
     $("#btn_guardar").click(function (e) {
         e.preventDefault();
-        if(validarTodo())
-        {
+        if (validarTodo()) {
 
-           var validator = $("#form").trigger("submit");
+            var validator = $("#form").trigger("submit");
         }
         // console.log(validator);
 
@@ -95,8 +99,7 @@ $(document).ready(function () {
     $(".next").click(function (e) {
         e.preventDefault();
         // console.log({ entrevistaRealizada });
-        if(paso >=14)
-        {
+        if (paso >= 14) {
             return false;
         }
 
@@ -104,14 +107,13 @@ $(document).ready(function () {
 
             switch (paso) {
                 case 1:
-                   if(entrevistaRealizada == 2)
-                   {
-                    console.log("paso al final")
-                      paso = 14
-                      stepper.to(paso);
+                    if (entrevistaRealizada == 2) {
+                        console.log("paso al final")
+                        paso = 14
+                        stepper.to(paso);
                         $("#form").scrollTop(0)
-                      return;
-                   }
+                        return;
+                    }
 
 
                     break;
@@ -127,7 +129,7 @@ $(document).ready(function () {
             if (paso == 14) {//qquito todas las restricciones en el ultimo paso hardcoding
                 // $('input,textarea,select').filter('[required=required]').removeAttr('required');
             }
-            console.log("Paso "+paso+ " ok ");
+            console.log("Paso " + paso + " ok ");
 
         }
         else {
@@ -157,8 +159,7 @@ $(document).ready(function () {
                 break;
         }
 
-        if(paso>1)
-        {
+        if (paso > 1) {
             paso--;
             stepper.to(paso);
         }
@@ -190,8 +191,7 @@ $(document).ready(function () {
 
 })
 
-function updateAll()
-{
+function updateAll() {
     update_parte_1();
     update_parte_2();
     update_parte_3();
@@ -209,7 +209,7 @@ function updateAll()
 
 function irASeccion(seccion)///ir a seccion del error
 {
-    n = $("#"+seccion).data('paso');
+    n = $("#" + seccion).data('paso');
     paso = n;
     stepper.to(n);
 }
@@ -247,13 +247,10 @@ function validarPorSeccion(seccion) {
  */
 
 
-function validarTodo()
-{
+function validarTodo() {
     status = true
-    for(i=1;i <= 14; i++)
-    {
-        if(!validar(i))
-        {
+    for (i = 1; i <= 14; i++) {
+        if (!validar(i)) {
             return false;
         }
 

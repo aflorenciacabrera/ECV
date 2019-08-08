@@ -2,33 +2,38 @@
 var stepper;
 var paso = 1;
 function getSelectedValue(selector) {
-    value = $(selector).children("option:selected").val();
-    return value;
+    if (rol != 'admin') {
+        value = $(selector).children("option:selected").val();
+        return value;
+    }
 }
 
 function desactivar(selector) {
 
-    // $(selector).val("")
-    $(selector).attr("disabled", true);
-    setOpcional(selector);
+    if (rol != 'admin') {
+        $(selector).attr("disabled", true);
+        setOpcional(selector);
+    }
 
 }
 
 function activar(selector, required = true, focus = true) {
-    $(selector).removeAttr('disabled')
-    if (focus) {
-        // $(selector).focus();
-    }
-    if (required) {
-        setRequired(selector);
+    if (rol != 'admin') {
+        $(selector).removeAttr('disabled')
+        if (focus) {
+            // $(selector).focus();
+        }
+        if (required) {
+            setRequired(selector);
+        }
     }
 }
 
 function setRequired(selector) {
-    $(selector).attr('required', true);
+    if (rol != 'admin') { $(selector).attr('required', true); }
 }
 function setOpcional(selector) {
-    $(selector).removeAttr('required')
+    if (rol != 'admin') { $(selector).removeAttr('required') }
 }
 
 
@@ -39,7 +44,10 @@ $(document).ready(function () {
     /**
      * inicio el bs-stepper
      */
-    $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+    // quitar restricciones si el usuario es admin
+    if (rol == 'admin') {
+        $('input,textarea,select').filter('[disabled=disabled]').removeAttr('disabled');
+    }
 
     var stepper = new Stepper($('.bs-stepper')[0])
     stepper.to(paso);
@@ -64,8 +72,7 @@ $(document).ready(function () {
      */
     $(".next").click(function (e) {
         e.preventDefault();
-        if(paso >=10 )
-        {
+        if (paso >= 10) {
             return false;
         }
 
@@ -86,11 +93,10 @@ $(document).ready(function () {
 
     $(".back").click(function (e) {
         e.preventDefault();
-       if(paso !== 1)
-       {
-           paso--;
-           stepper.previous();
-       }
+        if (paso !== 1) {
+            paso--;
+            stepper.previous();
+        }
     })
 
     /**

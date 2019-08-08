@@ -70,6 +70,13 @@ $(document).ready(function(){
 
 })
 </script>
+<script>
+
+rol = "{!! Auth::user()->rol !!}"
+console.log(rol);
+
+
+</script>
 <script src="{{asset('js/hogares.js')}}"></script>
 <div class="container-fluid">
            <div class="card">
