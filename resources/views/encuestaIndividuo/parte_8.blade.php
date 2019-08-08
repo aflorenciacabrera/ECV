@@ -32,7 +32,31 @@
             </div>
         </div>
         {{--  --}}
-        <label>8d. Cuanto cobró por ese mes&nbsp;</label>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="PP08B">8b. No cobró ninguna porque </label>
+            </div>
+            <div class="form-group col-md-4">
+                <select onchange="update_parte_8()" disabled name="PP08B" id="PP08B" class="form-control ">
+                    <option value=""></option>
+                    <option value=1>1. Lo está por cobrar </option>
+                    <option value=2>2. No sabe cuand lo va a cobrar </option>
+                    <option value=3>3. recién empezó </option>
+                    <option value=4>4. No los tiene</option>
+                </select>
+            </div>
+        </div>
+        {{--  --}}
+       <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="PP08C">8c. Monto arreglado mensual &nbsp;<label>
+            </div>
+            <div class="form-group col-md-5">
+                <input type="number" min=0 step=1  class="form-control form-control-sm" onchange="update_parte_8()" disabled name="PP08C" id="PP08C">
+             </div>
+        </div>
+        {{--  --}}
+            <label>8d. Cuanto cobró por ese mes&nbsp;</label>
         <div class="form-group form-inline">
             <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;<label>
             <input type="number" min=0 step=1  class="form-control form-control-sm"  disabled  id="PP08DTOTAL">
@@ -67,79 +91,11 @@
                 </div>
             </div>
         </div>
-    {{--  --}}
 
- <div class="form-group form-inline">
-    <label for="PP08G">8g. Ese cobro (o arreglo) corresponde a su trabajo de &nbsp;</label>
-    <select onchange="update_parte_8()" disabled name="PP08G" id="PP08G" class="form-control form-control-sm">
-        <option value=""></option>
-        <option value=1>1. Todo el mes todos los días  </option>
-        <option value=2>2. Todo el mes algunos días </option>
-        <option value=3>3. menos de todo el mes</option>
-    </select>
-</div>
-<div class="form-group form-inline">
-        <label for="PP08G1" >&nbsp;8g.1. ¿Cuantos dias por semana? &nbsp;<label>
-            <input type="number" min=0 step=1 max=7 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G1" id="PP08G1">
-
-    </div>
-    <div class="form-group form-inline">
-        <label for="PP08G2" >&nbsp;8g.2. ¿Cuantos dias en el mes? &nbsp;<label>
-            <input type="number" min=0 step=1 max=31 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G2" id="PP08G2">
-
-    </div>
-
- <div class="form-group form-inline">
-<label for="PP08I">8i. Por ese trabajó cobró &nbsp; </label>
-<select onchange="update_parte_8()" disabled name="PP08I" id="PP08I" class="form-control form-control-sm">
-    <option value=""></option>
-    <option value=1>1. Aguinaldo </option>
-    <option value=2>2. Otras bonificaciones </option>
-    <option value=3>3. Retroactivo </option>
-    <option value=5>5. Ninguno de estos</option>
-</select>
-</div>
-{{--  --}}
-
- <div class="form-group form-inline">
-<label for="PP08K">8k. Su patron o empleador es  &nbsp;</label>
-<select onchange="update_parte_8()" disabled name="PP08K" id="PP08K" class="form-control form-control-sm">
-    <option value=""></option>
-    <option value=1>1. contratistas </option>
-    <option value=2>2. agencia de empleo </option>
-    <option value=3>3. establecimieto </option>
-    <option value=4>4. otras personas </option>
-    <option value=5>5. Plan de empleo </option>
-    <option value=9>9. NS/nR</option>
-</select>
-</div>
     </div>
 
     {{-- Right --}}
     <div class="col-md-6">
-        <div class="form-row">
-            <div class="form-group col-md-5">
-                <label for="PP08B">8b. No cobró ninguna porque </label>
-            </div>
-            <div class="form-group col-md-4">
-                <select onchange="update_parte_8()" disabled name="PP08B" id="PP08B" class="form-control ">
-                    <option value=""></option>
-                    <option value=1>1. Lo está por cobrar </option>
-                    <option value=2>2. No sabe cuand lo va a cobrar </option>
-                    <option value=3>3. recién empezó </option>
-                    <option value=4>4. No los tiene</option>
-                </select>
-            </div>
-        </div>
-        {{--  --}}
-       <div class="form-row">
-            <div class="form-group col-md-5">
-                <label for="PP08C">8c. Monto arreglado mensual &nbsp;<label>
-            </div>
-            <div class="form-group col-md-5">
-                <input type="number" min=0 step=1  class="form-control form-control-sm" onchange="update_parte_8()" disabled name="PP08C" id="PP08C">
-             </div>
-        </div>
       
         {{--  --}}
         {{-- 8.f --}}
@@ -158,10 +114,45 @@
 
     {{--  --}}
      <div class="form-group form-inline">
+    <label for="PP08G">8g. Ese cobro (o arreglo) corresponde a su trabajo de &nbsp;</label>
+    <select onchange="update_parte_8()" disabled name="PP08G" id="PP08G" class="form-control form-control-sm">
+        <option value=""></option>
+        <option value=1>1. Todo el mes todos los días  </option>
+        <option value=2>2. Todo el mes algunos días </option>
+        <option value=3>3. menos de todo el mes</option>
+    </select>
+</div>
+ <div class="col-md-10 col-md-offset-10">
+<div class="form-group form-inline">
+        <label for="PP08G1" >&nbsp;8g.1. ¿Cuantos dias por semana? &nbsp;<label>
+            <input type="number" min=0 step=1 max=7 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G1" id="PP08G1">
+
+    </div>
+    <div class="form-group form-inline">
+        <label for="PP08G2" >&nbsp;8g.2. ¿Cuantos dias en el mes? &nbsp;<label>
+            <input type="number" min=0 step=1 max=31 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G2" id="PP08G2">
+
+    </div> 
+       </div> 
+    {{--  --}}
+
+     <div class="form-group form-inline">
         <label for="PP08H" >8h. ¿A cuántas horas por día corresponde? &nbsp;<label>
             <input type="number" min=0 step=1 max=24 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08H" id="PP08H">
 
     </div>
+    {{--  --}}
+     <div class="form-group form-inline">
+<label for="PP08I">8i. Por ese trabajó cobró &nbsp; </label>
+<select onchange="update_parte_8()" disabled name="PP08I" id="PP08I" class="form-control form-control-sm">
+    <option value=""></option>
+    <option value=1>1. Aguinaldo </option>
+    <option value=2>2. Otras bonificaciones </option>
+    <option value=3>3. Retroactivo </option>
+    <option value=5>5. Ninguno de estos</option>
+</select>
+</div>
+
     {{--  --}}
      <label for="">8j. ¿Cuánto cobró por ese mes de ..(mes)...</label>
     <div class="form-group form-inline">
@@ -176,7 +167,25 @@
         <label for="PP08J3" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto retroactivos&nbsp;<label>
         <input type="number" min=0 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J3" id="PP08J3">
     </div>
+  
     {{--  --}}
+
+
+
+
+
+ <div class="form-group form-inline">
+<label for="PP08K">8k. Su patron o empleador es  &nbsp;</label>
+<select onchange="update_parte_8()" disabled name="PP08K" id="PP08K" class="form-control form-control-sm">
+    <option value=""></option>
+    <option value=1>1. contratistas </option>
+    <option value=2>2. agencia de empleo </option>
+    <option value=3>3. establecimieto </option>
+    <option value=4>4. otras personas </option>
+    <option value=5>5. Plan de empleo </option>
+    <option value=9>9. NS/nR</option>
+</select>
+</div>
     </div>
    </div>
     {{--  --}}
