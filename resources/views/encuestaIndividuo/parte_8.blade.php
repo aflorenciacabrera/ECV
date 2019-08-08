@@ -4,55 +4,36 @@
     <div class="col-md-6">
         <div class="form-group">
         <label for="PP08A">8a. En ese trabajó cobró </label>
-
-
-
-         <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_1" name="PP08A_1" value="1">1. sueldos
-                    </div>
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input PP08A" disabled onchange="update_parte_8()" id="PP08A_1" name="PP08A_1" value="1">
+                        <label class="form-check-label" for="PP08A_1"> 1. sueldos</label> 
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class=" form-check-input PP08A" disabled onchange="update_parte_8()" id="PP08A_2" name="PP08A_2" value="2">
+                        <label class="form-check-label" for="PP08A_2"> 2. salario</label>      
+                </div>  
+                <div class="form-check">
+                        <input type="checkbox" class=" form-check-input PP08A" disabled onchange="update_parte_8()" id="PP08A_3" name="PP08A_3"  value="3">
+                         <label class="form-check-label" for="PP08A_3">  3. horas extras</label>      
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input PP08A" disabled onchange="update_parte_8()" id="PP08A_4" name="PP08A_4" value="4">
+                        <label class="form-check-label" for="PP08A_4"> 4. otras</label> 
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input PP08A" disabled onchange="update_parte_8()" id="PP08A_5" name="PP08A_5" value="5">
+                         <label class="form-check-label" for="PP08A_5">  5. Ticketxtras</label>  
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input PP08A" disabled onchange="update_parte_8()" id="PP08A_6" name="PP08A_6"  value="6">
+                        <label class="form-check-label" for="PP08A_6"> 6. Ninguna</label>   
                 </div>
             </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_2" name="PP08A_2" value="2">2. salario
-                    </div>
-                </div>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_3" name="PP08A_3"  value="3">3. horas extras
-                    </div>
-                </div>
-            </div>
-             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_4" name="PP08A_4" value="4">4. otras
-                    </div>
-                </div>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_5" name="PP08A_5" value="5">5. Ticket
-                    </div>
-                </div>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08A" disabled onchange="update_parte_8()" id="PP08A_6" name="PP08A_6"  value="6">6. Ninguna
-                    </div>
-                </div>
-            </div>
-             </div>
+        </div>
         {{--  --}}
         <label>8d. Cuanto cobró por ese mes&nbsp;</label>
-    <div class="form-group form-inline">
+        <div class="form-group form-inline">
             <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;<label>
             <input type="number" min=0 step=1  class="form-control form-control-sm"  disabled  id="PP08DTOTAL">
         </div>
@@ -70,35 +51,23 @@
         </div>
         {{--  --}}
         <div class="form-group ">
-            <label for="PP08E">8e.Por el mes de _____¿Cobró &nbsp;</label>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08E" disabled onchange="update_parte_8()" id="PP08E_1" name="PP08E_1" value="1">1. Comision por venta/produccion?
-                    </div>
+            <label for="PP08E">8e.Por el mes de _____ ¿Cobró &nbsp;</label>
+            <div class="col-md-6 col-md-offset-4">
+                <div class="form-check">
+                    <input type="checkbox" class=" form-check-input PP08E" disabled onchange="update_parte_8()" id="PP08E_1" name="PP08E_1" value="1">
+                     <label class="form-check-label" for="PP08E_1">  1. Comision por venta / produccion?</label>   
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input PP08E" disabled onchange="update_parte_8()" id="PP08E_2" name="PP08E_2" value="2">
+                        <label class="form-check-label" for="PP08E_2">  2. Propinas?</label>    
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input PP08E" disabled onchange="update_parte_8()"id="PP08E_3"  name="PP08E_3"  value="3">
+                        <label class="form-check-label" for="PP08E_3">   3. Ninguna</label>   
                 </div>
             </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08E" disabled onchange="update_parte_8()" id="PP08E_2" name="PP08E_2" value="2">2. Propinas?
-                    </div>
-                </div>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" class="PP08E" disabled onchange="update_parte_8()"id="PP08E_3"  name="PP08E_3"  value="3">3. Ninguna
-                    </div>
-                </div>
-            </div>
-
-            {{--  --}}
-</div>
-
-
-
+        </div>
+    {{--  --}}
 
  <div class="form-group form-inline">
     <label for="PP08G">8g. Ese cobro (o arreglo) corresponde a su trabajo de &nbsp;</label>
@@ -132,11 +101,8 @@
 </div>
 {{--  --}}
 
-
-
-
  <div class="form-group form-inline">
-<label for="PP08K">8k. Su patron o empleador es </label>
+<label for="PP08K">8k. Su patron o empleador es  &nbsp;</label>
 <select onchange="update_parte_8()" disabled name="PP08K" id="PP08K" class="form-control form-control-sm">
     <option value=""></option>
     <option value=1>1. contratistas </option>
@@ -151,35 +117,45 @@
 
     {{-- Right --}}
     <div class="col-md-6">
-        <div class="form-group form-inline">
+        <div class="form-row">
+            <div class="form-group col-md-5">
                 <label for="PP08B">8b. No cobró ninguna porque </label>
-                <select onchange="update_parte_8()" disabled name="PP08B" id="PP08B" class="form-control form-control-sm">
+            </div>
+            <div class="form-group col-md-4">
+                <select onchange="update_parte_8()" disabled name="PP08B" id="PP08B" class="form-control ">
                     <option value=""></option>
                     <option value=1>1. Lo está por cobrar </option>
                     <option value=2>2. No sabe cuand lo va a cobrar </option>
                     <option value=3>3. recién empezó </option>
                     <option value=4>4. No los tiene</option>
                 </select>
+            </div>
         </div>
         {{--  --}}
-        <div class="form-group form-inline">
-        <label for="PP08C">8c. Monto arreglado mensual &nbsp;<label>
-        <input type="number" min=0 step=1  class="form-control form-control-sm" onchange="update_parte_8()" disabled name="PP08C" id="PP08C">
+       <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="PP08C">8c. Monto arreglado mensual &nbsp;<label>
+            </div>
+            <div class="form-group col-md-5">
+                <input type="number" min=0 step=1  class="form-control form-control-sm" onchange="update_parte_8()" disabled name="PP08C" id="PP08C">
+             </div>
         </div>
+      
         {{--  --}}
         {{-- 8.f --}}
+     
     <label >8f. ¿Cuánto cobró por ese mes de ..... &nbsp;</label>
-    <div class="form-group form-inline">
-
-        <label for="PP08F1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comisión por  venta/producción <label>
+     <div class="form-group form-inline">
+         <div class="col-md-10 col-md-offset-10">
+        <label for="PP08F1" >-Comisión por venta / producción &nbsp;<label>
             <input type="number" min=0 step=1  class="form-control form-control-sm PP08F" onchange="update_parte_8()" disabled name="PP08F1" id="PP08F1">
-
-    </div>
-    <div class="form-group form-inline">
-        <label for="PP08F2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Propinas<label>
+    </div> </div>
+     <div class="form-group  form-inline">
+         <div class="col-md-7 col-md-offset-7">
+        <label for="PP08F2" >-Propinas &nbsp;<label>    
             <input type="number" min=0 step=1  class="form-control form-control-sm PP08F" onchange="update_parte_8()" disabled name="PP08F2" id="PP08F2">
+    </div></div>
 
-    </div>
     {{--  --}}
      <div class="form-group form-inline">
         <label for="PP08H" >8h. ¿A cuántas horas por día corresponde? &nbsp;<label>
@@ -201,16 +177,8 @@
         <input type="number" min=0 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J3" id="PP08J3">
     </div>
     {{--  --}}
-
     </div>
    </div>
-
-
-
-
-
-
-
     {{--  --}}
 </div>
 
