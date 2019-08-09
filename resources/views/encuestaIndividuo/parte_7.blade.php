@@ -2,7 +2,7 @@
 @section('content') --}}
 <div class="card-body">
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 border">
                     <label for="PP07A">7a. ¿Cuánto tiempo hace que está trabajando en ese empleo en forma continua?</label>
                      <select class="form-control" onchange="update_parte_7()" disabled name="PP07A" id="PP07A">
                                 <option value="">   </option>
@@ -16,7 +16,7 @@
                         </select>
                     {{-- <small id=" " class="form-text text-muted"> </small> --}}
             </div>
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border">
                     <label for="PP07B">7b. ¿Cómo consiguió ese trabajo?</label>
                      <select class="form-control" onchange="update_parte_7()" disabled name="PP07B" id="PP07B" >
                                 <option value="">   </option>
@@ -36,7 +36,7 @@
 
         </div>
         <div class="form-row">
-           <div class="form-group col-md-6">
+           <div class="form-group col-md-6 border" >
                     <label for="PP07C">7c. ¿Ese empleo tiene tiempo de finalización?</label>
                      <select class="form-control" onchange="update_parte_7()" disabled name="PP07C" id="PP07C">
                                 <option value="">   </option>
@@ -46,7 +46,7 @@
                         </select>
 
             </div>
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border">
                     <label for="PP07D">7d. ¿Por cuánto tiempo es ese trabajo?</label>
                      <select class="form-control" onchange="update_parte_7()" disabled name="PP07D" id="PP07D" >
                                 <option value="">   </option>
@@ -61,7 +61,7 @@
             </div>
         </div>
          <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 border">
                     <label for="PP07E">7e. ¿Ese trabajo es…</label>
                      <select class="form-control" onchange="update_parte_7()" disabled name="PP07E" id="PP07E" >
                                 <option value="">   </option>
@@ -118,7 +118,7 @@
 
             </div>
             </div>
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border border">
                 <label for="">7f. ¿En ese trabajo le dan…</label>
                 <div class="form-row">
                         <div class="form-group col-md-6">
@@ -192,7 +192,7 @@
                 </div>
             </div>
         <div class="form-row">
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border">
                   <label for="PP07H ">7h.¿Por ese trabajo tiene descuento jubilatorio?</label>
                     <select class="form-control" onchange="update_parte_7()" disabled name="PP07H" id="PP07H">
                                 <option value="">   </option>
@@ -200,7 +200,7 @@
                                 <option value="2">2. No</option>
                         </select>
             </div>
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border">
                    <label for="PP07I ">7i. ¿Aporta por sí mismo a algún sistema jubilatorio?</label>
                     <select class="form-control" onchange="update_parte_7()" disabled name="PP07I" id="PP07I">
                                 <option value="">   </option>
@@ -211,7 +211,7 @@
         </div>
         <div class="form-row">
 
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border">
                   <label for="PP07J ">7j. ¿El turno habitual de trabajo es…</label>
                         <select class="form-control" onchange="update_parte_7()" disabled name="PP07J" id="PP07J">
                                 <option value="">   </option>
@@ -220,7 +220,7 @@
                                 <option value="3">3. … de otro tipo? (rotativo, día y noche,guardias con franco)</option>
                         </select>
             </div>
-             <div class="form-group col-md-6">
+             <div class="form-group col-md-6 border">
                    <label for="PP07K ">7k. ¿Cuándo cobra…</label>
                     <select class="form-control" onchange="update_parte_7()" disabled name="PP07K" id="PP07K">
                                 <option value="">   </option>
