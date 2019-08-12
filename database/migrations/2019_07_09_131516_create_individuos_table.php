@@ -243,7 +243,7 @@ class CreateIndividuosTable extends Migration
             $table->text('seccion_13_modalidad')->nullable();
 
             //
-            $table->integer('estado')->default(0);//iniciado
+            $table->text('estado')->default(0);//iniciado
             $table->timestamps();
 
 
