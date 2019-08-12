@@ -191,7 +191,7 @@ class CreateHogarsTable extends Migration
 
             $table->timestamps();
 
-            $table->text('estado')->nullable();//iniciado
+            $table->integer('estado')->default(0);//iniciado
         });
     }
 
