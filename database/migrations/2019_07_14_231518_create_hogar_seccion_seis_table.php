@@ -20,20 +20,20 @@ class CreateHogarSeccionSeisTable extends Migration
             $table->foreign('hogar_id')->references('id')->on('hogars');
             $table->unsignedInteger('individuo_id')->nullable();
             $table->foreign('individuo_id')->references('id')->on('individuos');
-            $table->double('V2_M')->nullable();
-            $table->double('V21_M')->nullable();
-            $table->double('V22_M')->nullable();
-            $table->double('V3_M')->nullable();
-            $table->double('V4_M')->nullable();
-            $table->double('V5_M')->nullable();
-            $table->double('V8_M')->nullable();
-            $table->double('V9_M')->nullable();
-            $table->double('V10_M')->nullable();
-            $table->double('V11_M')->nullable();
-            $table->double('V12_M')->nullable();
-            $table->double('V18_M')->nullable();
-            $table->double('V19_AM')->nullable();
-            $table->double('T_Vi')->nullable();
+            $table->text('V2_M')->nullable();
+            $table->text('V21_M')->nullable();
+            $table->text('V22_M')->nullable();
+            $table->text('V3_M')->nullable();
+            $table->text('V4_M')->nullable();
+            $table->text('V5_M')->nullable();
+            $table->text('V8_M')->nullable();
+            $table->text('V9_M')->nullable();
+            $table->text('V10_M')->nullable();
+            $table->text('V11_M')->nullable();
+            $table->text('V12_M')->nullable();
+            $table->text('V18_M')->nullable();
+            $table->text('V19_AM')->nullable();
+            $table->text('T_Vi')->nullable();
 
 
             $table->timestamps();

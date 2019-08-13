@@ -2,7 +2,7 @@
 @section('content') --}}
 <div class="card-body">
 {{-- Prueba refs #3 --}}
-        <div class="form-row">
+ <div class="form-row">
                 <div class="form-group col-md-2">
                         <label for="trimestre">Trimestre:</label>
                         <input type="number" min="1" max="4" step="1" class="form-control form-control-sm" id="trimestre"  onchange="update_participacion()" name="trimestre" aria-describedby="" placeholder=" " required >
@@ -17,15 +17,34 @@
                         <input type="date" min="2019-01-01" max="2019-12-31" class="form-control form-control-sm sem_referencia" id="sem_referencia"  onchange="update_participacion()" name="sem_referencia" placeholder="desde" required>
                         <input type="date" min="2019-01-01" max="2019-12-31" class="form-control form-control-sm sem_referencia"   onchange="update_participacion()" name="sem_referencia_2" placeholder="hasta" required>
                 </div>
-                <div class="form-group col-md-3">
-                        <label for="cant_hogar">Cantidad de hogares en la vivienda:</label>
-                        <input type="number" min="1" max="99" step="1" class="form-control form-control-sm depende_de_entrevista_realizada" id="cant_hogar"  disabled onchange="update_participacion()" name="cant_hogar" placeholder="Si la entrevista fue realizada" >
-                </div>
-                <div class="form-group col-md-3">
-                        <label for="p_entrevistada">Persona entrevistada:</label>
-                        <input type="text" class="form-control form-control-sm depende_de_entrevista_realizada" id="p_entrevistada" disabled  onchange="update_participacion()" name="p_entrevistada" placeholder="si la entrevista fue realizada">
-                </div>
+
         </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+                        <label for="entrevista_realizada">Entrevista Realizada</label>
+                        <select class="form-control form-control-sm"  onchange="update_participacion()" name="entrevista_realizada" id="entrevista_realizada" onchange="update_participacion()" required >
+                            <option value=""></option>
+
+                                <option value="1">1. Si</option>
+                                <option value="2" >2. No</option>
+                        </select>
+                        <br>
+                        <label for="modalidad_aplicacion">Modalidad de Aplicación</label>
+                        <select class="form-control form-control-sm "  onchange="update_participacion()" name="modalidad_aplicacion" id="modalidad_aplicacion"  >
+                            <option value=""></option>
+                                <option value="1">1. Personal Completa</option>
+                                <option value="2">2. Personal Telefónico</option>
+                                <option value="3">3. Solo Telefónica</option>
+                        </select>
+                        <br>
+                        <label for="encuestador">Encuestador</label>
+                        <input type="text" class="form-control form-control-sm " required  onchange="update_participacion()" name="encuestador" id="encuestador" >
+                        <label for="numero_encuestador">Nº</label>
+                        <input type="text" class="form-control form-control-sm " required  onchange="update_participacion()" name="numero_encuestador" id="numero_encuestador" >
+                </div>
+    </div>
+
+
 
         <div class="form-row">
                 <div class="form-group col-md-6">
@@ -60,28 +79,7 @@
                                 </tbody>
                         </table>
                 </div>
-                <div class="form-group col-md-6">
-                        <label for="entrevista_realizada">Entrevista Realizada</label>
-                        <select class="form-control form-control-sm"  onchange="update_participacion()" name="entrevista_realizada" id="entrevista_realizada" onchange="update_participacion()" required >
-                            <option value=""></option>
 
-                                <option value="1">1. Si</option>
-                                <option value="2" >2. No</option>
-                        </select>
-                        <br>
-                        <label for="modalidad_aplicacion">Modalidad de Aplicación</label>
-                        <select class="form-control form-control-sm "  onchange="update_participacion()" name="modalidad_aplicacion" id="modalidad_aplicacion"  >
-                            <option value=""></option>
-                                <option value="1">1. Personal Completa</option>
-                                <option value="2">2. Personal Telefónico</option>
-                                <option value="3">3. Solo Telefónica</option>
-                        </select>
-                        <br>
-                        <label for="encuestador">Encuestador</label>
-                        <input type="text" class="form-control form-control-sm " required  onchange="update_participacion()" name="encuestador" id="encuestador" >
-                        <label for="numero_encuestador">Nº</label>
-                        <input type="text" class="form-control form-control-sm " required  onchange="update_participacion()" name="numero_encuestador" id="numero_encuestador" >
-                </div>
         </div>
         <div class="form-row">
                 <div class="form-group col-md-4">
@@ -99,6 +97,16 @@
                 <div class="form-group col-md-4">
                         <label for="numero_particion">N°:</label>
                         <input type="number" min="0" step="1" max="999" class="form-control form-control-sm se_hizo_acompaniamiento "  id="numero_particion"  onchange="update_participacion()" name="numero_particion" >
+                </div>
+        </div>
+        <div class="row">
+             <div class="form-group col-md-3">
+                        <label for="cant_hogar">Cantidad de hogares en la vivienda:</label>
+                        <input type="number" min="1" max="99" step="1" class="form-control form-control-sm depende_de_entrevista_realizada" id="cant_hogar"  disabled onchange="update_participacion()" name="cant_hogar" placeholder="Si la entrevista fue realizada" >
+                </div>
+                <div class="form-group col-md-3">
+                        <label for="p_entrevistada">Persona entrevistada:</label>
+                        <input type="text" class="form-control form-control-sm depende_de_entrevista_realizada" id="p_entrevistada" disabled  onchange="update_participacion()" name="p_entrevistada" placeholder="si la entrevista fue realizada">
                 </div>
         </div>
 

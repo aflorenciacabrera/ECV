@@ -45,11 +45,11 @@ class HomeController extends Controller
 
         $users = [
         ["Alberto Ojeda",
-                                    "aojeda", "262",'encuestador'],
+                                    "aojeda", "262",'coordinador'],
         ["Rosario Garrido",
-                                    "rgarrido","479",'encuestador'],
+                                    "rgarrido","479",'supervisor'],
         ["Silvia Gauna" ,
-                                    "sgauna","898",'encuestador'],
+                                    "sgauna","898",'supervisor'],
         ["Micaela Miranda" ,
                                     'mmiranda' ,"592",'encuestador'],
         ["Anahi Rodriguez" ,
