@@ -124,7 +124,8 @@ class HogarController extends Controller
         }
 
         // return redirect()->route('verListadoVivienda');
-        return redirect(route("individuosEnHogar",['hogar'=>$h->id]));
+        // return redirect(route("individuosEnHogar",['hogar'=>$h->id]));
+        return redirect(route("hogarok", ['id_hogar=>' => $h->id]));
 
       }
 
@@ -139,6 +140,12 @@ class HogarController extends Controller
         //TODO rediccionar a la vista de vivienda $h->vivienda->id;
         return redirect()->route('verListadoVivienda')->with('vivienda', $h->vivienda->id);
         }
+
+    public function ok($id_hogar)
+    {
+        $hogar = hogar::find($id_hogar);
+        return view('hogarok')->with('hogar', $hogar);
+    }
 
 
 }

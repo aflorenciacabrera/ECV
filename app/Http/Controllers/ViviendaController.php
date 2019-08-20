@@ -154,7 +154,7 @@ class ViviendaController extends Controller
 
 
 
-        return redirect(route("verListadoVivienda"));
+        return redirect(route("viviendaok",['id_vivienda=>'=>$v->id]));
         // return redirect(route('verHogares',['id_vivienda'=>$v->id]));
 
     }
@@ -184,6 +184,12 @@ class ViviendaController extends Controller
         // pero si tiene un solo hogar podriamos mandar directo al hogar pero bueno la proxima nomas
 
         return view('hogares_en_vivienda')->with('vivienda',$vivienda);
+    }
+
+    public function ok($id_vivienda)
+    {
+        $vivienda = vivienda::find($id_vivienda);
+        return view('viviendaok')->with('vivienda',$vivienda);
     }
 
 

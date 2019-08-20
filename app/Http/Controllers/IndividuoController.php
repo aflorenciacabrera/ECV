@@ -23,9 +23,17 @@ class IndividuoController extends Controller
                 $i->estado = 1;
                 $i->save();
 
-                //   return "ok";
-                return redirect(route("individuosEnHogar", ['hogar' => $i->hogar_id]));
+        //   return "ok";
+        // return redirect(route("individuosEnHogar", ['hogar' => $i->hogar_id]));
+        return redirect(route("individuook", ['id_individuo' => $i->id]));
 
         // return redirect(url('home'))->with('status','Formulario de Encuensta Individuo cargado');;
         }
+
+
+    public function ok($id_individuo)
+    {
+        $individuo = individuo::find($id_individuo);
+        return view('individuook')->with('individuo', $individuo);
+    }
 }
