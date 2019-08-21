@@ -25,10 +25,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
-        env("HTTPS") == "YES" ? URL::forceScheme('https') : URL::forceScheme('http');
-        Carbon::setlocale('es');
-        Carbon::setUTF8(true);
-        setlocale(LC_TIME, 'es_ES');
+        // env("HTTPS") == "YES" ? URL::forceScheme('https') : URL::forceScheme('http');
+        // Carbon::setlocale('es');
+        // Carbon::setUTF8(true);
+        // setlocale(LC_TIME, 'es_ES');
 
 
     }
