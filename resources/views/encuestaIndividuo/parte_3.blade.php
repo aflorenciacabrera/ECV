@@ -51,35 +51,35 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">Domingo? </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_domigo"> </td>
+                                        <td>  <input type="number"  min=0  max=24  class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_domigo"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">lunes?    </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_lunes"></td>
+                                        <td>  <input type="number"  min=0  max=24  class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_lunes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">martes? </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_martes"></td>
+                                        <td>  <input type="number"  min=0  max=24  class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_martes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">miercoles?    </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_miercoles"> </td>
+                                        <td>  <input type="number"  min=0  max=24  class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_miercoles"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">jueves?   </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_jueves"> </td>
+                                        <td>  <input type="number"  min=0  max=24  class="form-control PP03E"  disabled onchange="update_parte_3()" name="PP03E_jueves"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">viernes? </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_viernes"> </td>
+                                        <td>  <input type="number"  min=0  max=24  class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_viernes"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">sabado?   </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_sabado"></td>
+                                        <td>  <input type="number"  min=0  max=24 class="form-control PP03E" disabled onchange="update_parte_3()" name="PP03E_sabado"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Total de horas  </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03E" max="999"  disabled onchange="update_parte_3()" name="PP03E" id="PP03E"></td>
+                                        <td>  <input type="number"  min=0 class="form-control PP03E" max="999"  disabled onchange="update_parte_3()" name="PP03E" id="PP03E"></td>
                                         </tr>
                                 </tbody>
                         </table>
@@ -97,31 +97,31 @@
                                 <tbody>
                                         <tr>
                                         <th scope="row">Domingo? </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_domingo"> </td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_domingo"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">lunes?    </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_lunes"></td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_lunes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">martes? </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_martes"></td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_martes"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">miercoles?    </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_miercoles"> </td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_miercoles"> </td>
                                         </tr>
                                         <tr>
                                         <th scope="row">jueves?   </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_jueves"> </td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F"  disabled onchange="update_parte_3()" name="PP03F_jueves"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">viernes? </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_viernes"> </td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_viernes"> </td>
                                         </tr>
                                          <tr>
                                         <th scope="row">sabado?   </th>
-                                        <td>  <input type="number"  min=0 step=1 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_sabado"></td>
+                                        <td>  <input type="number"  min=0 max=24 class="form-control PP03F" disabled onchange="update_parte_3()" name="PP03F_sabado"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Total de horas  </th>
