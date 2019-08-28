@@ -54,8 +54,8 @@ Route::group(['middleware' => ['auth']], function () {
     // Route::get('makeusers','HomeController@make');
 
     Route::get("encuesta/viviendaok/{id_vivienda}",'ViviendaController@ok')->name('viviendaok');
-    Route::get("encuesta/hogarok/{id_hogar}", 'hogarController@ok')->name('hogarok');
-    Route::get("encuesta/individuook/{id_individuo}", 'individuoController@ok')->name('individuook');
+    Route::get("encuesta/hogarok/{id_hogar}", 'HogarController@ok')->name('hogarok');
+    Route::get("encuesta/individuook/{id_individuo}", 'IndividuoController@ok')->name('individuook');
 
 
 
