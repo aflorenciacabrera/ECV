@@ -75,14 +75,14 @@
                         {{-- 8 --}}
                         <td class="fit"><select name="AUSENCIA_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""        ></option>
-                            <option value="1">1. Si (2. NO Residente FIN)</option>
-                                        <option value="2">2. No </option>
+                            <option value="1">1. Si</option>
+                                        <option value="2">2. No </option>  {{-- (2. NO Residente FIN) --}}
                                         </select> </td>
                         {{-- 9 --}}
                         <td class="fit"><select name="OTRA_RES_{{$i}}" id="" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled>
                             <option value=""></option>
-                            <option value="1">1. Si (2. NO  RESIDENTE. FIN)</option>
-                                <option value="2">2. No</option>
+                            <option value="1">1. Si</option>
+                                <option value="2">2. No</option>  {{-- (2. NO Residente FIN) --}}
                                 <option value="3">3. N/S</option>
                                 </select> </td>
                         {{-- 10 --}}
