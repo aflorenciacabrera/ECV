@@ -313,7 +313,7 @@ Ultima Ocupación Changa
         <div class="col-md-6">
             <div class="form-group ">
                 <label for="PP11O"><b>11o.</b> ¿Cuál fue la razón principal por la que dejó ese trabajo? </label>
-                <select class="form-control form-control-sm" disabled onchange="update_parte_11()" name="PP11O"       id="PP11O">
+                <select class="form-control form-control-sm" disabled onchange="update_parte_11()" name="PP11O"   placeholder="especificar"    id="PP11O">
                     <option value=""></option>
                     <option value=1>1. despido/cierre (quiebra/venta/traslado de la empresa reestructuración o recorte
                         de
@@ -331,6 +331,7 @@ Ultima Ocupación Changa
                         estudio,
                         enfermedad) </option>
                 </select>
+                <input class="form-control form-control-sm" disabled id="PP11O_esp" name="PP11O_esp">
             </div>
         </div>
         <div class="col-md-6">
@@ -475,7 +476,7 @@ function update_parte_11(){
     // M1 >=1 ? activar("#PP11N"):desactivar("#PP11N");
     N >=1 ? activar("#PP11O"):desactivar("#PP11O");
     O == 1 ? activar("#PP11P"):desactivar("#PP11P");
-
+    O == 8 ? activar("#PP11O_esp"):desactivar("#PP11O_esp");
     O >= 4 || S >= 1? activar("#PP11T"):desactivar("#PP11T");
     P == 1 || Q >= 1? activar("#PP11R"):desactivar("#PP11R");
     P >= 2 ? activar("#PP11Q"):desactivar("#PP11Q");

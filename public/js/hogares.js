@@ -1,6 +1,6 @@
 
 var stepper;
-var paso = 4;
+var paso = 1;
 function getSelectedValue(selector) {
     if (rol != 'admin') {
         value = $(selector).children("option:selected").val();

@@ -213,6 +213,7 @@ class individuo extends Model
 'PP11M1',
 'PP11N',
 'PP11O',
+'PP11O_esp',
 'PP11P',
 'PP11Q',
 'PP11R',
