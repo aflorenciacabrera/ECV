@@ -71,7 +71,7 @@ class ViviendaController extends Controller
                 //     $request['NO_ESTABA_' . $i] == 8 ||
                 //     $request['OTRA_RES_' . $i] == 1 ))
                 // {
-                    $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
+                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
                 // }
                 //creo registro de vivienda_seccion_5
                 $vs = new vivienda_seccion_v();
