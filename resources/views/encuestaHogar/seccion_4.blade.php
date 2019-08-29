@@ -150,7 +150,7 @@
           {{-- 15 --}}
             <td><input type="number" class="form-control form-control-sm" name="CH10E_{{$index}}" id="CH10E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1" min="0" max="99"></td>
             {{-- 16 --}}
-            <td><select name="CH10M_{{$index}}" id="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="8">
+            <td><select name="CH10M_{{$index}}" id="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="8,8">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH10_M == "1" ) selected @endif >1. Porque me costaba estudiar</option>
                     <option value="2"  @if($item->caracteristicas->CH10_M == "2" ) selected @endif >2. Porque tenía que trabajar</option>
@@ -221,7 +221,7 @@
                     <option value="99"  @if($item->caracteristicas->CH14 == "99" ) selected @endif>99 Ns/Nr</option>
                     </select>  </td>
                 {{-- 22 --}}
-            <td><select name="CH15_{{$index}}" id="CH15_{{$index}}" value="{{$item->caracteristicas->CH15}}" class="form-control form-control-sm opcional" data-opcional="#CH15_Cod_{{$index}}" data-condicion="5,3">
+            <td><select name="CH15_{{$index}}" id="CH15_{{$index}}" value="{{$item->caracteristicas->CH15}}" class="form-control form-control-sm opcional" data-opcional="#CH15_Cod_{{$index}}" data-condicion="3,4,5">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH15 == "1" ) selected @endif >1. En esta localidad</option>
                     <option value="2"  @if($item->caracteristicas->CH15 == "2" ) selected @endif >2. En otra localidad de esta provincia </option>
@@ -232,7 +232,7 @@
                     <input type="text" class="form-control form-control-sm" name="CH15_Cod_{{$index}}" id="CH15_Cod_{{$index}}" value="{{$item->caracteristicas->CH15_Cod}}" placeholder=""  maxlength="3" disabled>
                  </td>
                 {{-- 23 --}}
-            <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="5,3">
+            <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="3,4,5">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH16 == "1" ) selected @endif >1. En esta localidad</option>
                     <option value="2"  @if($item->caracteristicas->CH16 == "2" ) selected @endif >2. En otra localidad de esta provincia </option>
@@ -280,9 +280,14 @@ $(document).ready(function(){
 
         target = $(this).data("opcional");
         condicion = $(this).data("condicion");//TODO condicion multiple IN(condicion)
+        condicion = condicion.split(',');
+
         value = $(this).children("option:selected").val();
-        if(value == condicion)
+
+
+        if(condicion.indexOf(value) >= 0)
         {
+            console.log({target})
             $(target).removeAttr("disabled");
         }
         else
