@@ -61,18 +61,18 @@ class ViviendaController extends Controller
 
 
                 //guardo cada nombre de inviduo para el individual solo si es residente
-                if (!($request['ESTABA_' . $i] == 1 ||
-                    $request['ESTABA_' . $i] == 2 ||
-                    $request['AUSENCIA_' . $i] == 2 ||
-                    $request['NO_ESTABA_' . $i] == 4 ||
-                    $request['NO_ESTABA_' . $i] == 5 ||
-                    $request['NO_ESTABA_' . $i] == 6 ||
-                    $request['NO_ESTABA_' . $i] == 7 ||
-                    $request['NO_ESTABA_' . $i] == 8 ||
-                    $request['OTRA_RES_' . $i] == 1 ))
-                {
-                    $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
-                }
+                // if (!($request['ESTABA_' . $i] == 1 ||
+                //     $request['ESTABA_' . $i] == 2 ||
+                //     $request['AUSENCIA_' . $i] == 2 ||
+                //     $request['NO_ESTABA_' . $i] == 4 ||
+                //     $request['NO_ESTABA_' . $i] == 5 ||
+                //     $request['NO_ESTABA_' . $i] == 6 ||
+                //     $request['NO_ESTABA_' . $i] == 7 ||
+                //     $request['NO_ESTABA_' . $i] == 8 ||
+                //     $request['OTRA_RES_' . $i] == 1 ))
+                // {
+                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
+                // }
                 //creo registro de vivienda_seccion_5
                 $vs = new vivienda_seccion_v();
                 $vs->vivienda_id = $vivienda_id;
@@ -121,8 +121,8 @@ class ViviendaController extends Controller
             //
             $h->user_id = Auth::user()->id;
             $h->save();
-           if(sizeOf($_componentes))
-           {
+        //    if(sizeOf($_componentes))
+        //    {
                 foreach ($_componentes[$value] as $nro_componente => $nombre) {
                     // cre el registro de cada individuo ??
                     $hogar_id = $h->id;
@@ -161,7 +161,7 @@ class ViviendaController extends Controller
                     $seccion6->save();
                     //TODO no asignable
                 }
-           }
+        //    }
         }
 
 
