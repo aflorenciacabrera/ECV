@@ -174,7 +174,16 @@ class ViviendaController extends Controller
 
     public function verListadoVivienda()
     {
-        $viviendas = Auth::user()->viviendas;
+        if(Auth::user()->rol == "admin")
+        {
+            $viviendas = vivienda::all();
+            // echo"admin";
+        }
+        else
+        {
+
+            $viviendas = Auth::user()->viviendas;
+        }
         // $viviendas = vivienda::all();
 
         return view("listadoVivienda")->with('viviendas',$viviendas);
