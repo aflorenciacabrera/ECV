@@ -125,7 +125,7 @@ se_hizo_acompaniamiento = getSelectedValue("#acompaniamiento");
 sem_ref = $("#sem_referencia").val();
 
 var chooseDate=new Date(sem_ref);
-chooseDate.setDate(chooseDate.getDate()+8);
+chooseDate.setDate(chooseDate.getDate()+7);
 console.log({chooseDate})
 
 $("#sem_referencia_2").val(chooseDate.getDate()+"/"+(chooseDate.getMonth()+1)+"/"+chooseDate.getFullYear())
