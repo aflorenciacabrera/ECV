@@ -84,12 +84,12 @@
 
             <div class="content">
   
-                  <a href="#"><img src="{{asset('img/LOGO_ESTADISTICA_Y_CENSOS_transparente.png')}}" width="300" /></a>
+                  <a href="#"><img src='/img/LOGO_ESTADISTICA_Y_CENSOS_transparente.png' width="300" /></a>
           <hr>
                 <div class="title m-b-md">
                 {{-- ECV --}}
                   
-                   <img src="{{asset('img/Logo-_Encuesta_Calidad_de_Vida_Color.png')}}" width="500" /><br>
+                   <img src='/img/Logo-_Encuesta_Calidad_de_Vida_Color.png' width="500" /><br>
                
                     
                 </div>

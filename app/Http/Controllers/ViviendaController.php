@@ -59,9 +59,20 @@ class ViviendaController extends Controller
                 //guardo cada hogar
                 $_hogares[] = $request['NRO_HOGAR_' . $i];
 
-                //guardo cada nombre de inviduo
-                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
 
+                //guardo cada nombre de inviduo para el individual solo si es residente
+                // if (!($request['ESTABA_' . $i] == 1 ||
+                //     $request['ESTABA_' . $i] == 2 ||
+                //     $request['AUSENCIA_' . $i] == 2 ||
+                //     $request['NO_ESTABA_' . $i] == 4 ||
+                //     $request['NO_ESTABA_' . $i] == 5 ||
+                //     $request['NO_ESTABA_' . $i] == 6 ||
+                //     $request['NO_ESTABA_' . $i] == 7 ||
+                //     $request['NO_ESTABA_' . $i] == 8 ||
+                //     $request['OTRA_RES_' . $i] == 1 ))
+                // {
+                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
+                // }
                 //creo registro de vivienda_seccion_5
                 $vs = new vivienda_seccion_v();
                 $vs->vivienda_id = $vivienda_id;
@@ -110,46 +121,47 @@ class ViviendaController extends Controller
             //
             $h->user_id = Auth::user()->id;
             $h->save();
-            foreach ($_componentes[$value] as $nro_componente => $nombre)
-            {
-                // cre el registro de cada individuo ??
-                $hogar_id = $h->id;
-                $individuo = new individuo();
-                $individuo->hogar_id = $hogar_id;
-                $individuo->user_id = Auth::user()->id;
+        //    if(sizeOf($_componentes))
+        //    {
+                foreach ($_componentes[$value] as $nro_componente => $nombre) {
+                    // cre el registro de cada individuo ??
+                    $hogar_id = $h->id;
+                    $individuo = new individuo();
+                    $individuo->hogar_id = $hogar_id;
+                    $individuo->user_id = Auth::user()->id;
 
-                $individuo->numero_componente = $nro_componente;
-                $individuo->nombre = $nombre;
-
-
-                //
-                $individuo->codigo_area = $v->codigo_area;
-                $individuo->numero_listado = $v->numero_listado;
-                $individuo->numero_semana = $v->numero_semana;
-                $individuo->trimestre = $v->trimestre;
-                $individuo->ano4 = $v->ano4;
-                $individuo->numero_vivienda = $v->numero_vivienda;
-                $individuo->numero_hogar = $h->numero_hogar;
+                    $individuo->numero_componente = $nro_componente;
+                    $individuo->nombre = $nombre;
 
 
-                //
+                    //
+                    $individuo->codigo_area = $v->codigo_area;
+                    $individuo->numero_listado = $v->numero_listado;
+                    $individuo->numero_semana = $v->numero_semana;
+                    $individuo->trimestre = $v->trimestre;
+                    $individuo->ano4 = $v->ano4;
+                    $individuo->numero_vivienda = $v->numero_vivienda;
+                    $individuo->numero_hogar = $h->numero_hogar;
 
-                $individuo->save();
-                // Tambien creo registro de la seccion 6 de hogar por cada coso
-                $seccion4 = new hogar_seccion_cuatro();
-                $seccion4->hogar_id = $hogar_id;
-                $seccion4->individuo_id = $individuo->id;
-                $seccion4->save();
-                //TODO no asignable
 
-                // Tambien creo registro de la seccion 6 de hogar por cada coso
-                $seccion6 = new hogarSeccionSeis();
-                $seccion6->hogar_id = $hogar_id;
-                $seccion6->individuo_id = $individuo->id;
-                $seccion6->save();
-                //TODO no asignable
+                    //
 
-            }
+                    $individuo->save();
+                    // Tambien creo registro de la seccion 6 de hogar por cada coso
+                    $seccion4 = new hogar_seccion_cuatro();
+                    $seccion4->hogar_id = $hogar_id;
+                    $seccion4->individuo_id = $individuo->id;
+                    $seccion4->save();
+                    //TODO no asignable
+
+                    // Tambien creo registro de la seccion 6 de hogar por cada coso
+                    $seccion6 = new hogarSeccionSeis();
+                    $seccion6->hogar_id = $hogar_id;
+                    $seccion6->individuo_id = $individuo->id;
+                    $seccion6->save();
+                    //TODO no asignable
+                }
+        //    }
         }
 
 
@@ -162,7 +174,16 @@ class ViviendaController extends Controller
 
     public function verListadoVivienda()
     {
-        $viviendas = Auth::user()->viviendas    ;
+        if(Auth::user()->rol == "admin")
+        {
+            $viviendas = vivienda::all();
+            // echo"admin";
+        }
+        else
+        {
+
+            $viviendas = Auth::user()->viviendas;
+        }
         // $viviendas = vivienda::all();
 
         return view("listadoVivienda")->with('viviendas',$viviendas);

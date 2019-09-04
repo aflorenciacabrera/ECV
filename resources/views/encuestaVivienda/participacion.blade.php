@@ -14,7 +14,7 @@
                 <div class="form-group col-md-2">
                         <label for="sem_referencia">Semana de referencia:</label>
                         <input type="date" min="2019-01-01" max="2019-12-31" class="form-control form-control-sm sem_referencia" id="sem_referencia"  onchange="update_participacion()" name="sem_referencia" placeholder="desde" required>
-                        <input type="date" min="2019-01-01" max="2019-12-31" class="form-control form-control-sm sem_referencia"   onchange="update_participacion()" name="sem_referencia_2" placeholder="hasta" required>
+                        <input disabled type="text"  class="form-control form-control-sm sem_referencia"   id="sem_referencia_2" name="sem_referencia_2" placeholder="hasta">
                 </div>
 
         </div>
@@ -122,6 +122,13 @@ function update_participacion(){
         visitas_fecha_hora_5 = $("#visitas_fecha_hora_5").val();
 se_hizo_acompaniamiento = getSelectedValue("#acompaniamiento");
 
+sem_ref = $("#sem_referencia").val();
+
+var chooseDate=new Date(sem_ref);
+chooseDate.setDate(chooseDate.getDate()+7);
+console.log({chooseDate})
+
+$("#sem_referencia_2").val(chooseDate.getDate()+"/"+(chooseDate.getMonth()+1)+"/"+chooseDate.getFullYear())
 
 
 entrevistaRealizada == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");

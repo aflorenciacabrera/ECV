@@ -106,12 +106,14 @@
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH08_A == "1" ) selected @endif >1. Si</option>
                     <option value="2"  @if($item->caracteristicas->CH08_A == "2" ) selected @endif >2. No</option>
+                    <option value="9"  @if($item->caracteristicas->CH08_A == "9" ) selected @endif >9. Ns/Nr</option>
                     </select> </td>
             {{-- 10 --}}
             <td><select name="CH08B_{{$index}}" id="CH08B_{{$index}}" value="{{$item->caracteristicas->CH08_B}}" class="form-control form-control-sm">
                     <option value="" required> </option>
                     <option value="1"  @if($item->caracteristicas->CH08_B == "1" ) selected @endif >1. Dolencia/afección/enfermedad</option>
                     <option value="2"  @if($item->caracteristicas->CH08_B == "2" ) selected @endif >2. Control/prevención</option>
+                    <option value="9"  @if($item->caracteristicas->CH08_B == "9" ) selected @endif >9. Ns/Nr</option>
                     </select> </td>
             {{-- 11 --}}
             <td><select name="CH08C_{{$index}}" id="CH08C_{{$index}}" value="{{$item->caracteristicas->CH08_C}}" class="form-control form-control-sm">
@@ -120,6 +122,7 @@
                     <option value="2"  @if($item->caracteristicas->CH08_C == "2" ) selected @endif >2. Guardia</option>
                     <option value="3"  @if($item->caracteristicas->CH08_C == "3" ) selected @endif >3. Turno programado</option>
                     <option value="4"  @if($item->caracteristicas->CH08_C == "4" ) selected @endif >4. Consulta Médica domiciliaria</option>
+                    <option value="9"  @if($item->caracteristicas->CH08_C == "9" ) selected @endif >9. Ns/Nr</option>
                     </select> </td>
             {{-- 12 --}}
             <td><select name="CH08D_{{$index}}" id="CH08D_{{$index}}" value="{{$item->caracteristicas->CH08_D}}" class="form-control form-control-sm">
@@ -128,6 +131,7 @@
                     <option value="2"  @if($item->caracteristicas->CH08_D == "2" ) selected @endif >2. Público Nacional</option>
                     <option value="3"  @if($item->caracteristicas->CH08_D == "3" ) selected @endif >3. Público Provincial</option>
                     <option value="4"  @if($item->caracteristicas->CH08_D == "4" ) selected @endif >4. Público Municipal</option>
+                    <option value="9"  @if($item->caracteristicas->CH08_D == "9" ) selected @endif >9. Ns/Nr</option>
                     </select> </td>
              {{-- 13 --}}
             <td><select name="CH09_{{$index}}" id="CH09_{{$index}}" value="{{$item->caracteristicas->CH09}}" class="form-control form-control-sm">
@@ -146,7 +150,7 @@
           {{-- 15 --}}
             <td><input type="number" class="form-control form-control-sm" name="CH10E_{{$index}}" id="CH10E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1" min="0" max="99"></td>
             {{-- 16 --}}
-            <td><select name="CH10M_{{$index}}" id="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="8">
+            <td><select name="CH10M_{{$index}}" id="CH10M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="8,8">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH10_M == "1" ) selected @endif >1. Porque me costaba estudiar</option>
                     <option value="2"  @if($item->caracteristicas->CH10_M == "2" ) selected @endif >2. Porque tenía que trabajar</option>
@@ -156,6 +160,7 @@
                     <option value="6"  @if($item->caracteristicas->CH10_M == "6" ) selected @endif >6. Por problemas de consumo de alcohol/drogas</option>
                     <option value="7"  @if($item->caracteristicas->CH10_M == "7" ) selected @endif >7. Finalizo</option>
                     <option value="8"  @if($item->caracteristicas->CH10_M == "8" ) selected @endif >8. Otros (especificar)</option>
+                    <option value="9"  @if($item->caracteristicas->CH10_M == "9" ) selected @endif >9. Ns/Nr</option>
                     </select>
                  <input type="text" disabled class="form-control form-control-sm" name="CH10M_Esp_{{$index}}" id="CH10M_Esp_{{$index}}" maxlength="45" >
             </td>
@@ -190,12 +195,14 @@
                     <option value="12"  @if($item->caracteristicas->CH12 == "12" ) selected @endif >12. Universitario</option>
                     <option value="13"  @if($item->caracteristicas->CH12 == "13" ) selected @endif >13. Posgrado Universitario</option>
                     <option value="14"  @if($item->caracteristicas->CH12 == "14" ) selected @endif >14. Educación Especial </option>
+                    <option value="99"  @if($item->caracteristicas->CH12 == "99" ) selected @endif >99. Ns/Nr</option>
                     </select> </td>
          {{-- 20 --}}
             <td><select name="CH13_{{$index}}" id="CH13_{{$index}}" value="{{$item->caracteristicas->CH13}}" class="form-control form-control-sm">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH13 == "1" ) selected @endif >1. Si</option>
                     <option value="2"  @if($item->caracteristicas->CH13 == "2" ) selected @endif >2. No</option>
+                    <option value="9"  @if($item->caracteristicas->CH13 == "9" ) selected @endif >9. Ns/Nr</option>
                     </select> </td>
         {{-- 21 --}}
             <td><select name="CH14_{{$index}}" id="CH14_{{$index}}" value="{{$item->caracteristicas->CH14}}" class="form-control form-control-sm">
@@ -214,7 +221,7 @@
                     <option value="99"  @if($item->caracteristicas->CH14 == "99" ) selected @endif>99 Ns/Nr</option>
                     </select>  </td>
                 {{-- 22 --}}
-            <td><select name="CH15_{{$index}}" id="CH15_{{$index}}" value="{{$item->caracteristicas->CH15}}" class="form-control form-control-sm opcional" data-opcional="#CH15_Cod_{{$index}}" data-condicion="5,3">
+            <td><select name="CH15_{{$index}}" id="CH15_{{$index}}" value="{{$item->caracteristicas->CH15}}" class="form-control form-control-sm opcional" data-opcional="#CH15_Cod_{{$index}}" data-condicion="3,4,5">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH15 == "1" ) selected @endif >1. En esta localidad</option>
                     <option value="2"  @if($item->caracteristicas->CH15 == "2" ) selected @endif >2. En otra localidad de esta provincia </option>
@@ -225,7 +232,7 @@
                     <input type="text" class="form-control form-control-sm" name="CH15_Cod_{{$index}}" id="CH15_Cod_{{$index}}" value="{{$item->caracteristicas->CH15_Cod}}" placeholder=""  maxlength="3" disabled>
                  </td>
                 {{-- 23 --}}
-            <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="5,3">
+            <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="3,4,5">
                     <option value=""> </option>
                     <option value="1"  @if($item->caracteristicas->CH16 == "1" ) selected @endif >1. En esta localidad</option>
                     <option value="2"  @if($item->caracteristicas->CH16 == "2" ) selected @endif >2. En otra localidad de esta provincia </option>
@@ -273,9 +280,14 @@ $(document).ready(function(){
 
         target = $(this).data("opcional");
         condicion = $(this).data("condicion");//TODO condicion multiple IN(condicion)
+        condicion = condicion.split(',');
+
         value = $(this).children("option:selected").val();
-        if(value == condicion)
+
+
+        if(condicion.indexOf(value) >= 0)
         {
+            console.log({target})
             $(target).removeAttr("disabled");
         }
         else
