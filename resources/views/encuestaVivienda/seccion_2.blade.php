@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group col-md-2">
                         <label for="piso">Piso:</label>
-                          <input type="text"  class="form-control form-control-sm" id="numero"  pattern="[0-9]*|pb|PB"  name="numero" placeholder="N° o PB"  >
+                          <input type="text"  class="form-control form-control-sm" id="piso"  pattern="[0-9]*|pb|PB"  name="piso" placeholder="N° o PB"  >
                 </div>
                 <div class="form-group col-md-2">
                         <label for="deptoocasa">Depto o casa:</label>
