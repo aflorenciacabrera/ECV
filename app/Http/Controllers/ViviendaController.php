@@ -41,125 +41,143 @@ class ViviendaController extends Controller
     public function crearEncuestaVivienda(Request $request)
     {
 
-        ///creo el registro de vivienda
-        $v = new vivienda;
-        $v->user_id = Auth::user()->id;
-        $v->fill($request->all());
-        $v->save();
+        /** CREAR UN REGISTRO DE VIVIEDA */
+            $v = new vivienda;
+            $v->user_id = Auth::user()->id;
+            $v->fill($request->all());
+            $v->save();
+        /** VIVIENDA CREADA */
 
-        //grabo registro seccion v
-        $vivienda_id = $v->id;
-        $_hogares = array();//guardo todos los numeros de hogar para despues
-        $_componentes = array();//guardo los individuales por cada hogar para crear los individuales
+
+        $vivienda_id = $v->id; //handshake
+
+        /**
+         * CREO ARREGLOS PARA OCNTAR
+         */
+            $_hogares = array(); //guardo todos los numeros de hogar para despues
+            $_componentes = array(); //guardo los individuales por cada hogar para crear los individuales
+            $_residencia = array();//guardo los individuales por cada hogar para crear los individuales
+        /** */
+        /**
+         * RECORRO Y CONTROLO LOS CAMPOS DEL CUATRO DE HOGAR
+         */
         for ($i=1; $i <= 14; $i++)
         {
             if($request['NRO_HOGAR_'.$i])///existe
             {
-                //
-                //guardo cada hogar
-                $_hogares[] = $request['NRO_HOGAR_' . $i];
+                /**GUARDO EL HOGAR PARA COMPLETAR DESPUES */
+                    $_hogares[] = $request['NRO_HOGAR_' . $i];
+
+                /**GUARDO UNA MATRIZ [hogar][componente] */
+                    $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
+                /**GUARDO CONDICION DE RESIDENCIA */
+                 if (!($request['ESTABA_' . $i] == 1 ||///7
+                    $request['ESTABA_' . $i] == 2 ||//7
+                    $request['AUSENCIA_' . $i] == 2 ||//8
+                    $request['NO_ESTABA_' . $i] == 4 ||//9
+                    $request['NO_ESTABA_' . $i] == 5 ||//9
+                    $request['NO_ESTABA_' . $i] == 6 ||//9
+                    $request['NO_ESTABA_' . $i] == 7 ||//9
+                    $request['NO_ESTABA_' . $i] == 8 ||//9
+                    $request['OTRA_RES_' . $i] == 1 ))//10
+                {
+                    echo "ES RESIDENTE";
+                    $_residencia[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = true;
+                }
+                else
+                {
+                    echo "NO RESIDENTE!";
+                    $_residencia[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = false;
+                }
 
 
-                //guardo cada nombre de inviduo para el individual solo si es residente
-                // if (!($request['ESTABA_' . $i] == 1 ||
-                //     $request['ESTABA_' . $i] == 2 ||
-                //     $request['AUSENCIA_' . $i] == 2 ||
-                //     $request['NO_ESTABA_' . $i] == 4 ||
-                //     $request['NO_ESTABA_' . $i] == 5 ||
-                //     $request['NO_ESTABA_' . $i] == 6 ||
-                //     $request['NO_ESTABA_' . $i] == 7 ||
-                //     $request['NO_ESTABA_' . $i] == 8 ||
-                //     $request['OTRA_RES_' . $i] == 1 ))
-                // {
-                $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
-                // }
-                //creo registro de vivienda_seccion_5
-                $vs = new vivienda_seccion_v();
-                $vs->vivienda_id = $vivienda_id;
-                $vs->NRO_HOGAR = $request['NRO_HOGAR_'.$i];
-                $vs->NRO_COMPONENTE = $request['NRO_COMPONENTE_'.$i];
-                $vs->NOMBRE_JEFE = $request['NOMBRE_JEFE_'.$i];
-                $vs->VIVIO_SEM = $request['VIVIO_SEM_'.$i];
-                $vs->VIVIO_MES = $request['VIVIO_MES_'.$i];
-                $vs->FIJAR_RES = $request['FIJAR_RES_'.$i];
-                $vs->ESTABA = $request['ESTABA_'.$i];
-                $vs->AUSENCIA = $request['AUSENCIA_'.$i];
-                $vs->OTRA_RES = $request['OTRA_RES_'.$i];
-                $vs->NO_ESTABA = $request['NO_ESTABA_'.$i];
-                $vs->CAMBIOS = $request['CAMBIOS_'.$i];
-                $vs->MOTIVO = $request['MOTIVO_'.$i];
-                $vs->MOTIVO_OTRO = $request['MOTIVO_OTRO_'.$i];
-                $vs->CH13 = $request['CH13_'.$i];
-                $vs->CH14 = $request['CH14_'.$i];
-                $vs->CH14_OTRO = $request['CH14_OTRO_'.$i];
-                $vs->CH15 = $request['CH15_'.$i];
-                $vs->CH16 = $request['CH16_'.$i];
-                $vs->CH16_OTRO = $request['CH16_OTRO_'.$i];
-                $vs->save();
+                /*
+                 * GUARDO TABLA SECCION 5 de VIVIENDA
+                 */
+                    $vs = new vivienda_seccion_v();
+                    $vs->vivienda_id = $vivienda_id;
+                    $vs->NRO_HOGAR = $request['NRO_HOGAR_'.$i];
+                    $vs->NRO_COMPONENTE = $request['NRO_COMPONENTE_'.$i];
+                    $vs->NOMBRE_JEFE = $request['NOMBRE_JEFE_'.$i];
+                    $vs->VIVIO_SEM = $request['VIVIO_SEM_'.$i];
+                    $vs->VIVIO_MES = $request['VIVIO_MES_'.$i];
+                    $vs->FIJAR_RES = $request['FIJAR_RES_'.$i];
+                    $vs->ESTABA = $request['ESTABA_'.$i];
+                    $vs->AUSENCIA = $request['AUSENCIA_'.$i];
+                    $vs->OTRA_RES = $request['OTRA_RES_'.$i];
+                    $vs->NO_ESTABA = $request['NO_ESTABA_'.$i];
+                    $vs->CAMBIOS = $request['CAMBIOS_'.$i];
+                    $vs->MOTIVO = $request['MOTIVO_'.$i];
+                    $vs->MOTIVO_OTRO = $request['MOTIVO_OTRO_'.$i];
+                    $vs->CH13 = $request['CH13_'.$i];
+                    $vs->CH14 = $request['CH14_'.$i];
+                    $vs->CH14_OTRO = $request['CH14_OTRO_'.$i];
+                    $vs->CH15 = $request['CH15_'.$i];
+                    $vs->CH16 = $request['CH16_'.$i];
+                    $vs->CH16_OTRO = $request['CH16_OTRO_'.$i];
+                    $vs->save();
+                /** FIN GUARGAR TABLA SECCION 5 de VIVIENDA */
             }
         }
-        // print_r($_componentes);
+
+        /**QUITO LOS REPETIDOS DE LOS ID DE HOGARES */
         $hogares = (array_unique(($_hogares)));
-        // creo el registro de cada hogar ??
-        //Cuantos hogares son?
+
+        /**CREO LOS REGISTROS EN HOGARES */
         foreach ($hogares as $value)
         {
-            $h = new hogar();
-            $h->vivienda_id = $vivienda_id;
-            $h->numero_hogar = $value;
-            print_r($value);
-            print_r($h->numero_hogar);
-            // campos similares
-            $h->codigo_area = $v->codigo_area;
-            $h->numero_listado = $v->numero_listado;
-            $h->numero_semana = $v->numero_semana;
-            $h->trimestre = $v->trimestre;
-            $h->ano4 = $v->ano4;
-            $h->numero_vivienda = $v->numero_vivienda;
+            /**CREO UN REGISTRO HOGAR */
+                $h = new hogar();
+                $h->vivienda_id = $vivienda_id;
+                $h->numero_hogar = $value;
+                // campos similares con vivienda para precargar
+                $h->codigo_area = $v->codigo_area;
+                $h->numero_listado = $v->numero_listado;
+                $h->numero_semana = $v->numero_semana;
+                $h->trimestre = $v->trimestre;
+                $h->ano4 = $v->ano4;
+                $h->numero_vivienda = $v->numero_vivienda;
+                $h->user_id = Auth::user()->id;
+                $h->save();
+            /*** FIN CREAR HOGAR*/
 
-
-            //
-            $h->user_id = Auth::user()->id;
-            $h->save();
-        //    if(sizeOf($_componentes))
-        //    {
+            //**RECORRO LA MATRIZ DE COMPONENTES PARA CREAR LOS REGISTROS INDIVIDUALES */
                 foreach ($_componentes[$value] as $nro_componente => $nombre) {
-                    // cre el registro de cada individuo ??
-                    $hogar_id = $h->id;
-                    $individuo = new individuo();
-                    $individuo->hogar_id = $hogar_id;
-                    $individuo->user_id = Auth::user()->id;
 
-                    $individuo->numero_componente = $nro_componente;
-                    $individuo->nombre = $nombre;
+                    $hogar_id = $h->id; //hand shake
+                //**CREO INDIVIDUAL */
+                /**REGISTRO SECCION 4 de HOGARES */
+                $seccion4 = new hogar_seccion_cuatro();
+                $seccion4->hogar_id = $hogar_id;
+                /**REGISTRO SECCION 6 de HOGARES */
+                $seccion6 = new hogarSeccionSeis();
+                $seccion6->hogar_id = $hogar_id;
+                    if($_residencia[$value][$nro_componente])
+                    {
+                        $individuo = new individuo();
+                        $individuo->hogar_id = $hogar_id;
+                        $individuo->user_id = Auth::user()->id;
 
+                        $individuo->numero_componente = $nro_componente;
+                        $individuo->nombre = $nombre;
+
+                        $individuo->codigo_area = $v->codigo_area;
+                        $individuo->numero_listado = $v->numero_listado;
+                        $individuo->numero_semana = $v->numero_semana;
+                        $individuo->trimestre = $v->trimestre;
+                        $individuo->ano4 = $v->ano4;
+                        $individuo->numero_vivienda = $v->numero_vivienda;
+                        $individuo->numero_hogar = $h->numero_hogar;
+                        $individuo->save();
 
                     //
-                    $individuo->codigo_area = $v->codigo_area;
-                    $individuo->numero_listado = $v->numero_listado;
-                    $individuo->numero_semana = $v->numero_semana;
-                    $individuo->trimestre = $v->trimestre;
-                    $individuo->ano4 = $v->ano4;
-                    $individuo->numero_vivienda = $v->numero_vivienda;
-                    $individuo->numero_hogar = $h->numero_hogar;
-
-
-                    //
-
-                    $individuo->save();
-                    // Tambien creo registro de la seccion 6 de hogar por cada coso
-                    $seccion4 = new hogar_seccion_cuatro();
-                    $seccion4->hogar_id = $hogar_id;
                     $seccion4->individuo_id = $individuo->id;
-                    $seccion4->save();
-                    //TODO no asignable
-
-                    // Tambien creo registro de la seccion 6 de hogar por cada coso
-                    $seccion6 = new hogarSeccionSeis();
-                    $seccion6->hogar_id = $hogar_id;
                     $seccion6->individuo_id = $individuo->id;
+                    }
+                    /** FIN CREO INDIVIDUAL */
+                    $seccion4->save();
                     $seccion6->save();
-                    //TODO no asignable
+
                 }
         //    }
         }
@@ -167,7 +185,7 @@ class ViviendaController extends Controller
 
 
         return redirect(route("viviendaok",['id_vivienda=>'=>$v->id]));
-        // return redirect(route('verHogares',['id_vivienda'=>$v->id]));
+
 
     }
 

@@ -167,13 +167,14 @@ class hogar extends Model
 
     public function estado()
     {
-
+        ///TRAER SOLO MAYORES A 10 Y RESIDENTES
         if(!$this->estado)
         {
             return 'Hogar Incompleto';
         }
 
         $individuos = $this->individuos;
+
         foreach ($individuos as $individuo) {
             if (!$individuo->estado && $individuo->edad() >= 10)
             {

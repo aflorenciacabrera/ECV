@@ -274,7 +274,7 @@ BE = getSelectedValue("#BE");
 
 AUH = getSelectedValue("#AUH");
 
-AUH == 1?activar(".auh_inputs"):desactivar(".auh_inputs");
+AUH == 1?activar(".auh_inputs",false):desactivar(".auh_inputs",false);
 DI == 1? activar("#DI_1"):desactivar("#DI_1");
 AI == 1? activar("#AI_1"):desactivar("#AI_1");
 MI == 1? activar("#MI_1"):desactivar("#MI_1");

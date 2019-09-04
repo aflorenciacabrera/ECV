@@ -20,9 +20,7 @@ function desactivar(selector) {
 function activar(selector, required = true, focus = true) {
     if (rol != 'admin') {
         $(selector).removeAttr('disabled')
-        if (focus) {
-            // $(selector).focus();
-        }
+
         if (required) {
             setRequired(selector);
         }

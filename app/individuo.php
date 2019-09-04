@@ -270,4 +270,6 @@ class individuo extends Model
                 break;
         };
     }
+
+
 }
