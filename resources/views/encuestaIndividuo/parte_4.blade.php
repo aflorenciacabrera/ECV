@@ -133,7 +133,7 @@ PP04B3_DIA = $("#PP04B3_DIA").val();
 
       (a >= 1)? activar("#PP04B"):desactivar("#PP04B");
       (a == 3)? activar("#PP04A_Esp"):desactivar("#PP04A_Esp");
-      (b)?activar("#PP04B1",false,false):desactivar("#PP04B1");
+      (b)?activar("#PP04B1",false):desactivar("#PP04B1");
       (b1 == 1)?activar(".PP04B3",false):desactivar(".PP04B3");
 
         PP04B3_ANO || PP04B3_DIA ? desactivar("#PP04B3_MES",false):false;
