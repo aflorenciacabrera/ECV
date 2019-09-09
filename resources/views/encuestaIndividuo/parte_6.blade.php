@@ -77,7 +77,7 @@
                                 <option value="1">1. Si</option>
                                 <option value="2">2. No</option>
                         </select>
-                        <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06H_Esp" id="PP06H_Esp" maxlength="45">
+                        <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06H_Esp" id="PP06H_Esp" >
 
             </div>
              <div class="form-group col-md-6">
@@ -99,7 +99,7 @@
                                 <option value="1">1. Si</option>
                                 <option value="2">2. No</option>
                         </select>
-                        {{-- <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06H_Esp" id="PP06H_Esp" maxlength="45">   --}}
+                        {{-- <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06H_Esp" id="PP06H_Esp" >   --}}
                    <br>
                 <label for="PP06L">6l. ¿A cuántas horas por día corresponde? </label>
                 <small id="" class="form-text text-muted">(en un día promedio)</small>
@@ -117,12 +117,12 @@
                                 <div class="form-group col-md-4">
                                         <label for="PP06K_sem">¿Cuántos días por semana?</label> </div>
                                 <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06k_sem" id="PP06K_sem" maxlength="45">
+                                        <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06k_sem" id="PP06K_sem" >
                                  </div>
                                  <div class="form-group col-md-4">
                                         <label for="PP06K_mes">¿Cuántos días por mes?</label> </div>
                                 <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06k_mes" id="PP06K_mes" maxlength="45">
+                                        <input type="text" class="form-control" disabled onchange="update_parte_6()" name="PP06k_mes" id="PP06K_mes" >
                                 </div>
                         </div>
             </div>

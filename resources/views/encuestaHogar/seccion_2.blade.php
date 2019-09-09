@@ -100,7 +100,7 @@
                 </div>
                 <div class="form-group col-md-6">
                         <label for="II7_Esp">   </label>
-                        <input type="text" disabled class="form-control form-control-sm" name="II7_Esp" id="II7_Esp" placeholder=""  maxlength="45" disabled>
+                        <input type="text" disabled class="form-control form-control-sm" name="II7_Esp" id="II7_Esp" placeholder="" disabled>
                 </div>
         </div>
         <div class="form-row">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="form-group col-md-6">
                         <label for="">   </label>
-                        <input type="text" disabled class="form-control form-control-sm" name="II8_Esp" id="II8_Esp" placeholder="" maxlength="45" disabled>
+                        <input type="text" disabled class="form-control form-control-sm" name="II8_Esp" id="II8_Esp" placeholder="" disabled>
                 </div>
         </div>
         <div class="form-row">

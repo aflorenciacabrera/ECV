@@ -30,7 +30,7 @@
                                 <option value="8">8. De otra forma (especificar)</option>
                                 <option value="9">9. Ns/Nr</option>
                      </select>
-                     <input type="text" class="form-control" onchange="update_parte_7()" disabled name="PP07B_Esp" id="PP07B_Esp" maxlength="45">
+                     <input type="text" class="form-control" onchange="update_parte_7()" disabled name="PP07B_Esp" id="PP07B_Esp" >
 
             </div>
 

@@ -11,10 +11,10 @@
                                 <option value="2">2.… privada?</option>
                                 <option value="3">3.… de otro tipo? (especificar)</option>
                 </select>
-                <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04A_Esp" id="PP04A_Esp" maxlength="45">
+                <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04A_Esp" id="PP04A_Esp" >
                 <br>
                  <label for="PP04B">4b. ¿A qué se dedica o qué produce ese negocio/empresa/institución?</label>
-                                <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04B" id="PP04B" maxlength="45"><br>
+                                <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04B" id="PP04B"><br>
                         <label for="">4b1. Si presta servicios domésticos en hogares particulares, Marque</label>
                                 <select class="form-control" disabled onchange="update_parte_4()" name="PP04B1" id="PP04B1">
                                         <option value=""> </option>
@@ -44,7 +44,7 @@
 
 
                          <label for="PP04B4">4b4. ¿Cómo se llama su ocupación?</label>
-                        <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04B4" id="PP04B4" maxlength="45"><br>
+                        <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04B4" id="PP04B4" ><br>
                 </div>
 
              <div class="form-group col-md-6">
@@ -76,13 +76,13 @@
                 </select>
                 <br>
                     <label for="PP04D">4d. ¿Cómo se llama la ocupación que hace?</label>
-                     <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04D" id="PP04D" maxlength="45">
+                     <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04D" id="PP04D" >
                      <br>
                      <label for="PP04E">4e. ¿Qué tareas realiza____________________ en ese trabajo?</label>
-                     <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04E" id="PP04E" maxlength="45">
+                     <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04E" id="PP04E" >
                      <br>
                       <label for="PP04F">4f. ¿Qué herramientas, maquinarias / equipos utiliza?</label>
-                     <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04F" id="PP04F" maxlength="45">
+                     <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04F" id="PP04F" >
                      <br>
                      <label for="PP04G">4g. ¿Dónde realiza principalmente sus tareas? </label>
                      <small  class="form-text text-muted">(no lea, escuche la respuesta y marque la que corresponda)</small>
@@ -100,7 +100,7 @@
                         <option value="10">10.-En otro lugares (especificar)</option>
                         </select>
 
-                        <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04G_Esp" id="PP04G_Esp" maxlength="45">
+                        <input type="text" class="form-control" disabled onchange="update_parte_4()" name="PP04G_Esp" id="PP04G_Esp" >
             </div>
          </div>
         {{-- <div class="form-row">

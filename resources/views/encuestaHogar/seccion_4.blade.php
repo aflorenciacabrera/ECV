@@ -162,7 +162,7 @@
                     <option value="8"  @if($item->caracteristicas->CH10_M == "8" ) selected @endif >8. Otros (especificar)</option>
                     <option value="9"  @if($item->caracteristicas->CH10_M == "9" ) selected @endif >9. Ns/Nr</option>
                     </select>
-                 <input type="text" disabled class="form-control form-control-sm" name="CH10M_Esp_{{$index}}" id="CH10M_Esp_{{$index}}" maxlength="45" >
+                 <input type="text" disabled class="form-control form-control-sm" name="CH10M_Esp_{{$index}}" id="CH10M_Esp_{{$index}}"  >
             </td>
            {{-- 17 --}}
             <td><select name="CH10G_{{$index}}" id="CH10G_{{$index}}" value="{{$item->caracteristicas->CH10_G}}" class="form-control form-control-sm">
@@ -229,7 +229,7 @@
                     <option value="4"  @if($item->caracteristicas->CH15 == "4" ) selected @endif >4. En un país limítrofe (especificar Brasil, Bolivia,Chile, Paraguay, Uruguay)</option>
                     <option value="5"  @if($item->caracteristicas->CH15 == "5" ) selected @endif >5. En otro país (especificar)</option>
                     </select>
-                    <input type="text" class="form-control form-control-sm" name="CH15_Cod_{{$index}}" id="CH15_Cod_{{$index}}" value="{{$item->caracteristicas->CH15_Cod}}" placeholder=""  maxlength="3" disabled>
+                    <input type="text" class="form-control form-control-sm" name="CH15_Cod_{{$index}}" id="CH15_Cod_{{$index}}" value="{{$item->caracteristicas->CH15_Cod}}" placeholder="" disabled>
                  </td>
                 {{-- 23 --}}
             <td><select name="CH16_{{$index}}" id="CH16_{{$index}}" value="{{$item->caracteristicas->CH16}}" class="form-control form-control-sm opcional"  data-opcional="#CH16_Cod_{{$index}}" data-condicion="3,4,5">
@@ -242,7 +242,7 @@
                     <option value="6"  @if($item->caracteristicas->CH16 == "6" ) selected @endif >6. No había nacido</option>
                     <option value="3"  @if($item->caracteristicas->CH16 == "3" ) selected @endif >9. Ns/Nr</option>
                     </select>
-                    <input type="text" class="form-control form-control-sm" name="CH16_Cod_{{$index}}" id="CH16_Cod_{{$index}}" value="{{$item->caracteristicas->CH16_Cod}}" placeholder=""  maxlength="3" disabled>
+                    <input type="text" class="form-control form-control-sm" name="CH16_Cod_{{$index}}" id="CH16_Cod_{{$index}}" value="{{$item->caracteristicas->CH16_Cod}}" placeholder=""   disabled>
                   </td>
                 {{-- 24 --}}
             <td><select name="CH24_{{$index}}" id="CH24_{{$index}}" value="{{$item->caracteristicas->CH24}}" class="form-control form-control-sm">

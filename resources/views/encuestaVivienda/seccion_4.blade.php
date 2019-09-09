@@ -20,7 +20,7 @@
             <div class="form-group col-md-6">
                 <label for="IV2">2. ¿Cuántos ambientes/habitaciones tiene la vivienda en total? </label>
                 <small  class="form-text text-muted"> (sin contar baño/s, cocina, pasillo/s, lavadero, garage)</small>
-                <input  type="number" min=0 step=1 class="form-control form-control-sm" name="IV2" id="IV2" maxlength="45"  disabled onchange='update_seccion_4()'>
+                <input  type="number" min=0 step=1 class="form-control form-control-sm" name="IV2" id="IV2"  disabled onchange='update_seccion_4()'>
             </div>
         </div>
         <div class="form-row">
@@ -34,7 +34,7 @@
                                 <option value="3">3. … Ladrillo suelto/ tierra?</option>
                                 <option value="4">4. Otro material? (especificar)</option>
                         </select>
-                          <input type="text" class="form-control form-control-sm " disabled name="IV3_Esp" id="IV3_Esp"  placeholder="Especificar" maxlength="45" disabled onchange='update_seccion_4()'>
+                          <input type="text" class="form-control form-control-sm " disabled name="IV3_Esp" id="IV3_Esp"  placeholder="Especificar"  disabled onchange='update_seccion_4()'>
 
                 </div>
                 <div class="form-group col-md-6">
@@ -95,7 +95,7 @@
                                 <option value="3">3. … Perforación con bomba manual?</option>
                                 <option value="4">4. …Otra fuente? (especificar)</option>
                         </select>
-                        <input type="text" class="form-control form-control-sm " disabled name="IV7_Esp" id="IV7_Esp" placeholder="Especificar" maxlength="45" disabled onchange='update_seccion_4()'>
+                        <input type="text" class="form-control form-control-sm " disabled name="IV7_Esp" id="IV7_Esp" placeholder="Especificar"  disabled onchange='update_seccion_4()'>
                 </div>
 
         </div>
