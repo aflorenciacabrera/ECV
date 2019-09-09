@@ -135,7 +135,7 @@ function update_parte_2(){
     (b == 2)?activar("#PP02D"):desactivar("#PP02D");
     (d == 2)?activar("#PP02E"):desactivar("#PP02E");
 
-    (d == 1 || e == 1 || e == 2 || c >= 1 || g == 1 || i == 1)?activar("#PP10A"):desactivar("#PP10A");//TODO saltar a la 10
+    (d == 1 || e == 1 || e == 2 || c >= 1 || g == 1)?activar("#PP10A"):desactivar("#PP10A");//TODO saltar a la 10
     (f == 1)?activar("#PP02G"):desactivar("#PP02G");
     (f == 2 || a == 3 || a == 4 || e == 3 || e == 4 || e == 5)?activar("#PP02H"):desactivar("#PP02H");
     (h == 1 || h == 2 || g == 2)?activar("#PP02I"):desactivar("#PP02I");
