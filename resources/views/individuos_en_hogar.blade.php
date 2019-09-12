@@ -8,8 +8,11 @@
             <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                <h4 class="card-title text-center">Hogar Nro:{{$hogar->numero_hogar}}</br> ( Área: {{$hogar->vivienda->codigo_area}} - Nro Listado: {{$hogar->vivienda->numero_listado}} - Vivienda:{{$hogar->vivienda->numero_vivienda}})</h4>
-                <h4 class="card-title text-center">( Trimestre: {{$hogar->vivienda->trimestre}} - Semana: {{$hogar->vivienda->numero_semana}} - Año:{{$hogar->vivienda->ano4}})</h4>
+                <h4 class="card-title text-center">Hogar Nro:{{$hogar->numero_hogar}}</br> ( Área: {{$hogar->vivienda->codigo_area}} - Nro Listado: {{$hogar->vivienda->numero_listado}} - Vivienda:{{$hogar->vivienda->numero_vivienda}} - Manzana:{{$hogar->vivienda->manz}})</h4>
+                <h4 class="card-title text-center">
+                    ( Trimestre: {{$hogar->vivienda->trimestre}} -
+                    Semana: {{$hogar->vivienda->numero_semana}} - Año:{{$hogar->vivienda->ano4}})
+                </h4>
                 </div>
 
             </div>
