@@ -1,6 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
+<script src="{{asset('js/tablefilter/tablefilter.js')}}"></script>
+<script>
+$(document).ready(function(){
+    var tf = new TableFilter(document.querySelector('#tabla'), {
+        base_path: "{{asset('js/tablefilter')}}"+"/",
+         col_0: 'select',
+         col_1: 'select',
+         col_2: 'select',
+         col_3: 'none',
+         col_4: 'none',
+         col_5: 'none',
+         col_6: 'none',
+         col_7: 'none',
+         col_8: 'none',
+         col_9: 'none',
+         col_10: 'none',
+         col_11: 'none',
+         col_12: 'none',
+         col_13: 'none',
+         col_14: 'none',
+         col_15: 'none',
+         col_16: 'none',
+    });
+
+    tf.init();
+
+
+})
+</script>
 <div class="container-fluid">
 
         <div class="card">
@@ -22,7 +51,7 @@
 
                 <div class="card-body">
 
-                    <table class="table table-striped table-inverse  table-sm">
+                    <table class="table table-striped table-inverse  table-sm" id="tabla">
                         <thead class="thead-inverse">
                             <tr>
                                 <th>Área</th>
@@ -39,9 +68,9 @@
                                 <th>Habitación</th>
                                 <th>Tipo Vivienda</th>
                                 {{-- <th>Descripción</th> --}}
-                                <th>trimestre</th>
-                                <th>ano4</th>
-                                <th>estado</th>
+                                <th>Trimestre</th>
+                                <th>Año</th>
+                                <th>Estado</th>
                                 <th>Acción</th>
                                 {{-- <th>Cargar Hogar</th> --}}
                             </tr>
@@ -83,8 +112,9 @@
                                @if($item->estado() !== 'ok')
 
                                         {{-- TODO ruta pra ver detalle de area --}}
-                                        <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
+                                <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
                                 <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
+
                                 @else
                                   <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Editar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
                                  <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
