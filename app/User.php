@@ -75,7 +75,7 @@ public function hasRole($role)
 
 
 public function viviendas(){
-    return $this->hasMany('App\vivienda');
+    return $this->hasMany('App\vivienda')->orderBy('codigo_area', 'ASC');;
 }
 
 }

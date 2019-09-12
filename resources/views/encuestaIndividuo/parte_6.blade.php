@@ -32,7 +32,7 @@
            <div class="form-group col-md-6">
                     <label for="PP06D">6d. Por el mes………………………… ¿cuánto ganó…………. en su negocio/empresa/actividad considerando sólo la parte que le corresponde a el/ella</label>
                     <small  class="form-text text-muted">(descontando los gastos) </small>
-                    <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06D" id="PP06D" step="1" min="0" max="9999999999">
+                    <input type="number" min="0" class="form-control" disabled onchange="update_parte_6()" name="PP06D" id="PP06D" step="1" min="0" max="9999999999">
                      <select class="form-control" disabled onchange="update_parte_6()" name="PP06D_op" id="PP06D_op">
                                  <option value=""> </option>
                                 <option value="8">8. No tuvo ingresos</option>

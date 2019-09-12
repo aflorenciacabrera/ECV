@@ -194,7 +194,7 @@ class ViviendaController extends Controller
     {
         if(Auth::user()->rol == "admin")
         {
-            $viviendas = vivienda::all();
+            $viviendas = vivienda::all()->sortBy("codigo_area");
             // echo"admin";
         }
         else
@@ -202,7 +202,7 @@ class ViviendaController extends Controller
 
             $viviendas = Auth::user()->viviendas;
         }
-        // $viviendas = vivienda::all();
+
 
         return view("listadoVivienda")->with('viviendas',$viviendas);
     }
