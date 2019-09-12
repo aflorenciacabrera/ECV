@@ -27,6 +27,13 @@ $(document).ready(function(){
 
     tf.init();
 
+    $(".borrar").click(function (e)
+    {
+        if(confirm("Esta Seguro que desea Borrar esta Vivienda?"))
+        {
+           window.location.href = $(this).data('ruta');
+        }
+    })
 
 })
 </script>
@@ -119,6 +126,7 @@ $(document).ready(function(){
                                   <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Editar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
                                  <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
                                @endif
+                                <a name="" id="" class="btn btn-sm btn-danger btn-block borrar" data-ruta="{{route('borrarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Borrar Vivienda<i class="fa fa-delete" aria-hidden="true"></i></a>
                                 </td>
 
                             </tr>

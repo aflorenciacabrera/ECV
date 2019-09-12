@@ -207,6 +207,16 @@ class ViviendaController extends Controller
         return view("listadoVivienda")->with('viviendas',$viviendas);
     }
 
+
+    public function borrarVivienda($vivienda_id){
+        if(Auth::user()->rol == 'admin')
+        {
+            $v = vivienda::find($vivienda_id);
+            $v->borrar();
+        }
+        return redirect(route('verListadoVivienda'));
+    }
+
     public function verVivienda($id)
     {
         //TODO trae listado pero para eso necesitamos hacer la clave en la base de datos

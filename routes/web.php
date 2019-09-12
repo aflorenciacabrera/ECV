@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::get('encuesta/vivienda/editar/{id_vivienda}', 'ViviendaController@editarVivienda')->name('editarVivienda');
+    Route::get('encuesta/vivienda/borrar/{id_vivienda}', 'ViviendaController@borrarVivienda')->name('borrarVivienda');
     Route::post('encuesta/vivienda/editar', 'ViviendaController@actualizarVivienda')->name('actualizarVivienda');
 
     Route::get('encuesta/viviendas/', 'ViviendaController@verListadoVivienda')->name('verListadoVivienda');
