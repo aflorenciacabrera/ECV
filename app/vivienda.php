@@ -116,6 +116,10 @@ class vivienda extends Model
         $this->delete();
     }
 
+    public function user(){
+        return $this->belongsTo("App\User");
+    }
+
     public function estado(){
         $hogares = $this->hogares;
         $flag = 'ok';
@@ -129,13 +133,12 @@ class vivienda extends Model
             else
             {
                 $individuos = $hogar->individuos;
-                foreach ($individuos as $individuo)
-                {
-                    if(!$individuo->estado)
-                    {
-                        $flag = 'individuo incompleto';
+                foreach ($individuos as $individuo) {
+                    if ($individuo->edad() >= 10) {
+                        if (!$individuo->estado) {
+                            $flag = 'individuo incompleto';
+                        }
                     }
-
                 }
             }
         }

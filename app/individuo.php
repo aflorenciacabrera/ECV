@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class individuo extends Model
 {
     //
-    protected $table = 'individuos';
-    protected $fillable = ['Entrev_realiz',
+protected $fillable = ['Entrev_realiz',
 'numero_componente',
 'numero_respondente',
         'nombre_respondente',
@@ -245,6 +244,8 @@ class individuo extends Model
         return $this->belongsTo('App\hogar');
     }
 
+
+
     public function nolaboral()
     {
         return $this->hasOne('App\hogarSeccionSeis');
@@ -278,8 +279,26 @@ class individuo extends Model
         return $this->belongsTo(hogar_seccion_cuatro::class, 'id', 'individuo_id');
     }
 
-    public function hogarSeccionSeis()
+    public function ingresosLaborales()
     {
-        return $this->belongsTo(hogarSeccionSeis::class, 'id', 'individuo_id');
+        $c = 0;
+        $c += $this->PP06C;
+        $c += $this->PP06D;
+        $c += $this->PP06G;
+        $c += $this->PP08D2;
+        $c += $this->PP08D3;
+        $c += $this->PP08D4;
+        $c += $this->PP08J1;
+        $c += $this->PP08J2;
+        $c += $this->PP08J3;
+        $c += $this->PP08F1;
+        $c += $this->PP08F2;
+        $c += $this->PP12B1;
+        $c += $this->PP12B12;
+        $c += $this->PP12B2;
+        $c += $this->PP12B22;
+        $c += $this->PP12B3;
+        $c += $this->PP12B32;
+        return $c;
     }
 }
