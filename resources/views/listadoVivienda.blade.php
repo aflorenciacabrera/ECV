@@ -59,7 +59,7 @@ $(document).ready(function(){
 
                 <div class="card-body">
 
-                    <table class="table table-striped table-inverse  table-sm" id="tabla">
+                    <table class="table table-striped table-inverse table-responsive table-sm" id="tabla">
                         <thead class="thead-inverse">
                             <tr>
                                 <th>Área</th>

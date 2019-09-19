@@ -58,8 +58,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get("encuesta/hogarok/{id_hogar}", 'HogarController@ok')->name('hogarok');
     Route::get("encuesta/individuook/{id_individuo}", 'IndividuoController@ok')->name('individuook');
 
+    /**
+     * Reportes
+     */
 
-
+     Route::get('reporte/ingresos','IndividuoController@reporte')->name('reporteIngresos');
 
 });
 

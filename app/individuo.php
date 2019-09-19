@@ -271,5 +271,28 @@ class individuo extends Model
         };
     }
 
+    public function ingresosLaborales()
+    {
+        $c = 0;
+        $c += $this->PP06C;
+        $c += $this->PP06D;
+        $c += $this->PP06G;
+        $c += $this->PP08D2;
+        $c += $this->PP08D3;
+        $c += $this->PP08D4;
+        $c += $this->PP08J1;
+        $c += $this->PP08J2;
+        $c += $this->PP08J3;
+        $c += $this->PP08F1;
+        $c += $this->PP08F2;
+        $c += $this->PP12B1;
+        $c += $this->PP12B12;
+        $c += $this->PP12B2;
+        $c += $this->PP12B22;
+        $c += $this->PP12B3;
+        $c += $this->PP12B32;
+        return $c;
+    }
+
 
 }
