@@ -276,23 +276,23 @@ protected $fillable = ['Entrev_realiz',
     public function ingresosLaborales()
     {
         $c = 0;
-        $c += $this->PP06C;
-        $c += $this->PP06D;
-        $c += $this->PP06G;
-        $c += $this->PP08D2;
-        $c += $this->PP08D3;
-        $c += $this->PP08D4;
-        $c += $this->PP08J1;
-        $c += $this->PP08J2;
-        $c += $this->PP08J3;
-        $c += $this->PP08F1;
-        $c += $this->PP08F2;
-        $c += $this->PP12B1;
-        $c += $this->PP12B12;
-        $c += $this->PP12B2;
-        $c += $this->PP12B22;
-        $c += $this->PP12B3;
-        $c += $this->PP12B32;
+        $c += $this->PP06C == -9? 0 : $this->PP06C;
+        $c += $this->PP06D == -9? 0 : $this->PP06D;
+        $c += $this->PP06G == -9? 0 : $this->PP06G;
+        $c += $this->PP08D2 == -9? 0 : $this->PP08D2;
+        $c += $this->PP08D3 == -9? 0 : $this->PP08D3;
+        $c += $this->PP08D4 == -9? 0 : $this->PP08D4;
+        $c += $this->PP08J1 == -9? 0 : $this->PP08J1;
+        $c += $this->PP08J2 == -9? 0 : $this->PP08J2;
+        $c += $this->PP08J3 == -9? 0 : $this->PP08J3;
+        $c += $this->PP08F1 == -9? 0 : $this->PP08F1;
+        $c += $this->PP08F2 == -9? 0 : $this->PP08F2;
+        $c += $this->PP12B1 == -9? 0 : $this->PP12B1;
+        $c += $this->PP12B12 == -9? 0 : $this->PP12B12;
+        $c += $this->PP12B2 == -9? 0 : $this->PP12B2;
+        $c += $this->PP12B22 == -9? 0 : $this->PP12B22;
+        $c += $this->PP12B3 == -9? 0 : $this->PP12B3;
+        $c += $this->PP12B32 == -9? 0 : $this->PP12B32;
         return $c;
     }
 
