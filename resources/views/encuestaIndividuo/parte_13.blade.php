@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-6 form-inline">
                 <label for="seccion_13_encuestador_numero" >N°</label>
-                    <input required type="number" min=0 step=1 name="seccion_13_encuestador_numero" id="seccion_13_encuestador_numero" class="form-control inline">
+                    <input required type="number" min=-9 step=1 name="seccion_13_encuestador_numero" id="seccion_13_encuestador_numero" class="form-control inline">
             </div>
            </div>
         </div>

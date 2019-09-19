@@ -20,7 +20,7 @@
             <div class="form-group col-md-6">
                 <label for="IV2">2. ¿Cuántos ambientes/habitaciones tiene la vivienda en total? </label>
                 <small  class="form-text text-muted"> (sin contar baño/s, cocina, pasillo/s, lavadero, garage)</small>
-                <input  type="number" min=0 step=1 class="form-control form-control-sm" name="IV2" id="IV2"  disabled onchange='update_seccion_4()'>
+                <input  type="number" min=-9 step=1 class="form-control form-control-sm" name="IV2" id="IV2"  disabled onchange='update_seccion_4()'>
             </div>
         </div>
         <div class="form-row">

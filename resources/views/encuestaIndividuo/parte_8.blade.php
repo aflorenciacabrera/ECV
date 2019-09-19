@@ -50,7 +50,7 @@
                 <label for="PP08C">8c. Monto arreglado mensual &nbsp;<label>
                      </div>
           <div class="form-group col-md-10 ">
-                <input type="number" min=0 step=1  class="form-control form-control-sm" onchange="update_parte_8()" disabled name="PP08C" id="PP08C">
+                <input type="number" min=-9 step=1  class="form-control form-control-sm" onchange="update_parte_8()" disabled name="PP08C" id="PP08C">
               </div>
         </div>
         {{--  --}}
@@ -58,19 +58,19 @@
             <label>8d. Cuanto cobró por ese mes&nbsp;</label>
         <div class="form-group ">
             <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;<label>
-            <input type="number" min=0 step=1  class="form-control form-control-sm"  disabled  id="PP08DTOTAL">
+            <input type="number" min=-9 step=1  class="form-control form-control-sm"  disabled  id="PP08DTOTAL">
         </div>
         <div class="form-group ">
             <label for="PP08D2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pesos&nbsp;<label>
-            <input type="number" min=0 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D2" id="PP08D2">
+            <input type="number" min=-9 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D2" id="PP08D2">
         </div>
         <div class="form-group ">
             <label for="PP08D3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bonos&nbsp;<label>
-            <input type="number" min=0 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D3" id="PP08D3">
+            <input type="number" min=-9 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D3" id="PP08D3">
         </div>
         <div class="form-group ">
             <label for="PP08D4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tickets&nbsp;<label>
-            <input type="number" min=0 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D4" id="PP08D4">
+            <input type="number" min=-9 step=1  class="form-control form-control-sm PP08D" onchange="update_parte_8()" disabled name="PP08D4" id="PP08D4">
         </div>
          </div>
 
@@ -98,13 +98,13 @@
      <div class="form-group ">
          <div class="col-md-10 col-md-offset-10">
         <label for="PP08F1" >-Comisión por venta / producción &nbsp;<label>
-            <input type="number" min=0 step=1  class="form-control form-control-sm PP08F" onchange="update_parte_8()" disabled name="PP08F1" id="PP08F1">
+            <input type="number" min=-9 step=1  class="form-control form-control-sm PP08F" onchange="update_parte_8()" disabled name="PP08F1" id="PP08F1">
     </div> </div>
 
      <div class="form-group  ">
          <div class="col-md-7 col-md-offset-7">
         <label for="PP08F2" >-Propinas &nbsp;<label>
-            <input type="number" min=0 step=1  class="form-control form-control-sm PP08F" onchange="update_parte_8()" disabled name="PP08F2" id="PP08F2">
+            <input type="number" min=-9 step=1  class="form-control form-control-sm PP08F" onchange="update_parte_8()" disabled name="PP08F2" id="PP08F2">
     </div></div>
   </div>
 
@@ -121,12 +121,12 @@
  <div class="col-md-10 col-md-offset-10">
 <div class="form-group">
         <label for="PP08G1" >&nbsp;8g.1. ¿Cuantos dias por semana? &nbsp;<label>
-            <input type="number" min=0 step=1 max=7 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G1" id="PP08G1">
+            <input type="number" min=-9 step=1 max=7 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G1" id="PP08G1">
 
     </div>
     <div class="form-group ">
         <label for="PP08G2" >&nbsp;8g.2. ¿Cuantos dias en el mes? &nbsp;<label>
-            <input type="number" min=0 step=1 max=31 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G2" id="PP08G2">
+            <input type="number" min=-9 step=1 max=31 class="form-control form-control-sm PP08G" onchange="update_parte_8()" disabled name="PP08G2" id="PP08G2">
 
     </div>
        </div>
@@ -138,7 +138,7 @@
                  <label for="PP08H" >8h. ¿A cuántas horas por día corresponde? &nbsp; <label>
              </div>
             <div class="form-group col-md-10 ">
-                 <input type="number" min=0 step=1 max=24 class="form-control PP08G" onchange="update_parte_8()" disabled name="PP08H" id="PP08H">
+                 <input type="number" min=-9 step=1 max=24 class="form-control PP08G" onchange="update_parte_8()" disabled name="PP08H" id="PP08H">
             </div>
       </div>
 
@@ -159,15 +159,15 @@
      <label for="">8j. ¿Cuánto cobró por ese mes de ..(mes)...</label>
     <div class="form-group ">
         <label for="PP08J1" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto aguinaldo&nbsp;<label>
-        <input type="number" min=0 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J1" id="PP08J1">
+        <input type="number" min=-9 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J1" id="PP08J1">
     </div>
     <div class="form-group ">
         <label for="PP08J2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto otras bonificaciones no habituales &nbsp;<label>
-        <input type="number" min=0 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J2" id="PP08J2">
+        <input type="number" min=-9 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J2" id="PP08J2">
     </div>
     <div class="form-group ">
         <label for="PP08J3" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monto retroactivos&nbsp;<label>
-        <input type="number" min=0 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J3" id="PP08J3">
+        <input type="number" min=-9 step=1  class="form-control form-control-sm PP08J" onchange="update_parte_8()" disabled name="PP08J3" id="PP08J3">
     </div>
    </div>
     {{--  --}}

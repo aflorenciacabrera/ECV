@@ -41,20 +41,20 @@ Ultima Ocupación Changa
                     <div class="col-md-4">
 
                         <label for="PP11B2_ANO"> Años
-                        </label><input type="number" min=0 step=1 max="99" disabled onchange="update_parte_11()"
+                        </label><input type="number" min=-9 step=1 max="99" disabled onchange="update_parte_11()"
                             name="PP11B2_ANO" id="PP11B2_ANO" class="form-control form-control-sm PP11B2">
                     </div>
                     <div class="col-md-4">
 
                         <label for="PP11B2_MES">Meses
-                        </label><input type="number" min=0 step=1 max="99" disabled onchange="update_parte_11()"
+                        </label><input type="number" min=-9 step=1 max="99" disabled onchange="update_parte_11()"
                             name="PP11B2_MES" id="PP11B2_MES" class="form-control form-control-sm PP11B2">
                     </div>
 
                     <div class="col-md-4">
 
                         <label for="PP11B2_DIA">Dias
-                        </label><input type="number" min=0 step=1 max="400" disabled onchange="update_parte_11()"
+                        </label><input type="number" min=-9 step=1 max="400" disabled onchange="update_parte_11()"
                             name="PP11B2_DIA" id="PP11B2_DIA" class="form-control form-control-sm PP11B2">
                     </div>
                 </div>
@@ -138,15 +138,15 @@ Ultima Ocupación Changa
                 <label><b>11g.</b> ¿Cuántp tiempo seguido estuvo trabajando en ese lugar?</label>
                 <div class="row">
                     <div class="col-md-4"> <label for="PP11G_ANO"> Años
-                        </label><input type="number" min=0 step=1 max="99" disabled onchange="update_parte_11()"
+                        </label><input type="number" min=-9 step=1 max="99" disabled onchange="update_parte_11()"
                             name="PP11G_ANO" id="PP11G_ANO" class="PP11G form-control form-control-sm">
                     </div>
                     <div class="col-md-4"> <label for="PP11G_MES">Meses
-                        </label><input type="number" min=0 step=1 max="99" disabled onchange="update_parte_11()"
+                        </label><input type="number" min=-9 step=1 max="99" disabled onchange="update_parte_11()"
                             name="PP11G_MES" id="PP11G_MES" class="PP11G form-control form-control-sm"></div>
                     <div class="col-md-4">
                         <label for="PP11G_DIA">Dias
-                        </label><input type="number" min=0 step=1 max="400" disabled onchange="update_parte_11()"
+                        </label><input type="number" min=-9 step=1 max="400" disabled onchange="update_parte_11()"
                             name="PP11G_DIA" id="PP11G_DIA" class="PP11G form-control form-control-sm">
                     </div>
                 </div>

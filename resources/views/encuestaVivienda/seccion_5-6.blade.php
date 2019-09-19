@@ -38,9 +38,9 @@
 
                     <tr>
                         {{-- 1 --}}
-                    <td class="fit"><input type="number" min=0 max=99  class="form-control form-control-sm primer-campo"  data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
+                    <td class="fit"><input type="number" min=-9 max=99  class="form-control form-control-sm primer-campo"  data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
                         {{-- 2 --}}
-                        <td class="fit"><input type="number" min=0 max=99 class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
+                        <td class="fit"><input type="number" min=-9 max=99 class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
                         {{-- 3 --}}
                         <td class="fit"><input type="text" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NOMBRE_JEFE_{{$i}}"> </td>
                         {{-- 4 --}}
