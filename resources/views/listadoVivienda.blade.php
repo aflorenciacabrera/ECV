@@ -22,8 +22,9 @@ $(document).ready(function(){
          col_13: 'none',
          col_14: 'none',
          col_15: 'select',
-         col_16: 'none',
+         col_16: 'select',
          col_17: 'none',
+         col_18: 'none',
     });
 
     tf.init();
@@ -79,6 +80,7 @@ $(document).ready(function(){
                                 <th>Trimestre</th>
                                 <th>Año</th>
                                 <th>Encuestador</th>
+                                <th>Cargó</th>
                                 <th>Estado</th>
                                 <th>Acción</th>
                                 {{-- <th>Cargar Hogar</th> --}}
@@ -103,6 +105,7 @@ $(document).ready(function(){
                                 <td>{{$item->trimestre}}</td>
                                 <td>{{$item->ano4}}</td>
                                 <td>{{$item->encuestador}}</td>
+                                <td>{{$item->user->name}}</td>
                                 <td>
                                     @if ($item->estado() == 'ok')
                                         <div class="alert alert-success" role="alert">

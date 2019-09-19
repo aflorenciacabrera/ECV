@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class individuo extends Model
 {
     //
-    protected $fillable = ['Entrev_realiz',
+protected $fillable = ['Entrev_realiz',
 'numero_componente',
 'numero_respondente',
         'nombre_respondente',
@@ -241,6 +241,8 @@ class individuo extends Model
     {
         return $this->belongsTo('App\hogar');
     }
+
+
 
     public function nolaboral()
     {
