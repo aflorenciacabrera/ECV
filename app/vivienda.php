@@ -111,6 +111,11 @@ class vivienda extends Model
         return $this->hasMany('App\vivienda_seccion_v');
     }
 
+    public function borrar(){
+        $this->seccionv()->delete();
+        $this->delete();
+    }
+
     public function estado(){
         $hogares = $this->hogares;
         $flag = 'ok';

@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::get('encuesta/vivienda/editar/{id_vivienda}', 'ViviendaController@editarVivienda')->name('editarVivienda');
+    Route::get('encuesta/vivienda/borrar/{id_vivienda}', 'ViviendaController@borrarVivienda')->name('borrarVivienda');
     Route::post('encuesta/vivienda/editar', 'ViviendaController@actualizarVivienda')->name('actualizarVivienda');
 
     Route::get('encuesta/viviendas/', 'ViviendaController@verListadoVivienda')->name('verListadoVivienda');
@@ -57,6 +58,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get("encuesta/hogarok/{id_hogar}", 'HogarController@ok')->name('hogarok');
     Route::get("encuesta/individuook/{id_individuo}", 'IndividuoController@ok')->name('individuook');
 
+    //Reportes Mauri
+    Route::get("reporte/general",'ReporteController@reporte_general')->name('reporte');
 
 
 

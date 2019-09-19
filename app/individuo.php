@@ -2,11 +2,14 @@
 
 namespace App;
 
+use App\hogarSeccionSeis;
+use App\hogar_seccion_cuatro;
 use Illuminate\Database\Eloquent\Model;
 
 class individuo extends Model
 {
     //
+    protected $table = 'individuos';
     protected $fillable = ['Entrev_realiz',
 'numero_componente',
 'numero_respondente',
@@ -270,6 +273,13 @@ class individuo extends Model
                 break;
         };
     }
+    public function hogar_seccion_cuatro()
+    {
+        return $this->belongsTo(hogar_seccion_cuatro::class, 'id', 'individuo_id');
+    }
 
-
+    public function hogarSeccionSeis()
+    {
+        return $this->belongsTo(hogarSeccionSeis::class, 'id', 'individuo_id');
+    }
 }

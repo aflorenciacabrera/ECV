@@ -8,8 +8,11 @@
             <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                <h4 class="card-title text-center">Hogar Nro:{{$hogar->numero_hogar}}</br> ( Área: {{$hogar->vivienda->codigo_area}} - Nro Listado: {{$hogar->vivienda->numero_listado}} - Vivienda:{{$hogar->vivienda->numero_vivienda}})</h4>
-                <h4 class="card-title text-center">( Trimestre: {{$hogar->vivienda->trimestre}} - Semana: {{$hogar->vivienda->numero_semana}} - Año:{{$hogar->vivienda->ano4}})</h4>
+                <h4 class="card-title text-center">Hogar Nro:{{$hogar->numero_hogar}}</br> ( Área: {{$hogar->vivienda->codigo_area}} - Nro Listado: {{$hogar->vivienda->numero_listado}} - Vivienda:{{$hogar->vivienda->numero_vivienda}} - Manzana:{{$hogar->vivienda->manz}})</h4>
+                <h4 class="card-title text-center">
+                    ( Trimestre: {{$hogar->vivienda->trimestre}} -
+                    Semana: {{$hogar->vivienda->numero_semana}} - Año:{{$hogar->vivienda->ano4}})
+                </h4>
                 </div>
 
             </div>
@@ -33,38 +36,18 @@
                     <td scope="row">{{$i->nombre}}</td>
                     <td scope="row">{{$i->sexo()}}</td>
                     <td scope="row">{{$i->edad()}}</td>
-                    @if($i->estado == 1)
-                        <td>
-                           <div class="alert alert-primary" role="alert">
-                                <strong>Completo</strong>
-                            </div>
-                        </td>
-                        <td>
-                            <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}"  role="button">Actualizar</a>
-                        </td>
-                            @else
-                            <td>
-                                <div class="alert alert-warning" role="alert">
-                            @if($i->edad() < 10)
-                                    <strong>Menor de Edad</strong>
-                            @else
-                                <strong>Incompleto</strong>
-                            @endif
-                            </div>
-
-                            </td>
-                        <td>
-                            @if($i->edad() < 10)
-                                    {{-- <strong>Menor de Edad</strong> --}}
-                            @else
-                            <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}" role="button">Completar Formulario</a>
-                            @endif
-
-                        </td>
-                            @endif
-
-
-                </tr>
+                    <td scope="row">
+                    @if($i->edad()<10)
+                        Menor de Edad
+                    @else
+                        @if($i->estado == 1)
+                        <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}"  role="button">Actualizar</a>
+                        @else
+                        <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}" role="button">Completar Formulario</a>
+                        @endif
+                    @endif
+                    </td>
+                    </tr>
                 @endforeach
 
             </tbody>

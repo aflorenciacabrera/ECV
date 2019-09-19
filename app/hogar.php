@@ -176,10 +176,13 @@ class hogar extends Model
         $individuos = $this->individuos;
 
         foreach ($individuos as $individuo) {
-            if (!$individuo->estado && $individuo->edad() >= 10)
+            if($individuo->edad() >= 10)
             {
-                return 'individuo incompleto';
+                if (!$individuo->estado) {
+                    return 'individuo incompleto';
+                }
             }
+
         }
         return 'ok';
     }

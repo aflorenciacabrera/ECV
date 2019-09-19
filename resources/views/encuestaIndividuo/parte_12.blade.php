@@ -43,13 +43,13 @@ referencia)
             <td>
                <div class="form-group form-inline">
                    <label for="PP12B1">$</label>
-                   <input type="number" disabled onchange="update_parte_12()" name="PP12B1" id="PP12B1" class="form-control PP12B form-control-sm">
+                   <input type="number" step="1"  disabled onchange="update_parte_12()" name="PP12B1" id="PP12B1" class="form-control PP12B form-control-sm">
                </div>
             </td>
             <td>
                <div class="form-group form-inline">
                    <label for="PP12B12">$</label>
-                   <input type="number" disabled onchange="update_parte_12()" name="PP12B12" id="PP12B12" class="form-control PP12B form-control-sm">
+                   <input type="number" step="1" disabled onchange="update_parte_12()" name="PP12B12" id="PP12B12" class="form-control PP12B form-control-sm">
                    {{-- TODO Diccionario --}}
                </div>
             </td>
@@ -62,13 +62,13 @@ referencia)
             <td>
                <div class="form-group form-inline">
                    <label for="PP12B2">$</label>
-                   <input type="number" disabled onchange="update_parte_12()" name="PP12B2" id="PP12B2" class="form-control  PP12B form-control-sm">
+                   <input type="number" step=1 disabled onchange="update_parte_12()" name="PP12B2" id="PP12B2" class="form-control  PP12B form-control-sm">
                </div>
             </td>
             <td>
                <div class="form-group form-inline">
                    <label for="PP12B22">$</label>
-                   <input type="number" disabled onchange="update_parte_12()" name="PP12B22" id="PP12B22" class="form-control  PP12B form-control-sm">
+                   <input type="number" step=1 disabled onchange="update_parte_12()" name="PP12B22" id="PP12B22" class="form-control  PP12B form-control-sm">
                    {{-- TODO Diccionario --}}
                </div>
             </td>
@@ -80,13 +80,13 @@ referencia)
             <td>
                <div class="form-group form-inline">
                    <label for="PP12B3">$</label>
-                   <input type="number" disabled onchange="update_parte_12()" name="PP12B3" id="PP12B3" class="form-control PP12B form-control-sm">
+                   <input type="number" step=1 disabled onchange="update_parte_12()" name="PP12B3" id="PP12B3" class="form-control PP12B form-control-sm">
                </div>
             </td>
             <td>
                <div class="form-group form-inline">
                    <label for="PP12B32">$</label>
-                   <input type="number" disabled onchange="update_parte_12()" name="PP12B32" id="PP12B32" class="form-control  PP12B form-control-sm">
+                   <input type="number" step=1 disabled onchange="update_parte_12()" name="PP12B32" id="PP12B32" class="form-control  PP12B form-control-sm">
                    {{-- TODO Diccionario --}}
                </div>
             </td>
