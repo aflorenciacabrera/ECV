@@ -21,8 +21,9 @@ $(document).ready(function(){
          col_12: 'none',
          col_13: 'none',
          col_14: 'none',
-         col_15: 'none',
+         col_15: 'select',
          col_16: 'none',
+         col_17: 'none',
     });
 
     tf.init();
@@ -65,18 +66,19 @@ $(document).ready(function(){
                                 <th>N° Listado</th>
                                 <th>Vivienda</th>
                                 <th>Semana</th>
-                                <th>Grupo Rotación</th>
-                                <th>Manzana</th>
+                                <th>G. Rotación</th>
+                                <th>Mzn</th>
                                 <th>Lado</th>
                                 <th>Calle</th>
-                                <th>Nro</th>
+                                <th>N°</th>
                                 <th>Piso</th>
-                                <th>Depto o Casa</th>
+                                <th>Depto/Casa</th>
                                 <th>Habitación</th>
                                 <th>Tipo Vivienda</th>
                                 {{-- <th>Descripción</th> --}}
                                 <th>Trimestre</th>
                                 <th>Año</th>
+                                <th>Encuestador</th>
                                 <th>Estado</th>
                                 <th>Acción</th>
                                 {{-- <th>Cargar Hogar</th> --}}
@@ -100,6 +102,7 @@ $(document).ready(function(){
                                 <td>{{$item->tipoVivienda}}</td>
                                 <td>{{$item->trimestre}}</td>
                                 <td>{{$item->ano4}}</td>
+                                <td>{{$item->encuestador}}</td>
                                 <td>
                                     @if ($item->estado() == 'ok')
                                         <div class="alert alert-success" role="alert">
