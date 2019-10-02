@@ -42,7 +42,7 @@ function setOpcional(selector) {
 function setEntrevistaRealizada(value) {
 
     entrevistaRealizada = value;
-
+    if (rol !== 'admin') {
     if (value == 1) {
         $("#numero_respondente").attr('required', true);
         $("#nombre_respondente").attr('required', true);
@@ -51,8 +51,10 @@ function setEntrevistaRealizada(value) {
     else {
         $("#numero_respondente").removeAttr('required');
         $("#nombre_respondente").removeAttr('required');
+
         desactivar("#PP01A");
     }
+}
 
 }
 $(document).ready(function () {
