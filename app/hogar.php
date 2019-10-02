@@ -191,4 +191,32 @@ class hogar extends Model
     {
         return $this->hasMany('app\hogar_seccion_cuatro');
     }
+
+    public function itf()
+    {
+        $c = 0;
+        foreach ($this->individuos as $i)
+        {
+            if ($i->ingresosLaborales() == -9) {
+                return -9;
+            } else {
+                $c += $i->ingresosLaborales();
+            }
+            if ($i->ingresosNoLaborales() == -9) {
+                return -9;
+            } else {
+                $c += $i->ingresosNoLaborales();
+            }
+        }
+        return $c;
+    }
+
+    public function adultoEquivalente(){
+        $c = 0;
+        foreach ($this->individuos as $i) {
+            $c += $i->adultoEquivalente();
+        }
+
+        return $c;
+    }
 }

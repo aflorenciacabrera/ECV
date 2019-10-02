@@ -273,27 +273,176 @@ protected $fillable = ['Entrev_realiz',
         };
     }
 
+    public function ingresosNoLaborales()
+    {
+        $c = 0;
+        $nl = $this->nolaboral;
+        $l = [
+            $nl->V2_M,
+            $nl->V21_M,
+            $nl->V22_M,
+            $nl->V3_M,
+            $nl->V4_M,
+            $nl->V5_M,
+            $nl->V8_M,
+            $nl->V9_M,
+            $nl->V10_M,
+            $nl->V11_M,
+            $nl->V12_M,
+            $nl->V18_M,
+            $nl->V19_AM,
+        ];
+        foreach ($l as $value) {
+            if ($value == -9) {
+                return -9;
+            } else {
+                $c += $value;
+            }
+        }
+
+        return $c;
+
+    }
+
+
+
     public function ingresosLaborales()
     {
         $c = 0;
-        $c += $this->PP06C == -9? 0 : $this->PP06C;
-        $c += $this->PP06D == -9? 0 : $this->PP06D;
-        $c += $this->PP06G == -9? 0 : $this->PP06G;
-        $c += $this->PP08D2 == -9? 0 : $this->PP08D2;
-        $c += $this->PP08D3 == -9? 0 : $this->PP08D3;
-        $c += $this->PP08D4 == -9? 0 : $this->PP08D4;
-        $c += $this->PP08J1 == -9? 0 : $this->PP08J1;
-        $c += $this->PP08J2 == -9? 0 : $this->PP08J2;
-        $c += $this->PP08J3 == -9? 0 : $this->PP08J3;
-        $c += $this->PP08F1 == -9? 0 : $this->PP08F1;
-        $c += $this->PP08F2 == -9? 0 : $this->PP08F2;
-        $c += $this->PP12B1 == -9? 0 : $this->PP12B1;
-        $c += $this->PP12B12 == -9? 0 : $this->PP12B12;
-        $c += $this->PP12B2 == -9? 0 : $this->PP12B2;
-        $c += $this->PP12B22 == -9? 0 : $this->PP12B22;
-        $c += $this->PP12B3 == -9? 0 : $this->PP12B3;
-        $c += $this->PP12B32 == -9? 0 : $this->PP12B32;
+        $l = [  $this->PP06C,
+                $this->PP06D,
+                $this->PP06G,
+                $this->PP08D2,
+                $this->PP08D3,
+                $this->PP08D4,
+                $this->PP08J1,
+                $this->PP08J2,
+                $this->PP08J3,
+                $this->PP08F1,
+                $this->PP08F2,
+                $this->PP12B1,
+                $this->PP12B12,
+                $this->PP12B2,
+                $this->PP12B22,
+                $this->PP12B3,
+                $this->PP12B32];
+
+        foreach ($l as $value)
+        {
+            if($value == -9)
+            {
+                return -9;
+            }
+            else {
+                $c += $value;
+            }
+        }
+
         return $c;
+    }
+
+    public function adultoEquivalente()
+    {
+        $edad = $this->edad();
+
+        if ($this->sexo() == "Mujer") {
+            if ($edad <= 0) {
+                return 0.35;
+            } elseif ($edad == 1) {
+                return 0.37;
+            } elseif ($edad == 2) {
+                return 0.46;
+            } elseif ($edad == 3) {
+                return 0.51;
+            } elseif ($edad == 4) {
+                return 0.55;
+            } elseif ($edad == 5) {
+                return 0.60;
+            } elseif ($edad == 6) {
+                return 0.64;
+            } elseif ($edad == 7) {
+                return 0.66;
+            } elseif ($edad == 8) {
+                return 0.68;
+            } elseif ($edad == 9) {
+                return 0.69;
+            } elseif ($edad == 10) {
+                return 0.70;
+            } elseif ($edad == 11) {
+                return 0.72;
+            } elseif ($edad == 12) {
+                return 0.74;
+            } elseif ($edad == 13) {
+                return 0.76;
+            } elseif ($edad == 14) {
+                return 0.76;
+            } elseif ($edad == 15) {
+                return 0.77;
+            } elseif ($edad == 16) {
+                return 0.77;
+            } elseif ($edad == 17) {
+                return 0.77;
+            } elseif ($edad >= 18 && $edad <= 29) {
+                return 0.76;
+            } elseif ($edad >= 30 && $edad <= 45) {
+                return 0.77;
+            } elseif ($edad >= 46 && $edad <= 60) {
+                return 0.76;
+            } elseif ($edad >= 61 && $edad <= 75) {
+                return 0.67;
+            } elseif ($edad > 75) {
+                return 0.63;
+            }
+        } else {
+            // HOMBRE
+            if ($edad <= 0) {
+                return 0.35;
+            } elseif ($edad == 1) {
+                return 0.37;
+            } elseif ($edad == 2) {
+                return 0.46;
+            } elseif ($edad == 3) {
+                return 0.51;
+            } elseif ($edad == 4) {
+                return 0.55;
+            } elseif ($edad == 5) {
+                return 0.60;
+            } elseif ($edad == 6) {
+                return 0.64;
+            } elseif ($edad == 7) {
+                return 0.66;
+            } elseif ($edad == 8) {
+                return 0.68;
+            } elseif ($edad == 9) {
+                return 0.69;
+            } elseif ($edad == 10) {
+                return 0.79;
+            } elseif ($edad == 11) {
+                return 0.82;
+            } elseif ($edad == 12) {
+                return 0.85;
+            } elseif ($edad == 13) {
+                return 0.90;
+            } elseif ($edad == 14) {
+                return 0.96;
+            } elseif ($edad == 15) {
+                return 1;
+            } elseif ($edad == 16) {
+                return 1.03;
+            } elseif ($edad == 17) {
+                return 1.04;
+            } elseif ($edad >= 18 && $edad <= 29) {
+                return 1.02;
+            } elseif ($edad >= 30 && $edad <= 45) {
+                return 1;
+            } elseif ($edad >= 46 && $edad <= 60) {
+                return 1;
+            } elseif ($edad >= 61 && $edad <= 75) {
+                return 0.83;
+            } elseif ($edad > 75) {
+                return 0.74;
+            }
+        }
     }
 
 

@@ -37,10 +37,5 @@ class IndividuoController extends Controller
         return view('individuook')->with('individuo', $individuo);
     }
 
-    public function reporte()
-    {
-        $individuos = individuo::all();
 
-        return view('reportes.ingresos')->with('individuos',$individuos);
-    }
 }
