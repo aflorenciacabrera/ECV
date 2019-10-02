@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class individuo extends Model
 {
     //
-protected $fillable = ['Entrev_realiz',
+protected $fillable = ['hogar_id','Entrev_realiz',
 'numero_componente',
 'numero_respondente',
         'nombre_respondente',
@@ -244,8 +244,6 @@ protected $fillable = ['Entrev_realiz',
         return $this->belongsTo('App\hogar');
     }
 
-
-
     public function nolaboral()
     {
         return $this->hasOne('App\hogarSeccionSeis');
@@ -279,26 +277,310 @@ protected $fillable = ['Entrev_realiz',
         return $this->belongsTo(hogar_seccion_cuatro::class, 'id', 'individuo_id');
     }
 
+    public function hogarSeccionSeis()
+    {
+        return $this->belongsTo(hogarSeccionSeis::class, 'id', 'individuo_id');
+    }
+
+    public function getPond(){
+        if($this->sexo() == "Mujer")
+        {
+           if($this->edad() <=0)
+           {
+               return 0.315;
+           }
+           elseif ($this->edad() == 1) {
+                return 0.37;
+           }
+           elseif ($this->edad() == 2) {
+                return 0.46;
+           }
+           elseif ($this->edad() == 3) {
+                return 0.51;
+           }
+           elseif ($this->edad() == 4) {
+                return 0.55;
+           }
+           elseif ($this->edad() == 5) {
+                return 0.60;
+           }
+           elseif ($this->edad() == 6) {
+                return 0.64;
+           }
+           elseif ($this->edad() == 7) {
+                return 0.66;
+           }
+           elseif ($this->edad() == 8) {
+                return 0.68;
+           }
+           elseif ($this->edad() == 9) {
+                return 0.69;
+           }
+           elseif ($this->edad() == 10) {
+                return 0.70;
+           }
+           elseif ($this->edad() == 11) {
+                return 0.72;
+           }
+           elseif ($this->edad() == 12) {
+                return 0.74;
+           }
+           elseif ($this->edad() == 13) {
+                return 0.76;
+           }
+           elseif ($this->edad() == 14) {
+                return 0.76;
+           }
+           elseif ($this->edad() == 15) {
+                return 0.77;
+           }
+           elseif ($this->edad() == 16) {
+                return 0.77;
+           }
+           elseif ($this->edad() == 17) {
+                return 0.77;
+           }
+           elseif ($this->edad() >= 18 && $this->edad() <= 29)
+           {
+                return 0.76;
+           }
+           elseif ($this->edad() >= 30 && $this->edad() <= 45)
+           {
+                return 0.77;
+           }
+           elseif ($this->edad() >= 46 && $this->edad() <= 60)
+           {
+                return 0.76;
+           }
+           elseif ($this->edad() >= 61 && $this->edad() <= 75)
+           {
+                return 0.67;
+           }
+           elseif ($this->edad() > 75)
+           {
+                return 0.63;
+           }
+        }
+        else
+        {
+            // HOMBRE
+            if($this->edad() <= 0)
+           {
+               return 0.315;
+           }
+           elseif ($this->edad() == 1) {
+                return 0.37;
+           }
+           elseif ($this->edad() == 2) {
+                return 0.46;
+           }
+           elseif ($this->edad() == 3) {
+                return 0.51;
+           }
+           elseif ($this->edad() == 4) {
+                return 0.55;
+           }
+           elseif ($this->edad() == 5) {
+                return 0.60;
+           }
+           elseif ($this->edad() == 6) {
+                return 0.64;
+           }
+           elseif ($this->edad() == 7) {
+                return 0.66;
+           }
+           elseif ($this->edad() == 8) {
+                return 0.68;
+           }
+           elseif ($this->edad() == 9) {
+                return 0.69;
+           }
+           elseif ($this->edad() == 10) {
+                return 0.79;
+           }
+           elseif ($this->edad() == 11) {
+                return 0.82;
+           }
+           elseif ($this->edad() == 12) {
+                return 0.85;
+           }
+           elseif ($this->edad() == 13) {
+                return 0.90;
+           }
+           elseif ($this->edad() == 14) {
+                return 0.96;
+           }
+           elseif ($this->edad() == 15) {
+                return 1;
+           }
+           elseif ($this->edad() == 16) {
+                return 1.03;
+           }
+           elseif ($this->edad() == 17) {
+                return 1.04;
+           }
+           elseif ($this->edad() >= 18 && $this->edad() <= 29)
+           {
+                return 1.02;
+           }
+           elseif ($this->edad() >= 30 && $this->edad() <= 45)
+           {
+                return 1;
+           }
+           elseif ($this->edad() >= 46 && $this->edad() <= 60)
+           {
+                return 1;
+           }
+           elseif ($this->edad() >= 61 && $this->edad() <= 75)
+           {
+                return 0.83;
+           }
+           elseif ($this->edad() > 75)
+           {
+                return 0.74;
+           }
+        }
+    }
+
     public function ingresosLaborales()
     {
         $c = 0;
-        $c += $this->PP06C == -9? 0 : $this->PP06C;
-        $c += $this->PP06D == -9? 0 : $this->PP06D;
-        $c += $this->PP06G == -9? 0 : $this->PP06G;
-        $c += $this->PP08D2 == -9? 0 : $this->PP08D2;
-        $c += $this->PP08D3 == -9? 0 : $this->PP08D3;
-        $c += $this->PP08D4 == -9? 0 : $this->PP08D4;
-        $c += $this->PP08J1 == -9? 0 : $this->PP08J1;
-        $c += $this->PP08J2 == -9? 0 : $this->PP08J2;
-        $c += $this->PP08J3 == -9? 0 : $this->PP08J3;
-        $c += $this->PP08F1 == -9? 0 : $this->PP08F1;
-        $c += $this->PP08F2 == -9? 0 : $this->PP08F2;
-        $c += $this->PP12B1 == -9? 0 : $this->PP12B1;
-        $c += $this->PP12B12 == -9? 0 : $this->PP12B12;
-        $c += $this->PP12B2 == -9? 0 : $this->PP12B2;
-        $c += $this->PP12B22 == -9? 0 : $this->PP12B22;
-        $c += $this->PP12B3 == -9? 0 : $this->PP12B3;
-        $c += $this->PP12B32 == -9? 0 : $this->PP12B32;
-        return $c;
+        if ($this->PP06C == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP06C;
+        }
+
+        if ($this->PP06D == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP06D;
+        }
+
+        if ($this->PP06G == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP06G;
+        }
+
+        if ($this->PP08D2 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08D2;
+        }
+
+        if ($this->PP08D3 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08D3;
+        }
+
+        if ($this->PP08D4 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08D4;
+        }
+
+        if ($this->PP08J1 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08J1;
+        }
+
+        if ($this->PP08J2 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08J2;
+        }
+
+        if ($this->PP08J3 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08J3;
+        }
+
+        if ($this->PP08F1 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08F1;
+        }
+
+        if ($this->PP08F2 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP08F2;
+        }
+
+        if ($this->PP12B1 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP12B1;
+        }
+
+        if ($this->PP12B12 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP12B12;
+        }
+
+        if ($this->PP12B2 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP12B2;
+        }
+
+        if ($this->PP12B22 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP12B22;
+        }
+
+        if ($this->PP12B3 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP12B3;
+        }
+
+        if ($this->PP12B32 == -9) {
+            $c=-9;
+            return $c;
+        }else{
+            $c+= $this->PP12B32;
+        }
+
+        /*$c = $this->PP06C == -9? -9 true : $c+= $this->PP06C;//Operador ternario: Si pp06c es igual a -9 suma 0 sino suma pp06c
+        $c = $this->PP06D == -9? -9 true : $c+= $this->PP06D;
+        $c = $this->PP06G == -9? -9 true : $c+= $this->PP06G;
+        $c = $this->PP08D2 == -9? -9 true : $c+= $this->PP08D2;
+        $c = $this->PP08D3 == -9? -9 true : $c+= $this->PP08D3;
+        $c = $this->PP08D4 == -9? -9 true : $c+= $this->PP08D4;
+        $c = $this->PP08J1 == -9? -9 true : $c+= $this->PP08J1;
+        $c = $this->PP08J2 == -9? -9 true : $c+= $this->PP08J2;
+        $c = $this->PP08J3 == -9? -9 true : $c+= $this->PP08J3;
+        $c = $this->PP08F1 == -9? -9 true : $c+= $this->PP08F1;
+        $c = $this->PP08F2 == -9? -9 true : $c+= $this->PP08F2;
+        $c = $this->PP12B1 == -9? -9 true : $c+= $this->PP12B1;
+        $c = $this->PP12B12 == -9? -9 true : $c+= $this->PP12B12;
+        $c = $this->PP12B2 == -9? -9 true : $c+= $this->PP12B2;
+        $c = $this->PP12B22 == -9? -9 true : $c+= $this->PP12B22;
+        $c = $this->PP12B3 == -9? -9 true : $c+= $this->PP12B3;
+        $c = $this->PP12B32 == -9? -9 true : $c+= $this->PP12B32;
+*/        return $c;
     }
 }

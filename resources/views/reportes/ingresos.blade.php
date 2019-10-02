@@ -26,7 +26,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <button id="bajar_excel" class="btn btn-success">Descargar Excel &nbsp;<i class="fa fa-file-excel" aria-hidden="true"></i></button>
-            <table id="reporte" class="table table-light table-sm">
+            <table id="reporte" class="table table-light table-sm" style="table-layout: fixed; border-collapse: collapse;">
                 <thead>
                     <tr>
                         <th>Area</th>
@@ -39,6 +39,7 @@
                         <th>Año</th>
                         <th>Nombre</th>
                         <th>Ingreso Laboral</th>
+                        <th>aeq</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,19 +48,20 @@
                             <td>{{$item->codigo_area}}</td>
                             <td>{{$item->numero_listado}}</td>
                             <td>{{$item->numero_vivienda}}</td>
-                            <td>{{$item->numero_hogar}}</td>
+                            <td>{{$item->hogar_id}}</td>
                             <td>{{$item->numero_componente}}</td>
                             <td>{{$item->numero_semana}}</td>
                             <td>{{$item->trimestre}}</td>
                             <td>{{$item->ano4}}</td>
-
-
+                            <td>{{$item->nombre}}</td>
                             <td>
-                                {{$item->nombre}}
+                                @if(($item->ingresosLaborales()==-9) or ($item->hogarSeccionSeis->ingresosNoLaborales()==-9))
+                                    $ -9
+                                @else
+                                    $ {{$item->ingresosLaborales() + $item->hogarSeccionSeis->ingresosNoLaborales()}}
+                                @endif
                             </td>
-                            <td>
-                               $ {{$item->ingresosLaborales()}}
-                            </td>
+                            <td>{{$item->getPond()}}</td>
                         </tr>
                     @endforeach
                 </tbody>
