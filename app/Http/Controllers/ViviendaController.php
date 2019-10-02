@@ -61,7 +61,7 @@ class ViviendaController extends Controller
         /**
          * RECORRO Y CONTROLO LOS CAMPOS DEL CUATRO DE HOGAR
          */
-        for ($i=1; $i <= 14; $i++)
+        for ($i=1; $i <= 25; $i++)
         {
             if($request['NRO_HOGAR_'.$i])///existe
             {

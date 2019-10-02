@@ -34,7 +34,7 @@
                         <td class="fit">16. ¿Cuál fue</br> el motivo?</td>
 
                     </tr>
-                   @for ($i = 1; $i <= 14; $i++)
+                   @for ($i = 1; $i <= 25; $i++)
 
                     <tr>
                         {{-- 1 --}}
