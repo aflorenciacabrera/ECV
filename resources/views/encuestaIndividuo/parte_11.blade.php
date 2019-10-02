@@ -456,7 +456,7 @@ function update_parte_11(){
     H == 2 ? activar("#PP11I"):desactivar("#PP11I");
      K2 == 7 || K3 >= 1? activar("#PP11L"):desactivar("#PP11L");
 
-    H == 3 || I == 1 || L == 1 ? activar("#PP11L1"):desactivar("#PP11L1");
+    H == 3 || I == 1 ? activar("#PP11L1",false):desactivar("#PP11L1");
     I == 2 ? activar("#PP11J"):desactivar("#PP11J");
     // J == 1 ? activar("#PP11K"):desactivar("#PP11K");
     update_parte_9();
