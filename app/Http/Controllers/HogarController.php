@@ -46,7 +46,7 @@ class HogarController extends Controller
         $h->save();
 
         //actualizo seccion 4
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i <= 25; $i++) {
             if ($request['carateristica_id_' . $i]) {
                 //id de seccion
                 $carateristica_id = $request['carateristica_id_' . $i];
