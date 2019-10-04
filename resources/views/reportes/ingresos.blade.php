@@ -6,7 +6,7 @@
  $(document).ready(function(){
 
 
-        $("#reporte").DataTable();
+        /*$("#reporte").DataTable();*/
 
             $("#bajar_excel").click(function(){
                 $("#reporte").table2excel({
@@ -49,7 +49,7 @@
                         <tr>
                             <td>{{$item->codigo_area}}</td>
                             <td>{{$item->numero_listado}}</td>
-                            <td>{{$item->numero_vivienda}}</td>
+                            <td>{{$item->hogar->vivienda_id}}</td>
                             <td>{{$item->hogar_id}}</td>
                             <td>{{$item->numero_componente}}</td>
                             <td>{{$item->numero_semana}}</td>
