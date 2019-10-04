@@ -19,15 +19,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><input type="number"  name="tarea_hogar_numero_1" id="tarea_hogar_numero_1" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                            <th scope="row"><input type="number"  name="tarea_hogar_numero_1" id="tarea_hogar_numero_1" step="1"   max="99" class="form-control form-control-sm"></th>
                             <td><input  name="tarea_hogar_nombre_1" id="tarea_hogar_nombre_1" type="text" class="form-control form-control-sm"></td>
                         </tr>
                         <tr>
-                            <th scope="row"><input type="number"  name="tarea_hogar_numero_2" id="tarea_hogar_numero_2" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                            <th scope="row"><input type="number"  name="tarea_hogar_numero_2" id="tarea_hogar_numero_2" step="1"   max="99" class="form-control form-control-sm"></th>
                             <td><input  name="tarea_hogar_nombre_2" id="tarea_hogar_nombre_2" type="text" class="form-control form-control-sm"></td>
                         </tr>
                         <tr>
-                            <th scope="row"><input type="number"  name="tarea_hogar_numero_3" id="tarea_hogar_numero_3" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                            <th scope="row"><input type="number"  name="tarea_hogar_numero_3" id="tarea_hogar_numero_3" step="1"   max="99" class="form-control form-control-sm"></th>
                             <td><input  name="tarea_hogar_nombre_3" id="tarea_hogar_nombre_3" type="text" class="form-control form-control-sm"></td>
                         </tr>
                     </tbody>
@@ -68,15 +68,15 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row"><input name="ayuda_hogar_numero_1" id="ayuda_hogar_numero_1" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                                    <th scope="row"><input name="ayuda_hogar_numero_1" id="ayuda_hogar_numero_1" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                                     <td><input name="ayuda_hogar_nombre_1" id="ayuda_hogar_nombre_1" type="text" class="form-control form-control-sm"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><input name="ayuda_hogar_numero_2" id="ayuda_hogar_numero_2" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                                    <th scope="row"><input name="ayuda_hogar_numero_2" id="ayuda_hogar_numero_2" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                                     <td><input name="ayuda_hogar_nombre_2" id="ayuda_hogar_nombre_2" type="text" class="form-control form-control-sm"></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><input name="ayuda_hogar_numero_3" id="ayuda_hogar_numero_3" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                                    <th scope="row"><input name="ayuda_hogar_numero_3" id="ayuda_hogar_numero_3" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                                     <td><input name="ayuda_hogar_nombre_3" id="ayuda_hogar_nombre_3" type="text" class="form-control form-control-sm"></td>
                                 </tr>
                             </tbody>
@@ -118,23 +118,23 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><input name="discapacidad_hogar_numero_1" id="discapacidad_hogar_numero_1" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <th scope="row"><input name="discapacidad_hogar_numero_1" id="discapacidad_hogar_numero_1" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                         <td><input name="discapacidad_hogar_nombre_2" id="discapacidad_hogar_nombre_1" type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input name="discapacidad_hogar_numero_2" id="discapacidad_hogar_numero_2" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <th scope="row"><input name="discapacidad_hogar_numero_2" id="discapacidad_hogar_numero_2" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                         <td><input name="discapacidad_hogar_nombre_2" id="discapacidad_hogar_nombre_2" type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input name="discapacidad_hogar_numero_3" id="discapacidad_hogar_numero_3" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <th scope="row"><input name="discapacidad_hogar_numero_3" id="discapacidad_hogar_numero_3" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                         <td><input name="discapacidad_hogar_nombre_3" id="discapacidad_hogar_nombre_3" type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input name="discapacidad_hogar_numero_4" id="discapacidad_hogar_numero_4" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <th scope="row"><input name="discapacidad_hogar_numero_4" id="discapacidad_hogar_numero_4" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                         <td><input name="discapacidad_hogar_nombre_4" id="discapacidad_hogar_nombre_4" type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
-                        <th scope="row"><input name="discapacidad_hogar_numero_5" id="discapacidad_hogar_numero_5" type="number" step="1" min="0" max="99" class="form-control form-control-sm"></th>
+                        <th scope="row"><input name="discapacidad_hogar_numero_5" id="discapacidad_hogar_numero_5" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
                         <td><input name="discapacidad_hogar_nombre_5" id="discapacidad_hogar_nombre_5" type="text" class="form-control form-control-sm"></td>
                     </tr>
                 </tbody>

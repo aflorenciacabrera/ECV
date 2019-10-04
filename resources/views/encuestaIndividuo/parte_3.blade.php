@@ -6,7 +6,7 @@
             <div class="form-group col-md-6">
                     <label for="PP03A">3a. ¿Cuántos empleos/ocupaciones tiene?</label>
 
-                    <input class="form-control" type="number"  min=-9 step=1  disabled onchange="update_parte_3()" name="PP03A" id="PP03A" step="1" min="0" max="99">
+                    <input class="form-control" type="number"  min=-9 step=1  disabled onchange="update_parte_3()" name="PP03A" id="PP03A" step="1"   max="99">
             </div>
              <div class="form-group col-md-6">
                      <br>
@@ -34,7 +34,7 @@
             </div>
              <div class="form-group col-md-6">
                     <label for="PP03D">3d. ¿Cuántos?</label>
-                        <input type="text" class="form-control" disabled onchange="update_parte_3()" name="PP03D" id="PP03D" step="1" min="0" max="99">
+                        <input type="text" class="form-control" disabled onchange="update_parte_3()" name="PP03D" id="PP03D" step="1"   max="99">
             </div>
         </div>
          <div class="form-row">

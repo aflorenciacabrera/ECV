@@ -82,7 +82,7 @@
             {{-- 5 --}}
             <td><input type="date" class="form-control form-control-sm" name="CH05_{{$index}}" id="CH05_{{$index}}" value="{{$item->caracteristicas->CH05}}"> </td>  {{-- dia,mes,año --}}
             {{-- 6 --}}
-            <td><input type="number" class="form-control form-control-sm" name="CH06_{{$index}}" id="CH06_{{$index}}" value="{{$item->caracteristicas->CH06}}" step="1" min="0" max="99">  </td>
+            <td><input type="number" class="form-control form-control-sm" name="CH06_{{$index}}" id="CH06_{{$index}}" value="{{$item->caracteristicas->CH06}}" step="1"   max="99">  </td>
             {{-- 7 --}}
             <td><select name="CH07_{{$index}}" id="CH07_{{$index}}" value="{{$item->caracteristicas->CH07}}" class="form-control form-control-sm">
                     <option value=""> </option>
@@ -148,7 +148,7 @@
                     <option value="3"  @if($item->caracteristicas->CH10 == "3" ) selected @endif >3. Nunca asistió (A p. 22)</option>
                     </select> </td>
           {{-- 15 --}}
-            <td><input type="number" class="form-control form-control-sm" name="CH10_E_{{$index}}" id="CH10_E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1" min="0" max="99"></td>
+            <td><input type="number" class="form-control form-control-sm" name="CH10_E_{{$index}}" id="CH10_E_{{$index}}" value="{{$item->caracteristicas->CH10_E}}" step="1"   max="99"></td>
             {{-- 16 --}}
             <td><select name="CH10_M_{{$index}}" id="CH10_M_{{$index}}" value="{{$item->caracteristicas->CH10_M}}" class="form-control form-control-sm opcional"  data-opcional="#CH10M_Esp_{{$index}}" data-condicion="8,8">
                     <option value=""> </option>

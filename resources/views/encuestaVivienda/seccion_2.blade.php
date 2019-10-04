@@ -4,7 +4,7 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                     <label for="manz">Manz.:</label>
-                    <input type="number" min="0" max="999" step="1" class="form-control form-control-sm" id="manz" name="manz" aria-describedby="" placeholder=" " required>
+                    <input type="number"   max="999" step="1" class="form-control form-control-sm" id="manz" name="manz" aria-describedby="" placeholder=" " required>
             </div>
             <div class="form-group col-md-4">
                     <label for="lado">Lado:</label>

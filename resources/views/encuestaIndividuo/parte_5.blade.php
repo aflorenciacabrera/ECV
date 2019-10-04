@@ -73,13 +73,13 @@
                  <div class="form-row">
                                 <div class="form-group col-md-4">
                                 <div class="text-center"><label for="PP05B2_ANO">Año</label></div>
-                                <input type="number" class="form-control PP05B2" disabled onchange="update_parte_5()" name="PP05B2_ANO" id="PP05B2_ANO" step="1" min="0" max="99"></div>
+                                <input type="number" class="form-control PP05B2" disabled onchange="update_parte_5()" name="PP05B2_ANO" id="PP05B2_ANO" step="1"   max="99"></div>
                                 <div class="form-group col-md-4">
                                 <div class="text-center"><label for="PP05B_MES">Mes</label></div>
-                                <input type="number" class="form-control PP05B2" disabled onchange="update_parte_5()" name="PP05B_MES" id="PP05B_MES" step="1" min="0" max="99"></div>
+                                <input type="number" class="form-control PP05B2" disabled onchange="update_parte_5()" name="PP05B_MES" id="PP05B_MES" step="1"   max="99"></div>
                                 <div class="form-group col-md-4">
                                 <div class="text-center"><label for="PP05B2_DIA">Día</label></div>
-                                <input type="number" class="form-control PP05B2" disabled onchange="update_parte_5()" name="PP05B2_DIA" id="PP05B2_DIA" step="1" min="0" max="99"></div>
+                                <input type="number" class="form-control PP05B2" disabled onchange="update_parte_5()" name="PP05B2_DIA" id="PP05B2_DIA" step="1"   max="99"></div>
                         </div>
             </div>
         </div>

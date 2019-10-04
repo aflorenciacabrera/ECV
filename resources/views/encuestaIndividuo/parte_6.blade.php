@@ -14,11 +14,11 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="PP06B">6b. ¿Cuántos socios, (familiares o no), son en total (incluyendo a ……………………………)?</label>
-                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06B" id="PP06B" step="1" min="0" max="99" pattern=[0-9]*>
+                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06B" id="PP06B" step="1"   max="99" pattern=[0-9]*>
             </div>
              <div class="form-group col-md-6">
                     <label for="PP06C">6c. Por el mes de…………………. ¿Cuánto ganó en su negocio/empresa/actividad?</label>
-                    <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06C" id="PP06C" step="1" min="0" max="9999999999">
+                    <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06C" id="PP06C" step="1"   max="9999999999">
                      <select class="form-control" disabled onchange="update_parte_6()" name="PP06C_op" id="PP06C_op">
                                  <option value="">  </option>
                                 <option value="8">8. No tuvo ingresos</option>
@@ -32,7 +32,7 @@
            <div class="form-group col-md-6">
                     <label for="PP06D">6d. Por el mes………………………… ¿cuánto ganó…………. en su negocio/empresa/actividad considerando sólo la parte que le corresponde a el/ella</label>
                     <small  class="form-text text-muted">(descontando los gastos) </small>
-                    <input type="number" min="0" class="form-control" disabled onchange="update_parte_6()" name="PP06D" id="PP06D" step="1" min="0" max="9999999999">
+                    <input type="number"  class="form-control" disabled onchange="update_parte_6()" name="PP06D" id="PP06D" step="1"  max="9999999999">
                      <select class="form-control" disabled onchange="update_parte_6()" name="PP06D_op" id="PP06D_op">
                                  <option value=""> </option>
                                 <option value="8">8. No tuvo ingresos</option>
@@ -62,7 +62,7 @@
             </div>
              <div class="form-group col-md-6">
                     <label for="PP06G">6g. ¿Cuánto cobró por el mes de ………….….… como sueldo?</label>
-                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06G" id="PP06G" step="1" min="0" max="9999999999">
+                     <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06G" id="PP06G" step="1"   max="9999999999">
                      <select class="form-control" disabled onchange="update_parte_6()" name="PP06G_op" id="PP06G_op">
                         <option value=""></option>
                         <option value="8">No cobró nada</option>
@@ -103,7 +103,7 @@
                    <br>
                 <label for="PP06L">6l. ¿A cuántas horas por día corresponde? </label>
                 <small id="" class="form-text text-muted">(en un día promedio)</small>
-                <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06L" id="PP06L" step="1" min="0" max="99">
+                <input type="number" class="form-control" disabled onchange="update_parte_6()" name="PP06L" id="PP06L" step="1"   max="99">
             </div>
              <div class="form-group col-md-6">
                     <label for="PP06K">6k. Lo ganado corresponde a su trabajo de…. </label>

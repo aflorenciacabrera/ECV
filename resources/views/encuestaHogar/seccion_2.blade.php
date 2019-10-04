@@ -4,13 +4,13 @@
                 <div class="form-group col-md-6">
                         <label for="codigo_area">1. ¿Cuántos ambientes/habitaciones tiene este hogar para su uso
                                 exclusivo? (excluyendo cocina, baño, pasillos, lavadero, garage)</label>
-                        <input type="number" class="form-control form-control-sm" name="II1" id="II1" aria-describedby="codigo_area" placeholder=" " step="1" min="0" max="99">
+                        <input type="number" class="form-control form-control-sm" name="II1" id="II1" aria-describedby="codigo_area" placeholder=" " step="1"   max="99">
                         {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
                 </div>
                 <div class="form-group col-md-6">
                 <br>
                         <label for="numero_listado">2. De ésos, ¿cuántos usan habitualmente para dormir?</label>
-                        <input type="number" class="form-control form-control-sm" name="II2" id="II2" placeholder="" step="1" min="0" max="99">
+                        <input type="number" class="form-control form-control-sm" name="II2" id="II2" placeholder="" step="1"   max="99">
                 </div>
         </div>
         <div class="form-row">
@@ -27,7 +27,7 @@
                 <div class="form-group col-md-6">
                         <br>
                         <label for="">3.1 ¿Cuántos?</label>
-                        <input type="number" disabled class="form-control form-control-sm" name="II3_1" id="II3_1" placeholder=""  step="1" min="0" max="9">
+                        <input type="number" disabled class="form-control form-control-sm" name="II3_1" id="II3_1" placeholder=""  step="1"   max="9">
                 </div>
         </div>
         <div class="form-row">
@@ -64,7 +64,7 @@
                                 <option value="2">2. No</option>
                         </select>
                         <label for="II5_1">5.1 ¿Cuántos?</label>
-                        <input disabled type="number" class="form-control form-control-sm" name="II5_1" id="II5_1" placeholder=""  step="1" min="0" max="99">
+                        <input disabled type="number" class="form-control form-control-sm" name="II5_1" id="II5_1" placeholder=""  step="1"   max="99">
                 </div>
         </div>
         <div class="form-row">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="form-group col-md-6">
                         <label for="II6_1">6.1 ¿Cuántos?</label>
-                        <input type="number" disabled class="form-control form-control-sm" name="II6_1" id="II6_1" placeholder="cuantos?"   step="1" min="0" max="99" >
+                        <input type="number" disabled class="form-control form-control-sm" name="II6_1" id="II6_1" placeholder="cuantos?"   step="1"   max="99" >
                 </div>
         </div>
         <div class="form-row">
