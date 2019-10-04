@@ -36,30 +36,4 @@ class IndividuoController extends Controller
         $individuo = individuo::find($id_individuo);
         return view('individuook')->with('individuo', $individuo);
     }
-
-    public function reporte()
-    {
-        //$individuos = individuo::with('hogarSeccionSeis')->get();
-        $individuos = individuo::with('hogar_seccion_cuatro', 'hogarSeccionSeis')->get();
-        
-        $individuos = $individuos->groupBy('hogar_id');
-        $array=[];
-        $itf=[];    
-        foreach ($individuos as $key => $value) {
-            //$itf=0;
-            for ($i=0; $i < count($value) ; $i++) { 
-                $itf[$key] += $value[$i]->PP06C;
-                //dd($value[$i]->PP06C);
-                //dd($individuos[$key]=$value[$i]->sum('PP06C'));
-            }
-            //dd($individuos);
-            /*$array=[
-                'hogar_id' => $key,
-                'itf' => $itf
-            ];
-            $itf=0;*/
-        }
-        dd($itf);
-        return view('reportes.ingresos')->with('individuos',$individuos);
-    }
 }

@@ -4,6 +4,10 @@
 <script>
 
  $(document).ready(function(){
+
+
+        $("#reporte").DataTable();
+
             $("#bajar_excel").click(function(){
                 $("#reporte").table2excel({
                 exclude: ".excludeThisClass",
@@ -12,13 +16,6 @@
             });
             })
 
-            //
-
-
-
-
-
-            //
 
 });
 </script>
@@ -26,7 +23,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <button id="bajar_excel" class="btn btn-success">Descargar Excel &nbsp;<i class="fa fa-file-excel" aria-hidden="true"></i></button>
-            <table id="reporte" class="table table-light table-sm" style="table-layout: fixed; border-collapse: collapse;">
+            <table id="reporte" class="table table-light table-sm table-striped">
                 <thead>
                     <tr>
                         <th>Area</th>
@@ -38,8 +35,13 @@
                         <th>Trimestre</th>
                         <th>Año</th>
                         <th>Nombre</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
                         <th>Ingreso Laboral</th>
-                        <th>aeq</th>
+                        <th>Ingreso No Laboral</th>
+                        <th>Adulto Equivalente</th>
+                        <th>Adulto Equivalente (Hogar)</th>
+                        <th>ITF</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,15 +55,32 @@
                             <td>{{$item->numero_semana}}</td>
                             <td>{{$item->trimestre}}</td>
                             <td>{{$item->ano4}}</td>
-                            <td>{{$item->nombre}}</td>
+
+
                             <td>
-                                @if(($item->ingresosLaborales()==-9) or ($item->hogarSeccionSeis->ingresosNoLaborales()==-9))
-                                    $ -9
-                                @else
-                                    $ {{$item->ingresosLaborales() + $item->hogarSeccionSeis->ingresosNoLaborales()}}
-                                @endif
+                                {{$item->nombre}}
                             </td>
-                            <td>{{$item->getPond()}}</td>
+                              <td>
+                                {{$item->sexo()}}
+                            </td>
+                              <td>
+                                {{$item->edad()}}
+                            </td>
+                            <td>
+                               {{$item->ingresosLaborales()}}
+                            </td>
+                             <td>
+                               {{$item->ingresosNoLaborales()}}
+                            </td>
+                             <td>
+                               {{$item->adultoEquivalente()}}
+                            </td>
+                            <td>
+                          {{$item->hogar->adultoEquivalente()}}
+                          </td>
+                             <td>
+                            {{$item->hogar->itf()}}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

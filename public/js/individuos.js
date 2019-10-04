@@ -1,6 +1,6 @@
 
 var stepper;
- var paso = 1;
+var paso = 1;
 
 
 var entrevistaRealizada = null;
@@ -42,16 +42,19 @@ function setOpcional(selector) {
 function setEntrevistaRealizada(value) {
 
     entrevistaRealizada = value;
-
-    if (value == 1) {
-        $("#numero_respondente").attr('required', true);
-        $("#nombre_respondente").attr('required', true);
-        activar("#PP01A")
-    }
-    else {
-        $("#numero_respondente").removeAttr('required');
-        $("#nombre_respondente").removeAttr('required');
-        desactivar("#PP01A");
+    if (rol !== 'admin') {
+        if (value == 1) {
+            $("#numero_respondente").attr('required', true);
+            $("#nombre_respondente").attr('required', true);
+            console.log("%c activar PP01A", "color:red")
+            activar("#PP01A")
+        }
+        else {
+            $("#numero_respondente").removeAttr('required');
+            $("#nombre_respondente").removeAttr('required');
+            console.log("%c desactivar PP01A","color:green")
+            desactivar("#PP01A");
+        }
     }
 
 }

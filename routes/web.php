@@ -62,7 +62,7 @@ Route::group(['middleware' => ['auth']], function () {
      * Reportes
      */
 
-     Route::get('reporte/ingresos','IndividuoController@reporte')->name('reporteIngresos');
+     Route::get('reporte/ingresos','reporteController@reporte')->name('reporteIngresos');
 
 });
 
