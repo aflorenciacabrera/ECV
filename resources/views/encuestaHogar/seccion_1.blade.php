@@ -3,40 +3,40 @@
     <div class="form-row">
         <div class="form-group col-md-6">
                 <label for="codigo_area">Código de área</label>
-                <input type="number" class="form-control form-control-sm"  name="codigo_area" id="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1" min="0" disabled>
+                <input type="number" class="form-control form-control-sm"  name="codigo_area" id="codigo_area" aria-describedby="codigo_area" placeholder=" " step="1"   disabled>
                 {{-- <small id="codigo_area" class="form-text text-muted"> </small> --}}
         </div>
         <div class="form-group col-md-6">
                 <label for="numero_listado">Nº en el listado</label>
-                <input type="number" class="form-control form-control-sm"  name="numero_listado" id="numero_listado" aria-describedby="codigo_area" placeholder=" " step="1" min="0" disabled>
+                <input type="number" class="form-control form-control-sm"  name="numero_listado" id="numero_listado" aria-describedby="codigo_area" placeholder=" " step="1"   disabled>
         </div>
     </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                     <label for="numero_semana">Semana Nº</label>
-                <input type="number" class="form-control form-control-sm"  name="numero_semana" id="numero_semana" placeholder="" step="1" min="0" disabled>
+                <input type="number" class="form-control form-control-sm"  name="numero_semana" id="numero_semana" placeholder="" step="1"   disabled>
 
             </div>
             <div class="form-group col-md-6">
                     <label for="trimestre">Trimestre</label>
-             <input type="number" class="form-control form-control-sm"  name="trimestre" id="trimestre" placeholder="" step="1" min="0" max="9" disabled>
+             <input type="number" class="form-control form-control-sm"  name="trimestre" id="trimestre" placeholder="" step="1"   max="9" disabled>
             </div>
     </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="anio">Año</label>
-                 <input type="number" class="form-control form-control-sm"  name="ano4" id="ano4" placeholder="" step="1" min="0" max="9999" disabled>
+                 <input type="number" class="form-control form-control-sm"  name="ano4" id="ano4" placeholder="" step="1"   max="9999" disabled>
 
             </div>
             <div class="form-group col-md-6">
                 <label for="numero_vivienda">Vivienda Nº</label>
-                <input type="number" class="form-control form-control-sm"  name="numero_vivienda" id="numero_vivienda" placeholder="" step="1" min="0" disabled>
+                <input type="number" class="form-control form-control-sm"  name="numero_vivienda" id="numero_vivienda" placeholder="" step="1"   disabled>
             </div>
     </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="numero_hogar">Hogar Nº</label>
-                 <input type="number" class="form-control form-control-sm"  name="numero_hogar" id="numero_hogar" placeholder="" step="1" min="0" disabled>
+                 <input type="number" class="form-control form-control-sm"  name="numero_hogar" id="numero_hogar" placeholder="" step="1"   disabled>
             </div>
             <div class="form-group col-md-6">
                 <label for="respondiente">Respondiente</label>
@@ -97,7 +97,7 @@
                     <label for="encuestador">Encuestador</label>
                     <input type="text" class="form-control form-control-sm"  name="encuestador" id="encuestador" placeholder="">
                     <label for="numero_encuestador">Nº</label>
-                    <input type="number" class="form-control form-control-sm"  name="numero_encuestador" id="numero_encuestador" placeholder="" step="1" min="0">
+                    <input type="number" class="form-control form-control-sm"  name="numero_encuestador" id="numero_encuestador" placeholder="" step="1"  >
                 </div>
     </div>
 </div>

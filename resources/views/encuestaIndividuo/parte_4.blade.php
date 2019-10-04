@@ -24,20 +24,20 @@
                                 <div class="form-group col-md-6">
                                         <label for="PP04B2">4b2. ¿En cuántas casas trabaja?</label>
                                         <small  class="form-text text-muted">(en la casa que tiene más horas)</small>
-                                        <input type="number" class="form-control" disabled onchange="update_parte_4()" name="PP04B2" id="PP04B2" step="1" min="0" max="9">
+                                        <input type="number" class="form-control" disabled onchange="update_parte_4()" name="PP04B2" id="PP04B2" step="1"   max="9">
                                 </div>
                                 <div class="form-group col-md-6">
                                 <label for="">4b3. ¿Cuánto tiempo hace que trabaja allí?</label>
                                 <div class="form-row">
                                         <div class="form-group col-md-4">
                                         <div class="text-center"><label for="">Año</label></div>
-                                        <input type="number" class="form-control PP04B3" disabled onchange="update_parte_4()" name="PP04B3_ANO" id="PP04B3_ANO" step="1" min="0" max="99"></div>
+                                        <input type="number" class="form-control PP04B3" disabled onchange="update_parte_4()" name="PP04B3_ANO" id="PP04B3_ANO" step="1"   max="99"></div>
                                         <div class="form-group col-md-4">
                                         <div class="text-center"><label for="">Mes</label></div>
-                                        <input type="number" class="form-control PP04B3" disabled onchange="update_parte_4()" name="PP04B3_MES" id="PP04B3_MES" step="1" min="0" max="99"></div>
+                                        <input type="number" class="form-control PP04B3" disabled onchange="update_parte_4()" name="PP04B3_MES" id="PP04B3_MES" step="1"   max="99"></div>
                                         <div class="form-group col-md-4">
                                         <div class="text-center"><label for="">Día</label></div>
-                                        <input type="number" class="form-control PP04B3" disabled onchange="update_parte_4()" name="PP04B3_DIA" id="PP04B3_DIA" step="1" min="0" max="99"></div>
+                                        <input type="number" class="form-control PP04B3" disabled onchange="update_parte_4()" name="PP04B3_DIA" id="PP04B3_DIA" step="1"   max="99"></div>
                                 </div>
                                 </div>
                         </div>

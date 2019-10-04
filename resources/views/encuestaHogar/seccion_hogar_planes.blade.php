@@ -22,7 +22,7 @@
       </div>
           <div class="col-md-10">
             <label for="DI_1">1.1¿Cuántos miembros?</label>
-            <input type="number" disabled class="form-control form-control-sm" name="DI_1" id="DI_1" step="1" min="0" max="99">
+            <input type="number" disabled class="form-control form-control-sm" name="DI_1" id="DI_1" step="1"   max="99">
         </div>
 
     </div>
@@ -42,7 +42,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">2.1¿Cuántos miembros?</label>
-              <input type="number" disabled class="form-control form-control-sm" name="AI_1" id="AI_1" step="1" min="0"  max="99">
+              <input type="number" disabled class="form-control form-control-sm" name="AI_1" id="AI_1" step="1"    max="99">
           </div>
 
       </div>
@@ -62,7 +62,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">3.1¿Cuántos miembros?</label>
-              <input type="number" disabled class="form-control form-control-sm" name="MI_1" id="MI_1" step="1" min="0"  max="99">
+              <input type="number" disabled class="form-control form-control-sm" name="MI_1" id="MI_1" step="1"    max="99">
           </div>
 
       </div>
@@ -82,7 +82,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">4.1 ¿Porcentaje?</label>
-              <input type="number"  class="form-control form-control-sm" name="TS_1" id="TS_1" step="1" min="0"  max="999">
+              <input type="number"  class="form-control form-control-sm" name="TS_1" id="TS_1" step="1"    max="999">
           </div>
 
       </div>
@@ -102,7 +102,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">5.1¿Monto total de boleta de energía?</label>
-              <input type="number" class="form-control form-control-sm" name="TE_1" id="TE_1" step="1" min="0"  max="999999">
+              <input type="number" class="form-control form-control-sm" name="TE_1" id="TE_1" step="1"    max="999999">
           </div>
 
       </div>
@@ -139,7 +139,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">7.1¿Cuántos miembros?</label>
-              <input type="number" disabled class="form-control form-control-sm" name="TM_1" id="TM_1" step="1" min="0"  max="99">
+              <input type="number" disabled class="form-control form-control-sm" name="TM_1" id="TM_1" step="1"    max="99">
           </div>
 
       </div>
@@ -159,7 +159,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">9.1¿Cuántos miembros?</label>
-              <input type="number" disabled class="form-control form-control-sm" name="PM_1" id="PM_1" step="1" min="0"  max="99">
+              <input type="number" disabled class="form-control form-control-sm" name="PM_1" id="PM_1" step="1"    max="99">
           </div>
 
       </div>
@@ -179,7 +179,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">8.1¿Cuántos miembros?</label>
-              <input type="number" disabled class="form-control form-control-sm" name="TSAP_1" id="TSAP_1" step="1" min="0"  max="99">
+              <input type="number" disabled class="form-control form-control-sm" name="TSAP_1" id="TSAP_1" step="1"    max="99">
           </div>
 
       </div>
@@ -201,7 +201,7 @@
         </div>
             <div class="col-md-10">
               <label for="numero_semana">10.1 Cuantos Miembros</label>
-              <input type="number" disabled class="form-control form-control-sm" name="BE_1" id="BE_1" step="1" min="0"  max="99">
+              <input type="number" disabled class="form-control form-control-sm" name="BE_1" id="BE_1" step="1"    max="99">
           </div>
 
       </div>
@@ -236,9 +236,9 @@
                                 </thead>
                                 <tbody>
                                         <tr>
-                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_1" id="AUH_1"   value=""  min="0"  max="99"></td>
-                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_2" id="AUH_2"   value=""  min="0" max="99"></td>
-                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_3" id="AUH_3"   value=""  min="0"  max="999999"></td>
+                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_1" id="AUH_1"   value=""     max="99"></td>
+                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_2" id="AUH_2"   value=""    max="99"></td>
+                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_3" id="AUH_3"   value=""     max="999999"></td>
                                         </tr>
                                         <tr>
                                        <td><input type="number"  disabled class="form-control form-control-sm auh_inputs" name="AUH_1_2" id="AUH_1_1"  ></td>

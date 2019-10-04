@@ -29,7 +29,7 @@
         <div class="col-md-6 form-group">
             <div>
                 <label for="N_hogar_viv">Indague el número de hogares que residen en esta vivienda.</label>
-                <input type="number" min="0" step="1" class="form-control form-control-sm" disabled
+                <input type="number"   step="1" class="form-control form-control-sm" disabled
                     onchange="update_seccion_3()" name="N_hogar_viv" id="N_hogar_viv">
                 <small class="form-text text-muted">Hogar: Persona o grupo de personas, parientes o no, que habitan bajo
                     el mismo techo y comparten los gastos de alimentación y/o otros gastos esenciales para

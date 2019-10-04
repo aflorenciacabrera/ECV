@@ -95,7 +95,7 @@
                 </div>
                 <div class="form-group col-md-4">
                         <label for="numero_particion">N°:</label>
-                        <input type="number" min="0" step="1" max="999" class="form-control form-control-sm se_hizo_acompaniamiento "  id="numero_particion"  onchange="update_participacion()" name="numero_particion" >
+                        <input type="number"   step="1" max="999" class="form-control form-control-sm se_hizo_acompaniamiento "  id="numero_particion"  onchange="update_participacion()" name="numero_particion" >
                 </div>
         </div>
         <div class="row">
