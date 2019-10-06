@@ -446,4 +446,37 @@ protected $fillable = ['Entrev_realiz',
     }
 
 
+    public function P21(){
+        $c = 0;
+        $l = [$this->PP06C, $this->PP06D, $this->PP06G, $this->PP08D2, $this->PP08D3, $this->PP08D4, $this->PP08J1, $this->PP08J2, $this->PP08J3, $this->PP08F1, $this->PP08F2];
+        foreach ($l as $value) {
+            if ($value == -9) {
+                return -9;
+            } else {
+                $c += $value;
+            }
+        }
+
+        return $c;
+    }
+
+    public function P47T(){
+        $c = 0;
+        $l = [$this->P21(), $this->PP12B1, $this->PP12B12, $this->PP12B2, $this->PP12B22, $this->PP12B3, $this->PP12B32 ];
+        foreach ($l as $value) {
+            if ($value == -9) {
+                return -9;
+            } else {
+                $c += $value;
+            }
+        }
+        return $c;
+    }
+
+    public function T_V()
+    {
+        return $this->ingresosNoLaborales();
+    }
+
+
 }
