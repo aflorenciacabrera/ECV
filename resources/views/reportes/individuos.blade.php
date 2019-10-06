@@ -50,7 +50,7 @@
                 $("#reporte").table2excel({
                     exclude: ".excludeThisClass",
                     name: "Pagina 1",
-                    filename: "reporte_ingresos" + new Date().toISOString().replace(/[\-\:\.]/g, ""), //do not include extension
+                    filename: "reporte_individual" + new Date().toISOString().replace(/[\-\:\.]/g, ""), //do not include extension
                 });
             })
 
@@ -343,12 +343,9 @@
 <th>V18_M</th>
 <th>V19_AM </th>
 <th>T_Vi</th>
-<th>VII1_1 </th>
-<th>VII1_2</th>
-<th>VII2_1</th>
-<th>VII2_2</th>
-<th>VII2_3</th>
-<th>VII2_4</th>
+<th>VII1</th>
+<th>VII2</th>
+<th>VII3</th>
 <th>DI</th>
 <th>DI_1</th>
 <th>AI</th>
@@ -675,12 +672,11 @@
 
   <td>{{$item->ingresosNoLaborales()}}</td>
   {{--  --}}
-<td>{{$item->hogar->VII1_1}} </td>
-<td>{{$item->hogar->VII1_2}}</td>
-<td>{{$item->hogar->VII2_1}}</td>
-<td>{{$item->hogar->VII2_2}}</td>
-<td>{{$item->hogar->VII2_3}}</td>
-<td>{{$item->hogar->VII2_4}}</td>
+<td>{{$item->hogar->VII1}} </td>
+<td>{{$item->hogar->VII2}}</td>
+<td>{{$item->hogar->VII3}}</td>
+
+
 <td>{{$item->hogar->DI}}</td>
 <td>{{$item->hogar->DI_1}}</td>
 <td>{{$item->hogar->AI}}</td>

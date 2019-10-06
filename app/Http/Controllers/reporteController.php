@@ -9,9 +9,16 @@ class reporteController extends Controller
 {
     public function reporte()
     {
-        $individuos = individuo::all()->take(100);
+        $individuos = individuo::all();
 
-        return view('reportes.ingresos')->with('individuos', $individuos);
+        return view('reportes.individuos')->with('individuos', $individuos);
+    }
+
+    public function hogares()
+    {
+        $hogar = hogar::all();
+
+        return view('reportes.hogares')->with('hogares', $hogar);
     }
 
 
