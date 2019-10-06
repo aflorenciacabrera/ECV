@@ -251,10 +251,43 @@
             @endforeach
             @else
             <tr class="bg-red">
+                 <tr>
                 <td>{{$vivienda->codusu()}}</td>
                 <td>{{$vivienda->ano4}}</td>
                 <td>{{$vivienda->trimestre}}</td>
-                <td>0</td>
+                <td></td>
+                <td>{{$vivienda->entrevista_realizada}}</td>
+                {{--  --}}
+                <td>{{$vivienda->IV1}}</td>
+<td>{{$vivienda->IV1_Esp}}</td>
+<td>{{$vivienda->IV2}}</td>
+<td>{{$vivienda->IV3}}</td>
+<td>{{$vivienda->IV3_Esp}} </td>
+<td>{{$vivienda->IV4}}</td>
+<td>{{$vivienda->IV5}}</td>
+<td>{{$vivienda->IVE}}</td>
+<td>{{$vivienda->IV6}}</td>
+<td>{{$vivienda->IV7}}</td>
+<td>{{$vivienda->IV7_Esp}}</td>
+<td>{{$vivienda->IV8}}</td>
+<td>{{$vivienda->IV9}}</td>
+<td>{{$vivienda->IV10}}</td>
+<td>{{$vivienda->IV11}}</td>
+<td>{{$vivienda->IV12_1}}</td>
+<td>{{$vivienda->IV12_2}}</td>
+<td>{{$vivienda->IV12_3}}</td>
+<td>{{$vivienda->IV14}}</td>
+<td>{{$vivienda->IV15}}</td>
+
+<td>{{$vivienda->DESHABILITADA}}</td>
+<td>{{$vivienda->DEMOLIDA}}</td>
+<td>{{$vivienda->FIN_DE_SEMANA}}</td>
+<td>{{$vivienda->CONSTRUCCIÓN}}</td>
+<td>{{$vivienda->ESTABLECIMIENTO}}</td>
+<td>{{$vivienda->VARIACION}}</td>
+<td>{{$vivienda->AUSENCIA}}</td>
+<td>{{$vivienda->RECHAZO}}</td>
+<td>{{$vivienda->OTRO}}</td>
             </tr>
             @endif
             @endforeach
