@@ -6,7 +6,7 @@
  $(document).ready(function(){
 
 
-        /*$("#reporte").DataTable();*/
+        // $("#reporte").DataTable();
 
             $("#bajar_excel").click(function(){
                 $("#reporte").table2excel({
@@ -29,8 +29,11 @@
                         <th>Area</th>
                         <th>Listado</th>
                         <th>Vivienda </th>
+                        <th>vivienda_id</th>
                         <th>Hogar</th>
+                        <th>hogar_id</th>
                         <th>Componente</th>
+                        <th>componente_id</th>
                         <th>Semana</th>
                         <th>Trimestre</th>
                         <th>Año</th>
@@ -49,9 +52,12 @@
                         <tr>
                             <td>{{$item->codigo_area}}</td>
                             <td>{{$item->numero_listado}}</td>
-                            <td>{{$item->hogar->vivienda_id}}</td>
-                            <td>{{$item->hogar_id}}</td>
+                            <td>{{$item->numero_vivienda}}</td>
+                            <td>{{$item->hogar->vivienda->id}}</td>
+                            <td>{{$item->numero_hogar}}</td>
+                            <td>{{$item->hogar->id}}</td>
                             <td>{{$item->numero_componente}}</td>
+                            <td>{{$item->id}}</td>
                             <td>{{$item->numero_semana}}</td>
                             <td>{{$item->trimestre}}</td>
                             <td>{{$item->ano4}}</td>
