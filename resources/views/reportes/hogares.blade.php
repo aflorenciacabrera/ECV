@@ -92,19 +92,7 @@
 <th>IV12_3</th>
 <th>IV14</th>
 <th>IV15</th>
-{{-- <th>CAMPO</th>
-<th>NRO_HOGAR</th>
-<th>NRO_COMPONENTE</th>
-<th>NOMBRE_JEFE</th>
-<th>VIVIO_SEM</th>
-<th>VIVIO_MES</th>
-<th>FIJAR_RES</th>
-<th>ESTABA</th>
-<th>AUSENCIA</th>
-<th>OTRA_RES</th>
-<th>NO_ESTABA</th>
-<th>CAMBIOS</th>
-<th>MOTIVO</th> --}}
+
 <th>DESHABILITADA</th>
 <th>DEMOLIDA</th>
 <th>FIN DE SEMANA</th>
@@ -168,7 +156,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($hogares as $item)
+            @foreach ($viviendas as $vivienda)
+            @if($vivienda->hogares->count() > 0)
+            @foreach ($vivienda->hogares as $item)
             <tr>
                 <td>{{$item->codusu()}}</td>
                 <td>{{$item->vivienda->ano4}}</td>
@@ -258,6 +248,15 @@
 
 
             </tr>
+            @endforeach
+            @else
+            <tr class="bg-red">
+                <td>{{$vivienda->codusu()}}</td>
+                <td>{{$vivienda->ano4}}</td>
+                <td>{{$vivienda->trimestre}}</td>
+                <td>0</td>
+            </tr>
+            @endif
             @endforeach
         </tbody>
     </table>

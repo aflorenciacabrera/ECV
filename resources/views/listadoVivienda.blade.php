@@ -6,10 +6,10 @@
 $(document).ready(function(){
     var tf = new TableFilter(document.querySelector('#tabla'), {
         base_path: "{{asset('js/tablefilter')}}"+"/",
-         col_0: 'select',
-         col_1: 'select',
+        col_0: 'none',
+        col_1: 'select',
          col_2: 'select',
-         col_3: 'none',
+         col_3: 'select',
          col_4: 'none',
          col_5: 'none',
          col_6: 'none',
@@ -21,10 +21,11 @@ $(document).ready(function(){
          col_12: 'none',
          col_13: 'none',
          col_14: 'none',
-         col_15: 'select',
+         col_15: 'none',
          col_16: 'select',
-         col_17: 'none',
+         col_17: 'select',
          col_18: 'none',
+         col_19: 'none',
     });
 
     tf.init();
@@ -69,7 +70,7 @@ $(document).ready(function(){
 
                     <table class="table table-striped table-inverse table-responsive table-sm" id="tabla">
                         <thead class="thead-inverse">
-                            <tr>
+                            <tr><th>Codusu</th>
                                 <th>Área</th>
                                 <th>N° Listado</th>
                                 <th>Vivienda</th>
@@ -95,7 +96,12 @@ $(document).ready(function(){
                             </thead>
                             <tbody>
                                 @foreach ($viviendas as $item)
+<<<<<<< HEAD
                                 <tr >
+=======
+                                <tr>
+                                    <td>{{$item->codusu()}}</td>
+>>>>>>> 405a867f7cfe787a3e80cce3fb7ada2216c92fe8
                                 <td>{{$item->codigo_area}}</td>
                                 <td>{{$item->numero_listado}}</td>
                                 <td>{{$item->numero_vivienda}}</td>
