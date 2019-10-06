@@ -148,6 +148,6 @@ class vivienda extends Model
 
     public function codusu()
     {
-        return $this->codigo_area . $this->numero_listado . $this->manz . $this->lado . $this->numero_vivienda;
+        return "A".$this->codigo_area ."L". $this->numero_listado ."M". $this->manz ."L". $this->lado . "V".$this->numero_vivienda;
     }
 }

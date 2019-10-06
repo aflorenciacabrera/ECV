@@ -385,7 +385,10 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($individuos as $item)
+            @foreach ($viviendas as $vivienda)
+            @if($vivienda->hogares->count() > 0)
+            @foreach ($vivienda->hogares as $hogar)
+            @foreach ($hogar->individuos as $item)
             <tr>
                 <td>{{$item->hogar->codusu()}}</td>
                 <td>{{$item->hogar->vivienda->ano4}}</td>
@@ -715,6 +718,16 @@
                 <td>{{$item->hogar->ipcf()}}</td>
 
             </tr>
+            @endforeach
+            @endforeach
+            @else
+            <tr>
+            <td>{{$vivienda->codusu()}}</td>
+                <td>{{$vivienda->ano4}}</td>
+                <td>{{$vivienda->trimestre}}</td>
+                <td>0</td>
+            </tr>
+                @endif
             @endforeach
         </tbody>
     </table>

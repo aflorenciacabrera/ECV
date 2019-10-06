@@ -62,7 +62,7 @@ $(document).ready(function(){
 
                     <table class="table table-striped table-inverse table-responsive table-sm" id="tabla">
                         <thead class="thead-inverse">
-                            <tr>
+                            <tr><th>-</th>
                                 <th>Área</th>
                                 <th>N° Listado</th>
                                 <th>Vivienda</th>
@@ -89,6 +89,7 @@ $(document).ready(function(){
                             <tbody>
                                 @foreach ($viviendas as $item)
                                 <tr>
+                                    <td>{{$item->codusu()}}</td>
                                 <td>{{$item->codigo_area}}</td>
                                 <td>{{$item->numero_listado}}</td>
                                 <td>{{$item->numero_vivienda}}</td>
