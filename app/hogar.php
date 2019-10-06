@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\vivienda;
 class hogar extends Model
 {
 
@@ -156,6 +156,16 @@ class hogar extends Model
 'entrega',
 'mal_tomado'];
     //
+
+    public function codusu()
+    {
+        // return area+listado+manzana+lado+numero_vivienda+hogarnumero
+
+        return $this->vivienda->codusu();
+
+    }
+
+
     public function vivienda()
     {
         return $this->belongsTo('App\vivienda');
@@ -197,16 +207,12 @@ class hogar extends Model
         $c = 0;
         foreach ($this->individuos as $i)
         {
-            if ($i->ingresosLaborales() == -9) {
+            if ($i->P47T() == -9) {
                 return -9;
             } else {
-                $c += $i->ingresosLaborales();
+                $c += $i->P47T();
             }
-            if ($i->ingresosNoLaborales() == -9) {
-                return -9;
-            } else {
-                $c += $i->ingresosNoLaborales();
-            }
+
         }
         return $c;
     }
@@ -219,4 +225,18 @@ class hogar extends Model
 
         return $c;
     }
+
+    public function ipcf(){
+        if($this->itf() > 0 & $this->individuos->count()>0)
+        {
+            return round(($this->itf() / $this->individuos->count()),2);
+        }
+        else
+        {
+            return "";
+        }
+
+    }
+
+
 }
