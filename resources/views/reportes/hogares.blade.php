@@ -63,7 +63,7 @@
 
     <button id="bajar_excel" class="btn btn-success">Descargar Excel &nbsp;<i class="fa fa-file-excel"
             aria-hidden="true"></i></button>
-    <table id="reporte" class="table table-light table-sm table-striped">
+    <table id="reporte" class="table table-sm table-striped">
         <thead>
             <tr>
                 <th>CODUSU</th>
@@ -93,10 +93,12 @@
 <th>IV14</th>
 <th>IV15</th>
 
+<th>CAUSAS</th>
 <th>DESHABILITADA</th>
 <th>DEMOLIDA</th>
-<th>FIN DE SEMANA</th>
 <th>CONSTRUCCIÓN</th>
+<th>FIN_DE_SEMANA</th>
+<th>CONSTRUCCION</th>
 <th>ESTABLECIMIENTO</th>
 <th>VARIACION</th>
 <th>AUSENCIA</th>
@@ -187,13 +189,15 @@
 <td>{{$item->vivienda->IV14}}</td>
 <td>{{$item->vivienda->IV15}}</td>
 
+<td>{{$item->vivienda->CAUSAS}}</td>
 <td>{{$item->vivienda->DESHABILITADA}}</td>
 <td>{{$item->vivienda->DEMOLIDA}}</td>
-<td>{{$item->vivienda->FIN_DE_SEMANA}}</td>
 <td>{{$item->vivienda->CONSTRUCCIÓN}}</td>
+<td>{{$item->vivienda->FIN_DE_SEMANA}}</td>
+<td>{{$item->vivienda->CONSTRUCCION}}</td>
 <td>{{$item->vivienda->ESTABLECIMIENTO}}</td>
 <td>{{$item->vivienda->VARIACION}}</td>
-<td>{{$item->vivienda->AUSENCIA}}</td>
+<td>{{$item->vivienda->AUSENCIA_PARTICIPACION}}</td>
 <td>{{$item->vivienda->RECHAZO}}</td>
 <td>{{$item->vivienda->OTRO}}</td>
 {{-- datos hogar --}}
@@ -250,7 +254,7 @@
             </tr>
             @endforeach
             @else
-            <tr class="bg-red">
+
                  <tr>
                 <td>{{$vivienda->codusu()}}</td>
                 <td>{{$vivienda->ano4}}</td>
@@ -279,13 +283,16 @@
 <td>{{$vivienda->IV14}}</td>
 <td>{{$vivienda->IV15}}</td>
 
+
+<td>{{$vivienda->CAUSAS}}</td>
 <td>{{$vivienda->DESHABILITADA}}</td>
 <td>{{$vivienda->DEMOLIDA}}</td>
-<td>{{$vivienda->FIN_DE_SEMANA}}</td>
 <td>{{$vivienda->CONSTRUCCIÓN}}</td>
+<td>{{$vivienda->FIN_DE_SEMANA}}</td>
+<td>{{$vivienda->CONSTRUCCION}}</td>
 <td>{{$vivienda->ESTABLECIMIENTO}}</td>
 <td>{{$vivienda->VARIACION}}</td>
-<td>{{$vivienda->AUSENCIA}}</td>
+<td>{{$vivienda->AUSENCIA_PARTICIPACION}}</td>
 <td>{{$vivienda->RECHAZO}}</td>
 <td>{{$vivienda->OTRO}}</td>
             </tr>
