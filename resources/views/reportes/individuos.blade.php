@@ -69,6 +69,7 @@
                 <th>CODUSU</th>
                 <th>ANO4</th>
                 <th>TRIMESTRE</th>
+                <th>AREA</th>
                 <th>NRO_HOGAR</th>
                 <th>COMPONENTE</th>
                 <th>CH15</th>
@@ -393,6 +394,7 @@
                 <td>{{$item->hogar->codusu()}}</td>
                 <td>{{$item->hogar->vivienda->ano4}}</td>
                 <td>{{$item->hogar->vivienda->trimestre}}</td>
+                <td>{{$item->hogar->vivienda->codigo_area}}</td>
                 <td>{{$item->hogar->numero_hogar}}</td>
                 <td>{{$item->numero_componente}}</td>
                 <td>{{$item->hogar->entrevista_realizada}}</td>
@@ -725,6 +727,7 @@
             <td>{{$vivienda->codusu()}}</td>
                 <td>{{$vivienda->ano4}}</td>
                 <td>{{$vivienda->trimestre}}</td>
+                <td>{{$vivienda->codigo_area}}</td>
                 <td>0</td>
             </tr>
                 @endif
