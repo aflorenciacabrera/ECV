@@ -470,7 +470,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
 
     public function P47T(){
         $c = 0;
-        $l = [$this->P21(), $this->PP12B1, $this->PP12B12, $this->PP12B2, $this->PP12B22, $this->PP12B3, $this->PP12B32 ];
+        $l = [$this->P21(), $this->PP12B1, $this->PP12B12, $this->PP12B2, $this->PP12B22, $this->PP12B3, $this->PP12B32, $this->T_V() ];
         foreach ($l as $value) {
             if ($value == -9) {
                 return -9;
