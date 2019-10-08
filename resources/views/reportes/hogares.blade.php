@@ -146,6 +146,8 @@
 <th>V18</th>
 <th>V19_A </th>
 <th>V19_B</th>
+<th>AUH</th>
+    
 <th>ITF</th>
 <th>IPCF</th>
 
@@ -244,7 +246,7 @@
 <td>{{$item->V19_A}} </td>
 <td>{{$item->V19_B}}</td>
             {{-- } --}}
-
+<td>{{$item->auh()}}</td>
 <td>{{$item->itf()}}</td>
 <td>{{$item->ipcf()}}</td>
 {{--  --}}

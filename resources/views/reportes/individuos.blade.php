@@ -343,6 +343,7 @@
 <th>V12_M</th>
 <th>V18_M</th>
 <th>V19_AM </th>
+<th>AUH</th>
 <th>T_Vi</th>
 <th>VII1</th>
 <th>VII2</th>
@@ -368,10 +369,8 @@
 <th>PM_1</th>
 <th>BE</th>
 <th>BE_1</th>
-<th>AUH</th>
-<th>AUH_1</th>
-<th>AUH_2</th>
-<th>AUH_3</th>
+
+
                 {{--  --}}
                 <th>P21</th>
                 <th>P47T</th>
@@ -674,6 +673,7 @@
 <td>{{$item->nolaboral->V12_M}}</td>
 <td>{{$item->nolaboral->V18_M}}</td>
 <td>{{$item->nolaboral->V19_AM}} </td>
+<td>{{$item->auh()}}</td>
 
   <td>{{$item->ingresosNoLaborales()}}</td>
   {{--  --}}
@@ -703,10 +703,8 @@
 <td>{{$item->hogar->PM_1}}</td>
 <td>{{$item->hogar->BE}}</td>
 <td>{{$item->hogar->BE_1}}</td>
-<td>{{$item->hogar->AUH}}</td>
-<td>{{$item->hogar->AUH_1}}</td>
-<td>{{$item->hogar->AUH_2}}</td>
-<td>{{$item->hogar->AUH_3}}</td>
+
+
 
 
                 {{--  --}}
