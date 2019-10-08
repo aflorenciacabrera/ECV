@@ -238,5 +238,14 @@ class hogar extends Model
 
     }
 
+    public function auh(){
+        $c = 0;
+        foreach ($this->individuos as $i) {
+            $c += $i->auh();
+        }
+        return $c;
+    }
+
+
 
 }

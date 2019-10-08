@@ -470,6 +470,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
 
     public function P47T(){
         $c = 0;
+
         $l = [$this->P21(), $this->PP12B1, $this->PP12B12, $this->PP12B2, $this->PP12B22, $this->PP12B3, $this->PP12B32, $this->T_V() ];
         foreach ($l as $value) {
             if ($value == -9) {
@@ -485,6 +486,22 @@ protected $fillable = ['hogar_id','Entrev_realiz',
     {
         return $this->ingresosNoLaborales();
     }
+    
+    public function auh()
+    {
+        if($this->numero_componente == $this->hogar->AUH_1)
+        {
+            return $this->hogar->AUH_3;
 
-
+        }
+        if($this->numero_componente == $this->hogar->AUH_1_2)
+        {
+            return $this->hogar->AUH_3_2;
+        }
+        if($this->numero_componente == $this->hogar->AUH_1_3 )
+        {
+            return $this->hogar->AUH_3_3;
+        }
+        return 0;
+    }
 }
