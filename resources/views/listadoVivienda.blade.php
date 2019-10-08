@@ -96,12 +96,8 @@ $(document).ready(function(){
                             </thead>
                             <tbody>
                                 @foreach ($viviendas as $item)
-<<<<<<< HEAD
-                                <tr >
-=======
                                 <tr>
                                     <td>{{$item->codusu()}}</td>
->>>>>>> 405a867f7cfe787a3e80cce3fb7ada2216c92fe8
                                 <td>{{$item->codigo_area}}</td>
                                 <td>{{$item->numero_listado}}</td>
                                 <td>{{$item->numero_vivienda}}</td>
