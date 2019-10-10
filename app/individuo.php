@@ -528,12 +528,12 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         $ch12 = $this->caracteristicas->CH12;
         $ch13 = $this->caracteristicas->CH13;
         $ch10 = $this->caracteristicas->CH10;
-        if($ch12 == 2 & $ch13 == 2){      return 1;    }
-        if($ch12 == 2 & $ch13 == 1){      return 2;    }
-        if($ch12 == 3 & $ch13 == 2){      return 3;    }
-        if($ch12 == 3 & $ch13 == 1){      return 4;    }
-        if($ch12 == 4 & $ch13 == 2){      return 5;    }
-        if($ch12 == 4 & $ch13 == 1){      return 6;    }
+        if($ch12 == 2 && $ch13 == 2){      return 1;    }
+        if($ch12 == 2 && $ch13 == 1){      return 2;    }
+        if($ch12 == 3 && $ch13 == 2){      return 3;    }
+        if($ch12 == 3 && $ch13 == 1){      return 4;    }
+        if($ch12 == 4 && $ch13 == 2){      return 5;    }
+        if($ch12 == 4 && $ch13 == 1){      return 6;    }
         if($ch10 == 3)            {      return 7;    }
         if($ch13 == 9)            {      return 9;    }       
     }
@@ -556,7 +556,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         {
             return 0;
         }
-        if($this->PP01A == 1 | $this->PP01B == 1)
+        if($this->PP01A == 1 || $this->PP01B == 1)
         {
             return 1;
         }
@@ -564,13 +564,14 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         {
             return 2;
         }
-        if($this->PP01E == 1 || $this->PP01E == 2 | $this->PP02F == 2)
+        if($this->PP01E == 1 || $this->PP01E == 2 || $this->PP02F == 2)
         {
             return 3;
         }
         if($this->caracteristicas->CH06 < 10){
             return 4;
         }
+        
     }
 
     // #CATEGORIA OCUPACIONAL
@@ -589,16 +590,16 @@ protected $fillable = ['hogar_id','Entrev_realiz',
 
     public function categoriaOcupacional()
     {
-            if ($this->PP05A==1 & $this->PP05D==1){
+            if ($this->PP05A==1 && $this->PP05D==1){
             return 1;
             }
-            if ($this->PP05A==1 & ($this->PP05D==2 | $this->PP05D==3)){
+            if ($this->PP05A==1 && ($this->PP05D==2 || $this->PP05D==3)){
             return 2;
             }
             if ($this->PP05A==3){
             return 3;
             }
-            if ($this->PP05A==2 & $this->PP05B==2 & $this->PP05B1==3){
+            if ($this->PP05A==2 && $this->PP05B==2 && $this->PP05B1==3){
             return 4;
             }
             // #Ns./Nr.
@@ -610,53 +611,111 @@ protected $fillable = ['hogar_id','Entrev_realiz',
  *  // #CATEGORIA INACTIVOS
  */
        
-        // gen CAT_INAC=.
-        // #Jubilado o pensionado
-        // replace CAT_INAC=1 if v21==1
-        // #Rentista
-        // replace CAT_INAC=2 if v8_m==1 & v9_m==1 & v10_m==1
-        // #Estudiante
-        // replace CAT_INAC=3 if ch10=1 & pp01e==2
-        // #Ama de casa
-        // replace CAT_INAC=4 if pp001e==2
-        // #Menor de 6 anios
-        // replace CAT_INAC=5 if CH06<6
-        // #Discapacidad
-        // replace CAT_INAC=6 if discapacidad_hogar_numero_1=!null | discapacidad_hogar_numero_2=!null | discapacidad_hogar_numero_3=!null | discapacidad_hogar_numero_4=!null
-        // #Otros
+//       #CATEGORIA INACTIVOS
+// gen CAT_INAC=.
+// #Jubilado o pensionado
+// replace CAT_INAC=1 if v21==1
+// #Rentista
+// replace CAT_INAC=2 if v8_m==1 & v9_m==1 & v10_m==1
+// #Estudiante
+// replace CAT_INAC=3 if ch10=1 & pp01e==2
+// #Ama de casa
+// replace CAT_INAC=4 if pp01e==2
+// #Menor de 6 anios
+// replace CAT_INAC=5 if CH06<6
+// #Discapacidad
+// replace CAT_INAC=6 if discapacidad_hogar_numero_1=!null | discapacidad_hogar_numero_2=!null | discapacidad_hogar_numero_3=!null | discapacidad_hogar_numero_4=!null
+// #Otros
 
-        // #Ns./Nr.
+// #Ns./Nr.
 
-        // #IMPUTADOS
-        // gen IMPUTA=.
-        // (todavia no se)
+// #IMPUTADOS
+// gen IMPUTA=.
+// (todavia no se)
+
+public function categoriaInactivos(){
+    if($this->nolaboral->V21_M >= 1)
+    {
+        return 1;
+    }
+    if($this->nolaboral->V8_M == 1 && $this->nolaboral->V9_M && $this->nolaboral->V10_M == 1)
+    {
+        return 2;
+    }
+    if($this->caracteristicas->CH10 == 1 && $this->PP01E == 2)
+    {
+        return 3;
+    }
+    if($this->PP01E == 2)
+    {
+        return 4;
+    }
+    if($this->caracteristicas->CH06 < 6)
+    {
+        return 5;
+    }
+    if($this->discapacidad())
+    {
+        return 6;
+    }
+    
+}
+
+public function discapacidad()
+{
+     if($this->numero_componente == $this->hogar->discapacidad_hogar_numero_1)
+        {
+            return true;
+        }
+        if($this->numero_componente == $this->hogar->discapacidad_hogar_numero_2)
+        {
+             return true;
+        }
+        if($this->numero_componente == $this->hogar->discapacidad_hogar_numero_3 )
+        {
+              return true;
+        }
+          if($this->numero_componente == $this->hogar->discapacidad_hogar_numero_4 )
+        {
+              return true;
+        }
+        return 0;
+}
+
+
+        
    
-/**
- *  //     #CANTIDAD DE MIEMBROS DEL HOGAR
- */
-   
-    // #Cantidad de miembros del hogar
-    // gen IX_TOT 
+// # INTENSIDAD DE TRABAJO
+// gen INTENSI=.
+// #subocupado por insuficiencia horaria
+// replace INTENSI=1 if pp03f<35 & pp03g==1 & pp03h==1
+// #Ocupado pleno
+// replace INTENSI=2 if ch06>=10 & pp01a==1 & pp01e==5
+// #sobreocupado
+// replace INTENSI=3 if pp03f>40
+// #Ocupado que no trabajo en la semana
+// replace INTENSI=4 if pp01e==5
+// #Ns./Nr.
 
-    // #Cantidad de miembros del hogar menores a 10 anios
-    // gen IX_MEN10 =. 
-    // replace IXMEN10=1 if ch10<10
+public function intensidad(){
+    if($this->PP03F < 35 && $this->PP03G == 1 && $this->PP03H == 1)
+    {
+        return 1;
+    }
+    if($this->caracteristicas->CH06 >= 10 && $this->PP03G == 1 && $this->PP01E == 5)
+    {
+        return 2;
+    }
+    if( $this->PP03F > 40)
+    {
+        return 3;
+    }
+    if($this->PP01E == 5)
+    {
+        return  4;
+    }
+}
 
-    // #Cantidad de miembros del hogar de 10 anios y mas
-    // gen IX_MAYEQ10=. 
-    // replace IXMAYEQ=1 if ch10>=10
-
-    // # INTENSIDAD DE TRABAJO
-    // gen INTENSI=.
-    // #subocupado por insuficiencia horaria
-    // replace INTENSI=1 if pp03f<35 & pp03g==1 & pp03h==1
-    // #Ocupado pleno
-    // replace INTENSI=2 if ch10>=10 & pp01a==1 & pp01e==5
-    // #sobreocupado
-    // replace INTENSI=3 if pp03f>40
-    // #Ocupado que no trabajo en la semana
-    // replace INTENSI=4 if pp01e==5
-    // #Ns./Nr.
 
 
 }
