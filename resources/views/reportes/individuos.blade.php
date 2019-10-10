@@ -310,8 +310,8 @@
 <th>CH25</th>
 <th>V1</th>
 <th>V2</th>
-<th>V21</th>
-<th>V22</th>
+{{-- <th>V21</th>
+<th>V22</th> --}}
 <th>V3</th>
 <th>V4</th>
 <th>V5</th>
@@ -638,8 +638,8 @@
 <td>{{$item->caracteristicas->CH25}}</td>
 <td>{{$item->hogar->V1}}</td>
 <td>{{$item->hogar->V2}}</td>
-<td>{{$item->hogar->V21}}</td>
-<td>{{$item->hogar->V22}}</td>
+{{-- <td>{{$item->hogar->V21}}</td>
+<td>{{$item->hogar->V22}}</td> --}}
 <td>{{$item->hogar->V3}}</td>
 <td>{{$item->hogar->V4}}</td>
 <td>{{$item->hogar->V5}}</td>
