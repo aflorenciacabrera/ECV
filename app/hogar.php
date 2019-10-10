@@ -246,6 +246,41 @@ class hogar extends Model
         return $c;
     }
 
+    // 
+    #CANTIDAD DE MIEMBROS DEL HOGAR
+// #Cantidad de miembros del hogar
+// gen IX_TOT 
+   public function totalMiembros(){
+        
+        return ($this->individuos->count());
+            
+    }
+// #Cantidad de miembros del hogar menores a 10 anios
+// gen IX_MEN10 =. 
+// replace IXMEN10=1 if ch06<10
+   public function totalMenores(){
+        $c = 0;
+        foreach ($this->individuos as $i) {
+            if($i->edad() < 10)
+            {
+                $c++;
+            }
+        }
+        return $c;
+    }
+// #Cantidad de miembros del hogar de 10 anios y mas
+// gen IX_MAYEQ10=. 
+// replace IXMAYEQ=1 if ch06>=10
+  public function totalMayores(){
+        $c = 0;
+        foreach ($this->individuos as $i) {
+            if($i->edad() >= 10)
+            {
+                $c++;
+            }
+        }
+        return $c;
+    }
 
 
 }

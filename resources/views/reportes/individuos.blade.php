@@ -369,6 +369,11 @@
 <th>PM_1</th>
 <th>BE</th>
 <th>BE_1</th>
+<th> NIVEL_ED</th>
+<th> ESTADO</th>
+<th> CAT_OCUP</th>
+<th> CAT_INAC</th>
+<th> IMPUTA</th>
 
 
                 {{--  --}}
@@ -705,7 +710,12 @@
 <td>{{$item->hogar->BE_1}}</td>
 
 
-
+{{--  --}}
+            <th> {{$item->NIVEL_ED()}}</th>
+            <th> {{$item->estado()}}</th>
+            <th> {{$item->categoriaOcupacional()}}</th>
+            <th> {{$item->categoriaInactivos()}}</th>
+<th> </th>
 
                 {{--  --}}
 

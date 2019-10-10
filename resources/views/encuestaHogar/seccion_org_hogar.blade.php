@@ -119,7 +119,7 @@
                 <tbody>
                     <tr>
                         <th scope="row"><input name="discapacidad_hogar_numero_1" id="discapacidad_hogar_numero_1" type="number" step="1"   max="99" class="form-control form-control-sm"></th>
-                        <td><input name="discapacidad_hogar_nombre_2" id="discapacidad_hogar_nombre_1" type="text" class="form-control form-control-sm"></td>
+                        <td><input name="discapacidad_hogar_nombre_1" id="discapacidad_hogar_nombre_1" type="text" class="form-control form-control-sm"></td>
                     </tr>
                     <tr>
                         <th scope="row"><input name="discapacidad_hogar_numero_2" id="discapacidad_hogar_numero_2" type="number" step="1"   max="99" class="form-control form-control-sm"></th>

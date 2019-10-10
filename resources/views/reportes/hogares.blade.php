@@ -146,8 +146,12 @@
 <th>V18</th>
 <th>V19_A </th>
 <th>V19_B</th>
-<th>AUH</th>
-    
+
+<td>IX_TOT</td>
+<td>IX_MEN10</td>
+<td>IX_MAYEQ10</td>
+
+<th>AUH</th>   
 <th>ITF</th>
 <th>IPCF</th>
 
@@ -245,6 +249,10 @@
 <td>{{$item->V18}}</td>
 <td>{{$item->V19_A}} </td>
 <td>{{$item->V19_B}}</td>
+{{--  --}}
+<td>{{$item->totalMiembros()}}</td>
+<td>{{$item->totalMenores()}}</td>
+<td>{{$item->totalMayores()}}</td>
             {{-- } --}}
 <td>{{$item->auh()}}</td>
 <td>{{$item->itf()}}</td>
