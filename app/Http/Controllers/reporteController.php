@@ -11,7 +11,7 @@ class reporteController extends Controller
     public function reporte()
     {
         // $individuos = individuo::all();
-        $viviendas = vivienda::all()->sortBy("codigo_area");
+        $viviendas = vivienda::all()->sortBy("codigo_area");//->take(10);
         // return view('reportes.individuos')->with('individuos', $individuos);
         return view('reportes.individuos')->with('viviendas', $viviendas);
     }
@@ -19,7 +19,7 @@ class reporteController extends Controller
     public function hogares()
     {
         // $hogar = hogar::all();
-        $viviendas = vivienda::all()->sortBy("codigo_area");;
+        $viviendas = vivienda::all()->sortBy("codigo_area");//->take(10);;
 
         return view('reportes.hogares')->with('viviendas', $viviendas);
     }

@@ -486,7 +486,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
     {
         return $this->ingresosNoLaborales();
     }
-    
+
     public function auh()
     {
         if($this->numero_componente == $this->hogar->AUH_1)
@@ -505,37 +505,93 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         return 0;
     }
 
-    #NIVEL EDUCATIVO
-    // gen NIVEL_ED=.
-    // #Primaria Incompleta
-    // replace NIVEL_ED=1 if ch12==2 & ch13==2
-    // #Primaria Completa
-    // replace NIVEL_ED=2 if ch12==2 & ch13==1
-    // #Secundaria Incompleta
-    // replace NIVEL_ED=3 if ch12==3 & ch13==2
-    // #Secundaria Completa
-    // replace NIVEL_ED=4 if ch12==3 & ch13==1
-    // #Superior Universitaria Incompleta
-    // replace NIVEL_ED=5 if ch12==4 & ch13==2
-    // #Superior Universitaria Completa
-    // replace NIVEL_ED=6 if ch12==4 & ch13==1
-    // #Sin instruccion
-    // replace NIVEL_ED=7 if ch10==3 
-    // #Ns./Nr.
-    // replace NIVEL_ED=9 if ch13==9
+//   #NIVEL EDUCATIVO
+// gen NIVEL_ED=.
+// #Primaria Incompleta
+// replace NIVEL_ED=1 if ch12==1 & ch13==1
+// replace NIVEL_ED=1 if ch12==2 & ch13==1
+// replace NIVEL_ED=1 if ch12==3 & ch13==1
+// replace NIVEL_ED=1 if ch12==4 & ch13==1
+// replace NIVEL_ED=1 if ch12==5 & ch13==2
+// replace NIVEL_ED=1 if ch12==6 & ch13==2
+// #Primaria Completa
+// replace NIVEL_ED=2 if ch12==5 & ch13==1
+// replace NIVEL_ED=2 if ch12==6 & ch13==1
+// #Secundaria Incompleta
+// replace NIVEL_ED=3 if ch12==7 & ch13==2
+// replace NIVEL_ED=3 if ch12==8 & ch13==2
+// replace NIVEL_ED=3 if ch12==9 & ch13==2
+// replace NIVEL_ED=3 if ch12==10 & ch13==2
+// #Secundaria Completa
+// replace NIVEL_ED=4 if ch12==7 & ch13==1
+// replace NIVEL_ED=4 if ch12==8 & ch13==1
+// replace NIVEL_ED=4 if ch12==9 & ch13==1
+// replace NIVEL_ED=4 if ch12==10 & ch13==1
+// #Superior Universitaria Incompleta
+// replace NIVEL_ED=5 if ch12==11 & ch13==2
+
 
     public function NIVEL_ED(){
         $ch12 = $this->caracteristicas->CH12;
         $ch13 = $this->caracteristicas->CH13;
         $ch10 = $this->caracteristicas->CH10;
-        if($ch12 == 2 && $ch13 == 2){      return 1;    }
-        if($ch12 == 2 && $ch13 == 1){      return 2;    }
-        if($ch12 == 3 && $ch13 == 2){      return 3;    }
-        if($ch12 == 3 && $ch13 == 1){      return 4;    }
-        if($ch12 == 4 && $ch13 == 2){      return 5;    }
-        if($ch12 == 4 && $ch13 == 1){      return 6;    }
-        if($ch10 == 3)            {      return 7;    }
-        if($ch13 == 9)            {      return 9;    }       
+        if ($ch12 == 1 && $ch13 == 1) {
+            return 1;
+        }
+        if ($ch12 == 2 && $ch13 == 1) {
+            return 1;
+        }
+        if ($ch12 == 3 && $ch13 == 1) {
+            return 1;
+        }
+        if ($ch12 == 4 && $ch13 == 1) {
+            return 1;
+        }
+        if ($ch12 == 5 && $ch13 == 2) {
+            return 1;
+        }
+        if ($ch12 == 6 && $ch13 == 1) {
+            return 1;
+        }
+        //
+        if ($ch12 == 5 && $ch13 == 1) {
+            return 2;
+        }
+        if ($ch12 == 6 && $ch13 == 1) {
+            return 2;
+        }
+        //
+        if ($ch12 == 7 && $ch13 == 2) {
+            return 3;
+        }
+        if ($ch12 == 8 && $ch13 == 2) {
+            return 3;
+        }
+        if ($ch12 == 9 && $ch13 == 2) {
+            return 3;
+        }
+        if ($ch12 == 10 && $ch13 == 2) {
+            return 3;
+        }
+        //
+        if ($ch12 == 7 && $ch13 == 1) {
+            return 4;
+        }
+        if ($ch12 == 8 && $ch13 == 1) {
+            return 4;
+        }
+        if ($ch12 == 9 && $ch13 == 1) {
+            return 4;
+        }
+        if ($ch12 == 10 && $ch13 == 1) {
+            return 4;
+        }
+        //
+        if ($ch12 == 11 && $ch13 == 2) {
+            return 5;
+        }
+
+
     }
 
     //     #CATEGORIA ESTADO OCUPACIONAL
@@ -571,7 +627,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         if($this->caracteristicas->CH06 < 10){
             return 4;
         }
-        
+
     }
 
     // #CATEGORIA OCUPACIONAL
@@ -610,7 +666,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
 /**
  *  // #CATEGORIA INACTIVOS
  */
-       
+
 //       #CATEGORIA INACTIVOS
 // gen CAT_INAC=.
 // #Jubilado o pensionado
@@ -658,7 +714,7 @@ public function categoriaInactivos(){
     {
         return 6;
     }
-    
+
 }
 
 public function discapacidad()
@@ -683,8 +739,8 @@ public function discapacidad()
 }
 
 
-        
-   
+
+
 // # INTENSIDAD DE TRABAJO
 // gen INTENSI=.
 // #subocupado por insuficiencia horaria
