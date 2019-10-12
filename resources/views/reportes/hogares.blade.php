@@ -124,6 +124,27 @@
 <th>II8_Esp </th>
 <th>II9</th>
 {{--  --}}
+<th>DI_1</th>
+<th>DI</th>
+<th>AI_1</th>
+<th>AI</th>
+<th>MI_1</th>
+<th>MI</th>
+<th>TS_1</th>
+<th>TS</th>
+<th>TE_1</th>
+<th>TE</th>
+<th>TV</th>
+<th>TM_1</th>
+<th>TM</th>
+<th>PM_1</th>
+<th>PM</th>
+<th>TSAP_1</th>
+<th>TSAP</th>
+<th>BE_1</th>
+<th>BE</th>
+<th>AUH</th>
+{{--  --}}
 <th>V1</th>
 <th>V2</th>
 <th>V21</th>
@@ -151,7 +172,7 @@
 <td>IX_MEN10</td>
 <td>IX_MAYEQ10</td>
 
-<th>AUH</th>   
+<th>AUH</th>
 <th>ITF</th>
 <th>IPCF</th>
 
@@ -226,6 +247,27 @@
 <td>{{$item->II8}}</td>
 <td>{{$item->II8_Esp}} </td>
 <td>{{$item->II9}}</td>
+{{-- Planes sociales --}}
+<th>{{$item->DI_1}}</th>
+<th>{{$item->DI}}</th>
+<th>{{$item->AI_1}}</th>
+<th>{{$item->AI}}</th>
+<th>{{$item->MI_1}}</th>
+<th>{{$item->MI}}</th>
+<th>{{$item->TS_1}}</th>
+<th>{{$item->TS}}</th>
+<th>{{$item->TE_1}}</th>
+<th>{{$item->TE}}</th>
+<th>{{$item->TV}}</th>
+<th>{{$item->TM_1}}</th>
+<th>{{$item->TM}}</th>
+<th>{{$item->PM_1}}</th>
+<th>{{$item->PM}}</th>
+<th>{{$item->TSAP_1}}</th>
+<th>{{$item->TSAP}}</th>
+<th>{{$item->BE_1}}</th>
+<th>{{$item->BE}}</th>
+<th>{{$item->AUH}}</th>
 {{--  --}}
 <td>{{$item->V1}}</td>
 <td>{{$item->V2}}</td>
