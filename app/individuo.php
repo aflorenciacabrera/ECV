@@ -505,36 +505,52 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         return 0;
     }
 
-//   #NIVEL EDUCATIVO
 // gen NIVEL_ED=.
-// #Primaria Incompleta
+// *Sin instruccion
+// replace NIVEL_ED=0 if ch10==3
+// *Primaria Incompleta
 // replace NIVEL_ED=1 if ch12==1 & ch13==1
 // replace NIVEL_ED=1 if ch12==2 & ch13==1
 // replace NIVEL_ED=1 if ch12==3 & ch13==1
 // replace NIVEL_ED=1 if ch12==4 & ch13==1
 // replace NIVEL_ED=1 if ch12==5 & ch13==2
 // replace NIVEL_ED=1 if ch12==6 & ch13==2
-// #Primaria Completa
+// *Primaria Completa
 // replace NIVEL_ED=2 if ch12==5 & ch13==1
 // replace NIVEL_ED=2 if ch12==6 & ch13==1
-// #Secundaria Incompleta
+// *Secundaria Incompleta
 // replace NIVEL_ED=3 if ch12==7 & ch13==2
 // replace NIVEL_ED=3 if ch12==8 & ch13==2
 // replace NIVEL_ED=3 if ch12==9 & ch13==2
 // replace NIVEL_ED=3 if ch12==10 & ch13==2
-// #Secundaria Completa
+// *Secundaria Completa
 // replace NIVEL_ED=4 if ch12==7 & ch13==1
 // replace NIVEL_ED=4 if ch12==8 & ch13==1
 // replace NIVEL_ED=4 if ch12==9 & ch13==1
 // replace NIVEL_ED=4 if ch12==10 & ch13==1
-// #Superior Universitaria Incompleta
+// *Superior Universitaria Incompleta
 // replace NIVEL_ED=5 if ch12==11 & ch13==2
+// replace NIVEL_ED=5 if ch12==12 & ch13==2
+// *Superior Universitaria Completa
+// replace NIVEL_ED=6 if ch12==11 & ch13==1
+// replace NIVEL_ED=6 if ch12==12 & ch13==1
+// *Posgrado Incompleto
+// replace NIVEL_ED=7 if ch12==13 & ch13==2
+// *Posgrado Completo
+// replace NIVEL_ED=8 if ch12==13 & ch13==1
+// *Ns./Nr.
+// replace NIVEL_ED=9 if ch13==9 | ch13==0
+
 
 
     public function NIVEL_ED(){
         $ch12 = $this->caracteristicas->CH12;
         $ch13 = $this->caracteristicas->CH13;
         $ch10 = $this->caracteristicas->CH10;
+        if($ch10 == 3)
+        {
+            return 0;
+        }
         if ($ch12 == 1 && $ch13 == 1) {
             return 1;
         }
@@ -550,7 +566,7 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         if ($ch12 == 5 && $ch13 == 2) {
             return 1;
         }
-        if ($ch12 == 6 && $ch13 == 1) {
+        if ($ch12 == 6 && $ch13 == 2) {
             return 1;
         }
         //
@@ -590,8 +606,26 @@ protected $fillable = ['hogar_id','Entrev_realiz',
         if ($ch12 == 11 && $ch13 == 2) {
             return 5;
         }
-
-
+        if ($ch12 == 12 && $ch13 == 2) {
+            return 5;
+        }
+        //
+        if ($ch12 == 11 && $ch13 == 1) {
+            return 6;
+        }
+        if ($ch12 == 12 && $ch13 == 1) {
+            return 6;
+        }
+        //
+        if ($ch12 == 13 && $ch13 == 2) {
+            return 7;
+        }
+        if ($ch12 == 13 && $ch13 == 1) {
+            return 8;
+        }
+        if ($ch13 == 9 || $ch13 == 0) {
+            return 9;
+        }
     }
 
     //     #CATEGORIA ESTADO OCUPACIONAL
@@ -694,7 +728,7 @@ public function categoriaInactivos(){
     {
         return 1;
     }
-    if($this->nolaboral->V8_M == 1 && $this->nolaboral->V9_M && $this->nolaboral->V10_M == 1)
+    if($this->nolaboral->V8_M == 1 && $this->nolaboral->V9_M == 1 && $this->nolaboral->V10_M == 1)
     {
         return 2;
     }
