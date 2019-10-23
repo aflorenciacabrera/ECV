@@ -799,5 +799,10 @@ public function intensidad(){
 }
 
 
+public function completo()
+{
+    return ($this->ingresosLaborales() !== -9 && $this->ingresosNoLaborales() !== -9);
+}
+
 
 }
