@@ -52,76 +52,95 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class=" border col-md-6 ">
-                <p><strong>Totales</strong></p>
+
                 {{$totales}}
+                <p><strong>Totales</strong></p>
             </div>
             <div class=" border col-md-6">
-                <p><strong>Totales Individuales</strong></p>
+
                 {{$total_individuales}}
+                <p><strong>Totales Individuales</strong></p>
             </div>
         </div>
         <div class="row text-center">
             <div class=" border col-md-12">
-                <p><strong>Efectivas</strong></p>
+
 
                 {{$efectivas}}/{{$totales}}
-                  ({{round(($efectivas / $totales)*100)}}%)
+                ({{round(($efectivas / $totales)*100)}}%)
+                <p><strong>Efectivas</strong></p>
 
             </div>
         </div>
         <div class="row text-center">
-             <div class=" border col-md-3"><p><strong>Con Respuestas</strong></p>
-                {{$con_respuesta}}/{{$totales}}
+             <div class=" border col-md-3">
+                 {{$con_respuesta}}/{{$efectivas}}
+                    ({{round(($con_respuesta / $efectivas)*100)}}%)
+                 <p><strong>Con Respuestas</strong></p>
             </div>
-            <div class=" border col-md-5"><p><strong>Completas</strong></p>
-            {{$completos}}/ {{$con_respuesta}}
+            <div class=" border col-md-5">
+                {{$completos}}/ {{$con_respuesta}}
+                <p><strong>Completas</strong></p>
             </div>
-            <div class=" border col-md-4"><p><strong>Incompletas</strong></p>
-            {{$incompletos}}/ {{$con_respuesta}}
+            <div class=" border col-md-4">
+                {{$incompletos}}/ {{$con_respuesta}}
+                <p><strong>Incompletas</strong></p>
             </div>
         </div>
         <div class="row text-center">
             <div class=" border col-md-3">
+
+                {{$sin_respuesta}}/{{$efectivas}}
+                ({{round(($sin_respuesta / $efectivas)*100)}}%)
                 <p><strong>Sin Respuesta</strong></p>
-                {{$sin_respuesta}}/{{$totales}}
             </div>
-            <div class=" border col-md-3"><p><strong>Ausencias</strong></p>
-            {{$ausencias}}/{{$sin_respuesta}}
+            <div class=" border col-md-3">
+                {{$ausencias}}/{{$sin_respuesta}}
+                <p><strong>Ausencias</strong></p>
             </div>
-            <div class=" border col-md-3"><p><strong>Rechazos</strong></p>
-            {{$rechazos}}/{{$sin_respuesta}}
+            <div class=" border col-md-3">
+                {{$rechazos}}/{{$sin_respuesta}}
+                <p><strong>Rechazos</strong></p>
             </div>
-            <div class=" border col-md-3"><p><strong>Otros</strong></p>
-            {{$otros}}/{{$sin_respuesta}}
+            <div class=" border col-md-3">
+                {{$otros}}/{{$sin_respuesta}}
+                <p><strong>Otros</strong></p>
             </div>
         </div>
         <div class="row text-center">
             <div class=" border col-md-12">
-              <p><strong>No Efectivas</strong></p>
+
                 {{$no_efectivas}}/{{$totales}}
-                      ({{round(($no_efectivas / $totales)*100)}}%)
+                ({{round(($no_efectivas / $totales)*100)}}%)
+                <p><strong>No Efectivas</strong></p>
             </div>
         </div>
         <div class="row text-center">
-            <div class=" border col-md-3"><p><strong>Deshabitada</strong></p>
-            {{$deshabitada}}/{{$no_efectivas}}
+            <div class=" border col-md-3">
+                {{$deshabitada}}/{{$no_efectivas}}
+                <p><strong>Deshabitada</strong></p>
             </div>
-            <div class=" border col-md-3"><p><strong>Demolida</strong></p>
-            {{$demolida}}/{{$no_efectivas}}
+            <div class=" border col-md-3">
+                {{$demolida}}/{{$no_efectivas}}
+                <p><strong>Demolida</strong></p>
             </div>
-            <div class=" border col-md-3"><p><strong>Fin de semana</strong></p>
-            {{$fin_de_semana}}/{{$no_efectivas}}
+            <div class=" border col-md-3">
+                {{$fin_de_semana}}/{{$no_efectivas}}
+                <p><strong>Fin de semana</strong></p>
             </div>
-            <div class=" border col-md-3"><p><strong>Construccion</strong></p>
-            {{$construccion}}/{{$no_efectivas}}
+            <div class=" border col-md-3">
+                {{$construccion}}/{{$no_efectivas}}
+                <p><strong>Construccion</strong></p>
             </div>
         </div>
         <div class="row text-center">
-            <div class=" border col-md-6"><p><strong>Establecimiento</strong></p>
-            {{$establecimiento}}/{{$no_efectivas}}
+            <div class=" border col-md-6">
+                {{$establecimiento}}/{{$no_efectivas}}
+                <p><strong>Establecimiento</strong></p>
             </div>
-            <div class=" border col-md-6"><p><strong>Variación del listado</strong></p>
-            {{$variacion}}/{{$no_efectivas}}
+            <div class=" border col-md-6">
+                {{$variacion}}/{{$no_efectivas}}
+                <p><strong>Variación del listado</strong></p>
             </div>
         </div>
 
