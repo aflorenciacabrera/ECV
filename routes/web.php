@@ -23,7 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
     //
-
+    // Indicadores
+    Route::get("indicadores",'reporteController@indicadores')->name('indicadores');
 
 
     // Encuestas

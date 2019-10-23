@@ -283,4 +283,16 @@ class hogar extends Model
     }
 
 
+    public function completo()
+    {
+
+        foreach ($this->individuos as $i) {
+            if ($i->completo() == false) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }

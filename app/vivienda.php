@@ -150,4 +150,17 @@ class vivienda extends Model
     {
         return "A".$this->codigo_area ."L". $this->numero_listado ."M". $this->manz ."L". $this->lado . "V".$this->numero_vivienda;
     }
+
+    public function completo()
+    {
+
+        foreach ($this->hogares as $h)
+        {
+            if($h->completo() == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
