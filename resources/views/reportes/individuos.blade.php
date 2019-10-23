@@ -400,7 +400,7 @@
                 <td>{{$item->hogar->vivienda->trimestre}}</td>
                 <td>{{$item->hogar->vivienda->codigo_area}}</td>
                 <td>{{$item->hogar->numero_hogar}}</td>
-                <td>{{$item->numero_componente}}</td>
+                <td>{{$item->hogar->individuos->count()}}</td>
                 <td>{{$item->hogar->entrevista_realizada}}</td>
                 {{-- Tabla indivudos --}}
                 <td>{{$item->PP01A}}</td>
