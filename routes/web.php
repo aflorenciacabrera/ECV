@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('recupero','HomeController@recupero')->name("recupero");
+Route::get('recupero',function(){
+    return view('reportes.recupero_form');
+})->name("recupero_form");
+Route::post('update_ch','HomeController@update_ch')->name('update_ch');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
