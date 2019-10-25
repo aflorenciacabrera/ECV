@@ -586,12 +586,12 @@
                 <td>{{$item->PP11S}}</td>
                 <td>{{$item->PP11T}}</td>
                 <td>{{$item->PP12A}}</td>
-                <td>{{$item->PP12B1_DEP}}</td>
-                <td>{{$item->PP12B1_PROP}}</td>
-                <td>{{$item->PP12B2_DEP}}</td>
-                <td>{{$item->PP12B2_PROP}}</td>
-                <td>{{$item->PP12B3_DEP}}</td>
-                <td>{{$item->PP12B3_PROP}}</td>
+                <td>{{$item->PP12B1}}</td>
+                <td>{{$item->PP12B12}}</td>
+                <td>{{$item->PP12B2}}</td>
+                <td>{{$item->PP12B22}}</td>
+                <td>{{$item->PP12B3}}</td>
+                <td>{{$item->PP12B32}}</td>
                 <td>{{$item->PP13A}}</td>
 
                 {{-- tabla hogares ---}}

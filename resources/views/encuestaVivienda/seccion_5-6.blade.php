@@ -38,9 +38,9 @@
 
                     <tr>
                         {{-- 1 --}}
-                    <td class="fit"><input type="number" min=-9 max=99  class="form-control form-control-sm primer-campo"  data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
+                    <td class="fit"><input type="number" min=1 max=99  class="form-control form-control-sm primer-campo"  data-indice={{$i}} name="NRO_HOGAR_{{$i}}"> </td>
                         {{-- 2 --}}
-                        <td class="fit"><input type="number" min=-9 max=99 class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
+                        <td class="fit"><input type="number" min=1 max=99 class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NRO_COMPONENTE_{{$i}}"> </td>
                         {{-- 3 --}}
                         <td class="fit"><input type="text" class="form-control form-control-sm otros-campos" data-indice={{$i}} disabled name="NOMBRE_JEFE_{{$i}}"> </td>
                         {{-- 4 --}}
@@ -103,8 +103,8 @@
                                                 vivienda</option>
                                 <option value="8">8. Fallecimiento</option>
                                 </select> </td>
-                        {{-- 11 --}}
-                        <td class="fit"><select name="CAMBIOS_{{$i}}" id="" class="form-control form-control-sm otros-campos">
+                        {{-- 11  Activar cpn grupo de rotacion 2--}}
+                        <td class="fit"><select name="CAMBIOS_{{$i}}" id="" class="form-control form-control-sm otros-campos control-cambios" data-control="2" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Continúa en el hogar</option>
                                         <option value="2">2. Entrado (aplicar
@@ -112,8 +112,8 @@
                                         <option value="3">3.Salido</option>
                                         <option value="4">4. Mal tomado</option>
                                 </select> </td>
-                        {{-- 12 --}}
-                        <td class="fit"><select name="MOTIVO_{{$i}}" id="" class="form-control form-control-sm otros-campos">
+                        {{-- 12 Activar con grupo de rotacion 2 --}}
+                        <td class="fit"><select name="MOTIVO_{{$i}}" id="" class="form-control form-control-sm otros-campos control-cambios" data-control="2" data-indice={{$i}} disabled>>
                             <option value=""></option>
                             <option value="1">1. Nacimiento
                                                 /adopción</option>
@@ -128,9 +128,9 @@
                                 <option value="9">9. Otra razón
                                                 (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="MOTIVO_OTRO_{{$i}}">   </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="MOTIVO_OTRO_{{$i}}" data-indice={{$i}} disabled>   </td> {{-- FALTA DICCIONARIO --}}
                          {{-- 13 --}}
-                        <td class="fit"><select name="CH13_{{$i}}" id="" class="form-control form-control-sm otros-campos">
+                        <td class="fit"><select name="CH13_{{$i}}" id="" class="form-control form-control-sm otros-campos control-cambios" data-control="3" data-indice={{$i}} disabled>>
                             <option value=""        ></option>
                             <option value="1">1. Continúa en el
                                                         hogar</option>
@@ -140,7 +140,7 @@
                                         <option value="4">4. Mal tomado</option>
                             </select> </td>
                        {{-- 14 --}}
-                        <td class="fit"><select name="CH14_{{$i}}" id="" class="form-control form-control-sm otros-campos">
+                        <td class="fit"><select name="CH14_{{$i}}" id="" class="form-control form-control-sm otros-campos control-cambios" data-control="3" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Nacimiento /adopción</option>
                                         <option value="2">2. Matrimonio /Unión</option>
@@ -152,9 +152,9 @@
                                         <option value="8">8. En prisión</option>
                                         <option value="9">9. Otra razón (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="CH14_OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="CH14_OTRO_{{$i}}" data-indice={{$i}} disabled>  </td> {{-- FALTA DICCIONARIO --}}
                       {{-- 15 --}}
-                        <td class="fit"><select name="CH15_{{$i}}" id="" class="form-control form-control-sm otros-campos">
+                        <td class="fit"><select name="CH15_{{$i}}" id="" class="form-control form-control-sm otros-campos control-cambios" data-control="4" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Continúa en el
                                                         hogar</option>
@@ -164,7 +164,7 @@
                                         <option value="4">4. Mal tomado</option>
                                 </select></td>
                         {{-- 16 --}}
-                        <td class="fit"><select name="CH16_{{$i}}" id="" class="form-control form-control-sm otros-campos">
+                        <td class="fit"><select name="CH16_{{$i}}" id="" class="form-control form-control-sm otros-campos control-cambios" data-control="4" data-indice={{$i}} disabled>
                             <option value=""        ></option>
                             <option value="1">1. Nacimiento /adopción</option>
                                         <option value="2">2. Matrimonio /Unión</option>
@@ -176,7 +176,7 @@
                                         <option value="8">8. En prisión</option>
                                         <option value="9">9. Otra razón (especificar)</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm d-none" id="" placeholder="" name="CH16_OTRO_{{$i}}">  </td> {{-- FALTA DICCIONARIO --}}
+                                <input type="text" class="form-control form-control-sm d-none otros-cambios control-cambios" data-control="4" id="" placeholder="" name="CH16_OTRO_{{$i}}" data-indice={{$i}} disabled>  </td> {{-- FALTA DICCIONARIO --}}
 
                     </tr>
 
@@ -200,8 +200,13 @@
 
 function actualizar_seccion_5()
     {
-         $(".otros-campos").attr('disabled',true);
+    console.log("gr: "+$("#grupo_rotacion").val())
 
+    var gr = $("#grupo_rotacion").val()
+
+        
+
+        $(".otros-campos").attr('disabled',true);
         $(".primer-campo").each(function ()
         {
             if($(this).val() != "")
@@ -210,11 +215,22 @@ function actualizar_seccion_5()
                 $(".otros-campos").each(function(){
                     if($(this).data('indice') == indice)
                     {
+                        
                         $(this).removeAttr('disabled');
+                        // 
+                        if($(this).hasClass('control-cambios'))
+                        {
+                            if($(this).data('control') != gr)
+                            {
+                                $(this).attr('disabled',true);
+                            }
+                        }
                     }
                 })
             }
         })
+
+     
     }
 
 $(document).ready(function ()
@@ -223,6 +239,7 @@ $(document).ready(function ()
 
     $(".primer-campo").keyup(function(){
         actualizar_seccion_5();
+
     })
 })
 </script>
