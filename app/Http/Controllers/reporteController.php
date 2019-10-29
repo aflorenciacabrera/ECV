@@ -10,9 +10,10 @@ class reporteController extends Controller
 {
     public function reporte()
     {
-        // $individuos = individuo::all();
-        $viviendas = vivienda::all()->sortBy("codigo_area");//->take(10);
-        // return view('reportes.individuos')->with('individuos', $individuos);
+
+        // $viviendas = vivienda::all()->sortBy("codigo_area");//->take(10);
+        $viviendas = vivienda::where('trimestre', 3)->get()->sortBy("codigo_area");
+
         return view('reportes.individuos')->with('viviendas', $viviendas);
     }
 
