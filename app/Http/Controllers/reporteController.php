@@ -20,7 +20,7 @@ class reporteController extends Controller
     public function hogares()
     {
         // $hogar = hogar::all();
-        $viviendas = vivienda::all()->sortBy("codigo_area");//->take(10);;
+        $viviendas = vivienda::where('trimestre', 3)->get()->sortBy("codigo_area");//->take(10);;
 
         return view('reportes.hogares')->with('viviendas', $viviendas);
     }
