@@ -70,6 +70,9 @@
                 <th>ANO4</th>
                 <th>TRIMESTRE</th>
                 <th>AREA</th>
+                <th>FRACCION</th>
+                <th>RADIO</th>
+                <th>ID_AREA_CENSAL</th>
                 <th>NRO_HOGAR</th>
                 <th>CH15</th>
                 {{-- datos vivienda --}}
@@ -194,6 +197,9 @@
                 <td>{{$item->vivienda->ano4}}</td>
                 <td>{{$item->vivienda->trimestre}}</td>
                 <td>{{$item->vivienda->codigo_area}}</td>
+                <td>{{$item->vivienda->area->fraccion}}</td>
+                <td>{{$item->vivienda->area->radio}}</td>
+                <td>{{$item->vivienda->area->id_area_censal}}</td>
                 <td>{{$item->numero_hogar}}</td>
                 <td>{{$item->entrevista_realizada}}</td>
                 {{--  --}}
@@ -314,6 +320,9 @@
                 <td>{{$vivienda->ano4}}</td>
                 <td>{{$vivienda->trimestre}}</td>
                 <td>{{$vivienda->codigo_area}}</td>
+                <td>{{$vivienda->area->fraccion}}</td>
+                <td>{{$vivienda->area->radio}}</td>
+                <td>{{$vivienda->area->id_area_censal}}</td>
                 <td></td>
                 <td>{{$vivienda->entrevista_realizada}}</td>
                 {{--  --}}
