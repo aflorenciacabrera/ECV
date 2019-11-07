@@ -10,7 +10,7 @@ use App\hogar;
 use App\hogarSeccionSeis;
 use App\vivienda_seccion_v;
 use App\individuo;
-
+use DB;
 use App\hogar_seccion_cuatro;
 
 class ViviendaController extends Controller
@@ -71,7 +71,8 @@ class ViviendaController extends Controller
                 /**GUARDO UNA MATRIZ [hogar][componente] */
                     $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
                 /**GUARDO CONDICION DE RESIDENCIA */
-                 if (!($request['ESTABA_' . $i] == 1 ||///7
+                 if (
+                     (!($request['ESTABA_' . $i] == 1 ||///7
                     $request['ESTABA_' . $i] == 2 ||//7
                     $request['AUSENCIA_' . $i] == 1 ||//8
                     $request['NO_ESTABA_' . $i] == 4 ||//10
@@ -79,7 +80,10 @@ class ViviendaController extends Controller
                     $request['NO_ESTABA_' . $i] == 6 ||//10
                     $request['NO_ESTABA_' . $i] == 7 ||//10
                     $request['NO_ESTABA_' . $i] == 8 ||//10
-                    $request['OTRA_RES_' . $i] == 1 ))//9
+                    $request['OTRA_RES_' . $i] == 1 )) 
+                    ||
+                    (!($request['CH13_'.$i] == 3 || $request['CH13_'.$i] == 4 ))
+                    )//9
                 {
                     echo "ES RESIDENTE";
                     $_residencia[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = true;
@@ -192,20 +196,31 @@ class ViviendaController extends Controller
 
     public function verListadoVivienda()
     {
+        //busco trimestre actual
+        $trimestre = vivienda::all()->sortByDesc('id')->first()->trimestre;
+        return $this->verListadoViviendaTrimestre($trimestre);
+    }
+
+    public function verListadoViviendaTrimestre($t)
+    {
+
+        $y = '2019';
+        
         if(Auth::user()->rol == "admin")
         {
-            $viviendas = vivienda::all()->sortBy("codigo_area");
-            // echo"admin";
+            $viviendas = vivienda::where('trimestre',$t)->where('ano4',$y)->sortBy("codigo_area");
         }
         else
         {
-
-            $viviendas = Auth::user()->viviendas;
+            $viviendas = Auth::user()->viviendas->where('trimestre',$t)->where('ano4',$y)->sortBy("codigo_area");
         }
 
-
-        return view("listadoVivienda")->with('viviendas',$viviendas);
+        $tr = DB::table('viviendas')->select(['ano4','trimestre'])->distinct()->orderByDesc('trimestre')->get();
+        // print($t);
+        return view("listadoVivienda")->with('viviendas',$viviendas)->with('trimestres',$tr)->with('seleccionado',$t);
     }
+
+    
 
 
     public function borrarVivienda($vivienda_id){

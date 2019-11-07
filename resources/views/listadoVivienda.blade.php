@@ -38,7 +38,14 @@ $(document).ready(function(){
         }
     })
 
+
+
 })
+
+function filtrar(val)
+{
+    window.location.href = "{{route('verListadoVivienda')}}"+"/"+val
+}
 </script>
 <div class="container-fluid">
 
@@ -66,7 +73,20 @@ $(document).ready(function(){
                     <!-- </div> -->
                 <!-- </div> -->
                 </div>
-                <div class="card-body">
+                  <div class="card-body">
+                  <form method="get" class="form-inline" id="trimestre_form">
+                            
+                            <div class="form-group">
+                                <label for="trimestre_select">Trimestre</label>
+                                <select id="trimestre_select" class="form-control" name="trimestre_select" onchange="filtrar(this.value)">
+                                  @foreach ($trimestres as $t)
+                                     <option value={{$t->trimestre}} @if($seleccionado == $t->trimestre) selected="selected" @endif>{{$t->trimestre}}° Trimestre {{$t->ano4}}</option>
+                                  @endforeach
+                                </select>
+                                {{-- <input class="btn btn-primary" type="submit" value="Filtrar" id="trimestre_submit"> --}}
+                            </div>
+                      </form>
+                  </div>
 
                     <table class="table table-striped table-inverse table-responsive table-sm" id="tabla">
                         <thead class="thead-inverse">
