@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('encuesta/vivienda/editar', 'ViviendaController@actualizarVivienda')->name('actualizarVivienda');
 
     Route::get('encuesta/viviendas/', 'ViviendaController@verListadoVivienda')->name('verListadoVivienda');
+    Route::get('encuesta/viviendas/{trimestre}', 'ViviendaController@verListadoViviendaTrimestre')->name('verListadoTrimestre');
     Route::get('encuesta/vivienda/{id}', 'ViviendaController@verVivienda')->name('verDetalleVivienda');
     Route::get('encuesta/viviendas/generar', 'ViviendaController@autogenerar')->name('autogenerarVivienda');
 
