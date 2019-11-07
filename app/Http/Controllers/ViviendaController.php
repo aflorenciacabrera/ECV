@@ -71,7 +71,8 @@ class ViviendaController extends Controller
                 /**GUARDO UNA MATRIZ [hogar][componente] */
                     $_componentes[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = $request['NOMBRE_JEFE_' . $i];//nombre
                 /**GUARDO CONDICION DE RESIDENCIA */
-                 if (!($request['ESTABA_' . $i] == 1 ||///7
+                 if (
+                     (!($request['ESTABA_' . $i] == 1 ||///7
                     $request['ESTABA_' . $i] == 2 ||//7
                     $request['AUSENCIA_' . $i] == 1 ||//8
                     $request['NO_ESTABA_' . $i] == 4 ||//10
@@ -79,7 +80,10 @@ class ViviendaController extends Controller
                     $request['NO_ESTABA_' . $i] == 6 ||//10
                     $request['NO_ESTABA_' . $i] == 7 ||//10
                     $request['NO_ESTABA_' . $i] == 8 ||//10
-                    $request['OTRA_RES_' . $i] == 1 ))//9
+                    $request['OTRA_RES_' . $i] == 1 )) 
+                    ||
+                    (!($request['CH13_'.$i] == 3 || $request['CH13_'.$i] == 4 ))
+                    )//9
                 {
                     echo "ES RESIDENTE";
                     $_residencia[$request['NRO_HOGAR_' . $i]][$request['NRO_COMPONENTE_' . $i]] = true;
