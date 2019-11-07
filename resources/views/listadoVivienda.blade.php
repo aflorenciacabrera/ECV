@@ -20,7 +20,7 @@ $(document).ready(function(){
          col_11: 'none',
          col_12: 'none',
          col_13: 'none',
-         col_14: 'none',
+         col_14: 'select',
          col_15: 'none',
          col_16: 'select',
          col_17: 'select',
