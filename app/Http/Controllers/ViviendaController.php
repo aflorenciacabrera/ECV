@@ -208,7 +208,7 @@ class ViviendaController extends Controller
         
         if(Auth::user()->rol == "admin")
         {
-            $viviendas = vivienda::where('trimestre',$t)->where('ano4',$y)->sortBy("codigo_area");
+            $viviendas = vivienda::where('trimestre',$t)->where('ano4',$y)->orderBy("codigo_area");
         }
         else
         {
