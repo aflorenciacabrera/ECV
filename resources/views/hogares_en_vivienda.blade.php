@@ -33,10 +33,13 @@
                         </td>
                         <td>
                             @if($h->estado() =="individuo incompleto")
-                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('individuosEnHogar',['id'=>$h->id])}}" role="button">Completar Individuales</a>
-                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}"  role="button">Actualizar Hogar</a>
+                                <a class="btn btn-primary btn-sm" href="{{route('individuosEnHogar',['id'=>$h->id])}}" role="button">Completar Individuales</a>
+                               
+                                @if(Auth::user()->rol == 'admin' || Auth::user()->rol == 'supervisor')
+                                    <a class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}"  role="button">Actualizar Hogar</a>
+                                @endif
                             @else
-                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}" role="button">Completar Formulario</a>
+                                <a class="btn btn-primary btn-sm" href="{{route('verEncuestaHogar',['id'=>$h->id])}}" role="button">Completar Formulario</a>
                             @endif
                         </td>
                     @else

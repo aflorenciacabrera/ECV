@@ -41,7 +41,9 @@
                         Menor de Edad
                     @else
                         @if($i->estado == 1)
-                        <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}"  role="button">Actualizar</a>
+                            @if(Auth::user()->rol == 'admin' || Auth::user()->rol == 'supervisor')
+                                <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}"  role="button">Actualizar</a>
+                            @endif
                         @else
                         <a name="" id="" class="btn btn-primary btn-sm" href="{{route('verEncuestaIndividuo',['id'=>$i->id])}}" role="button">Completar Formulario</a>
                         @endif
