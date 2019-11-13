@@ -148,7 +148,7 @@ function filtrar(val)
 
                                         {{-- TODO ruta pra ver detalle de area --}}
                                 <a class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
-                                    @if(Auth::user()->rol == 'admin' || Auth::user()->rol == 'supervisor'))
+                                    @if(Auth::user()->rol == 'admin' || Auth::user()->rol == 'supervisor')
                                         <a class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
                                     @endif
                                 @else
