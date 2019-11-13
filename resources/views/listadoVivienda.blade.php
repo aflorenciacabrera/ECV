@@ -63,19 +63,11 @@ function filtrar(val)
             <div class="card">
 
                 <div class="card-header">
-                    Viviendas Ingresadas por <strong>{{Auth::user()->name}}</strong>
-                <!-- <div class="row"> -->
-                    <!-- <div class="col-md-6 offset-md-3 d-flex flex-column align-items-center"> -->
-                      <!-- <label><h5>Buscar</h5></label> -->
-                      <br>
-                      <br>
-                        <input id="filtrar" type="text" class="form-control" placeholder="Ingresa la palabra que deseas Buscar...">
-                    <!-- </div> -->
-                <!-- </div> -->
+                    Viviendas Ingresadas por <strong>{{Auth::user()->name}} ({{Auth::user()->rol}})</strong>
                 </div>
                   <div class="card-body">
                   <form method="get" class="form-inline" id="trimestre_form">
-                            
+
                             <div class="form-group">
                                 <label for="trimestre_select">Trimestre</label>
                                 <select id="trimestre_select" class="form-control" name="trimestre_select" onchange="filtrar(this.value)">
@@ -154,14 +146,17 @@ function filtrar(val)
                                @if($item->estado() !== 'ok')
 
                                         {{-- TODO ruta pra ver detalle de area --}}
-                                <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
-                                <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
-
+                                <a class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Completar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
+                                    @if(Auth::user()->rol == 'admin' || Auth::user()->rol == 'supervisor')
+                                        <a class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    @endif
                                 @else
-                                  <a name="" id="" class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Editar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
-                                 <a name="" id="" class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                  @if(Auth::user()->rol == 'admin' || Auth::user()->rol == 'supervisor')
+                                    <a class="btn btn-sm btn-primary btn-warning btn-block" href="{{route('verHogares',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Cargar Hogar" data-placemente="top">Editar Hogares<i class="fa fa-home" aria-hidden="true"></i></a>
+                                    <a class="btn btn-sm btn-primary btn-block" href="{{route('editarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Editar <i class="fa fa-eye" aria-hidden="true"></i></a>
+                                 @endif
                                @endif
-                                <a name="" id="" class="btn btn-sm btn-danger text-white btn-block borrar" data-ruta="{{route('borrarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Borrar Vivienda<i class="fa fa-delete" aria-hidden="true"></i></a>
+                                <a class="btn btn-sm btn-danger text-white btn-block borrar" data-ruta="{{route('borrarVivienda',['id'=>$item->id])}}" role="button"  data-toggle="tooltip" title="Ver Datos de la vivienda" data-placemente="top">Borrar Vivienda<i class="fa fa-delete" aria-hidden="true"></i></a>
                                 </td>
 
                             </tr>

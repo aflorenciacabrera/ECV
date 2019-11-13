@@ -53,10 +53,12 @@ class reporteController extends Controller
 
 
 
+
+
         return view('reportes.indicadores',
                 [
-                    'totales'=>$totales,
-                    'total_individuales'=>$total_individuales,
+                'totales'=>$totales,
+                'total_individuales'=>$total_individuales,
                 'efectivas' => $efectivas->count(),
                 'no_efectivas' => $no_efectivas->count(),
                 'deshabitada'=> $no_efectivas->where('CAUSAS','1')->count(),

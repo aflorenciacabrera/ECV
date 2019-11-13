@@ -4,6 +4,7 @@ var paso = 1;
 
 function entrevistaRealizada(value)
 {
+
     if(value == 2)
     {
         entrevista_realizada = false;
@@ -99,6 +100,7 @@ $(document).ready(function () {
                 {
                     if (paso == 2 && !entrevista_realizada)
                     {
+                        console.log("%c Salto al paso 6","color:blue")
                         paso=6;
                         stepper.to(paso);
                         //remove all requireds fields

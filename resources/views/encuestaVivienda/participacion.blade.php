@@ -114,6 +114,7 @@
 
 <script>
 function update_participacion(){
+    console.log("ROL: "+rol)
     entrevistaRealizada = getSelectedValue("#entrevista_realizada");
         visitas_fecha_hora_1 = $("#visitas_fecha_hora_1").val();
         visitas_fecha_hora_2 = $("#visitas_fecha_hora_2").val();
@@ -131,7 +132,7 @@ console.log({chooseDate})
 $("#sem_referencia_2").val(chooseDate.getDate()+"/"+(chooseDate.getMonth()+1)+"/"+chooseDate.getFullYear())
 
 
-entrevistaRealizada == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");
+
 
 
 visitas_fecha_hora_1? activar("#visitas_fecha_hora_2",false,false):desactivar("#visitas_fecha_hora_2");
@@ -140,12 +141,27 @@ visitas_fecha_hora_3? activar("#visitas_fecha_hora_4",false,false):desactivar("#
 visitas_fecha_hora_4? activar("#visitas_fecha_hora_5",false,false):desactivar("#visitas_fecha_hora_5");
 
 se_hizo_acompaniamiento == 1 ? activar(".se_hizo_acompaniamiento",true,false):desactivar(".se_hizo_acompaniamiento");
-entrevistaRealizada == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
-entrevistaRealizada == 2 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
-entrevistaRealizada == 2 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
 
-entrevistaRealizada == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
-entrevistaRealizada == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
+if(rol !== 'admin' && rol !== 'supervisor')
+{
+    console.log("entrevista_realizada_normal")
+    entrevistaRealizada == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
+    entrevistaRealizada == 2 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
+    entrevistaRealizada == 2 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
+    entrevistaRealizada == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");
+    entrevistaRealizada == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
+    entrevistaRealizada == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
+}
+else
+{
+    activar("#otra_viv_direc");
+    activar("#CAUSAS, #INFORMANTE",true,false);
+    activar("#INFORMANTE",true,false);
+    activar(".depende_de_entrevista_realizada",true,false);
+    activar(".primer-campo",false,false);
+    activar("#NRO_HOGAR_1");
+}
+
 
 
 }

@@ -80,7 +80,7 @@ class ViviendaController extends Controller
                     $request['NO_ESTABA_' . $i] == 6 ||//10
                     $request['NO_ESTABA_' . $i] == 7 ||//10
                     $request['NO_ESTABA_' . $i] == 8 ||//10
-                    $request['OTRA_RES_' . $i] == 1 )) 
+                    $request['OTRA_RES_' . $i] == 1 ))
                     ||
                     (!($request['CH13_'.$i] == 3 || $request['CH13_'.$i] == 4 ))
                     )//9
@@ -205,10 +205,18 @@ class ViviendaController extends Controller
     {
 
         $y = '2019';
-        
+
         if(Auth::user()->rol == "admin")
         {
             $viviendas = vivienda::where('trimestre',$t)->where('ano4',$y)->orderBy("codigo_area")->get();
+        }
+        else if(Auth::user()->rol == "supervisor")
+        {
+            $date = \Carbon\Carbon::today()->subDays(7);
+
+            $viviendas = vivienda::where('created_at', '>=', $date)->get();
+            // $viviendas = vivienda::where('trimestre', $t)->where('ano4', $y)->orderBy("codigo_area")->get();
+            // dd($viviendas);
         }
         else
         {
@@ -220,7 +228,7 @@ class ViviendaController extends Controller
         return view("listadoVivienda")->with('viviendas',$viviendas)->with('trimestres',$tr)->with('seleccionado',$t);
     }
 
-    
+
 
 
     public function borrarVivienda($vivienda_id){

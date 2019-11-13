@@ -59,7 +59,7 @@ editar = false;
 <script>
 
 rol = "{!! Auth::user()->rol !!}"
-console.log(rol);
+console.log("ROL: "+rol);
 
 
 </script>
