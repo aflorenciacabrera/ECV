@@ -213,7 +213,6 @@ class ViviendaController extends Controller
         else if(Auth::user()->rol == "supervisor")
         {
             $date = \Carbon\Carbon::today()->subDays(7);
-
             $viviendas = vivienda::where('created_at', '>=', $date)->get();
             // $viviendas = vivienda::where('trimestre', $t)->where('ano4', $y)->orderBy("codigo_area")->get();
             // dd($viviendas);

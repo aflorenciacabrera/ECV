@@ -20,7 +20,7 @@ $(document).ready(function(){
          col_11: 'none',
          col_12: 'none',
          col_13: 'none',
-         col_14: 'none',
+         col_14: 'select',
          col_15: 'none',
          col_16: 'select',
          col_17: 'select',
@@ -63,7 +63,19 @@ function filtrar(val)
             <div class="card">
 
                 <div class="card-header">
+
                     Viviendas Ingresadas por <strong>{{Auth::user()->name}} ({{Auth::user()->rol}})</strong>
+
+                    
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-md-6 offset-md-3 d-flex flex-column align-items-center"> -->
+                      <!-- <label><h5>Buscar</h5></label> -->
+                      <br>
+                      <br>
+                        <input id="filtrar" type="text" class="form-control" placeholder="Ingresa la palabra que deseas Buscar...">
+                    <!-- </div> -->
+                <!-- </div> -->
+
                 </div>
                   <div class="card-body">
                   <form method="get" class="form-inline" id="trimestre_form">
@@ -79,7 +91,6 @@ function filtrar(val)
                             </div>
                       </form>
                   </div>
-                <div class="card-body">
 
                     <table class="table table-striped table-inverse table-responsive table-sm" id="tabla">
                         <thead class="thead-inverse">
@@ -173,4 +184,38 @@ function filtrar(val)
         </div>
 
 </div>
+<script type="text/javascript">
+    $("#filtrar").keyup(function () {
+    var searchTerm = $("#filtrar").val();
+    var listItem = $('.results tbody').children('tr');
+    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+    
+  $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+        return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
+  });
+    
+  $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','false');
+  });
+
+  $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','true');
+  });
+
+  var jobCount = $('.results tbody tr[visible="true"]').length;
+    $('.counter').text(jobCount + ' item');
+
+  if(jobCount == '0') {$('.no-result').show();}
+    else {$('.no-result').hide();}
+      });
+    .results tr[visible='false'],
+    .no-result{
+      display:none;
+    }
+
+    .results tr[visible='true']{
+      display:table-row;
+    }
+</script>
 @endsection

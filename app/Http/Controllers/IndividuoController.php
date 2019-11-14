@@ -36,6 +36,4 @@ class IndividuoController extends Controller
         $individuo = individuo::find($id_individuo);
         return view('individuook')->with('individuo', $individuo);
     }
-
-
 }

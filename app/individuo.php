@@ -2,12 +2,14 @@
 
 namespace App;
 
+use App\hogarSeccionSeis;
+use App\hogar_seccion_cuatro;
 use Illuminate\Database\Eloquent\Model;
 
 class individuo extends Model
 {
     //
-protected $fillable = ['Entrev_realiz',
+protected $fillable = ['hogar_id','Entrev_realiz',
 'numero_componente',
 'numero_respondente',
         'nombre_respondente',
@@ -242,8 +244,6 @@ protected $fillable = ['Entrev_realiz',
         return $this->belongsTo('App\hogar');
     }
 
-
-
     public function nolaboral()
     {
         return $this->hasOne('App\hogarSeccionSeis');
@@ -271,6 +271,15 @@ protected $fillable = ['Entrev_realiz',
                 # code...
                 break;
         };
+    }
+    public function hogar_seccion_cuatro()
+    {
+        return $this->belongsTo(hogar_seccion_cuatro::class, 'id', 'individuo_id');
+    }
+
+    public function hogarSeccionSeis()
+    {
+        return $this->belongsTo(hogarSeccionSeis::class, 'id', 'individuo_id');
     }
 
     public function ingresosNoLaborales()
@@ -444,7 +453,6 @@ protected $fillable = ['Entrev_realiz',
             }
         }
     }
-
 
     public function P21(){
         $c = 0;
