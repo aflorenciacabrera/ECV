@@ -65,11 +65,11 @@
 
                                 <a class="btn btn-secondary active " role="button" href="{{ route('login') }}">{{ __('Acceder') }}</a>
 
-                            @if (Route::has('register'))
+                            {{-- @if (Route::has('register'))
 
                                     <a class="btn btn-secondary active " role="button" href="{{ route('register') }}">{{ __('Registrar') }}</a>
 
-                            @endif
+                            @endif --}}
                         </div>
                         @else
                             {{-- <a  class="nav-link" href="{{route('home')}}" role="button" >
