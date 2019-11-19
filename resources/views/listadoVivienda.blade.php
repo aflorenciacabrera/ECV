@@ -63,7 +63,19 @@ function filtrar(val)
             <div class="card">
 
                 <div class="card-header">
+
                     Viviendas Ingresadas por <strong>{{Auth::user()->name}} ({{Auth::user()->rol}})</strong>
+
+                    
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-md-6 offset-md-3 d-flex flex-column align-items-center"> -->
+                      <!-- <label><h5>Buscar</h5></label> -->
+                      <br>
+                      <br>
+                        <input id="filtrar" type="text" class="form-control" placeholder="Ingresa la palabra que deseas Buscar...">
+                    <!-- </div> -->
+                <!-- </div> -->
+
                 </div>
                   <div class="card-body">
                   <form method="get" class="form-inline" id="trimestre_form">
