@@ -27,6 +27,15 @@
                                 <option value="1">1. Si</option>
                                 <option value="2" >2. No</option>
                         </select>
+                        @if(Auth::user()->rol == "supervisor")
+                        <label for="entrevista_realizada_supervisor">Entrevista Realizada por Supervisor</label>
+                        <select class="form-control form-control-sm"  onchange="update_participacion()" name="entrevista_realizada_supervisor" id="entrevista_realizada_supervisor" onchange="update_participacion()" required >
+                            <option value=""></option>
+
+                                <option value="1">1. Si</option>
+                                <option value="2" >2. No</option>
+                        </select>
+                        @endif
                         <br>
                         <label for="modalidad_aplicacion">Modalidad de Aplicación</label>
                         <select class="form-control form-control-sm "  onchange="update_participacion()" name="modalidad_aplicacion" id="modalidad_aplicacion"  >
@@ -142,8 +151,20 @@ visitas_fecha_hora_4? activar("#visitas_fecha_hora_5",false,false):desactivar("#
 
 se_hizo_acompaniamiento == 1 ? activar(".se_hizo_acompaniamiento",true,false):desactivar(".se_hizo_acompaniamiento");
 
-if(rol !== 'admin' && rol !== 'supervisor')
+if(rol == 'supervisor' )
 {
+    entrevistaRealizada_supervisor = getSelectedValue("#entrevista_realizada_supervisor");
+
+    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
+    entrevistaRealizada == 2 && entrevistaRealizada_supervisor == 1 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
+    entrevistaRealizada == 2 && entrevistaRealizada_supervisor == 1 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
+    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");
+    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
+    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
+}
+else
+{
+
     console.log("entrevista_realizada_normal")
     entrevistaRealizada == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
     entrevistaRealizada == 2 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
@@ -152,15 +173,7 @@ if(rol !== 'admin' && rol !== 'supervisor')
     entrevistaRealizada == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
     entrevistaRealizada == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
 }
-else
-{
-    activar("#otra_viv_direc");
-    activar("#CAUSAS, #INFORMANTE",true,false);
-    activar("#INFORMANTE",true,false);
-    activar(".depende_de_entrevista_realizada",true,false);
-    activar(".primer-campo",false,false);
-    activar("#NRO_HOGAR_1");
-}
+
 
 
 
