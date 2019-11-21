@@ -155,12 +155,12 @@ if(rol == 'supervisor' )
 {
     entrevistaRealizada_supervisor = getSelectedValue("#entrevista_realizada_supervisor");
 
-    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
-    entrevistaRealizada == 2 && entrevistaRealizada_supervisor == 1 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
-    entrevistaRealizada == 2 && entrevistaRealizada_supervisor == 1 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
-    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");
-    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
-    entrevistaRealizada == 1 && entrevistaRealizada_supervisor == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
+    entrevistaRealizada == 1 || entrevistaRealizada_supervisor == 1 ? activar("#otra_viv_direc"):desactivar("#otra_viv_direc");
+    entrevistaRealizada == 2 || entrevistaRealizada_supervisor == 1 ? activar("#CAUSAS, #INFORMANTE",true,false):desactivar("#CAUSAS, #INFORMANTE");
+    entrevistaRealizada == 2 || entrevistaRealizada_supervisor == 1 ? activar("#INFORMANTE",true,false):desactivar("#INFORMANTE");
+    entrevistaRealizada == 1 || entrevistaRealizada_supervisor == 1 ? activar(".depende_de_entrevista_realizada",true,false):desactivar(".depende_de_entrevista_realizada");
+    entrevistaRealizada == 1 || entrevistaRealizada_supervisor == 1 ? activar(".primer-campo",false,false):desactivar(".primer-campo");
+    entrevistaRealizada == 1 || entrevistaRealizada_supervisor == 1 ? activar("#NRO_HOGAR_1"):desactivar("#NRO_HOGAR_1");
 }
 else
 {
