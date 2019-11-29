@@ -80,15 +80,14 @@ class ViviendaController extends Controller
                     $request['NO_ESTABA_' . $i] == 6 ||//10
                     $request['NO_ESTABA_' . $i] == 7 ||//10
                     $request['NO_ESTABA_' . $i] == 8 ||//10
-                    $request['OTRA_RES_' . $i] == 1 ))
-                    ||
-                    (
-                        !
-                        (($request['CAMBIOS_'.$i] == 3 || $request['CAMBIOS_'.$i] == 4 ) ||
-                        ($request['CH13_'.$i] == 3 || $request['CH13_'.$i] == 4 ) ||
-                        ($request['CH15_' . $i] == 3 || $request['CH15_' . $i] == 4))
-
-                    )
+                    $request['OTRA_RES_' . $i] == 1 ||
+                    
+                    $request['CAMBIOS_'.$i] == 3 || 
+                    $request['CAMBIOS_'.$i] == 4 ||
+                    $request['CH13_'.$i] == 3 || 
+                    $request['CH13_'.$i] == 4  ||
+                    $request['CH15_' . $i] == 3 || 
+                    $request['CH15_' . $i] == 4 ))
                     )//9
                 {
                     echo "ES RESIDENTE";
