@@ -8,7 +8,7 @@
             </div>
             <div class="form-group col-md-4">
                     <label for="lado">Lado:</label>
-                    <input type="number" min="1" max ="4" step="1" class="form-control form-control-sm" id="lado" name="lado" placeholder="" required>
+                    <input type="number" min="1" max ="9" step="1" class="form-control form-control-sm" id="lado" name="lado" placeholder="" required>
             </div>
             <div class="form-group col-md-4">
                         <label for="calle">Calle:</label>
